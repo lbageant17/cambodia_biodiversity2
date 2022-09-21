@@ -1,5 +1,23 @@
 
 
+## calculating weighted RDAs met using relative abundance, but then I got confused and stopped (9/21/2022)
+
+file <- ccm_traits %>% 
+  select(contains(c("hhid", "scode", "iweight", "content", "minbio"))) %>% 
+  # sum(is.na(file$pr_content)) 4220 observations with no nutrient info
+  # nrow(file) total obs = 26.9k so 16% of obs have no nutrient info
+  drop_na(pr_content) %>% # dropping 16% of cases due to missing nutrient info
+  # bring in relative abundance data: 
+  left_join(rel_abundance, key = scode_ccm) %>% 
+  # sum(is.na(file$rel_abundance)) # 3 NA values. I will drop them. These are scode = 144, a species that did not appear in the biomonitoring data.
+  drop_na(rel_abundance) %>% # nrow(file) n = 2271
+
+
+
+
+
+
+## misc rank abundance things
 library(vegan) # install.packages("vegan")
 library(BiodiversityR) #install.packages("BiodiversityR")
 data(dune.env)

@@ -39,7 +39,8 @@ Sebastian's description of variables with _MinBio suffix
 Sebastian's description of variables with _RDA_100g suffix
 "The %RDA met with 100g y a child under 5, estimated using nutrient content divided by RDA."
 
-NumRDA variable: "The number of RDAs met with 100g by a child under five (ranges from 1 to 6, the 1 being always protein)."
+NumRDA 100: The number of RDAs 100% met with 100g by a child under five. In theory this could range from 0 to 6, but in practice the Cambodia data do not contain any species that meet 0 RDAs or 6 RDAs at 100%. 
+NumRDA 50: The number of RDAs 50% met with 100g by a child under five. This ranges from 1-6. 
 
 
 

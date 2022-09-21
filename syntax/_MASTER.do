@@ -1,16 +1,17 @@
 ** Liz Bageant
-** August 3, 2022
+** August 30, 2022
 
 ** Master dofile for Cambodia Biodiversity paper
 
 * Macros
-global stata_raw "/Users/erb32/github/cambodia_biodiversity/data/stata_raw"
-global excel_raw "/Users/erb32/github/cambodia_biodiversity/data/excel_raw"
-global do "/Users/erb32/github/cambodia_biodiversity/syntax"
+global umbrella "/Users/erb32/github/cambodia_biodiversity2"
+global stata_raw "$umbrella/data/stata_raw"
+global excel_raw "$umbrella/data/excel_raw"
+global do "$umbrella/syntax"
 global temp "/Users/erb32/Desktop/temp"
-global processed "/Users/erb32/github/cambodia_biodiversity/data/processed"
-global traits "/Users/erb32/github/cambodia_biodiversity/data/traits/"
-global documentation "/Users/erb32/github/cambodia_biodiversity/documentation/"
+global processed "$umbrella/data/processed"
+global traits "$umbrella/data/traits/"
+global documentation "$umbrella/documentation/"
  
 *global processed
 

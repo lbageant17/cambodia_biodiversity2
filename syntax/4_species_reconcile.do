@@ -62,7 +62,7 @@ import excel "$documentation/Species code and group reconciliation.xlsx", sheet(
 
 
 * Merge the WorldFish files with Sebastian's trait list
-	merge 1:1 Speciescode using seb_species
+	merge 1:1 Speciescode using "$temp/seb_species"
 
 	list Speciescode if _mer == 1, clean noobs
 		/* 
@@ -99,7 +99,7 @@ use "$processed/ccm_q7.dta", clear
 
 	gen scode = scode_ccm
 
-	merge 1:1 scode using species_reconciled
+	merge 1:1 scode using "$temp/species_reconciled"
 
 	/*
 
@@ -130,7 +130,7 @@ use "$processed/biom_formb.dta", clear
 
 	gen scode = scode_biom
 
-	merge 1:1 scode using specieslist
+	merge 1:1 scode using "$temp/specieslist"
 
 	/*
 		Result                           # of obs.
