@@ -33,7 +33,7 @@ Sebastian's description of variables with _MinBio suffix
 	Iron = 7.55 mg
 	Zinc = 4.1 mg
 	Calcium = 450 mg
-	Vitamin A = 400 mg
+	Vitamin A = 400 mcg
 	Omega-3 = 285 mg
 
 Sebastian's description of variables with _RDA_100g suffix

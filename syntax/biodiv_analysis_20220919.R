@@ -161,7 +161,7 @@
     ggsave(path = "output/", "numspecies_catch_x_sold.png", width = 16, height =  12, units = "cm", dpi = 320)
     
     # Check correlation stats
-    fr_biodiv %>% 
+    cfr_biodiv %>% 
       select(catch_species, sold_species) %>% 
       as.matrix() %>% 
       Hmisc::rcorr(type = "spearman") %>% 
@@ -327,7 +327,7 @@
   
   
   # catch x sell
-  cm_traits_specieslevel %>% 
+  ccm_traits_specieslevel %>% 
     ggplot(aes(x = catch, y = sell, size = rel_abundance, color = rel_abundance)) +
     geom_point() +
     scale_color_viridis() + theme_bw() +
