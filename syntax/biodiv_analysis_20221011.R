@@ -274,24 +274,101 @@
     
 #------------------------------------------------------------------------------# 
 #### Relative abundance plots ####
+    
+    # Need to confirm the level at which we should be calculating relative abundance
+    # For example, we could calculate it at system level, CFR level or household catch level.
 #------------------------------------------------------------------------------# 
+ 
+    
+#### EATEN X SOLD X RELATIVE ABUNDANCE #### 
     
   # eat x sell
+  # This is at the species level
+  # Relative abundance is calculated at the system level using biomonitoring data.
   ccm_traits_specieslevel %>% 
-    ggplot(aes(x = eat, y = sell, size = rel_abundance, color = rel_abundance)) +
-    geom_point() +
+    ggplot(aes(x = eat, y = sell, color = rel_abundance, size = rel_abundance)) +
+    geom_point(alpha = 0.7) +
     scale_color_viridis() + theme_bw() +
     scale_x_continuous(trans = "log1p") +
     scale_y_continuous(trans = "log1p") +
     #geom_smooth(method = "lm", color = "black", show.legend = FALSE) +
-    labs(size = "", colour = "Relative abundance") +
     geom_abline(intercept = 0, slope = 1, color = "gray") +
-    ggtitle("Quantity eaten X Quantity sold X Relative abundance (system level)")
-  
+    ggtitle("Quantity eaten X Quantity sold X Relative abundance (species level)") +
+      ylab("Quantity sold") +
+      xlab("Quantity eaten") +
+      labs(size = " ", colour = " Relative abundance \nat system level ")
+    
   ggsave(path = "output/", "cons_x_sold_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
+ 
+  # Check correlation stats
+  ccm_traits_specieslevel %>% 
+    ungroup() %>% 
+    mutate(total = eat + sell,
+           share_eaten = eat/total) %>% 
+    select(rel_abundance, share_eaten) %>% 
+    drop_na(rel_abundance) %>% 
+    as.matrix() %>% 
+    Hmisc::rcorr(type = "spearman") %>% 
+    broom::tidy() 
   
-  # eat x sell at HH level with CFR-level relative abundance
+  ccm_traits_specieslevel %>% 
+    ungroup() %>% 
+    mutate(total = eat + sell,
+           share_eaten = eat/total) %>% 
+    select(rel_abundance, share_eaten) %>%
+    ggplot(aes(x = rel_abundance, y = share_eaten)) +
+    geom_smooth()
   
+  # eat x sell 
+  # This is at the household level
+  # Relative abundance is calculated at the system level using biomonitoring data
+  ccm_traits_specieslevel %>% 
+    select(scode_ccm, rel_abundance) %>% 
+    full_join(hh_ccm, by = "scode_ccm") %>% 
+    filter(sold < 200) %>% 
+    ggplot(aes(x = eat, y = sold, color = log(rel_abundance+1), size = log(rel_abundance+1))) +
+    geom_point(alpha = 0.6) +
+    scale_x_continuous(trans = "log1p") +
+    scale_y_continuous(trans = "log1p") +
+    scale_color_viridis() +
+    theme_bw() +
+    ggtitle("Eaten X Sold X Relative abundance (household level)") +
+    xlab("Quantity eaten") +
+    ylab("Quantity sold") +
+    labs(size = "", color = " Relative abundance \nat system level")
+  
+  # check correlation stats
+  ccm_traits_specieslevel %>% 
+    select(scode_ccm, rel_abundance) %>% 
+    full_join(hh_ccm, by = "scode_ccm") %>% 
+    filter(sold < 200) %>%   
+    ungroup() %>% 
+    mutate(total = eat + sold,
+           share_eaten = eat/total) %>% 
+    select(rel_abundance, share_eaten) %>% 
+    drop_na(rel_abundance) %>% 
+    as.matrix() %>% 
+    Hmisc::rcorr(type = "spearman") %>% 
+    broom::tidy()  
+  
+  ccm_traits_specieslevel %>% 
+    select(scode_ccm, rel_abundance) %>% 
+    full_join(hh_ccm, by = "scode_ccm") %>% 
+    filter(sold < 200) %>%   
+    ungroup() %>% 
+    mutate(total = eat + sold,
+           share_eaten = eat/total) %>% 
+    select(rel_abundance, share_eaten) %>% 
+    ggplot(aes(x = rel_abundance, y = share_eaten)) +
+    geom_smooth() +
+    ggtitle("System level relative abundance and proportion of catch that is eaten") +
+    xlab("System level relative abundance") +
+    ylab("Share eaten")
+  
+  
+  # eat x sell
+  # This is at the household level. 
+  # Relative abundance is calculated at the CFR level 
     # calculate CFR-level proportional abundance by species
     pa_cfr <- b %>% 
       select(cfrid, scode_biom, totalweight_biom) %>% 
@@ -310,13 +387,78 @@
       select(cfrid, scode_biom, pa)
     
     # plot
-    ccm_traits_specieslevel %>% 
-      select(scode_ccm, num_rda100, tl, rel_abundance) %>% 
-      mutate(scode_biom = scode_ccm) %>% # facilitate merge with pa_cfr
-      full_join(hh_ccm, by = "scode_ccm") %>%  # dim(x) 9594 x 12
-      left_join(cfrid_to_hhid, by = "hhid") %>% # dim(x) 9594 x 13
+    hh_ccm %>% 
+      left_join(cfrid_to_hhid, by = "hhid") %>% # to facilitate join with pa_cfr
+      mutate(scode_biom = scode_ccm) %>% # to facilitate join with pa_cfr
       left_join(pa_cfr, by = c("cfrid", "scode_biom")) %>% 
-      arrange(hhid) %>% # dim() #9694 x 12
+      arrange(pa) %>% # dim() #9694 x 12
+      filter(sold < 200) %>% 
+      ggplot(aes(x = eat, y = sold, color = log(pa+1), size = log(pa+1))) +
+      geom_point(alpha = 0.7) +
+      scale_x_continuous(trans = "log1p") +
+      scale_y_continuous(trans = "log1p") +
+      scale_color_viridis() +
+      theme_bw() +
+      theme(plot.caption = element_text(hjust = 0)) +
+      ggtitle("Eaten X Sold X Relative abundance (Household level)") +
+      xlab("Quantity eaten") +
+      ylab("Quantity sold") + 
+      labs(size = "", colour = "Relative abundance \nat CFR level")
+   
+    # Check correlation stats
+    hh_ccm %>% 
+      left_join(cfrid_to_hhid, by = "hhid") %>% # to facilitate join with pa_cfr
+      mutate(scode_biom = scode_ccm) %>% # to facilitate join with pa_cfr
+      left_join(pa_cfr, by = c("cfrid", "scode_biom"))  %>% 
+      filter(sold < 200) %>% 
+      ungroup() %>% 
+      mutate(total = eat + sold,
+             share_eaten = eat/total) %>% 
+      select(pa, share_eaten) %>% 
+      drop_na(pa) %>% 
+      as.matrix() %>% 
+      Hmisc::rcorr(type = "spearman") %>% 
+      broom::tidy()  
+        # Relationship is negative but driven by the lower end of the pa distribution (see plot below)
+    
+    hh_ccm %>% 
+      left_join(cfrid_to_hhid, by = "hhid") %>% # to facilitate join with pa_cfr
+      mutate(scode_biom = scode_ccm) %>% # to facilitate join with pa_cfr
+      left_join(pa_cfr, by = c("cfrid", "scode_biom"))  %>% 
+      filter(sold < 200) %>% 
+      ungroup() %>% 
+      mutate(total = eat + sold,
+             share_eaten = eat/total) %>% 
+      select(pa, share_eaten) %>% 
+      ggplot(aes(x = pa, y = share_eaten)) +
+      geom_smooth() +
+      ggtitle("CFR level relative abundance and proportion of catch that is eaten") +
+      xlab("CFR level relative abundance") +
+      ylab("Share eaten")
+
+   
+  # eat x sell
+  # this is at the household level
+  # Relative abundance is calculated at household catch level
+  
+    # Calculate household catch proportional abundance by species
+    pa_hh_catch <- c %>% 
+      select(hhid, scode_ccm, catch_iweight) %>% 
+      # get total catch by species
+      group_by(hhid, scode_ccm) %>% 
+      summarise(catch_kg_species = sum(catch_iweight)) %>% 
+      # bring in total catch by household
+      left_join(total_hh, by = "hhid") %>% 
+      # calculate proportional abundance
+      mutate(pa = catch_kg_species/total_catch_kg) %>% 
+      # Confirm that proportional abundances total to 1 for each household
+      ## group_by(hhid) %>% 
+      ## summarise(should_equal_1 = sum(pa)) ## all values = 1
+      select(hhid, scode_ccm, pa)
+    
+    hh_ccm %>% 
+      left_join(pa_hh_catch, by = c("hhid", "scode_ccm")) %>% 
+      arrange(pa) %>% 
       filter(sold < 200) %>% 
       ggplot(aes(x = eat, y = sold, color = pa, size = pa)) +
       geom_point(alpha = 0.6) +
@@ -324,31 +466,46 @@
       scale_y_continuous(trans = "log1p") +
       scale_color_viridis() +
       theme_bw() +
-      ggtitle("Eaten X Sold X Relative abundance (CFR level)") +
+      ggtitle("Eaten X Sold X Relative abundance (household level)") +
       xlab("Quantity eaten") +
-      ylab("Quantity sold")
+      ylab("Quantity sold") +
+      labs(size = "", color = "Relative abundance \nat household \ncatch level")
+    
+    # check correlation stats
+    hh_ccm %>% 
+      left_join(pa_hh_catch, by = c("hhid", "scode_ccm")) %>% 
+      arrange(pa) %>% 
+      filter(sold < 200) %>% 
+      ungroup() %>% 
+      mutate(total = eat + sold,
+             share_eaten = eat/total) %>% 
+      select(pa, share_eaten) %>% 
+      drop_na(pa) %>% 
+      as.matrix() %>% 
+      Hmisc::rcorr(type = "spearman") %>% 
+      broom::tidy() 
+    
+    hh_ccm %>% 
+      left_join(pa_hh_catch, by = c("hhid", "scode_ccm")) %>% 
+      arrange(pa) %>% 
+      filter(sold < 200) %>% 
+      ungroup() %>% 
+      mutate(total = eat + sold,
+             share_eaten = eat/total) %>% 
+      select(pa, share_eaten) %>% 
+      ggplot(aes(x = pa, y = share_eaten)) +
+      geom_smooth() +
+      ggtitle("Household level relative abundance and proportion of catch that is eaten") +
+      xlab("Household level relative abundance") +
+      ylab("Share eaten")
+    
       
-  
-  # eat x sell at household level
-  ccm_traits_specieslevel %>% 
-    select(scode_ccm, num_rda100, tl, rel_abundance) %>% 
-    full_join(hh_ccm, by = "scode_ccm") %>% 
-    arrange(hhid) %>% # dim() #9694 x 12
-    filter(sold < 200) %>% 
-    ggplot(aes(x = eat, y = sold, color = rel_abundance, size = rel_abundance)) +
-    geom_point(alpha = 0.6) +
-    scale_x_continuous(trans = "log1p") +
-    scale_y_continuous(trans = "log1p") +
-    scale_color_viridis() +
-    theme_bw() +
-    ggtitle("Eaten X Sold X Relative abundance (household level)") +
-    xlab("Quantity eaten") +
-    ylab("Quantity sold")
 
-  ggsave(path = "output/", "cons_x_sold_x_abund_hhlevel.png", width = 16, height =  12, units = "cm", dpi = 320)
-  
-  
+#### CAUGHT X EATEN X RELATIVE ABUNDANCE #### 
+
   # catch x eat
+  # This is at the species level
+  # Relative abundance is calculated at the system level
   ccm_traits_specieslevel %>% 
     ggplot(aes(x = catch, y = eat, size = rel_abundance, color = rel_abundance)) +
     geom_point() +
@@ -363,8 +520,12 @@
 
   ggsave(path = "output/", "catch_x_cons_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
   
+
+#### CAUGHT X SOLD X RELATIVE ABUNDANCE #### 
   
   # catch x sell
+  # This is at the species level
+  # Relative abundance is calculated at the system level
   ccm_traits_specieslevel %>% 
     ggplot(aes(x = catch, y = sell, size = rel_abundance, color = rel_abundance)) +
     geom_point() +
@@ -380,20 +541,20 @@
   ggsave(path = "output/", "catch_x_sell_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
   
 
-  
-  
-  
-  
+
 #------------------------------------------------------------------------------# 
 #### Nutrition plots ####
 #------------------------------------------------------------------------------# 
 
-## EVERYTHING IN THIS SECTION IS UNWEIGHTED RDAS AND NEEDS TO BE FIXED
-  
+## NEED TO CONSIDER WEIGHTED VS UNWEIGHTED RDAS IN THIS SECTION
+
   # eat x sell 
+  # This is at species level. 
+  # RDAs are currently unweighted and represent the RDAs 50% met by 100g of a given species.
   ccm_traits_specieslevel %>% 
-    ggplot(aes(x = eat, y = sell, size = num_rda100, color = num_rda100)) +
-    geom_point() +
+    arrange(num_rda100) %>% 
+    ggplot(aes(x = eat, y = sell, size = num_rda50, color = num_rda50)) +
+    geom_point(alpha = 0.7) +
     scale_color_viridis() + theme_bw() +
     scale_x_continuous(trans = "log1p") +
     scale_y_continuous(trans = "log1p") +
@@ -408,31 +569,37 @@
   
   
   # eat x sell at household level
+  # This is at the household level.
+  # RDAs weighted by relative abundance in individual household CATCH portfolios
   ccm_traits_specieslevel %>% 
     select(scode_ccm, num_rda100, tl, rel_abundance) %>% 
     full_join(hh_ccm, by = "scode_ccm") %>% 
-    arrange(hhid) %>% # dim() 9694 x 12
+    left_join(rda_hh_catch, by = "hhid") %>% 
+    arrange(-rda_hh_catch) %>% # dim() 9694 x 12
     filter(sold < 200) %>% 
-    ggplot(aes(x = eat, y = sold, color = num_rda100, size = num_rda100)) +
-    geom_point(alpha = 0.6) +
+    ggplot(aes(x = eat, y = sold, color = rda_hh_catch, size = rda_hh_catch)) +
+    geom_point(alpha = 0.5) +
     geom_abline(intercept = 0, slope = 1, color = "gray") +
     scale_x_continuous(trans = "log1p") +
     scale_y_continuous(trans = "log1p") +
     scale_color_viridis() +
     theme_bw() +
-    labs(size = "", colour = "RDAs Met") +
+    theme(plot.caption = element_text(hjust = 0)) +
+    labs(size = "", colour = "RDAs Met",
+         caption = "RDAs are weighted by household catch portfolio--not sure that this is the best way. \nLow-RDA cases are obscured behind high-RDA cases (yellow)") +
     ggtitle("Eaten X Sold X RDAs met (household level)") +
     xlab("Quantity eaten") +
-    ylab("Quantity sold")
+    ylab("Quantity sold") 
   
   ggsave(path = "output/", "eat_x_sell_x_rda_hhlevel.png", width = 16, height =  12, units = "cm", dpi = 320)
   
-  
 
   # catch x eat
+  # This is at species level. 
+  # RDAs are currently unweighted and represent the RDAs 50%met by 100g of a given species.
   ccm_traits_specieslevel %>% 
-    ggplot(aes(x = catch, y = eat, size = num_rda100, color = num_rda100)) +
-    geom_point() +
+    ggplot(aes(x = catch, y = eat, size = num_rda50, color = num_rda50)) +
+    geom_point(alpha = 0.7) +
     scale_color_viridis() + theme_bw() +
     scale_x_continuous(trans = "log1p") +
     scale_y_continuous(trans = "log1p") +
@@ -445,11 +612,12 @@
   ggsave(path = "output/", "catch_x_eat_x_rda_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
   
   
-  
   # catch x sell
+  # This is at species level. 
+  # RDAs are currently unweighted and represent the RDAs 50% met by 100g of a given species.
   ccm_traits_specieslevel %>% 
-    ggplot(aes(x = catch, y = sell, size = num_rda100, color = num_rda100)) +
-    geom_point() +
+    ggplot(aes(x = catch, y = sell, size = num_rda50, color = num_rda50)) +
+    geom_point(alpha = 0.7) +
     scale_color_viridis() + theme_bw() +
     scale_x_continuous(trans = "log1p") +
     scale_y_continuous(trans = "log1p") +
@@ -462,95 +630,3 @@
   ggsave(path = "output/", "catch_x_sell_x_rda_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
  
   
-#------------------------------------------------------------------------------# 
-#### Body size (total length) plots ####
-#------------------------------------------------------------------------------# 
-  
-  
-  # eat x sell
-  ccm_traits_specieslevel %>% 
-    ggplot(aes(x = eat, y = sell, size = tl, color = tl)) +
-    geom_point() +
-    scale_x_continuous(trans = "log1p") +
-    scale_y_continuous(trans = "log1p") +
-    scale_color_viridis() +
-    theme_bw() +
-    #geom_smooth(method = "lm", color = "black", show.legend = FALSE) +
-    labs(size = "", colour = "Total length") +
-    geom_abline(intercept = 0, slope = 1, color = "gray") +
-    ggtitle("Quantity eaten X Quantity sold X Total length")
-  
-  ggsave(path = "output/", "eat_x_sell_x_length_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
-  
-  
-  # eat x sell disaggregated to household level
-  ccm_traits_specieslevel %>% 
-    select(scode_ccm, tl, rel_abundance) %>% 
-    full_join(hh_ccm, by = "scode_ccm") %>% 
-    arrange(hhid) %>% # dim() 9694 x 11
-    filter(sold <200) %>% #dim() 9684 x 11
-    ggplot(aes(x = eat, y = sold, color = tl, size = tl)) +
-    geom_point(alpha = 0.6) +
-    scale_x_continuous(trans = "log1p") +
-    scale_y_continuous(trans = "log1p") +
-    geom_abline(intercept = 0, slope = 1, color = "gray") +
-    scale_color_viridis() +
-    theme_bw() +
-    labs(size = "", colour = "Total length") +
-    ggtitle("Eaten X Sold X Total length (household level)") +
-    xlab("Quantity eaten") +
-    ylab("Quantity sold") 
-  
-  ggsave(path = "output/", "eat_x_sell_x_length_hhlevel.png", width = 16, height =  12, units = "cm", dpi = 320)
-  
-  
-   
-  # catch x eat
-  ccm_traits_specieslevel %>% 
-    ggplot(aes(x = catch, y = eat, size = tl, color = tl)) +
-    geom_point() +
-    scale_x_continuous(trans = "log1p") +
-    scale_y_continuous(trans = "log1p") +
-    theme_bw() +
-    #geom_smooth(method = "lm", color = "black", show.legend = FALSE) +
-    geom_abline(intercept = 0, slope = 1, color = "gray") +
-    #geom_abline(intercept = 0, slope = log1p(0.5), color = "#99FFFF") +
-    labs(size = "", colour = "Total length") +
-    ggtitle("Quantity caught X Quantity eaten X Total length")
-  
-  ggsave(path = "output/", "catch_x_eat_x_length_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
-  
-  
-  # catch x sell
-  size_catchsell <- ccm_traits_specieslevel %>% 
-    ggplot(aes(x = catch, y = sell, size = tl, color = tl)) +
-    geom_point() +
-    scale_x_continuous(trans = "log1p") +
-    scale_y_continuous(trans = "log1p") +
-    theme_bw() +
-    #geom_smooth(method = "lm", color = "black", show.legend = FALSE) +
-    geom_abline(intercept = 0, slope = 1, color = "gray")+
-    #geom_abline(intercept = 0, slope = 0.5, color = "#99FFFF") +
-    labs(size = "", colour = "Total length") +
-    ggtitle("Quantity caught X Quantity sold X Total length")
-  
-  ggsave(path = "output/", "catch_x_sell_x_length_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
-  
-  ## Body size and nutrition
-  
-  size_rda <- ccm_traits_specieslevel %>% 
-    ggplot(aes(x = num_rda100, y = tl)) +
-    geom_point() +
-    geom_smooth(method = "lm", color = "black") +
-    ggtitle("Body size X RDAs met")
-  
-  # Check correlation stats
-  size_rda_corr <- ccm_traits_specieslevel %>% 
-    ungroup() %>% 
-    select(num_rda100, tl) %>% 
-    drop_na() %>% 
-    as.matrix() %>% 
-    Hmisc::rcorr(type = "spearman") %>% 
-    broom::tidy()%>% 
-    knitr::kable()
-    
