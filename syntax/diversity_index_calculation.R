@@ -572,3 +572,4 @@ sold_div_data_hh <- c %>%
       Hmisc::rcorr(type = "spearman") %>% 
       broom::tidy() 
     
+    
