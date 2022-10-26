@@ -28,8 +28,9 @@ library(vegan) #install.packages("vegan")
 
 #### ----- Bring in csv files ------#### 
 
-  # cfr types
+  # cfr characteristics
   cfrtype <- as_tibble(read.csv("data/processed/cfr_category.csv", na.strings = c("", "NA")))
+
 
   # all dates
   dates <- as_tibble(read.csv("data/processed/dates.csv", na.strings = c("", "NA")))
@@ -49,6 +50,10 @@ library(vegan) #install.packages("vegan")
   
   # effort data
   e <- as_tibble(read.csv("data/processed/effort.csv", na.strings = c("", "NA")))
+  
+  # livelihood data
+  l <- as_tibble(read.csv("data/processed/livelihood.csv", na.strings = c("", "NA"))) %>% 
+    filter(year == 2012)
   
   
   #### ----- Household level data files ------ #### 
@@ -111,6 +116,7 @@ library(vegan) #install.packages("vegan")
   ## Combine CFR-level data frames
   cfr_biodiv <- full_join(cfr_biom, hh_catch, by = "cfrid") 
   cfr_biodiv <- full_join(cfr_biodiv, hh_soldcons, by = c("cfrid", "hhid"))
+  
   
 
   #### ----- Species level data files ------ #### 
@@ -198,7 +204,8 @@ library(vegan) #install.packages("vegan")
 #------------------------------------------------------------------------------# 
 
 source("syntax/diversity_index_calculation.R")
-source("syntax/biodiv_analysis_20220919.R")
+source("syntax/biodiv_analysis_20221011.R")
+source("syntax/diet_quality_calculation_20221015.R")
   
   
   
