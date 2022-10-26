@@ -1,41 +1,41 @@
-category,categoryname,cfrid
-1,Reservoir for irrigation in upland area,1. Ang Chork
-2,Community pond within agricultural land not prone to flood,2. Anlous Dong
-2,Community pond within agricultural land not prone to flood,3. Aren
-3,Community pond within agricultural land prone to flood,4. Bakong
-2,Community pond within agricultural land not prone to flood,5. Boeng Chheutrav
-3,Community pond within agricultural land prone to flood,6. Boeng Daiphtaul
-3,Community pond within agricultural land prone to flood,7. Boeng Kamhengsa
-4,Demarcated area in larger water body (Perennial fishing),8. Boeng Kampeng
-2,Community pond within agricultural land not prone to flood,9. Boeng Kantout
-3,Community pond within agricultural land prone to flood,10. Boeng Krong
-4,Demarcated area in larger water body (Perennial fishing),11. Boeng Prahauch
-3,Community pond within agricultural land prone to flood,12. Boeng Prang
-4,Demarcated area in larger water body (Perennial fishing),13. Boeng Preah Ponley
-4,Demarcated area in larger water body (Perennial fishing),14. Boeng Rolum
-2,Community pond within agricultural land not prone to flood,15. Boeng Romlech
-4,Demarcated area in larger water body (Perennial fishing),16. Boeng Thea
-4,Demarcated area in larger water body (Perennial fishing),17. Boeng Thmor Koul
-3,Community pond within agricultural land prone to flood,18. Boeng Tramper
-4,Demarcated area in larger water body (Perennial fishing),19. Boeng Tramses
-1,Reservoir for irrigation in upland area,20. Damnak Kranh
-2,Community pond within agricultural land not prone to flood,21. Entark Komar
-2,Community pond within agricultural land not prone to flood,22. Kork Lhong
-2,Community pond within agricultural land not prone to flood,23. Krasaing Rithy
-1,Reservoir for irrigation in upland area,24. Kuch Noub
-2,Community pond within agricultural land not prone to flood,25. Lboeuk Keteyuos
-1,Reservoir for irrigation in upland area,26. Obosmkak
-4,Demarcated area in larger water body (Perennial fishing),27. Otaky
-4,Demarcated area in larger water body (Perennial fishing),28. Otamoan
-3,Community pond within agricultural land prone to flood,29. Othom Sranal
-2,Community pond within agricultural land not prone to flood,30. Preah Neang Korl
-3,Community pond within agricultural land prone to flood,31. Pur Sdey
-2,Community pond within agricultural land not prone to flood,32. Sla Slak
-3,Community pond within agricultural land prone to flood,33. Trapaing Kuy
-2,Community pond within agricultural land not prone to flood,34. Trapaing Neang Noy
-3,Community pond within agricultural land prone to flood,35. Trapaing Thlok Meanchey
-2,Community pond within agricultural land not prone to flood,36. Trapaing Thlong
-2,Community pond within agricultural land not prone to flood,37. Trapaing Veng
-1,Reservoir for irrigation in upland area,38. Tumnub Kandole
-1,Reservoir for irrigation in upland area,39. Tumnub Mkak
-1,Reservoir for irrigation in upland area,40. Tumnub Rumdeng
+category,cfrid,city_distance
+1,1,38
+3,10,20
+4,11,40.200001
+3,12,21.6
+4,13,28.9
+4,14,33
+2,15,33.700001
+4,16,11.9
+4,17,31
+3,18,85.699997
+4,19,77
+2,2,54.799999
+1,20,28
+2,21,42.299999
+2,22,40
+2,23,31.200001
+1,24,69.300003
+2,25,50
+1,26,48.5
+4,27,33.5
+4,28,57.700001
+3,29,55.299999
+2,3,27.299999
+2,30,12.6
+3,31,37.299999
+2,32,47
+3,33,12.7
+2,34,23.200001
+3,35,8.8999996
+2,36,42.5
+2,37,73
+1,38,16.200001
+1,39,42.099998
+3,4,27.9
+1,40,39.700001
+2,5,16.1
+3,6,21.200001
+3,7,13.4
+4,8,41.900002
+2,9,52

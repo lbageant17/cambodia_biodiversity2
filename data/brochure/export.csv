@@ -1,0 +1,41 @@
+cfrid,lat,lon,cfr,distance_to_road,distance_to_city_km,city
+1,12.847785,103.36685,Ang Chork,2,,
+2,12.713465,103.42855,Anlous Dong,7,,
+3,13.182701,103.02815,Aren,1,,
+4,12.967658,103.37451,Bakong,n/a,24,Kampong Thom
+5,13.183199,103.27579,Boeng Chheutrav,27,,
+6,13.045165,103.34124,Boeng Daiphtaul,,24,
+7,13.145815,103.1199,Boeng Kamhengsa,n/a,2,Siem Reap
+8,12.480811,104.14249,Boeng Kampeng,17,,
+9,12.456036,104.24107,Boeng Kantout,1,,
+10,12.339437,103.7798,Boeng Krong,3.5,,
+11,12.600104,103.69793,Boeng Prahauch,,46,Kampong Thom
+12,12.557189,103.83994,Boeng Prang,4,,
+13,12.531845,104.08231,Boeng Preah,30,,
+14,12.682003,103.87697,Boeng Rolum,,46,Kampong Thom
+15,12.649499,103.79442,Boeng Romlech,6,,
+16,12.402806,103.80454,Boeng Thea,3,16,Kampong Thom
+17,12.391315,103.72208,Boeng Thmor,3,60,Siem Reap
+18,13.295489,104.37721,Boeng Tramper,13,,
+19,13.22489,104.36575,Boeng Tramses,5,,
+20,13.396586,104.0755,Damnak Kranh,10,30,Pursat
+21,13.549034,103.51598,Entark Komar,,12,Kampong Thom
+22,13.534105,103.55344,Kork Lhong,.5,12,Siem Reap
+23,13.360538,104.07626,Krasaing Rithy,700m,35,Kampong Thom
+24,13.07634,104.35537,Kuch Noub,8,45,Pursat
+25,13.550259,103.45602,Lboeuk Keteyuos,,37,Siem Reap
+26,13.553934,103.46719,Obosmkak,2,20,Kampong Thom
+27,13.233874,104.07924,Otaky,.5,,
+28,13.620031,103.40361,Otamoan,4,57,Siem Reap
+29,13.567118,103.42121,Othom Sranal,1.5,54,Siem Reap
+30,12.803261,104.87608,Preah Neang Korl,1.5,42,Kampong Thom
+31,12.828116,104.657,Pur Sdey,5,41,Siem Reap
+32,12.89663,104.61422,Sla Slak,10,,
+33,12.777232,104.9454,Trapaing Kuy,5,33,Siem Reap
+34,12.798703,104.77268,Trapaing Neang Noy,900m,40,Kampong Thom
+35,12.729748,104.83909,Trapaing Thlok Meanchey,2,72,Kampong Thom
+36,12.874097,104.60919,Trapaing Thlong,13,25,Siem Reap
+37,13.024595,104.48992,Trapaing Veng,4,69,Siem Reap
+38,12.801675,104.8466,Tumnub Kandole,35,95,Siem Reap
+39,12.822843,105.09008,Tumnub Mkak,12,,
+40,12.88967,105.11397,Tumnub Rumdeng,15,,

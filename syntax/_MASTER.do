@@ -12,6 +12,7 @@ global temp "/Users/erb32/Desktop/temp"
 global processed "$umbrella/data/processed"
 global traits "$umbrella/data/traits/"
 global documentation "$umbrella/documentation/"
+global brochure "$umbrella/data/brochure/"
  
 *global processed
 

@@ -27,7 +27,8 @@ use LH_A_pid.dta,clear
 		encode educ,gen(temp)
 		numlabel,add
 		tab temp,miss
-		recode temp (16=0) (1 5/9=1) (10/12 2/4=2) (13/15=3) 
+		*recode temp (16=0) (1 5/9=1) (10/12 2/4=2) (13/15=3) 
+		recode temp (1 = 1) (2 = 10) (3 = 11) (4 = 12) (5 = 2) (6 = 3) (7 = 4) (8 = 5) (9 = 6) (10 = 7) (11 = 8) (12 = 9) (13 = 16) (14 = 16) (15 = 14) (16 = 0)
 		ren educ _temp
 		ren temp educ
 		tab _temp educ
@@ -35,7 +36,7 @@ use LH_A_pid.dta,clear
 		tab educ,miss
 	bys hhid year: egen maxeduc=max(educ)
 
-	collapse (max) hhsize depshare maxeduc,by(hhid year)
+	collapse (max) hhsize depshare maxeduc, by(hhid year)
 	la var hhsize "Household size"
 	la var depshare "Share of household members <=15 or >=65"
 	la var maxeduc "Max educational attainment by any hh member 0=none; 1=primary; 2=sec; 3=postsec"
@@ -227,5 +228,8 @@ merge 1:1 hhid year using land
 	* 4 master only
 	drop _mer
 
+
 save "$processed/livelihood.dta",replace
+
+export delimited using "$processed/livelihood.csv", replace
 
