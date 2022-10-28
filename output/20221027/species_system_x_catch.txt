@@ -1,0 +1,27 @@
+Table X: System X Catch (species counts)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Number of species caught by HH (ccm)	Number of species caught by HH (ccm)	Number of species caught by HH (ccm)	Number of species caught by HH (ccm)
+					
+biom_species	Number of species in system (biom)	0.344***	0.359***	0.380***	0.185**
+		(0.0417)	(0.0430)	(0.0423)	(0.0871)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			0.133***	-0.135
+				(0.0301)	(0.108)
+c.biom_species#c.city_distance					0.00537**
+					(0.00210)
+hhsize	Household size		0.500*	0.492*	0.558**
+			(0.287)	(0.281)	(0.280)
+maxeduc	Max educational attainment by any hh member 0=none; 1=primary; 2=sec; 3=postsec		-0.0280	-0.00820	-0.00197
+			(0.145)	(0.142)	(0.141)
+index1	Household amenities index		-1.842***	-1.563***	-1.554***
+			(0.607)	(0.597)	(0.593)
+index2	Livelihood asset index		-0.493	-0.243	-0.251
+			(0.328)	(0.326)	(0.323)
+Constant	Constant	5.567**	1.207	-4.835	4.668
+		(2.236)	(2.924)	(3.173)	(4.868)
+					
+Observations		413	410	410	410
+R-squared		0.142	0.178	0.216	0.228
+Standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
+Outcome variable is count of species at CFR level. Robust standard errors clustered at cfrid level in parenthese. *** p<0.01, ** p<0.05, * p<0.1					

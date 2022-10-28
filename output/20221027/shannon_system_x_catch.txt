@@ -1,0 +1,27 @@
+Table X: System X Catch (Shannon index)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Shannon index--catch	Shannon index--catch	Shannon index--catch	Shannon index--catch
+					
+h_biom_cfr_level	Shannon index--system CFR level	0.472***	0.444***	0.448***	0.315**
+		(0.0668)	(0.0678)	(0.0668)	(0.146)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			0.00514***	-0.00503
+				(0.00139)	(0.0100)
+c.h_biom_cfr_level#c.city_distance					0.00377
+					(0.00369)
+hhsize	Household size		0.00873	0.00888	0.00983
+			(0.0132)	(0.0130)	(0.0131)
+maxeduc	Max educational attainment by any hh member 0=none; 1=primary; 2=sec; 3=postsec		-0.0123*	-0.0121*	-0.0114*
+			(0.00663)	(0.00653)	(0.00655)
+index1	Household amenities index		-0.0921***	-0.0809***	-0.0791***
+			(0.0280)	(0.0277)	(0.0278)
+index2	Livelihood asset index		0.00796	0.0184	0.0183
+			(0.0151)	(0.0151)	(0.0151)
+Constant	Constant	1.011***	1.060***	0.858***	1.209***
+		(0.185)	(0.206)	(0.210)	(0.403)
+					
+Observations		413	410	410	410
+R-squared		0.108	0.138	0.166	0.169
+Standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
+Outcome variable is shannon index at CFR level. Robust standard errors clustered at cfrid level in parenthese. *** p<0.01, ** p<0.05, * p<0.1					
