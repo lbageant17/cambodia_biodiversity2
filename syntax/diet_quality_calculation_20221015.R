@@ -603,11 +603,15 @@ minbio_sys_biom <- portfolio_nutrient_concentration %>%
            amount = minbio_cfr) %>% 
     select(type, amount)
   
-  # plot
+#------------------------------------------------------------------------------# 
+# PLOT
+#------------------------------------------------------------------------------# 
+  
+# Plot differences in min-bio amounts across portfolios
+  
   #order <- c("cfr", "minbio_hh_catch_all", "minbio_hh_cons_all", "minbio_hh_sold_all")
   sys <- minbio_sys_biom$minbio_sys_biom_all[1]
     
-
   hh_dq %>% select(hhid, contains("all")) %>% 
     pivot_longer(!hhid, names_to = "type", values_to = "amount") %>% 
     select(type, amount) %>% 
@@ -631,4 +635,7 @@ minbio_sys_biom <- portfolio_nutrient_concentration %>%
        caption = "RDA threshold = 50% \nHorizontal line indicates minimum biomass of the system level portfolio that yields the set % of all RDAs, \ncalculated using biomonitoring data")
   
   ggsave(path = "output/", "minbio_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+  
+  
+
   

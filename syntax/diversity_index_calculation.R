@@ -460,6 +460,12 @@ sold_div_data_hh <- c %>%
       left_join(indices_sold_hh, by = "hhid") %>% 
       relocate(hhid)
 
+  ## Export for use in stata
+      write.csv(diversity_indices_cfr_level, file = "data/processed/diversity_indices_cfr_level.csv")
+      write.csv(diversity_indices_hh_level, file = "data/processed/diversity_indices_hh_level.csv")
+
+      
+      
 
 #### ----- Plot some things! ------ ####     
 
@@ -470,6 +476,7 @@ sold_div_data_hh <- c %>%
         ggplot(aes(x = h_catch, y = h_biom)) +
         geom_point(size = 2, alpha = 0.6) +
         geom_smooth(method = "lm", color = "#008B8B") +
+        #geom_smooth( color = "#008B8B") +
         theme_bw() +
         ggtitle("Shannon Index: System diversity X Catch diversity") +
         xlab("Biomonitoring Shannon index (by CFR)") +
@@ -516,6 +523,7 @@ sold_div_data_hh <- c %>%
       ggplot(aes(x = h_catch, y = h_cons)) +
       geom_point(size = 2, alpha = 0.6) +
       geom_smooth(method = "lm", color = "#008B8B") +
+      #geom_smooth( color = "#008B8B") +
       theme_bw() +
       ggtitle("Shannon Index: Catch diversity X Consumption diversity") +
       xlab("Catch Shannon index (by HH)") +
@@ -537,6 +545,7 @@ sold_div_data_hh <- c %>%
       ggplot(aes(x = h_catch, y = h_sold)) +
       geom_point(size = 2, alpha = 0.6) +
       geom_smooth(method = "lm", color = "#008B8B") +
+      #geom_smooth(color = "#008B8B") +
       theme_bw() +
       ggtitle("Shannon Index: Catch diversity X Sold diversity (all households)") +
       xlab("Catch Shannon index (by HH)") +
@@ -557,6 +566,7 @@ sold_div_data_hh <- c %>%
       ggplot(aes(x = h_catch, y = h_sold)) +
       geom_point(size = 2, alpha = 0.6) +
       geom_smooth(method = "lm", color = "#008B8B") +
+      #geom_smooth(color = "#008B8B") +
       theme_bw() +
       ggtitle("Shannon Index: Catch diversity X Sold diversity (households with non-zero fish sales)") +
       xlab("Catch Shannon index (by HH)") +
