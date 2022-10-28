@@ -58,10 +58,9 @@ import delimited using "$processed/cfr_category.csv", clear
 
 gen id = substr(cfrid, 1, 2)
 gen id2 = subinstr(id, ".", "", .)
-drop cfrid
-gen cfrid = id2
+gen cfrid_num = id2
 keep cfrid category 
-merge 1:1 cfrid using "$temp/temp"
+merge 1:1 cfrid cfrid_num using "$temp/temp"
 drop _mer
 
 

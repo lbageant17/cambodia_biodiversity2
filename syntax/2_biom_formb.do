@@ -141,6 +141,7 @@ foreach var of varlist timekey* {
 /*------------------------------------------------------------------------------
 	Save and export 
 ------------------------------------------------------------------------------*/
+la drop cfr
 
 save "$processed/biom_formb.dta", replace
 export delimited using "$processed/biom_formb.csv", replace quote

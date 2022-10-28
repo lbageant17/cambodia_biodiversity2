@@ -25,14 +25,14 @@ replace cfrid=10 if cfr=="Boeng krong" // note alternate spelling (capitalizatio
 replace cfrid=11 if cfr=="Boeng Prahauch"
 replace cfrid=11 if cfr=="B. Prahauch" // note abbreviated spelling
 replace cfrid=12 if cfr=="Boeng Prang"
-replace cfrid=13 if cfr=="Boeng Preah Ponley"
+replace cfrid=13 if cfr=="Boeng Preah Ponley" | cfr == "Boeng Preah"
 replace cfrid=14 if cfr=="Boeng Rolum"
 replace cfrid=14 if cfr=="B. Rolum"  // note abbreviated spelling
 replace cfrid=15 if cfr=="Boeng Romlech"
 replace cfrid=16 if cfr=="Boeng Thea"
 replace cfrid=16 if cfr=="B. Thea" // note abbreviated spelling
 replace cfrid=16 if cfr=="Boeng Thear" // note abbreviated spelling
-replace cfrid=17 if cfr=="Boeng Thmor Koul" | cfr== "Boeng Thmor koul"
+replace cfrid=17 if cfr=="Boeng Thmor Koul" | cfr == "Boeng Thmor koul" | cfr == "Boeng Thmor"
 replace cfrid=17 if cfr=="B. Thmorkoul"  // note abbreviation/alternate spelling
 replace cfrid=18 if cfr=="Boeng Tramper"
 replace cfrid=18 if cfr=="Boeng  Tramper" // note alternate spelling (space)
@@ -89,7 +89,7 @@ replace cfrid=39 if cfr=="Tumnub Mkak"
 replace cfrid=39 if cfr=="T. Mkak" // note abbreviation
 replace cfrid=40 if cfr=="Tumnub Rumdeng" | cfr=="Tumnub rumdeng"
 replace cfrid=40 if cfr=="T. Rumdeng" // note abbreviation
-cap la def cfr 1 "Ang Chork" 2 "Anlous Dong"  3 "Aren" 4 "Bakong" ///
+/*cap la def cfr 1 "Ang Chork" 2 "Anlous Dong"  3 "Aren" 4 "Bakong" ///
 	5 "Boeng Chheutrav" 6 "Boeng Daiphtaul" 7 "Boeng Kamhengsa" 8 "Boeng Kampeng" ///
 	9 "Boeng Kantout" 10 "Boeng Krong" 11 "Boeng Prahauch" 12 "Boeng Prang" ///
 	13 "Boeng Preah Ponley" 14 "Boeng Rolum" 15 "Boeng Romlech" 16 "Boeng Thea" ///
@@ -100,7 +100,7 @@ cap la def cfr 1 "Ang Chork" 2 "Anlous Dong"  3 "Aren" 4 "Bakong" ///
 	34 "Trapaing Neang Noy"  35 "Trapaing Thlok Meanchey" ///
 	36 "Trapaing Thlong" 37 "Trapaing Veng" 38 "Tumnub Kandole" 39 "Tumnub Mkak" 40 "Tumnub Rumdeng" 
 la val cfrid cfr
-numlabel,add
+numlabel,add*/
 
 * generate consistent names for "cfr" variable
 replace cfr = "Ang Chork" if cfrid == 1

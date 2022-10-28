@@ -388,6 +388,8 @@ foreach var of varlist timekey* {
 	replace catchperiod = 19 if year == 2015 & month == 11
 	
 	tab catchperiod, miss
+	
+la drop cfr
 
 	
 save "$processed/ccm_q7.dta", replace

@@ -13,8 +13,12 @@ global processed "$umbrella/data/processed"
 global traits "$umbrella/data/traits/"
 global documentation "$umbrella/documentation/"
 global brochure "$umbrella/data/brochure/"
- 
-*global processed
+global component "$umbrella/data/component/"
+global output "$umbrella/output/"
+
+* date macro for date-specific output
+global date "20221027"
+cap mkdir "$umbrella/output/$date"
 
 /*
 ** Converting all excel files to stata files
@@ -38,3 +42,5 @@ do "$do/2_biom_formb.do" 				// clean/organize biomonitoring data
 	// this file calls "0_code_fix.do" 
 do "$do/3_traits.do" 		
 do "$do/4_species_reconcile.do" // generate master list of species codes
+do "$do/5_livelihood_survey.do" // household characteristics files
+do "$do/6_cfr_characteristics.do" // CFR characteristics (distance to city, cfr type)
