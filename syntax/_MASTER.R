@@ -60,7 +60,8 @@ library(vegan) #install.packages("vegan")
   
   # Create a household-level data frame that contains the number of species caught by each household
   hh_catch <- c %>% 
-    select(hhid, cfrid, scode_ccm) %>% 
+    select(hhid, cfrid, scode_ccm, catch_iweight) %>% 
+    filter(catch_iweight != 0) %>% 
     distinct(hhid, cfrid, scode_ccm) %>%   # nrow(hh_catch) 9687
     group_by(hhid, cfrid) %>% 
     summarise(catch_species = n())
@@ -116,7 +117,6 @@ library(vegan) #install.packages("vegan")
   ## Combine CFR-level data frames
   cfr_biodiv <- full_join(cfr_biom, hh_catch, by = "cfrid") 
   cfr_biodiv <- full_join(cfr_biodiv, hh_soldcons, by = c("cfrid", "hhid"))
-  
   
 
   #### ----- Species level data files ------ #### 
@@ -204,7 +204,7 @@ library(vegan) #install.packages("vegan")
 #------------------------------------------------------------------------------# 
 
 source("syntax/diversity_index_calculation.R")
-source("syntax/biodiv_analysis_20221011.R")
+source("syntax/biodiv_analysis_20221026.R")
 source("syntax/diet_quality_calculation_20221015.R")
   
   

@@ -42,7 +42,7 @@ isid householdid dateinter speciesgroup
 	* how do use breakdowns by weight relate to the total weight indicated
 	egen temp = rowtotal(weight_soldfresh weight_consumedfresh weight_process weight_lost weight_other)
 	bys hhid month year: egen breakdown_weight = total(temp)
-	br hhcatch_weight breakdown_weight
+	*br hhcatch_weight breakdown_weight
 	count if hhcatch_weight != breakdown_weight // 3131
 	count if breakdown_weight > hhcatch_weight  // 1720 cases where breakdowns sum to more than total catch
 	gen weight_discrepancy = 1 if hhcatch_weight != breakdown_weight
@@ -59,7 +59,7 @@ isid householdid dateinter speciesgroup
 /* This file contains species names that a given household caught and the 
 corresponding species group code. 
 
-1. Parce speciesgroup to get a numeric code. 
+1. Parse speciesgroup to get a numeric code. 
 2. Update codes per "species code and group reconciliation.xlsx"
 3. Identify cases there are of multiple species per code
 4. Merge with Q7 data 
@@ -69,19 +69,19 @@ corresponding species group code.
 use "$stata_raw/Catch & Consumption_Q7sub.dta", clear
 sort householdid dateinter speciesgroup
 
-* Parse speciesgroup to get a numeric code
+* 1. Parse speciesgroup to get a numeric code
 	replace speciesgroup = substr(speciesgroup, -2, 2)
 	destring speciesgroup, replace
 	destring speciescode, replace
 
-* Update codes per "species code and group reconciliation.xlsx"
+* 2. Update codes per "species code and group reconciliation.xlsx"
 do "$do/0_code_fix.do"
 	// 0_code_fix.do creates several duplicates in terms of all variables that need to be eliminated prior to merging with q7
 	duplicates tag, gen(tag)
 	duplicates drop // 3 observations deleted
 	drop tag
 	
-* Identify cases where there are multiple species per code
+* 3. Identify cases where there are multiple species per code
 	
 	* tidy
 	ren speciesgroup group
@@ -151,6 +151,37 @@ do "$do/0_code_fix.do"
 	drop _mer
 
 	destring *,replace
+	
+	* Assess how many cases there are with multiple species per species group. 
+	preserve
+	keep hhid year month group duplicate
+	duplicates drop
+	count
+	tab duplicate
+
+	/*
+
+	  Indicates |
+	cases where |
+	two species |
+	   within a |
+	 group were |
+	  caught by |
+			 hh |      Freq.     Percent        Cum.
+	------------+-----------------------------------
+			  0 |     20,131       86.29       86.29 <-- no duplicate
+			  1 |      2,818       12.08       98.37
+			  2 |        298        1.28       99.65
+			  3 |         58        0.25       99.90
+			  4 |         17        0.07       99.97
+			  5 |          3        0.01       99.98
+			  6 |          2        0.01       99.99
+			  7 |          1        0.00      100.00
+			 10 |          1        0.00      100.00
+	------------+-----------------------------------
+		  Total |     23,329      100.00
+	*/
+	restore
 
 
 * Checking understanding of Q7 data
@@ -178,9 +209,9 @@ do "$do/0_code_fix.do"
 			// a large amount. I am unsure of the implications of this.
 		
 
-* Divide each weight by the number of duplicates. 
+* 5. Divide each catch weight by the number of duplicates. 
 	* NOTE: duplicates variables indicate the number of ADDITIONAL DUPLICATE observations, 
-		* therefore duplicate = 1 indicates that there are two rows of data. 
+		* therefore duplicate = 1 indicates that there are two rows of data, so we need to add 1 to the duplicate value
 	gen duplicate_divider = duplicate + 1
 	gen catch_iweight = weight_indicate/duplicate_divider
 	la var catch_iweight "Reported catch weight by species (imputed by dividing equally)"
@@ -205,17 +236,36 @@ do "$do/0_code_fix.do"
 	sum catch_iweight rowtotal // only rounding errors
 	drop rowtotal
 	
-	* NOTE: There are some pretty big outliers (e.g. hhid = 55 in January 2015; hhid = 50 in January 2015)
-	* 		that probably need to be dealt with.
-	list hhid year month q5_weight_bygroup hhcatch_weight catch_iweight if catch_iweight > 100, clean noobs
-		/*
-			hhid   year   month   q5_wei~p   hhcatc~t   catch_~t  
-		  50   2015       1        300      314.5        300  
-		  55   2015       1        750        850        750  
-		 427   2015      11        120        120        120  
-		 453   2014       3   124.9904        382   124.9904  
-		*/
-
+	* NOTE: There are some pretty big outliers (e.g. hhid = 55 in January 2015; hhid = 50 in January 2015) that need addressing.
+		preserve
+			collapse (sum) catch_iweight, by(hhid year month)
+			sum catch_iweight, d
+				// p99 = 73kg
+				count if catch_iweight >r(p99)
+				qui: sum catch_iweight,d
+				* hist catch_iweight if catch_iweight >r(p99), freq width(10)
+				* check high values relative to other points in time by household
+				* hhid 50 and 55 have the extreme outliers. 
+		restore
+		
+		* calculating the mean of catch for hhid 50 and 55 and replacing outlier values with that. 
+		preserve
+			keep if hhid == 50 | hhid == 55
+			drop if catch_iweight > 299
+			collapse (mean) catch_iweight, by(hhid)
+			list
+			sort hhid
+			* use local macros to capture mean for replacement
+			local m50 = catch_iweight in 1
+			local m55 = catch_iweight in 2
+		restore
+		
+		replace catch_iweight = `m50' if hhid == 50 & catch_iweight > 299
+		replace catch_iweight = `m55' if hhid == 55 & catch_iweight >299
+		* Re-calculate the proportion sold/consumed/etc. In both above cases entire catch was sold (it was also same time period and species...)
+		replace soldfresh_iweight = catch_iweight if hhid == 55 & year == 2015 & month == 1 & code == 53
+		replace soldfresh_iweight = catch_iweight if hhid == 50 & year == 2015 & month == 1 & code == 53
+			
 
 /*------------------------------------------------------------------------------
 	Organize merged file
@@ -389,8 +439,7 @@ foreach var of varlist timekey* {
 	
 	tab catchperiod, miss
 	
-la drop cfr
-
+cap la drop cfr
 	
 save "$processed/ccm_q7.dta", replace
 export delimited using "$processed/ccm_q7.csv", replace quote

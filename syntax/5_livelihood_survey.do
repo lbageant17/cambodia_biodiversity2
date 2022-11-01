@@ -39,7 +39,7 @@ use LH_A_pid.dta,clear
 	collapse (max) hhsize depshare maxeduc, by(hhid year)
 	la var hhsize "Household size"
 	la var depshare "Share of household members <=15 or >=65"
-	la var maxeduc "Max educational attainment by any hh member 0=none; 1=primary; 2=sec; 3=postsec"
+	la var maxeduc "Max educational attainment by any hh member (years)"
 	destring hhid year,replace
 	save "$temp/composition",replace
 

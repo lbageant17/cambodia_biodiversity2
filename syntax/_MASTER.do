@@ -17,7 +17,7 @@ global component "$umbrella/data/component/"
 global output "$umbrella/output/"
 
 * date macro for date-specific output
-global date "20221027"
+global date "20221101"
 cap mkdir "$umbrella/output/$date"
 
 /*
@@ -41,6 +41,10 @@ do "$do/2_biom_formb.do" 				// clean/organize biomonitoring data
 	// this file calls "0_cfrid_string_to_num.do"
 	// this file calls "0_code_fix.do" 
 do "$do/3_traits.do" 		
-do "$do/4_species_reconcile.do" // generate master list of species codes
-do "$do/5_livelihood_survey.do" // household characteristics files
+do "$do/4_species_reconcile.do" // Generate master list of species codes
+do "$do/5_livelihood_survey.do" // Generate household characteristics files
 do "$do/6_cfr_characteristics.do" // CFR characteristics (distance to city, cfr type)
+do "$do/7_asset_index.do" 	// Generate asset indices
+do "$do/8_combine.do"		// combine all household-level files into a single data file (including some generated in R)
+do "$do/9_sumstats.do"		// Generate summary statistics table
+do "$do/10_hh_regressions_20221031.do" 

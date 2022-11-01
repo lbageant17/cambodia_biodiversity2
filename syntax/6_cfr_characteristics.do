@@ -9,12 +9,7 @@
 ** 2. CFR category
 
 
-/*
-DISTANCE
-The Brochure data has incomplete distances to towns/cities. This file merges the
-Brochure file with the GPS coordinates. 
-Four cities: Kampong Thom, Pursat, Siem Reap and Battambang
-*/
+/*--------------- Distance ---------------------------------------------------*/
 
 import excel "$brochure/Brochure_20221026.xlsx", sheet("CFR and Region") cellrange(A1:F41) firstrow clear
 ren CFR cfr
@@ -49,18 +44,20 @@ tostring cfrid, replace
 
 save "$temp/temp", replace
 
-/*
-CATEGORY */
+/*--------------- Category ---------------------------------------------------*/
+
 
 import delimited using "$processed/cfr_category.csv", clear
 
 * CFR is a string. Need to parse CFR ID from string. 
 
-gen id = substr(cfrid, 1, 2)
+/*gen id = substr(cfrid, 1, 2)
 gen id2 = subinstr(id, ".", "", .)
-gen cfrid_num = id2
+gen cfrid_num = id2*/
 keep cfrid category 
-merge 1:1 cfrid cfrid_num using "$temp/temp"
+tostring cfrid, replace
+merge 1:1 cfrid using "$temp/temp"
+destring cfrid, replace
 drop _mer
 
 

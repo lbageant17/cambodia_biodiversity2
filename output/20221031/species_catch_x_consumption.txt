@@ -1,0 +1,36 @@
+Table X: Catch X Consumption (species counts)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Number of species consumed by HH (ccm)	Number of species consumed by HH (ccm)	Number of species consumed by HH (ccm)	Number of species consumed by HH (ccm)	Number of species consumed by HH (ccm)
+						
+catch_species	Number of species caught by HH (ccm)	0.899***	0.897***	0.897***	0.895***	0.893***
+		(0.00995)	(0.0115)	(0.0117)	(0.0117)	(0.0280)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				0.00641	0.0417
+					(0.00675)	(0.0262)
+c.catch_species#c.city_distance						0.000298
+						(0.000627)
+effort_persondays	Person-days		0.00166	0.000494	0.000445	-0.000552
+			(0.00412)	(0.00419)	(0.00419)	(0.00449)
+hhsize	Household size			0.0419	0.0439	0.0335
+				(0.0769)	(0.0769)	(0.0774)
+depshare	Share of household members <=15 or >=65			2.488	2.509	2.205
+				(1.730)	(1.730)	(1.740)
+maxeduc	Max educational attainment by any hh member 0=none; 1=primary; 2=sec; 3=postsec			-0.0467	-0.0469	-0.0565*
+				(0.0310)	(0.0311)	(0.0319)
+index1	Household amenities index			-0.213	-0.201	-0.190
+				(0.133)	(0.134)	(0.135)
+index2	Livelihood asset index			-0.183**	-0.170**	-0.163**
+				(0.0712)	(0.0725)	(0.0728)
+o.city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap = o,					-
+						
+biom_species	Number of species in system (biom)					0.0190
+						(0.0209)
+c.biom_species#c.city_distance						-0.000890*
+						(0.000490)
+Constant	Constant	0.776***	0.728**	0.348	0.133	-0.448
+		(0.263)	(0.289)	(0.735)	(0.769)	(1.360)
+						
+Observations		410	410	410	410	410
+R-squared		0.952	0.952	0.954	0.954	0.955
+Standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						

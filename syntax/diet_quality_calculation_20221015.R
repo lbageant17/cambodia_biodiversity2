@@ -590,6 +590,10 @@ minbio_sys_biom <- portfolio_nutrient_concentration %>%
     left_join(rda_hh_sold, by = "hhid") %>% 
     left_join(minbio_hh_sold, by = "hhid")
   
+    ## Export for use in stata
+    write.csv(hh_dq, file = "data/processed/diet_quality_hh_level.csv")
+    
+  
 # combine system level files
   sys_dq <- minbio_sys_biom %>% 
     cbind(minbio_sys_ccm)

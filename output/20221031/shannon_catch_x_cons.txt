@@ -1,0 +1,26 @@
+Table X: Catch X Consumption (Shannon index)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Shannon index--consumption	Shannon index--consumption	Shannon index--consumption	Shannon index--consumption
+					
+h_catch	Shannon index--catch	0.878***	0.881***	0.885***	0.844***
+		(0.0174)	(0.0178)	(0.0180)	(0.0397)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			-0.000694	-0.00347
+				(0.000538)	(0.00244)
+c.h_catch#c.city_distance					0.00118
+					(0.00101)
+hhsize	Household size		0.00500	0.00491	0.00535
+			(0.00496)	(0.00496)	(0.00497)
+maxeduc	Max educational attainment by any hh member 0=none; 1=primary; 2=sec; 3=postsec		0.000738	0.000791	0.000672
+			(0.00248)	(0.00248)	(0.00248)
+index1	Household amenities index		0.00536	0.00423	0.00351
+			(0.0107)	(0.0107)	(0.0107)
+index2	Livelihood asset index		-0.0145**	-0.0160***	-0.0161***
+			(0.00563)	(0.00575)	(0.00575)
+Constant	Constant	0.316***	0.283***	0.300***	0.393***
+		(0.0414)	(0.0518)	(0.0534)	(0.0961)
+					
+Observations		410	410	410	410
+R-squared		0.862	0.864	0.865	0.865
+Standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
