@@ -21,7 +21,9 @@ library(tidyverse)
 library(viridis) #install.packages("viridis")
 library (hrbrthemes) #install.packages("hrbrthemes")
 library(vegan) #install.packages("vegan")
-
+library(readxl)
+library(multcompView) #install.packages("multcompView")
+library(rstatix)
 #------------------------------------------------------------------------------# 
 #####  Data prep ####
 #------------------------------------------------------------------------------# 
@@ -203,9 +205,14 @@ library(vegan) #install.packages("vegan")
 ##### FILES ####
 #------------------------------------------------------------------------------# 
 
-source("syntax/diversity_index_calculation.R")
-source("syntax/biodiv_analysis_20221026.R")
-source("syntax/diet_quality_calculation_20221015.R")
+source("syntax/diet_quality_calculation_20221104.R")
+source("syntax/species_count_analysis_20221104.R")
+source("syntax/diversity_index_calculation_20221104.R")
+source("syntax/commonness_analysis_20221104.R")
+source("syntax/body_size_calculation_20221104.R")
+source("syntax/plot_betas.R")
+  
+  
   
   
   

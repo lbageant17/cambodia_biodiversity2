@@ -15,10 +15,14 @@ global documentation "$umbrella/documentation/"
 global brochure "$umbrella/data/brochure/"
 global component "$umbrella/data/component/"
 global output "$umbrella/output/"
+global data "$umbrella/data/"
 
 * date macro for date-specific output
-global date "20221101"
+global date "20221104"
 cap mkdir "$umbrella/output/$date"
+cap mkdir "$umbrella/output/$date/figures"
+cap mkdir "$umbrella/output/$date/tables"
+
 
 /*
 ** Converting all excel files to stata files

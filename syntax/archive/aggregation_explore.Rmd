@@ -1,0 +1,620 @@
+
+---
+title: "Cambodia Biodiversity Paper: Notes on approaches to biodiversity data structure--July 18, 2022"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+mainfont: Arial
+
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "~/github/cambodia_biodiversity/output") })
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+```{r packages, echo = FALSE, include = FALSE}
+
+library(lubridate)
+library(ggalluvial) # install.packages("ggalluvial")
+library(alluvial) #install.packages("alluvial")
+library(tidyverse)
+library(viridis) #install.packages("viridis")
+library (hrbrthemes) #install.packages("hrbrthemes")
+projectFolder  <- "~/github/cambodia_biodiversity"
+data <- file.path(projectFolder, "data/processed/")
+output <-file.path(projectFolder, "output/")
+
+```
+
+
+```{r read_files}
+# bring in csv files generated in stata
+
+c <- read.csv(file.path(data, "ccm_q7.csv"), na.strings = c("", "NA")) 
+c <- as_tibble(c)
+
+b <- read.csv(file.path(data, "biom_formb.csv"), na.strings = c("", "NA"))
+b <- as_tibble(b)
+
+cfrtype <- read.csv(file.path(data, "cfr_category.csv"), na.strings = c("", "NA"))
+cfrtype <- as_tibble(cfrtype)
+
+```
+
+**Conceptual notes:**
+
+The biodiversity portfolio ($B$) represents the portfolio of fish that are available in the system that fishers interact with. We don't have clear system boundaries or a true representation of $B$, so this file explores several proxies for $B$ that could be considered. **Each of the aoproaches below makes an assumption about the system boundaries.** Ideally we would have an observed $B$ with clearly defined system boundaries and that contains the full catch portfolio of fishers ($C$), which we directly observe in our sample. You will see below that this is not the case. 
+
+The consumption portfolio ($M$) represents the subset of $C$ that fishing households consume. We directly observe $M$ in our data. Due to the strucutre of the data collection, $M$ should be fully contained by $C$ (though this hasn't been verified in the data just yet).
+
+The notes below demonstrate the issues associated with our observed $B$, which I am calling $\hat{B}$. I show that the species reported in $C$ are not strictly contained in $\hat{B}$ at any level, and explore various versions of $\hat{B}$ and the assumptions associated with each.
+
+
+
+**Available data:**
+
+1. Biomonitoring data was collected at 3-month intervals from November 2012 until November 2015 for a total of 13 time points. Biomonitoring data are repsented in this document by $\hat{B}$.
+
+2. Household catch data was collected at approximately 2-month intervals from November 2012 until November 2015 with a total of 19 time points.  The intervals are disrupted in mid-2013, and throughout the period they only partially align with $\hat{B}$ time points. Catch data are observed and therefore represented by $C$.
+
+3. Household consumption data was collected at the same intervals as the catch data. Consumption is recorded by species caught rather than a standard consumption module. Consumption data are observed and therefore represented by $M$.
+
+Throughout this document $c$ indexes the CFR associated with the household and $i$ indexes the household itself. The time index, $t$, represents the observed time points for $C$ and $M$, which are observed at the same times, and $z$ is the time index for $\hat{B}$ (to distinguish from time points $t$ which do not align with $z$).
+
+Here is a schematic of the data structure for reference. 
+
+![](images/data_structure1.png)
+
+Because the time points for $C$ and ($\hat{B}$) do not line up, we will have to make **assumptions about the relationship between $B$ and $C$ over time.** Even if they were aligned in time, some assumptions would be required, as it is not clear that using a contemporaneous proxy for $B$ is the correct approach, given seasonal dynamics and geographical dispersion of fish beyond the area where the biomonitoring ($\hat{B}$) takes place.
+
+In sum, all of the approaches below vary the assumptions related to **system boundaries** and the **relationship between $B$ and $C$** over time
+\
+\
+
+##### **APPROACH 1: Use only contemporaneous observations of $\hat{B}$ and $C$**
+\
+\
+This approach assumes that the true $B$ is best represented by $\hat{B}$ at the same point in time as $C$. It assumes that the system boundary is related to the CFR itself: e.g. each household is operating within a system that is somehow associated with the CFR in their community. This assumption means there are 40 different systems within the study area that could have different values of $B$. 
+
+No values of $\hat{B}$ are aggregated across time under this scenario. The "timekey3" variable flags only cases where the year-month align perfectly between $\hat{B}$ and ($C$) and we merge the data using this timekey. This is the most conservative and involves dropping roughly half of catch observations where there is not contemporaneous $\hat{B}$.
+
+This can also be expressed as:    $\hat{B}_{ct}^0 = \hat{B}_{cz}$, where $t = z$.
+
+When we restrict to only cases where $t = z$, how often do fishers catch species that are not found in biomonitoring? Catch $C$ is conceptually a subset of $B$, but in practice may not be fully contained in $\hat{B}$, the observed biomonitoring data is limited in origin to the CFR itself. 
+
+In all subsequent tables, "Matched (N)" and "Unmatched (N)" indicate the number of cases where a household catches a species that is/isn't represented in $\hat{B}$, as defined by each approach. The numbers are all greater than the total number of households because each household has at least one catch-species combination in each time point (assuming they fished in that time point).
+
+
+```{r approach1, message = FALSE}
+
+# get a list of species caught by fishers by time point in contemporaneous scenario
+
+fisher_catch <- c %>% 
+  mutate(scode = scode_ccm) %>% 
+  select(cfrid, scode, timekey3) %>%
+  drop_na(timekey3) %>% # there are many missing values in timekey3 because it is the most restrictive timekey
+  mutate(scode = replace_na(scode, 0)) %>% 
+  distinct(cfrid, scode, timekey3)
+
+nrow_fisher_catch <- nrow(fisher_catch)
+
+# get a list of species catught during biomonitoring
+biom_catch <- b %>% 
+  mutate(scode = scode_biom) %>% 
+  select(cfrid, scode, timekey3) %>% 
+  drop_na(timekey3) %>% # there are many missing values in timekey3 because it is the most restrictive timekey
+  mutate(scode = replace_na(scode, 0)) %>% 
+  distinct(cfrid, scode, timekey3)
+
+nrow_biom_catch <- nrow(biom_catch)
+
+# Join the two together to understand where they overlap
+
+# how many CFR-species-time matches are there?
+matched = inner_join(fisher_catch, biom_catch, by = c("cfrid", "scode", "timekey3"))
+
+  # Get number of species per CFR-timepoint that are unmatched
+  matched_count <- matched %>% 
+    group_by(cfrid, timekey3) %>% 
+    summarize(matched_count = n())
+
+# how many CFR-species-time observations are unmatched?
+unmatched = anti_join(fisher_catch, biom_catch, by = c("cfrid", "scode", "timekey3")) 
+nrow_unmatched <- nrow(unmatched)
+
+  # Get number of species per CFR-timepoint that are unmatched
+  unmatched_count <- unmatched %>% 
+    group_by(cfrid, timekey3) %>% 
+    summarize(unmatched_count = n())
+  
+# Combined matched and unmatched for comparison
+match_table_all <- left_join(matched_count, unmatched_count, by = c("cfrid", "timekey3")) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) 
+
+match_table_cfr <- match_table_all %>% 
+  group_by(cfrid) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count)))
+
+match_table_time <- match_table_all %>% 
+  group_by(timekey3) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) %>% 
+  mutate(percent_unmatched = round(percent_unmatched, 0)) %>% 
+  knitr:: kable(col.names = c('Time Period', 'Unmatched (N)', 'Matched (N)', 'Unmatched (%)'),
+                caption = "Table 1: Contemporaneous (approach 1)", align = ("l"))
+
+match_table_time
+```
+
+
+As shown in Table 1, there are many many cases where species are caught by fishers that were not found in the contemporaneous biomonitoring data $\hat{B}_{ct}^0$ (between 57-73% of all cases). One way of thinking about this is that $C$ is a "sample" of the biodiversity porfolio $B$, albeit not a random one, taken many more times and in a different set of locations than $\hat{B}$ data collection in a given period. The fish catch data is the list of species from the prior week's catch by approximately 10 households per CFR, so is not surprising that these fishers a wider range of species. Furthermore, the fishers are fishing beyond the borders of the CFR, therefore the spatial area in which they "sample" is more diverse. (In fact, I think fishing within the CFR is normally prohibited, so they are explicitly NOT fishing in the CFR, though the degree to which other water bodies are connected to the CFR varies widely by CFR type, location, and season). 
+\
+\
+
+##### **APPROACH 2: Time-bound sum of lagged observation of $B$**
+\
+\
+This approach maintains the system boundary assumption from Approach 1, that the system boundary is related to the CFR itself and there are 40 different systems with different $B$s. Approach 2 makes a different assumption about the relationship over time between $\hat{B}$ and $C$.
+
+We can imagine that the species richness of the fishery beyond the CFR is influenced by species richness in the CFR over a longer period of time: For example, some fish species found in a CFR at a given time point $t$ may migrate and be caught by fishers elsewhere at a later time point $t+x$, but no longer show up in CFR monitoring at $t+x$. In this case, contemporaneous observation does not accurately depict the biodiversity in the system. 
+
+To address this scenario, potential proxies for $B$ could involve aggregating values of $\hat{B}$ over a given number of time periods, $x$, with $x$ ranging from 2 to 13. For a given time period t, the value of $\hat{B}$ would be the sum of $\hat{B}$ over $x$ time periods preceding $t$. The time periods would then be "rolling," and $x$ initial observations of $C$ would be dropped depending on the value of $x$. Thus, there is a tradeoff to aggregation if we impose strict temporal limits, requiring that values of $\hat{B}$ applied to values of $C$ must be aggregated across periods *during or prior* to t, but not periods *after*). The more time we aggregate across, the more early catch data we lose. We also potentially lose variation in $\hat{B}$. 
+
+Example, where x = 2: $\hat{B}_{ct}^1 = \hat{B}_{cz} + \hat{B}_{c,z-1}$
+
+Here is an image in case my notation is a failure.
+
+![](images/data_structure2.png)
+
+
+Table 2 shows the percentage of species found in household catch that is not found in $hat{B}_{ct}^1$ as defined above.
+The same data broken down by CFR shows similar percentages. Though lower than the contemporaneous scenario, they are still quite high, ranging from 29-52 percent.
+
+
+
+```{r approach2, message = FALSE}
+
+# create separate objects for each biodiversity portfolio time period where t = 2
+    i3 <- b %>% 
+      filter((month == 11 & year == 2012) | (month == 2 & year == 2013)) %>% 
+      mutate(catchperiod = 3) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i4 <- b %>% 
+      filter((month == 2 & year == 2013) | (month == 5 & year == 2013)) %>% 
+      mutate(catchperiod = 4) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i5 <- b %>% 
+      filter((month == 5 & year == 2013) | (month == 8 & year == 2013)) %>% 
+      mutate(catchperiod = 5) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i6 <- b %>%   # same as i5
+      filter((month == 5 & year == 2013) | (month == 8 & year == 2013)) %>% 
+      mutate(catchperiod = 6) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i7 <- b %>% 
+      filter((month == 8 & year == 2013) | (month == 11 & year == 2013)) %>% 
+      mutate(catchperiod = 7) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i8 <- b %>%  # same as i7
+      filter((month == 8 & year == 2013) | (month == 11 & year == 2013)) %>% 
+      mutate(catchperiod = 8) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i9 <- b %>% 
+      filter((month == 11 & year == 2013) | (month == 2 & year == 2014)) %>% 
+      mutate(catchperiod = 9) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i10 <- b %>% 
+      filter((month == 2 & year == 2014) | (month == 5 & year == 2014)) %>% 
+      mutate(catchperiod = 10) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i11 <- b %>% # same as i10
+      filter((month == 2 & year == 2014) | (month == 5 & year == 2014)) %>% 
+      mutate(catchperiod = 11) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+               
+     i12 <- b %>% 
+      filter((month == 5 & year == 2014) | (month == 8 & year == 2014)) %>% 
+      mutate(catchperiod = 12) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+     
+     i13 <- b %>% 
+      filter((month == 8 & year == 2014) | (month == 11 & year == 2014)) %>% 
+      mutate(catchperiod = 13) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i14 <- b %>% # same as i13
+      filter((month == 8 & year == 2014) | (month == 11 & year == 2014)) %>% 
+      mutate(catchperiod = 14) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+     
+    i15 <- b %>% 
+      filter((month == 11 & year == 2014) | (month == 2 & year == 2015)) %>% 
+      mutate(catchperiod = 15) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+     
+    i16 <- b %>% 
+      filter((month == 2 & year == 2015) | (month == 5 & year == 2015)) %>% 
+      mutate(catchperiod = 16) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i17 <- b %>% # same as 16
+      filter((month == 2 & year == 2015) | (month == 5 & year == 2015)) %>% 
+      mutate(catchperiod = 17) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+     
+    i18 <- b %>% 
+      filter((month == 5 & year == 2015) | (month == 8 & year == 2015)) %>% 
+      mutate(catchperiod = 18) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+    i19 <- b %>% 
+      filter((month == 8 & year == 2015) | (month == 11 & year == 2015)) %>% 
+      mutate(catchperiod = 19) %>% 
+      distinct(cfrid, year, month, scode_biom, catchperiod) 
+    
+# Combine all of the above objects into a single data frame
+bhat_ct <- bind_rows(i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19) %>% 
+  mutate(scode = scode_biom)
+
+# Get a list of species caught by fishers by timepoint "catchperiod"
+fc <- c %>% 
+  mutate(scode = scode_ccm) %>% 
+  select(cfrid, scode, catchperiod) %>%
+  drop_na(catchperiod) %>% # drop any missing values
+  mutate(scode = replace_na(scode, 0)) %>% 
+  distinct(cfrid, scode, catchperiod)
+
+# Join the fisher_catch and bhat_ct together to understand where they overlap
+# How many CFR-species-catchperiod matches are there?
+matched <- inner_join(fc, bhat_ct, by = c("cfrid", "scode", "catchperiod"))
+
+  # Get number of species per CFR-timepoint that are matched
+  matched_count <- matched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(matched_count = n())
+
+# How many CFR-species-catchperiod mismatches are there?
+unmatched <- anti_join(fc, bhat_ct, by = c("cfrid", "scode", "catchperiod"))
+
+  # Get number of species per CFR-timepoint that are unmatched
+  unmatched_count <- unmatched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(unmatched_count = n())
+
+# Make comparison tables
+
+match_table_all2 <- left_join(matched_count, unmatched_count, by = c("cfrid", "catchperiod")) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) 
+
+match_table_cfr2 <-match_table_all2 %>% 
+  group_by(cfrid) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count)))
+
+match_table_time2 <- match_table_all2 %>% 
+  group_by(catchperiod) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) %>% 
+  mutate(percent_unmatched = round(percent_unmatched, 0)) %>% 
+  knitr:: kable(col.names = c('Time Period', 'Unmatched (N)', 'Matched (N)', 'Unmatched (%)'),
+                caption = "Time-bound sum of Bhat (approach 2)",
+                align = ("l"))
+
+match_table_time2
+```
+
+\
+\
+
+##### **APPROACH 3: Apply the sum of total species richness across time by CFR to each catch time point.**
+\
+\
+Another option is to eliminate the strict temporal limits described above and allow $B$ to include species identified in time points *after* we observe $C$. One version of this is to apply the total species richness across the entire study period for a given CFR to each catch time point, thus maintaining the assumption that the CFR is related to the system boundary. This reduces the temporal variation in $\hat{B}$, but there is still variation across CFRs. This assumption also obscures variation in $B$ over time that might be relevant, such as seasonal variation and time trends.
+
+This would be expressed as: $\hat{B}_{c}^2 = \sum_{t=1}^{13}  \hat{B}_{ct}$
+
+Table 3 demonstrates a much lower percentage unmatched relative to the previous approaches, ranging from 11-25 percent of cases.
+
+```{r approach3, message = FALSE}
+
+# Generate a CFR-level file that contains all of the species found in a given CFR over time
+
+cfrspecies <- b %>% 
+  mutate(scode = scode_biom) %>% 
+  select(cfrid, scode) %>% 
+  distinct(cfrid, scode)
+
+# Join the fc file (fisher catch by catchperiod, generated above) and CFR-level species data together to understand where they overlap
+matched <- inner_join(fc, cfrspecies, by = c("cfrid", "scode"))
+
+  # Get number of species per CFR-timepoint that are matched
+  matched_count <- matched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(matched_count = n())
+
+unmatched <- anti_join(fc, cfrspecies, by = c("cfrid", "scode"))
+
+  # Get number of species per CFR-timepoint that are unmatched
+  unmatched_count <- unmatched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(unmatched_count = n())
+  
+# Make comparison tables
+
+match_table_all3 <- left_join(matched_count, unmatched_count, by = c("cfrid", "catchperiod")) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) 
+
+match_table_cfr3 <-match_table_all3 %>% 
+  group_by(cfrid) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count)))
+
+match_table_time3 <- match_table_all3 %>% 
+  group_by(catchperiod) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) %>% 
+  mutate(percent_unmatched = round(percent_unmatched, 0)) %>% 
+  knitr:: kable(col.names = c('Time Period', 'Unmatched (N)', 'Matched (N)', 'Unmatched (%)'),
+                caption = "Sum of Bhat across all time periods, by CFR (approach 3)",
+                align = ("l"))
+
+match_table_time3
+```
+
+
+\
+\
+
+##### **APPROACH 4: Apply the sum of total species richness across time and CFR to each catch time point**
+\
+\
+An alternate approach would be to apply the total species richness across the entire study period and across all CFRs to each catch time point. This is a more permissive version of the above approach that eliminates the assumption that the CFR is the relevant system boundary. It treats the system as singular and each of the households faces the same set of $B$ from which to draw their catch. 
+
+The practical value here is that it should generate the smallest number of unmatched cases. Unmatched cases, under this approach, represent species that were caught by fishers but *never* appeared in *any* biomonitoring in *any* CFR at *any* time period. 
+
+
+
+
+```{r approach4, message = FALSE}
+
+# Generate a file that lists all species caught in biomonitoring activities, ever. 
+allspecies <- b %>% 
+  mutate(scode = scode_biom) %>% 
+  select(scode) %>% 
+  distinct(scode)
+
+# nrow(allspecies) # 132
+
+# Join the fish catch file with the species codes to see where they overlap
+matched <- inner_join(allspecies, fc, by = "scode")
+
+  # Get number of species per CFR-timepoint that are matched
+  matched_count <- matched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(matched_count = n())
+  
+unmatched <- anti_join(fc, allspecies, c("scode"))
+extraspecies <- unmatched ## see side investigation below
+
+
+  # Get number of species per CFR-timepoint that are unmatched
+  unmatched_count <- unmatched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(unmatched_count = n())
+
+# Make comparison tables
+
+match_table_all4 <- left_join(matched_count, unmatched_count, by = c("cfrid", "catchperiod")) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) 
+
+match_table_cfr4 <-match_table_all4 %>% 
+  group_by(cfrid) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count)))
+
+match_table_time4 <- match_table_all4 %>% 
+  group_by(catchperiod) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) %>% 
+  mutate(percent_unmatched = round(percent_unmatched, 0)) %>% 
+  knitr:: kable(col.names = c('Time Period', 'Unmatched (N)', 'Matched (N)', 'Unmatched (%)'),
+                caption = "Sum of Bhat across all time periods and CFRs (approach 4)",
+                align = ("l"))  
+
+match_table_time4
+```
+
+
+Table 4 illustrates that this approach successfully eliminates mismatches. However, if we want to make the case that households in more diverse systems are (or are not) accessing more diverse nutrients, the intuitively we want individual households to be facing some range of system diversity over space and/or time, rather than holding diversity constant for all households across space and time. Useful variation in diversity should be across space (e.g. in relation to CFRs) or time (seasonally or ???). 
+\
+\
+
+##### **Side investigation:** Which fish species are represented in $C$ but not in $\hat{B}$?
+
+```{r side1, message = FALSE}
+
+extraspecies <- unmatched %>% 
+  distinct(scode) %>%   # get a list of unique species codes that are unmatched
+  mutate(scode_ccm = scode) %>%  # rename to match catch data
+  left_join(c, by = "scode_ccm") %>% 
+  select(scode, sname_ccm) %>% 
+  group_by(scode, sname_ccm) %>% 
+  summarise(occurrences = n()) %>% 
+  knitr::kable(col.names = c('Species Code', 'Species Name"', 'Occurrences'),
+                caption = "Species that never appear in Bhat",
+                align = ("l"))
+  
+extraspecies
+```
+
+\
+\
+
+##### **APPROACH 5: Aggregate $\hat{B}$ by season (month)**
+\
+\
+In order to maintain spatial and temporal variation, but increase the level of aggregation to something higher than Approach 2 and but lower than Approach 4, I will try aggregating by month and CFR. I think the relevant seasons are driven by rainfall patterns, which may vary a bit, but month is a useful rough proxy for the time being. We have 4 observations per year and we aggregate across years, then merge them with months that appear in the catch data. This leaves us with 5 time periods.
+
+
+```{r approach5, message = FALSE}
+# generate a file with the biodiversity species aggregated by month
+bmonth <- b %>% 
+  select(cfrid, month, scode_biom) %>% 
+  mutate(scode = scode_biom) %>% 
+  distinct(month, scode, cfrid)
+
+# Generate a version of fc file used above that contains "month" in it for later merging
+fc_month <- c %>% 
+  select(cfrid, month, year, catchperiod, scode_ccm) %>% 
+  mutate(scode = scode_ccm) 
+  
+# Inner join to identify matches
+matched <- inner_join(bmonth, fc_month, by = c("month", "cfrid", "scode"))
+
+# Get number of species per CFR-timepoint that are matched
+  matched_count <- matched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(matched_count = n())
+
+# Anti join to get the mismatches
+  unmatched <- anti_join(fc_month, bmonth, by = c("month", "cfrid", "scode"))
+  
+  # Get number of species per CFR-timepoint that are unmatched
+  unmatched_count <- unmatched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(unmatched_count = n())
+  
+  
+# Make comparison tables
+
+match_table_all5 <- left_join(matched_count, unmatched_count, by = c("cfrid", "catchperiod")) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) 
+
+match_table_cfr5 <-match_table_all5 %>% 
+  group_by(cfrid) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count)))
+
+match_table_time5 <- match_table_all5 %>% 
+  group_by(catchperiod) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) %>% 
+  mutate(percent_unmatched = round(percent_unmatched, 0)) %>% 
+  knitr:: kable(col.names = c('Time Period', 'Unmatched (N)', 'Matched (N)', 'Unmatched (%)'),
+                caption = "Sum of Bhat by month and by CFR (approach 5)",
+                align = ("l"))
+
+match_table_time5
+```
+
+In Table 6, unmatched percentages are still quite high. Not as high as Approach 2, but still very high.
+\
+\
+
+##### **APPROACH 6: Aggregate $\hat{B}$ by CFR type**.  
+\
+\
+This approach keeps the time dimension intact, and aggregates the $\hat{B}$ spatially by CFR type. There are 4 types of CFRs, defined as:
+
+1. Reservoir for irrigation in upland area
+2. Community pond within agricultural land not prone to flood
+3. Community pond within agricultural land prone to flood
+4. Demarcated area in larger water body (Perennial fishing)
+
+We have little information about the categories beyond what is written above. It is reasonable to think that propensity for flooding, being upland or being a demarcated area in a larger water body could make a difference to the nature of the CFR's representation of the system fishers have access to. 
+
+Table 7 shows that this approach successfully minimized mismatches, while retaining *some* variation across space and time. In effect, this approach defines the system boundary as something related to the type of CFR, but not the CFR itself. This is likely correlated with the surrounding geographical features (elevation, slope, water bodies).
+
+```{r approach6, message = FALSE}
+
+## Add the CFR type information to b and c and check merges
+check <- nrow(b)
+bcfr <- left_join(b, cfrtype, by = "cfrid")
+check = nrow(bcfr)
+
+check <- nrow(c)
+ccfr <- left_join(c, cfrtype, by = "cfrid") %>% 
+  mutate(scode = scode_ccm)
+check - nrow(ccfr)
+
+# Generate a file with species found in each CFR type in a given time period.
+
+cfrtypespecies <- bcfr %>% 
+  mutate(scode = scode_biom) %>% 
+  select(category, scode) %>% 
+  distinct(category, scode)
+
+# Inner join to identify matches
+matched <- inner_join(cfrtypespecies, ccfr, by = c("category", "scode"))
+
+  # Get number of species per CFR-timepoint that are matched
+  matched_count <- matched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(matched_count = n())
+
+  
+# Anti join to get the mismatches
+  unmatched <- anti_join(ccfr, cfrtypespecies, by = c("category", "scode"))
+  
+  # Get number of species per CFR-timepoint that are unmatched
+  unmatched_count <- unmatched %>% 
+    group_by(cfrid, catchperiod) %>% 
+    summarize(unmatched_count = n())
+  
+  
+  
+# Make comparison tables
+
+match_table_all6 <- left_join(matched_count, unmatched_count, by = c("cfrid", "catchperiod")) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) 
+
+match_table_cfr6 <-match_table_all6 %>% 
+  group_by(cfrid) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count)))
+
+match_table_time6 <- match_table_all6 %>% 
+  group_by(catchperiod) %>% 
+  summarize(unmatched_count = sum(unmatched_count, na.rm = TRUE),
+            matched_count = sum(matched_count, na.rm = TRUE)) %>% 
+  mutate(percent_unmatched = 100*(unmatched_count/(matched_count + unmatched_count))) %>% 
+  mutate(percent_unmatched = round(percent_unmatched, 0)) %>% 
+  knitr:: kable(col.names = c('Time Period', 'Unmatched (N)', 'Matched (N)', 'Unmatched (%)'),
+                caption = "Sum of Bhat by CFR type (approach 6)",
+                align = ("l"))
+
+match_table_time6
+
+```
+
+
+I'm stopping here because my brain is tired. Amazing that you read this far! :) 
+
+
+
+

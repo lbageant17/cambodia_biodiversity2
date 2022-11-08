@@ -3,6 +3,7 @@
 
 
 ## Incorporating household characteristics into main plots
+WE DO THIS ANALYSIS IN STATA AS OF 11/4/2022
 
 
 #------------------------------------------------------------------------------# 
@@ -11,6 +12,8 @@
 # regression resources: https://andrewproctor.github.io/rcourse/module5.html
 
 # output info: https://cran.r-project.org/web/packages/jtools/vignettes/summ.html#Table_output_for_Word_and_RMarkdown_documents
+library(tidyverse)
+library(readxl)
 library(effects) #install.packages("effects")
 library(openxlsx) #install.packages("openxlsx")
 library(flextable) #install.packages("flextable")
