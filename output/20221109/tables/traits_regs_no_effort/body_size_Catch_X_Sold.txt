@@ -1,0 +1,29 @@
+Table X: Catch_X_Sold (body_size)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Body size: sold level	Body size: sold level	Body size: sold level	Body size: sold level
+					
+body_size_catch	Body size: catch level	5.109***	5.127***	5.107***	5.675***
+		(0.473)	(0.482)	(0.467)	(1.013)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			-0.000137	1.22e-05
+				(0.000119)	(0.000110)
+c.body_size_catch#c.city_distance					-0.0180
+					(0.0200)
+hhsize	Household size		-0.000587	-0.000607	-0.000438
+			(0.000649)	(0.000673)	(0.000651)
+depshare	Share of household members <=15 or >=65		-0.000459	-0.00128	0.000222
+			(0.0138)	(0.0139)	(0.0138)
+maxeduc	Max educational attainment by any hh member (years)		-0.000231	-0.000233	-0.000220
+			(0.000369)	(0.000369)	(0.000366)
+index1	Household amenities index		0.000198	-8.20e-05	-1.39e-05
+			(0.00102)	(0.00106)	(0.00105)
+index2	Livelihood asset index		-0.000850	-0.00114	-0.00114
+			(0.000862)	(0.000977)	(0.000984)
+Constant	Constant	-0.0108***	-0.00569	-0.000205	-0.00645
+		(0.00244)	(0.00468)	(0.00669)	(0.00673)
+					
+Observations		410	410	410	410
+R-squared		0.629	0.631	0.633	0.635
+Robust standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
+Outcome variable is body_size at the catch level. In these models _sold = 0 for households that sold no fish. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1.					

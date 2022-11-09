@@ -487,7 +487,7 @@ sold_div_data_hh <- c %>%
         xlab("Biomonitoring Shannon index (by CFR)") +
         ylab("Catch Shannon index (by CFR)")
       
-      ggsave(path = "output/", "shannon_biom_x_catch_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
+      ggsave(path = "output/20221109/figures/secondary", "shannon_biom_x_catch_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
       
       # Check correlation stats
       diversity_indices_cfr_level %>% 
@@ -512,7 +512,7 @@ sold_div_data_hh <- c %>%
       xlab("Catch Shannon index (by household)") +
       ylab("Biomonitoring Shannon index (by CFR)")
       
-    ggsave(path = "output/", "shannon_biom_x_catch_hh.png", width = 16, height =  12, units = "cm", dpi = 320)
+    ggsave(path = "output/20221109/figures/secondary", "shannon_biom_x_catch_hh.png", width = 16, height =  12, units = "cm", dpi = 320)
     
     # Check correlation stats
     data %>% 
@@ -534,7 +534,7 @@ sold_div_data_hh <- c %>%
       xlab("Catch Shannon index (by HH)") +
       ylab("Consumption Shannon index (by HH)")
     
-    ggsave(path = "output/", "shannon_catch_x_cons_hh.png", width = 16, height =  12, units = "cm", dpi = 320)
+    ggsave(path = "output/20221109/figures/secondary", "shannon_catch_x_cons_hh.png", width = 16, height =  12, units = "cm", dpi = 320)
   
     # Check correlation stats
     diversity_indices_hh_level %>% 
@@ -556,7 +556,7 @@ sold_div_data_hh <- c %>%
       xlab("Catch Shannon index (by HH)") +
       ylab("Sold Shannon index (by HH)")
     
-    ggsave(path = "output/", "shannon_catch_x_sold_hh.png", width = 16, height =  12, units = "cm", dpi = 320)
+    ggsave(path = "output/20221109/figures/secondary", "shannon_catch_x_sold_hh.png", width = 16, height =  12, units = "cm", dpi = 320)
     
     # Check correlation stats
     diversity_indices_hh_level %>% 
@@ -577,7 +577,7 @@ sold_div_data_hh <- c %>%
       xlab("Catch Shannon index (by HH)") +
       ylab("Sold Shannon index (by HH)")
     
-    ggsave(path = "output/", "shannon_catch_x_sold_hh2.png", width = 16, height =  12, units = "cm", dpi = 320)
+    ggsave(path = "output/20221109/figures/secondary", "shannon_catch_x_sold_hh2.png", width = 16, height =  12, units = "cm", dpi = 320)
     
     # Check correlation stats
     diversity_indices_hh_level %>% 

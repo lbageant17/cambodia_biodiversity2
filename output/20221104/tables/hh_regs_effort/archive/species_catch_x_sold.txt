@@ -1,0 +1,31 @@
+Table X: Catch X Sold (species counts)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Number of species sold	Number of species sold	Number of species sold	Number of species sold	Number of species sold
+						
+catch_species	Number of species caught by households	0.271***	0.229***	0.232***	0.236***	0.233***
+		(0.0396)	(0.0309)	(0.0285)	(0.0301)	(0.0704)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-0.0185	-0.0205
+					(0.0201)	(0.0296)
+c.catch_species#c.city_distance						8.47e-05
+						(0.00152)
+effort_persondays	Person-days		0.0301**	0.0315**	0.0316**	0.0316**
+			(0.0121)	(0.0133)	(0.0137)	(0.0136)
+hhsize	Household size			-0.0701	-0.0758	-0.0753
+				(0.206)	(0.204)	(0.203)
+depshare	Share of household members <=15 or >=65			0.0241	-0.0357	-0.0380
+				(4.562)	(4.480)	(4.497)
+maxeduc	Max educational attainment by any hh member (years)			-0.00837	-0.00783	-0.00795
+				(0.0871)	(0.0870)	(0.0867)
+index1	Household amenities index			0.370	0.337	0.335
+				(0.294)	(0.287)	(0.287)
+index2	Livelihood asset index			0.248	0.210	0.209
+				(0.170)	(0.177)	(0.172)
+Constant	Constant	-1.782**	-2.647***	-2.217	-1.597	-1.522
+		(0.722)	(0.930)	(1.530)	(1.659)	(1.848)
+						
+Observations		410	410	410	410	410
+R-squared		0.259	0.278	0.287	0.290	0.290
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is count of species sold. Robust standard errors clustered at cfrid level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

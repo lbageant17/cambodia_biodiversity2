@@ -1,0 +1,31 @@
+Table X: System_X_Sold (nd_score)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Nutrient density score: sold level	Nutrient density score: sold level	Nutrient density score: sold level	Nutrient density score: sold level	Nutrient density score: sold level
+						
+nd_score_cfr	Nutrient density score: cfr level	-0.0966	0.126	0.168	0.198	1.529***
+		(0.185)	(0.231)	(0.205)	(0.221)	(0.530)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-0.00475	0.181***
+					(0.00542)	(0.0613)
+c.nd_score_cfr#c.city_distance						-0.0413***
+						(0.0139)
+effort_persondays	Person-days		0.0189***	0.0206***	0.0209***	0.0220***
+			(0.00272)	(0.00271)	(0.00282)	(0.00264)
+hhsize	Household size			-0.0652	-0.0674	-0.0789
+				(0.0632)	(0.0625)	(0.0630)
+depshare	Share of household members <=15 or >=65			1.391	1.378	1.159
+				(1.405)	(1.392)	(1.407)
+maxeduc	Max educational attainment by any hh member (years)			0.0169	0.0173	0.0222
+				(0.0259)	(0.0258)	(0.0248)
+index1	Household amenities index			0.0511	0.0416	0.0238
+				(0.114)	(0.114)	(0.110)
+index2	Livelihood asset index			0.112	0.101	0.0999
+				(0.0671)	(0.0648)	(0.0630)
+Constant	Constant	2.715***	0.538	0.261	0.296	-5.634**
+		(0.818)	(1.070)	(1.163)	(1.144)	(2.424)
+						
+Observations		410	410	410	410	410
+R-squared		0.001	0.126	0.151	0.153	0.173
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is nd_score at the CFR level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

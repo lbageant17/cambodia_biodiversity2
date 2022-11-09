@@ -1,0 +1,29 @@
+Table X: Catch_X_Consumption (species)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Number of species consumed by households	Number of species consumed by households	Number of species consumed by households	Number of species consumed by households
+					
+catch_species	Number of species caught by households	0.899***	0.897***	0.896***	0.896***
+		(0.0208)	(0.0198)	(0.0193)	(0.0359)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			0.00642	0.00627
+				(0.00942)	(0.0223)
+c.catch_species#c.city_distance					6.27e-06
+					(0.00117)
+hhsize	Household size		0.0440	0.0458	0.0458
+			(0.107)	(0.107)	(0.108)
+depshare	Share of household members <=15 or >=65		2.513	2.532	2.531
+			(2.411)	(2.410)	(2.415)
+maxeduc	Max educational attainment by any hh member (years)		-0.0468	-0.0470	-0.0470
+			(0.0328)	(0.0323)	(0.0321)
+index1	Household amenities index		-0.212	-0.200	-0.200
+			(0.141)	(0.145)	(0.144)
+index2	Livelihood asset index		-0.184**	-0.171*	-0.171**
+			(0.0777)	(0.0867)	(0.0828)
+Constant	Constant	0.776*	0.347	0.132	0.138
+		(0.388)	(1.045)	(1.160)	(1.153)
+					
+Observations		410	410	410	410
+R-squared		0.952	0.954	0.954	0.954
+Robust standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
+Outcome variable is species at the catch level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1					

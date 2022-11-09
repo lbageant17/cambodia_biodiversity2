@@ -1,0 +1,29 @@
+Table X: System_X_Catch (body_size)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Body size: catch level	Body size: catch level	Body size: catch level	Body size: catch level
+					
+body_size_cfr	Body size: cfr level	0.0650	0.0633	0.0618	0.219*
+		(0.0425)	(0.0398)	(0.0392)	(0.123)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			-1.66e-05	9.71e-05
+				(3.84e-05)	(6.27e-05)
+c.body_size_cfr#c.city_distance					-0.00439*
+					(0.00251)
+hhsize	Household size		0.000532**	0.000528**	0.000545**
+			(0.000213)	(0.000213)	(0.000213)
+depshare	Share of household members <=15 or >=65		0.00728*	0.00723*	0.00973**
+			(0.00388)	(0.00383)	(0.00423)
+maxeduc	Max educational attainment by any hh member (years)		0.000106	0.000106	0.000103
+			(9.79e-05)	(9.95e-05)	(9.87e-05)
+index1	Household amenities index		0.000697*	0.000662*	0.000722**
+			(0.000363)	(0.000363)	(0.000356)
+index2	Livelihood asset index		-7.29e-05	-0.000107	-0.000131
+			(0.000210)	(0.000210)	(0.000187)
+Constant	Constant	0.00580***	0.00131	0.00200	-0.00279
+		(0.00104)	(0.00184)	(0.00248)	(0.00373)
+					
+Observations		410	410	410	410
+R-squared		0.046	0.067	0.069	0.115
+Robust standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
+Outcome variable is body_size at the CFR level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1					

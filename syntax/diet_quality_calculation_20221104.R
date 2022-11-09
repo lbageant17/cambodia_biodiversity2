@@ -592,10 +592,6 @@ minbio_sys_biom <- portfolio_nutrient_concentration %>%
     #select(-hhid) %>%
     mutate(cfrid = 0) %>% 
     rbind(nd_score_cfr) 
-
-    ## Export for use in stata
-    write.csv(nd_score, file = "data/processed/diet_quality_hh_level.csv")
-
   
 #------------------------------------------------------------------------------# 
 # PLOT
@@ -624,9 +620,11 @@ nd_score %>%
         plot.caption = element_text(hjust = 0)) +
   ylab("Nutrient density score") +
   labs(title = "Nutrient density scores of household and CFR portfolios", 
-       caption = "Sold plot excludes households that sold no fish. White diamonds depict means. \nMeans differences are significant between: CFR and all other levels; Sold and all other levels.")
+  caption = "
+       Sold plot excludes households that sold no fish. White diamonds depict means. 
+       Means differences are significant between all groups except catch and consumed (Paired t-tests with Bonferroni correction)")
 
-ggsave(path = "output/20221104/figures", "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+ggsave(path = "output/20221109/figures", "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 
 
@@ -645,6 +643,12 @@ data <- nd_score %>%
   rbind(cfrdata) %>% 
   as_tibble() 
 
+## Export for use in stata
+data %>% 
+  pivot_wider(names_from = "type", values_from = "nd_score") %>% 
+  write.csv(., file = "data/processed/nd_score_hh_level.csv")
+
+
 # compare differences with n = 413, replacing nd_score = 0 for households that did not sell fish.
 t413 <- data %>% 
   pairwise_t_test(nd_score ~ type, paired = TRUE, p.adjust.method = "bonferroni")
@@ -658,8 +662,21 @@ t266 <- data %>%
 
 # export
 t413 %>% rbind(t266) %>% 
-  write.csv(., file = "output/20221104/tables/diet_quality_ttest.csv")
+  write.csv(., file = "output/20221109/tables/diet_quality_ttest.csv")
 
+
+# Plot minimum biomass against nutrient density score to see how they correspond
+nd_score %>% 
+  as_tibble() %>% 
+  filter(type == "catch") %>% 
+  left_join(hh_dq, by = "hhid") %>% 
+  select(nd_score, minbio_hh_catch_all) %>% 
+  ggplot(aes(x = nd_score, y = minbio_hh_catch_all)) +
+  geom_point() +
+  geom_smooth() +
+  ylab("Minimum biomass") +
+  xlab("Nutrient density score") +
+  ggtitle("Minimum biomass X Nutrient density score")
 
 
 
@@ -706,7 +723,7 @@ cfrplotfile <- minbio_cfr %>%
     labs(title = "Minimum biomass of household and CFR portfolios required to meet \nall RDAs relative to minimum biomass of system level portfolio",
        caption = "RDA threshold = 50% \nHorizontal line indicates minimum biomass of the system level portfolio that yields the set % of all RDAs, \ncalculated using biomonitoring data")
   
-  ggsave(path = "output/", "minbio_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+  ggsave(path = "output/20221109/figures/secondary", "minbio_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
   
 
 

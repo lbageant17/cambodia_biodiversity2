@@ -191,9 +191,12 @@ commonness %>%
         plot.caption = element_text(hjust = 0)) +
   ylab("Mean commonness index") +
   labs(title = "Mean commonness index by portfolio type",
-       caption = "Figure is zoomed to show detail, truncating max values of household sold mean total length. \nWhite diamonds depict means.")
+  caption = "
+       Figure is zoomed to show detail, truncating max values of household sold mean commonness. 
+       White diamonds depict means. 
+       Means differences are significant between all groups except CFR and sold (Paired t-tests with Bonferroni correction)")
 
-ggsave(path = "output/20221104/figures", "commonness_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+ggsave(path = "output/20221109/figures", "commonness_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 
 #--------- Test mean differences in commonness -------------------------------*/
@@ -219,6 +222,11 @@ data <- commonness %>%
   rbind(cfrdata) %>% 
   as_tibble() 
 
+  ## Export for use in stata
+  data %>% 
+    pivot_wider(names_from = "type", values_from = "commonness") %>% 
+    write.csv(., file = "data/processed/commonness_hh_level.csv")
+
 # compare differences with n = 413, replacing nd_score = 0 for households that did not sell fish.
 t413 <- data %>% 
   filter(type != "sold") %>% 
@@ -234,6 +242,6 @@ t266 <- data %>%
 
 # export
 t413 %>% rbind(t266) %>% 
-  write.csv(., file = "output/20221104/tables/commonness_ttest.csv")
+  write.csv(., file = "output/20221109/tables/commonness_ttest.csv")
 
 

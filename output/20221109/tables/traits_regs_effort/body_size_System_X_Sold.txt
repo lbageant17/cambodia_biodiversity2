@@ -1,0 +1,31 @@
+Table X: System_X_Sold (body_size)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Body size: sold level	Body size: sold level	Body size: sold level	Body size: sold level	Body size: sold level
+						
+body_size_cfr	Body size: cfr level	0.312	0.341	0.321	0.295	1.051
+		(0.252)	(0.249)	(0.237)	(0.223)	(0.798)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-0.000282	0.000272
+					(0.000228)	(0.000386)
+c.body_size_cfr#c.city_distance						-0.0212
+						(0.0160)
+effort_persondays	Person-days		0.000340***	0.000342***	0.000354***	0.000323***
+			(9.22e-05)	(8.96e-05)	(9.59e-05)	(8.15e-05)
+hhsize	Household size			0.000590	0.000460	0.000683
+				(0.00114)	(0.00117)	(0.00113)
+depshare	Share of household members <=15 or >=65			0.0294	0.0282	0.0410
+				(0.0234)	(0.0232)	(0.0257)
+maxeduc	Max educational attainment by any hh member (years)			0.000555	0.000574	0.000540
+				(0.000539)	(0.000567)	(0.000568)
+index1	Household amenities index			0.00389*	0.00330	0.00359*
+				(0.00207)	(0.00215)	(0.00209)
+index2	Livelihood asset index			-0.000553	-0.00111	-0.00128
+				(0.00119)	(0.00132)	(0.00125)
+Constant	Constant	0.0195***	-0.00240	-0.0114	-0.000245	-0.0224
+		(0.00564)	(0.00810)	(0.0100)	(0.0125)	(0.0230)
+						
+Observations		410	410	410	410	410
+R-squared		0.026	0.078	0.086	0.095	0.121
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is body_size at the CFR level. In these models body_size_sold = 0 for households that sold no fish. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

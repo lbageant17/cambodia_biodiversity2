@@ -1,7 +1,75 @@
 
+/* ----------- System x Catch ------------------------------------------------*/
 
+	use "$processed/hh_level_stata", clear
 
-* looking at whether we can do a paired ttest in a regression framework with clustered SEs
+* These regressions will be calculated with robust SEs and output
+	reg nd_score_catch nd_score_cfr, vce(cluster cfrid)
+	est sto base 
+	post `betas' ("nd_score_catch") ("nd_score_cfr")  ("base") (_b[nd_score_cfr]) (_se[nd_score_cfr]) ("nd_score_cfr") ("")
+	* add effort
+	reg nd_score_catch nd_score_cfr $effort, vce(cluster cfrid)
+	est sto effort
+	post `betas' ("nd_score_catch") ("nd_score_cfr") ("effort") (_b[nd_score_cfr]) (_se[nd_score_cfr]) ("nd_score_cfr")  ("")
+
+	* add hh characteristics
+	reg nd_score_catch nd_score_cfr $effort $hh, vce(cluster cfrid)
+	est sto hh 
+	post `betas' ("nd_score_catch") ("nd_score_cfr") ("hh") (_b[nd_score_cfr]) (_se[nd_score_cfr]) ("nd_score_cfr")  ("")
+	
+	* add market access
+	reg nd_score_catch nd_score_cfr $effort $hh $mkt, vce(cluster cfrid) 
+	est sto mkt 
+	post `betas' ("nd_score_catch") ("nd_score_cfr") ("mkt") (_b[nd_score_cfr]) (_se[nd_score_cfr]) ("nd_score_cfr") ("")
+		
+	* interact market access
+	reg nd_score_catch c.nd_score_cfr##c.city_distance $effort $hh, vce(cluster cfrid) 
+	est sto mktx 
+	
+
+	
+
+use "$processed/hh_level_stata", clear
+	
+* Set up file to store beta coefficients of interest and SEs for plotting
+tempname betas
+postfile `betas' str40(Outcome) str40(Predictor) str40(Model) coeff se str40(coeff_var) str40(note)  using "$temp/betas_traits", replace
+	
+	
+	local outcome nd_score_catch
+	local pred nd_score_cfr
+	
+* These regressions will be calculated with robust SEs and output
+	reg `outcome' nd_score_cfr, vce(cluster cfrid)
+	est sto base 
+	post `betas' ("`outcome'") ("`pred'")  ("base") (_b[`pred']) (_se[`pred']) ("`pred'") ("")
+	* add effort
+	reg `outcome' `pred' $effort, vce(cluster cfrid)
+	est sto effort
+	post `betas' ("`outcome'") ("`pred'") ("effort") (_b[`pred']) (_se[`pred']) ("`pred'")  ("")
+
+	* add hh characteristics
+	reg `outcome' nd_score_cfr $effort $hh, vce(cluster cfrid)
+	est sto hh 
+	post `betas' ("`outcome'") ("`pred'") ("hh") (_b[`pred']) (_se[`pred']) ("`pred'")  ("")
+	
+	* add market access
+	reg `outcome' nd_score_cfr $effort $hh $mkt, vce(cluster cfrid) 
+	est sto mkt 
+	post `betas' ("`outcome'") ("`pred'") ("mkt") (_b[`pred']) (_se[`pred']) ("`pred'") ("")
+		
+	* interact market access
+	reg `outcome' c.`pred'##c.city_distance $effort $hh, vce(cluster cfrid) 
+	est sto mktx 
+	
+postclose `betas'
+use "$temp/betas_traits", clear
+	
+	
+	
+	
+
+** ttest problem solving
 
 	use "$processed/hh_level_stata", clear
 

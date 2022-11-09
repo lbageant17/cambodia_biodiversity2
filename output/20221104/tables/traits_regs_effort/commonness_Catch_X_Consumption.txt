@@ -1,0 +1,29 @@
+Table X: Catch_X_Consumption (commonness)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Commonness index: cons level	Commonness index: cons level	Commonness index: cons level	Commonness index: cons level	Commonness index: cons level
+						
+com_catch	Commonness index: catch level	0.297***	0.297***	0.296***	0.297***	0.330***
+		(0.0448)	(0.0448)	(0.0467)	(0.0466)	(0.107)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				3.53e-09	8.97e-09
+					(4.58e-09)	(8.94e-09)
+c.com_catch#c.city_distance						-0.00102
+						(0.00202)
+hhsize	Household size			5.87e-10	1.10e-09	7.74e-09
+				(4.64e-08)	(4.66e-08)	(4.53e-08)
+depshare	Share of household members <=15 or >=65			1.07e-06	1.09e-06	1.15e-06
+				(8.25e-07)	(8.21e-07)	(7.92e-07)
+maxeduc	Max educational attainment by any hh member (years)			2.49e-08	2.50e-08	2.60e-08
+				(1.74e-08)	(1.74e-08)	(1.79e-08)
+index1	Household amenities index			-6.42e-08	-5.69e-08	-5.47e-08
+				(5.43e-08)	(5.57e-08)	(5.50e-08)
+index2	Livelihood asset index			-1.48e-08	-7.45e-09	-9.16e-09
+				(3.54e-08)	(3.83e-08)	(3.78e-08)
+Constant	Constant	8.36e-07***	8.36e-07***	4.58e-07	3.17e-07	7.90e-08
+		(1.84e-07)	(1.84e-07)	(3.21e-07)	(3.41e-07)	(5.22e-07)
+						
+Observations		410	410	410	410	410
+R-squared		0.615	0.615	0.621	0.622	0.624
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is commonness at the catch level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

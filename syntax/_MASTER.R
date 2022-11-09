@@ -205,14 +205,22 @@ library(rstatix)
 ##### FILES ####
 #------------------------------------------------------------------------------# 
 
-source("syntax/diet_quality_calculation_20221104.R")
-source("syntax/species_count_analysis_20221104.R")
-source("syntax/diversity_index_calculation_20221104.R")
-source("syntax/commonness_analysis_20221104.R")
-source("syntax/body_size_calculation_20221104.R")
-source("syntax/plot_betas.R")
+# Phase 1: Stata (data prep)
+  
+# Phase 2: R (biodiversity and trait plots, t-tests)
+  
+  source("syntax/diet_quality_calculation_20221104.R")
+  source("syntax/species_count_analysis_20221104.R")
+  source("syntax/diversity_index_calculation_20221104.R")
+  source("syntax/commonness_analysis_20221104.R")
+  source("syntax/body_size_calculation_20221104.R")
   
   
+# Phase 3: Stata (regression analyses)
   
+# Phase 4: R (plot regression analyses)
+  source("syntax/plot_betas.R")
+  
+
   
   

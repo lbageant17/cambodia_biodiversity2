@@ -1,0 +1,31 @@
+Table X: Catch_X_Consumption (body_size)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Body size: cons level	Body size: cons level	Body size: cons level	Body size: cons level	Body size: cons level
+						
+body_size_catch	Body size: catch level	0.259***	0.258***	0.257***	0.259***	0.226***
+		(0.0245)	(0.0260)	(0.0261)	(0.0250)	(0.0600)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				1.01e-05	1.36e-06
+					(7.92e-06)	(9.85e-06)
+c.body_size_catch#c.city_distance						0.00105
+						(0.00137)
+effort_persondays	Person-days		1.75e-07	3.51e-07	-2.49e-07	-1.66e-07
+			(3.20e-06)	(3.24e-06)	(3.49e-06)	(3.64e-06)
+hhsize	Household size			1.52e-05	1.90e-05	8.87e-06
+				(5.77e-05)	(5.69e-05)	(6.16e-05)
+depshare	Share of household members <=15 or >=65			0.00123	0.00129	0.00121
+				(0.00139)	(0.00137)	(0.00132)
+maxeduc	Max educational attainment by any hh member (years)			4.13e-05	4.09e-05	4.02e-05
+				(2.62e-05)	(2.59e-05)	(2.60e-05)
+index1	Household amenities index			-8.41e-05	-6.43e-05	-6.82e-05
+				(8.53e-05)	(8.56e-05)	(8.57e-05)
+index2	Livelihood asset index			-3.62e-05	-1.63e-05	-1.57e-05
+				(5.09e-05)	(5.86e-05)	(5.86e-05)
+Constant	Constant	0.00150***	0.00150***	0.000893*	0.000511	0.000873
+		(0.000161)	(0.000214)	(0.000517)	(0.000527)	(0.000633)
+						
+Observations		410	410	410	410	410
+R-squared		0.540	0.540	0.546	0.551	0.553
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is body_size at the catch level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						
