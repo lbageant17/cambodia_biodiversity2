@@ -43,7 +43,7 @@ local sold_caveat "In these models `metric'_sold = 0 for households that sold no
 /*----------------------------------------------------------------------------*/
 /* ----------- Nutrient density ----------------------------------------------*/
 /*----------------------------------------------------------------------------*/
-
+local metric nd_score
 
 /* ----------- System x Catch ------------------------------------------------*/
 
@@ -487,6 +487,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' `pred', vce(cluster cfrid)
 	est sto base 
 	post `betas' ("`outcome'") ("`pred'")  ("base") (_b[`pred']) (_se[`pred']) ("`pred'") ("")
+	
 	* add effort
 	reg `outcome' `pred' $effort, vce(cluster cfrid)
 	est sto effort
@@ -1111,36 +1112,7 @@ use "$processed/hh_level_stata", clear
 
 	test [mkt_mean]`pred' = [mktx_mean]`pred' 
 	post `wald' ("`outcome'") ("`pred'") ("Market = Market X") (r(p)) ("")
-	
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 /*----------------------------------------------------------------------------*/
@@ -1150,8 +1122,8 @@ use "$processed/hh_level_stata", clear
 postclose `betas'
 use "$temp/betas_traits", clear
 * calculate min and max
-gen min = coeff-2*se
-gen max = coeff+2*se
+gen min = coeff-1.96*se
+gen max = coeff+1.96*se
 export excel using "$output/$date/tables/betas_traits.xlsx", sheet("traits models") sheetmodify firstrow(variables)
 
 

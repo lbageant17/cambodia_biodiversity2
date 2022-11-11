@@ -1,7 +1,17 @@
 ** Liz Bageant
 ** November 9, 2022
 
-** Master dofile for Cambodia Biodiversity paper
+/*----------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+
+ Phase 1 master dofile for Cambodia Biodiversity paper
+ 
+ Use for Phase 1 data prep.
+ 
+ This file must be run prior to Phase 2-4 analysis.
+
+------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 
 * Macros
 global umbrella "/Users/erb32/github/cambodia_biodiversity2"
@@ -18,11 +28,12 @@ global output "$umbrella/output/"
 global data "$umbrella/data/"
 
 * date macro for date-specific output
-global date "20221109"
+global date "20221109"  // <----UPDATE THIS DATE IN _PHASE_2_MASTER.do
+
 cap mkdir "$umbrella/output/$date"
 cap mkdir "$umbrella/output/$date/figures"
 cap mkdir "$umbrella/output/$date/figures/secondary"
-
+cap mkdir "$umbrella/output/$date/figures/beta_compare"
 cap mkdir "$umbrella/output/$date/tables"
 cap mkdir "$umbrella/output/$date/tables/hh_regs_effort"
 cap mkdir "$umbrella/output/$date/tables/hh_regs_no_effort"
@@ -30,18 +41,6 @@ cap mkdir "$umbrella/output/$date/tables/traits_regs_effort"
 cap mkdir "$umbrella/output/$date/tables/traits_regs_no_effort"
 
 
-/*
-** Converting all excel files to stata files
-clear all
-file open _filenames using "$excel_raw/_filenames",read
-file read _filenames line
-while r(eof)==0 {
-	import excel "$excel_raw/`line'.xlsx",  firstrow case(lower) allstring clear
-	saveold "$stata_raw/`line'",replace
-	file read _filenames line
-	}
-*/
-	
 * Do-files
 
 do "$do/1_ccm_q7.do" 					// clean/organize catch data

@@ -32,7 +32,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2013,2,8,2,"Hemibagrus spilopterus/nemurus",56.5,2,2,
 1,2013,2,12,3,"Cyclocheilichthys lagleri",122,2,2,
 1,2013,2,17,5,"Puntius sp. (cf. masyai)",803,2,2,
-1,2013,2,21,6,"Labiobarbus leptocheilus",72.80000000000001,2,2,
+1,2013,2,21,6,"Labiobarbus leptocheilus",72.8,2,2,
 1,2013,2,38,12,"Anabas testudineus",75.80000000000001,2,2,
 1,2013,2,43,14,"Channa striata",16.4,2,2,
 1,2013,2,47,15,"Pristolepis fasciata",6,2,2,
@@ -49,7 +49,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2013,5,6,1,"Mystus gulio",71.8,3,3,2
 1,2013,5,8,2,"Hemibagrus spilopterus/nemurus",62.9,3,3,2
 1,2013,5,12,3,"Cyclocheilichthys lagleri",228.5,3,3,2
-1,2013,5,16,5,"Puntius brevis",964.0000000000002,3,3,2
+1,2013,5,16,5,"Puntius brevis",964,3,3,2
 1,2013,5,21,6,"Labiobarbus leptocheilus",38.6,3,3,2
 1,2013,5,49,16,"Parambassis wolffii",123,3,3,2
 1,2013,5,52,17,"Trichogaster microlepis",9.300000000000001,3,3,2
@@ -62,13 +62,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2013,5,134,49,"Phalacronotus bleekeri",8.800000000000001,3,3,2
 1,2013,8,2,1,"Mystus singaringan",7,4,4,3
 1,2013,8,4,1,"Mystus mysticetus",26.3,4,4,3
-1,2013,8,12,3,"Cyclocheilichthys lagleri",77,4,4,3
+1,2013,8,12,3,"Cyclocheilichthys lagleri",76.99999999999999,4,4,3
 1,2013,8,16,5,"Puntius brevis",5.3,4,4,3
 1,2013,8,18,5,"Puntius aurotaeniatus",5.2,4,4,3
 1,2013,8,38,12,"Anabas testudineus",10.7,4,4,3
 1,2013,8,49,16,"Parambassis wolffii",352.4,4,4,3
 1,2013,8,63,21,"Xenentodon cancila",31.5,4,4,3
-1,2013,8,65,22,"Kryptopterus dissitus",48.9,4,4,3
+1,2013,8,65,22,"Kryptopterus dissitus",48.90000000000001,4,4,3
 1,2013,8,66,22,"Kryptopterus cheveyi",35.8,4,4,3
 1,2013,8,68,25,"Macrognathus siamensis",105.7,4,4,3
 1,2013,8,69,25,"Macrognathus semiocellatus",21.5,4,4,3
@@ -82,7 +82,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2013,11,21,6,"Labiobarbus leptocheilus",69.3,5,5,4
 1,2013,11,22,8,"Henicorhynchus siamensis",113.5,5,5,4
 1,2013,11,24,9,"Esomus metallicus",82.30000000000001,5,5,4
-1,2013,11,49,16,"Parambassis wolffii",487.9,5,5,4
+1,2013,11,49,16,"Parambassis wolffii",487.9000000000001,5,5,4
 1,2013,11,52,17,"Trichogaster microlepis",32,5,5,4
 1,2013,11,63,21,"Xenentodon cancila",249.6,5,5,4
 1,2013,11,66,22,"Kryptopterus cheveyi",212.7,5,5,4
@@ -94,7 +94,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2013,11,137,43,"Monotrete cochinchinensis",4.6,5,5,4
 1,2014,2,1,1,"Mystus albolineatus",157.2,6,6,
 1,2014,2,4,1,"Mystus mysticetus",585.5,6,6,
-1,2014,2,8,2,"Hemibagrus spilopterus/nemurus",634.5999999999999,6,6,
+1,2014,2,8,2,"Hemibagrus spilopterus/nemurus",634.6,6,6,
 1,2014,2,12,3,"Cyclocheilichthys lagleri",1799.8,6,6,
 1,2014,2,15,4,"Barbonymus gonionotus",364,6,6,
 1,2014,2,17,5,"Puntius sp. (cf. masyai)",2857.9,6,6,
@@ -105,7 +105,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2014,2,47,15,"Pristolepis fasciata",156.6,6,6,
 1,2014,2,49,16,"Parambassis wolffii",429.1,6,6,
 1,2014,2,52,17,"Trichogaster microlepis",14.6,6,6,
-1,2014,2,59,19,"Notopterus notopterus",648.3000000000001,6,6,
+1,2014,2,59,19,"Notopterus notopterus",648.3,6,6,
 1,2014,2,63,21,"Xenentodon cancila",397.9999999999999,6,6,
 1,2014,2,65,22,"Kryptopterus dissitus",141.4,6,6,
 1,2014,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",729.1,6,6,
@@ -119,7 +119,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2014,2,139,1,"Leiocassis/Pseudomystus siamensis",41.2,6,6,
 1,2014,2,147,34,"Osteochilus microcephalus",7.1,6,6,
 1,2014,5,1,1,"Mystus albolineatus",29,7,7,5
-1,2014,5,4,1,"Mystus mysticetus",83.19999999999999,7,7,5
+1,2014,5,4,1,"Mystus mysticetus",83.2,7,7,5
 1,2014,5,12,3,"Cyclocheilichthys lagleri",99.2,7,7,5
 1,2014,5,15,4,"Barbonymus gonionotus",110.9,7,7,5
 1,2014,5,21,6,"Labiobarbus leptocheilus",58.8,7,7,5
@@ -178,7 +178,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2014,11,99,34,"Puntius orphoides",68.8,9,9,6
 1,2014,11,128,7,"Thynnichthys thynnoides",20.4,9,9,6
 1,2014,11,134,49,"Phalacronotus bleekeri",95.90000000000001,9,9,6
-1,2015,2,1,1,"Mystus albolineatus",85.49999999999999,10,10,
+1,2015,2,1,1,"Mystus albolineatus",85.5,10,10,
 1,2015,2,3,1,"Mystus multiradiatus",102.9,10,10,
 1,2015,2,4,1,"Mystus mysticetus",544,10,10,
 1,2015,2,8,2,"Hemibagrus spilopterus/nemurus",49,10,10,
@@ -196,14 +196,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2015,2,40,13,"Clarias batrachus",67.7,10,10,
 1,2015,2,43,14,"Channa striata",130.5,10,10,
 1,2015,2,47,15,"Pristolepis fasciata",20.3,10,10,
-1,2015,2,50,16,"Parambassis siamensis",480,10,10,
+1,2015,2,50,16,"Parambassis siamensis",479.9999999999999,10,10,
 1,2015,2,52,17,"Trichogaster microlepis",65,10,10,
 1,2015,2,53,17,"Trichopodus trichopterus",22.4,10,10,
 1,2015,2,58,18,"Trichopsis vittata",1.1,10,10,
 1,2015,2,59,19,"Notopterus notopterus",288.5,10,10,
 1,2015,2,63,21,"Xenentodon cancila",38.3,10,10,
-1,2015,2,65,22,"Kryptopterus dissitus",57.5,10,10,
-1,2015,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",612.5999999999999,10,10,
+1,2015,2,65,22,"Kryptopterus dissitus",57.50000000000001,10,10,
+1,2015,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",612.6,10,10,
 1,2015,2,99,34,"Puntius orphoides",38.3,10,10,
 1,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",92.90000000000001,10,10,
 1,2015,2,134,49,"Phalacronotus bleekeri",62.9,10,10,
@@ -211,7 +211,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2015,5,1,1,"Mystus albolineatus",10.5,11,11,7
 1,2015,5,4,1,"Mystus mysticetus",28.8,11,11,7
 1,2015,5,8,2,"Hemibagrus spilopterus/nemurus",52.9,11,11,7
-1,2015,5,12,3,"Cyclocheilichthys lagleri",748.1000000000001,11,11,7
+1,2015,5,12,3,"Cyclocheilichthys lagleri",748.1,11,11,7
 1,2015,5,15,4,"Barbonymus gonionotus",361.5,11,11,7
 1,2015,5,16,5,"Puntius brevis",966,11,11,7
 1,2015,5,17,5,"Puntius sp. (cf. masyai)",68.59999999999999,11,11,7
@@ -233,7 +233,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2015,8,21,6,"Labiobarbus leptocheilus",37,12,12,
 1,2015,8,50,16,"Parambassis siamensis",40.7,12,12,
 1,2015,8,52,17,"Trichogaster microlepis",24.5,12,12,
-1,2015,8,65,22,"Kryptopterus dissitus",430.5,12,12,
+1,2015,8,65,22,"Kryptopterus dissitus",430.4999999999999,12,12,
 1,2015,8,68,25,"Macrognathus siamensis",116.8,12,12,
 1,2015,8,69,25,"Macrognathus semiocellatus",69.40000000000001,12,12,
 1,2015,11,3,1,"Mystus multiradiatus",13.8,13,13,8
@@ -245,7 +245,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 1,2015,11,17,5,"Puntius sp. (cf. masyai)",8.699999999999999,13,13,8
 1,2015,11,21,6,"Labiobarbus leptocheilus",225.1,13,13,8
 1,2015,11,22,8,"Henicorhynchus siamensis",19.1,13,13,8
-1,2015,11,24,9,"Esomus metallicus",9.399999999999999,13,13,8
+1,2015,11,24,9,"Esomus metallicus",9.4,13,13,8
 1,2015,11,29,9,"Rasbora aurotaenia",11.4,13,13,8
 1,2015,11,37,11,"Puntioplites proctozystron",19.8,13,13,8
 1,2015,11,38,12,"Anabas testudineus",4.5,13,13,8
@@ -331,7 +331,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2013,8,52,17,"Trichogaster microlepis",21.1,4,4,3
 2,2013,8,53,17,"Trichopodus trichopterus",5.1,4,4,3
 2,2013,8,59,19,"Notopterus notopterus",102.5,4,4,3
-2,2013,8,63,21,"Xenentodon cancila",78.90000000000001,4,4,3
+2,2013,8,63,21,"Xenentodon cancila",78.89999999999999,4,4,3
 2,2013,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",34.4,4,4,3
 2,2013,8,68,25,"Macrognathus siamensis",45.09999999999999,4,4,3
 2,2013,8,69,25,"Macrognathus semiocellatus",17,4,4,3
@@ -340,21 +340,21 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2013,11,4,1,"Mystus mysticetus",200.2,5,5,4
 2,2013,11,8,2,"Hemibagrus spilopterus/nemurus",3.5,5,5,4
 2,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",180.9,5,5,4
-2,2013,11,12,3,"Cyclocheilichthys lagleri",85.3,5,5,4
+2,2013,11,12,3,"Cyclocheilichthys lagleri",85.29999999999998,5,5,4
 2,2013,11,15,4,"Barbonymus gonionotus",76,5,5,4
 2,2013,11,17,5,"Puntius sp. (cf. masyai)",468.5,5,5,4
 2,2013,11,21,6,"Labiobarbus leptocheilus",31,5,5,4
 2,2013,11,22,8,"Henicorhynchus siamensis",3.5,5,5,4
-2,2013,11,24,9,"Esomus metallicus",57,5,5,4
+2,2013,11,24,9,"Esomus metallicus",57.00000000000001,5,5,4
 2,2013,11,27,9,"Amblypharyngodon chulabhornae",16.6,5,5,4
 2,2013,11,32,9,"Rasbora borapetensis",.3,5,5,4
 2,2013,11,43,14,"Channa striata",98.09999999999999,5,5,4
-2,2013,11,49,16,"Parambassis wolffii",434.5999999999999,5,5,4
+2,2013,11,49,16,"Parambassis wolffii",434.6,5,5,4
 2,2013,11,63,21,"Xenentodon cancila",56.9,5,5,4
 2,2013,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",192.8,5,5,4
 2,2013,11,68,25,"Macrognathus siamensis",9.699999999999999,5,5,4
 2,2013,11,99,34,"Puntius orphoides",27.9,5,5,4
-2,2013,11,108,38,"Paralaubuca typus",62.29999999999999,5,5,4
+2,2013,11,108,38,"Paralaubuca typus",62.3,5,5,4
 2,2014,2,1,1,"Mystus albolineatus",7.1,6,6,
 2,2014,2,3,1,"Mystus multiradiatus",18.1,6,6,
 2,2014,2,4,1,"Mystus mysticetus",70.30000000000001,6,6,
@@ -370,7 +370,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2014,2,40,13,"Clarias batrachus",277.7,6,6,
 2,2014,2,43,14,"Channa striata",196.4,6,6,
 2,2014,2,47,15,"Pristolepis fasciata",7,6,6,
-2,2014,2,49,16,"Parambassis wolffii",631,6,6,
+2,2014,2,49,16,"Parambassis wolffii",631.0000000000001,6,6,
 2,2014,2,52,17,"Trichogaster microlepis",15.3,6,6,
 2,2014,2,53,17,"Trichopodus trichopterus",4.699999999999999,6,6,
 2,2014,2,55,9,"Lobocheilos melanotaenia",4,6,6,
@@ -407,7 +407,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2014,8,12,3,"Cyclocheilichthys lagleri",121.1,8,8,
 2,2014,8,15,4,"Barbonymus gonionotus",255.8,8,8,
 2,2014,8,16,5,"Puntius brevis",3.5,8,8,
-2,2014,8,17,5,"Puntius sp. (cf. masyai)",329.1999999999999,8,8,
+2,2014,8,17,5,"Puntius sp. (cf. masyai)",329.2,8,8,
 2,2014,8,21,6,"Labiobarbus leptocheilus",150.7,8,8,
 2,2014,8,22,8,"Henicorhynchus siamensis",996.7,8,8,
 2,2014,8,24,9,"Esomus metallicus",1.2,8,8,
@@ -420,7 +420,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2014,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",61.3,8,8,
 2,2014,8,99,34,"Puntius orphoides",39.2,8,8,
 2,2014,8,108,38,"Paralaubuca typus",.9,8,8,
-2,2014,11,4,1,"Mystus mysticetus",737.3,9,9,6
+2,2014,11,4,1,"Mystus mysticetus",737.3000000000001,9,9,6
 2,2014,11,6,1,"Mystus gulio",6,9,9,6
 2,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",25.7,9,9,6
 2,2014,11,12,3,"Cyclocheilichthys lagleri",360.8,9,9,6
@@ -428,7 +428,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2014,11,17,5,"Puntius sp. (cf. masyai)",548.6,9,9,6
 2,2014,11,21,6,"Labiobarbus leptocheilus",51.00000000000001,9,9,6
 2,2014,11,22,8,"Henicorhynchus siamensis",106.6,9,9,6
-2,2014,11,24,9,"Esomus metallicus",79.30000000000001,9,9,6
+2,2014,11,24,9,"Esomus metallicus",79.3,9,9,6
 2,2014,11,25,9,"Esomus longimanus",22.5,9,9,6
 2,2014,11,27,9,"Amblypharyngodon chulabhornae",.4,9,9,6
 2,2014,11,33,9,"Rasbora tornieri",.5,9,9,6
@@ -452,7 +452,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2015,2,17,5,"Puntius sp. (cf. masyai)",109.7,10,10,
 2,2015,2,21,6,"Labiobarbus leptocheilus",236.6,10,10,
 2,2015,2,43,14,"Channa striata",201.6,10,10,
-2,2015,2,50,16,"Parambassis siamensis",613.6999999999999,10,10,
+2,2015,2,50,16,"Parambassis siamensis",613.7,10,10,
 2,2015,2,59,19,"Notopterus notopterus",587.8,10,10,
 2,2015,2,63,21,"Xenentodon cancila",268.1,10,10,
 2,2015,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",178.3,10,10,
@@ -477,7 +477,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2015,8,16,5,"Puntius brevis",6.6,12,12,
 2,2015,8,17,5,"Puntius sp. (cf. masyai)",1327,12,12,
 2,2015,8,21,6,"Labiobarbus leptocheilus",454.3,12,12,
-2,2015,8,22,8,"Henicorhynchus siamensis",4219.700000000001,12,12,
+2,2015,8,22,8,"Henicorhynchus siamensis",4219.7,12,12,
 2,2015,8,40,13,"Clarias batrachus",629,12,12,
 2,2015,8,43,14,"Channa striata",131,12,12,
 2,2015,8,50,16,"Parambassis siamensis",708.5,12,12,
@@ -491,7 +491,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 2,2015,11,12,3,"Cyclocheilichthys lagleri",196.8,13,13,8
 2,2015,11,15,4,"Barbonymus gonionotus",22.3,13,13,8
 2,2015,11,16,5,"Puntius brevis",62.1,13,13,8
-2,2015,11,17,5,"Puntius sp. (cf. masyai)",415.4,13,13,8
+2,2015,11,17,5,"Puntius sp. (cf. masyai)",415.3999999999999,13,13,8
 2,2015,11,21,6,"Labiobarbus leptocheilus",55.1,13,13,8
 2,2015,11,22,8,"Henicorhynchus siamensis",103.6,13,13,8
 2,2015,11,23,8,"Henicorhynchus lobatus",446.1,13,13,8
@@ -522,7 +522,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 3,2013,5,53,17,"Trichopodus trichopterus",20,3,3,2
 3,2013,8,4,1,"Mystus mysticetus",87.90000000000001,4,4,3
 3,2013,8,24,9,"Esomus metallicus",25.1,4,4,3
-3,2013,8,38,12,"Anabas testudineus",94.3,4,4,3
+3,2013,8,38,12,"Anabas testudineus",94.30000000000001,4,4,3
 3,2013,8,40,13,"Clarias batrachus",11.6,4,4,3
 3,2013,8,43,14,"Channa striata",1.6,4,4,3
 3,2013,8,56,18,"Trichopsis schalleri",21.5,4,4,3
@@ -538,7 +538,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 3,2013,11,110,24,"Ompok hypophthalmus/urbaini",50.2,5,5,4
 3,2013,11,143,18,"Betta prima",4.5,5,5,4
 3,2014,2,1,1,"Mystus albolineatus",39.9,6,6,
-3,2014,2,10,3,"Anematichthys repasson",57.09999999999999,6,6,
+3,2014,2,10,3,"Anematichthys repasson",57.1,6,6,
 3,2014,2,24,9,"Esomus metallicus",520.4,6,6,
 3,2014,2,38,12,"Anabas testudineus",196.8,6,6,
 3,2014,2,43,14,"Channa striata",56.9,6,6,
@@ -558,19 +558,19 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 3,2014,8,24,9,"Esomus metallicus",1079.4,8,8,
 3,2014,8,68,25,"Macrognathus siamensis",25.2,8,8,
 3,2014,8,100,4,"Hypsibarbus vernayi",714.6,8,8,
-3,2014,8,107,38,"Oxygaster pointoni",82.2,8,8,
+3,2014,8,107,38,"Oxygaster pointoni",82.19999999999999,8,8,
 3,2014,8,110,24,"Ompok hypophthalmus/urbaini",195.6,8,8,
 3,2014,8,150,4,"Hypsibarbus wetmorei",378.6,8,8,
 3,2014,11,1,1,"Mystus albolineatus",2.5,9,9,6
 3,2014,11,24,9,"Esomus metallicus",198.9,9,9,6
 3,2014,11,38,12,"Anabas testudineus",123.3,9,9,6
-3,2014,11,52,17,"Trichogaster microlepis",82.8,9,9,6
+3,2014,11,52,17,"Trichogaster microlepis",82.79999999999998,9,9,6
 3,2014,11,53,17,"Trichopodus trichopterus",8.700000000000001,9,9,6
-3,2014,11,100,4,"Hypsibarbus vernayi",775.9000000000001,9,9,6
+3,2014,11,100,4,"Hypsibarbus vernayi",775.9,9,9,6
 3,2014,11,143,18,"Betta prima",14.5,9,9,6
 3,2014,11,149,48,"Wallago attu",113.3,9,9,6
 3,2015,2,6,1,"Mystus gulio",78,10,10,
-3,2015,2,24,9,"Esomus metallicus",854.6000000000001,10,10,
+3,2015,2,24,9,"Esomus metallicus",854.6,10,10,
 3,2015,2,38,12,"Anabas testudineus",72.7,10,10,
 3,2015,2,40,13,"Clarias batrachus",363.3,10,10,
 3,2015,2,42,13,"Clarias meladerma",207.4,10,10,
@@ -586,7 +586,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 3,2015,5,40,13,"Clarias batrachus",252.3,11,11,7
 3,2015,5,43,14,"Channa striata",90.7,11,11,7
 3,2015,5,51,17,"Trichopodus pectoralis",69.40000000000001,11,11,7
-3,2015,5,52,17,"Trichogaster microlepis",265.2,11,11,7
+3,2015,5,52,17,"Trichogaster microlepis",265.1999999999999,11,11,7
 3,2015,5,100,4,"Hypsibarbus vernayi",1528.4,11,11,7
 3,2015,5,107,38,"Oxygaster pointoni",1.2,11,11,7
 3,2015,5,143,18,"Betta prima",1.1,11,11,7
@@ -601,7 +601,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 3,2015,8,150,4,"Hypsibarbus wetmorei",301.5,12,12,
 3,2015,11,4,1,"Mystus mysticetus",17.9,13,13,8
 3,2015,11,24,9,"Esomus metallicus",411.3,13,13,8
-3,2015,11,27,9,"Amblypharyngodon chulabhornae",91.09999999999999,13,13,8
+3,2015,11,27,9,"Amblypharyngodon chulabhornae",91.10000000000001,13,13,8
 3,2015,11,38,12,"Anabas testudineus",185,13,13,8
 3,2015,11,40,13,"Clarias batrachus",98.09999999999999,13,13,8
 3,2015,11,51,17,"Trichopodus pectoralis",148.8,13,13,8
@@ -680,7 +680,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 4,2013,11,138,9,"Rasbora caudimaculata",.7,5,5,4
 4,2014,2,1,1,"Mystus albolineatus",33.9,6,6,
 4,2014,2,8,2,"Hemibagrus spilopterus/nemurus",128.1,6,6,
-4,2014,2,12,3,"Cyclocheilichthys lagleri",75.39999999999999,6,6,
+4,2014,2,12,3,"Cyclocheilichthys lagleri",75.40000000000001,6,6,
 4,2014,2,15,4,"Barbonymus gonionotus",139,6,6,
 4,2014,2,16,5,"Puntius brevis",69.3,6,6,
 4,2014,2,21,6,"Labiobarbus leptocheilus",192.9,6,6,
@@ -692,7 +692,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 4,2014,2,68,25,"Macrognathus siamensis",20.2,6,6,
 4,2014,2,69,25,"Macrognathus semiocellatus",5.1,6,6,
 4,2014,2,102,34,"Osteochilus vittatus/lini/hasselti",18.7,6,6,
-4,2014,2,111,40,"Channa micropeltes",787.9000000000001,6,6,
+4,2014,2,111,40,"Channa micropeltes",787.8999999999999,6,6,
 4,2014,5,6,1,"Mystus gulio",159.7,7,7,5
 4,2014,5,12,3,"Cyclocheilichthys lagleri",196.7,7,7,5
 4,2014,5,15,4,"Barbonymus gonionotus",1426.4,7,7,5
@@ -700,7 +700,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 4,2014,5,21,6,"Labiobarbus leptocheilus",1444.2,7,7,5
 4,2014,5,40,13,"Clarias batrachus",63.9,7,7,5
 4,2014,5,47,15,"Pristolepis fasciata",43.8,7,7,5
-4,2014,5,50,16,"Parambassis siamensis",73.30000000000001,7,7,5
+4,2014,5,50,16,"Parambassis siamensis",73.3,7,7,5
 4,2014,5,59,19,"Notopterus notopterus",436.7,7,7,5
 4,2014,5,64,22,"Micronema hexapterus",40.9,7,7,5
 4,2014,5,102,34,"Osteochilus vittatus/lini/hasselti",11.2,7,7,5
@@ -713,7 +713,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 4,2014,11,6,1,"Mystus gulio",58,9,9,6
 4,2014,11,12,3,"Cyclocheilichthys lagleri",356.7,9,9,6
 4,2014,11,15,4,"Barbonymus gonionotus",290.3,9,9,6
-4,2014,11,16,5,"Puntius brevis",523.4,9,9,6
+4,2014,11,16,5,"Puntius brevis",523.4000000000001,9,9,6
 4,2014,11,25,9,"Esomus longimanus",395.3,9,9,6
 4,2014,11,47,15,"Pristolepis fasciata",18.6,9,9,6
 4,2014,11,48,16,"Parambassis apogonoides",153.1,9,9,6
@@ -727,7 +727,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 4,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",14.6,10,10,
 4,2015,2,11,3,"Anematichthys/Cyclocheilichthys armatus",216.1,10,10,
 4,2015,2,15,4,"Barbonymus gonionotus",2697.4,10,10,
-4,2015,2,16,5,"Puntius brevis",817.5,10,10,
+4,2015,2,16,5,"Puntius brevis",817.5000000000001,10,10,
 4,2015,2,21,6,"Labiobarbus leptocheilus",1415.6,10,10,
 4,2015,2,40,13,"Clarias batrachus",347.5,10,10,
 4,2015,2,43,14,"Channa striata",396.3,10,10,
@@ -736,7 +736,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 4,2015,2,59,19,"Notopterus notopterus",2200.8,10,10,
 4,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",48.2,10,10,
 4,2015,2,172,0,"Hampala dispar",585.5,10,10,
-4,2015,5,6,1,"Mystus gulio",70.60000000000001,11,11,7
+4,2015,5,6,1,"Mystus gulio",70.59999999999999,11,11,7
 4,2015,5,12,3,"Cyclocheilichthys lagleri",365.3,11,11,7
 4,2015,5,15,4,"Barbonymus gonionotus",334.8,11,11,7
 4,2015,5,16,5,"Puntius brevis",400.8,11,11,7
@@ -771,7 +771,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 5,2012,11,10,3,"Anematichthys repasson",188.7,1,1,1
 5,2012,11,13,4,"Hypsibarbus lagleri",6.4,1,1,1
 5,2012,11,17,5,"Puntius sp. (cf. masyai)",4,1,1,1
-5,2012,11,24,9,"Esomus metallicus",704.9,1,1,1
+5,2012,11,24,9,"Esomus metallicus",704.9000000000001,1,1,1
 5,2012,11,38,12,"Anabas testudineus",25.8,1,1,1
 5,2012,11,43,14,"Channa striata",179.2,1,1,1
 5,2012,11,53,17,"Trichopodus trichopterus",16.2,1,1,1
@@ -782,7 +782,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 5,2012,11,79,30,"Hampala macrolepidota",66.40000000000001,1,1,1
 5,2012,11,100,4,"Hypsibarbus vernayi",3.4,1,1,1
 5,2013,2,1,1,"Mystus albolineatus",5.5,2,2,
-5,2013,2,12,3,"Cyclocheilichthys lagleri",93.09999999999998,2,2,
+5,2013,2,12,3,"Cyclocheilichthys lagleri",93.09999999999999,2,2,
 5,2013,2,29,9,"Rasbora aurotaenia",2.1,2,2,
 5,2013,2,40,13,"Clarias batrachus",77.40000000000001,2,2,
 5,2013,2,43,14,"Channa striata",1121.2,2,2,
@@ -797,7 +797,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 5,2013,8,50,16,"Parambassis siamensis",5.300000000000001,4,4,3
 5,2013,8,59,19,"Notopterus notopterus",118.1,4,4,3
 5,2013,8,128,7,"Thynnichthys thynnoides",1.9,4,4,3
-5,2013,11,1,1,"Mystus albolineatus",47.4,5,5,4
+5,2013,11,1,1,"Mystus albolineatus",47.40000000000001,5,5,4
 5,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",12.1,5,5,4
 5,2013,11,10,3,"Anematichthys repasson",273.8,5,5,4
 5,2013,11,12,3,"Cyclocheilichthys lagleri",56,5,5,4
@@ -807,13 +807,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 5,2013,11,19,5,"Puntius rhombeus",9.800000000000001,5,5,4
 5,2013,11,24,9,"Esomus metallicus",21.2,5,5,4
 5,2013,11,26,9,"Danio albolineatus",8.4,5,5,4
-5,2013,11,29,9,"Rasbora aurotaenia",63.6,5,5,4
+5,2013,11,29,9,"Rasbora aurotaenia",63.60000000000001,5,5,4
 5,2013,11,38,12,"Anabas testudineus",692.9,5,5,4
 5,2013,11,40,13,"Clarias batrachus",64.3,5,5,4
 5,2013,11,42,13,"Clarias meladerma",102.9,5,5,4
 5,2013,11,43,14,"Channa striata",428.9,5,5,4
 5,2013,11,51,17,"Trichopodus pectoralis",20.8,5,5,4
-5,2013,11,52,17,"Trichogaster microlepis",56.4,5,5,4
+5,2013,11,52,17,"Trichogaster microlepis",56.40000000000001,5,5,4
 5,2013,11,53,17,"Trichopodus trichopterus",58.5,5,5,4
 5,2013,11,56,18,"Trichopsis schalleri",4.3,5,5,4
 5,2013,11,60,19,"Chitala blanci",1.2,5,5,4
@@ -847,9 +847,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 5,2014,11,110,24,"Ompok hypophthalmus/urbaini",188.5,9,9,6
 5,2015,2,4,1,"Mystus mysticetus",15.3,10,10,
 5,2015,2,12,3,"Cyclocheilichthys lagleri",247.5,10,10,
-5,2015,2,40,13,"Clarias batrachus",651.3999999999999,10,10,
+5,2015,2,40,13,"Clarias batrachus",651.4,10,10,
 5,2015,2,42,13,"Clarias meladerma",35.9,10,10,
-5,2015,2,43,14,"Channa striata",540.6,10,10,
+5,2015,2,43,14,"Channa striata",540.5999999999999,10,10,
 5,2015,2,52,17,"Trichogaster microlepis",17.5,10,10,
 5,2015,2,59,19,"Notopterus notopterus",71.7,10,10,
 5,2015,2,68,25,"Macrognathus siamensis",48.4,10,10,
@@ -903,7 +903,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2013,2,52,17,"Trichogaster microlepis",1316.7,2,2,
 6,2013,2,53,17,"Trichopodus trichopterus",66.7,2,2,
 6,2013,2,57,18,"Trichopsis pumila",1.2,2,2,
-6,2013,2,58,18,"Trichopsis vittata",8.6,2,2,
+6,2013,2,58,18,"Trichopsis vittata",8.600000000000001,2,2,
 6,2013,2,59,19,"Notopterus notopterus",1188.6,2,2,
 6,2013,2,63,21,"Xenentodon cancila",5.5,2,2,
 6,2013,2,100,4,"Hypsibarbus vernayi",7,2,2,
@@ -922,7 +922,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2013,5,53,17,"Trichopodus trichopterus",3.8,3,3,2
 6,2013,5,59,19,"Notopterus notopterus",1160.2,3,3,2
 6,2013,5,69,25,"Macrognathus semiocellatus",4.6,3,3,2
-6,2013,8,4,1,"Mystus mysticetus",77.30000000000001,4,4,3
+6,2013,8,4,1,"Mystus mysticetus",77.3,4,4,3
 6,2013,8,9,3,"Anematichthys/Cyclocheilichthys apogon",10.3,4,4,3
 6,2013,8,15,4,"Barbonymus gonionotus",28.6,4,4,3
 6,2013,8,16,5,"Puntius brevis",11.1,4,4,3
@@ -931,7 +931,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2013,8,37,11,"Puntioplites proctozystron",4,4,4,3
 6,2013,8,38,12,"Anabas testudineus",5,4,4,3
 6,2013,8,47,15,"Pristolepis fasciata",3.7,4,4,3
-6,2013,8,49,16,"Parambassis wolffii",89.09999999999999,4,4,3
+6,2013,8,49,16,"Parambassis wolffii",89.09999999999998,4,4,3
 6,2013,8,52,17,"Trichogaster microlepis",29,4,4,3
 6,2013,8,53,17,"Trichopodus trichopterus",4,4,4,3
 6,2013,8,58,18,"Trichopsis vittata",1.6,4,4,3
@@ -953,7 +953,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2013,11,41,13,"Clarias macrocephalus",148.1,5,5,4
 6,2013,11,43,14,"Channa striata",362.1,5,5,4
 6,2013,11,47,15,"Pristolepis fasciata",82.8,5,5,4
-6,2013,11,49,16,"Parambassis wolffii",4.4,5,5,4
+6,2013,11,49,16,"Parambassis wolffii",4.399999999999999,5,5,4
 6,2013,11,52,17,"Trichogaster microlepis",58.3,5,5,4
 6,2013,11,53,17,"Trichopodus trichopterus",8.199999999999999,5,5,4
 6,2013,11,58,18,"Trichopsis vittata",4.4,5,5,4
@@ -962,16 +962,16 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2013,11,65,22,"Kryptopterus dissitus",9.5,5,5,4
 6,2013,11,68,25,"Macrognathus siamensis",19.7,5,5,4
 6,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",12.9,5,5,4
-6,2014,2,17,5,"Puntius sp. (cf. masyai)",884.4,6,6,
+6,2014,2,17,5,"Puntius sp. (cf. masyai)",884.4000000000001,6,6,
 6,2014,2,24,9,"Esomus metallicus",73.7,6,6,
 6,2014,2,38,12,"Anabas testudineus",405.5,6,6,
-6,2014,2,43,14,"Channa striata",35622.09999999999,6,6,
+6,2014,2,43,14,"Channa striata",35622.1,6,6,
 6,2014,2,49,16,"Parambassis wolffii",29.9,6,6,
 6,2014,2,51,17,"Trichopodus pectoralis",342.2,6,6,
 6,2014,2,52,17,"Trichogaster microlepis",16.2,6,6,
 6,2014,2,53,17,"Trichopodus trichopterus",6,6,6,
 6,2014,2,58,18,"Trichopsis vittata",1.4,6,6,
-6,2014,2,59,19,"Notopterus notopterus",4113.400000000001,6,6,
+6,2014,2,59,19,"Notopterus notopterus",4113.4,6,6,
 6,2014,2,111,40,"Channa micropeltes",409.9,6,6,
 6,2014,2,128,7,"Thynnichthys thynnoides",3.2,6,6,
 6,2014,5,9,3,"Anematichthys/Cyclocheilichthys apogon",5.4,7,7,5
@@ -979,12 +979,12 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2014,5,17,5,"Puntius sp. (cf. masyai)",19.7,7,7,5
 6,2014,5,24,9,"Esomus metallicus",75.5,7,7,5
 6,2014,5,38,12,"Anabas testudineus",256.4,7,7,5
-6,2014,5,40,13,"Clarias batrachus",867.9,7,7,5
+6,2014,5,40,13,"Clarias batrachus",867.9000000000001,7,7,5
 6,2014,5,41,13,"Clarias macrocephalus",712.5,7,7,5
-6,2014,5,43,14,"Channa striata",901.3000000000001,7,7,5
+6,2014,5,43,14,"Channa striata",901.3,7,7,5
 6,2014,5,52,17,"Trichogaster microlepis",207.6,7,7,5
 6,2014,5,59,19,"Notopterus notopterus",1144.8,7,7,5
-6,2014,8,4,1,"Mystus mysticetus",46.89999999999999,8,8,
+6,2014,8,4,1,"Mystus mysticetus",46.9,8,8,
 6,2014,8,8,2,"Hemibagrus spilopterus/nemurus",22.7,8,8,
 6,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",9.1,8,8,
 6,2014,8,12,3,"Cyclocheilichthys lagleri",24.5,8,8,
@@ -996,7 +996,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2014,8,27,9,"Amblypharyngodon chulabhornae",3.3,8,8,
 6,2014,8,29,9,"Rasbora aurotaenia",7,8,8,
 6,2014,8,37,11,"Puntioplites proctozystron",38,8,8,
-6,2014,8,49,16,"Parambassis wolffii",33.9,8,8,
+6,2014,8,49,16,"Parambassis wolffii",33.90000000000001,8,8,
 6,2014,8,53,17,"Trichopodus trichopterus",12.5,8,8,
 6,2014,8,59,19,"Notopterus notopterus",721.5,8,8,
 6,2014,8,63,21,"Xenentodon cancila",5.5,8,8,
@@ -1024,7 +1024,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2014,11,53,17,"Trichopodus trichopterus",145.3,9,9,6
 6,2014,11,56,18,"Trichopsis schalleri",8.300000000000001,9,9,6
 6,2014,11,58,18,"Trichopsis vittata",69.90000000000001,9,9,6
-6,2014,11,59,19,"Notopterus notopterus",623,9,9,6
+6,2014,11,59,19,"Notopterus notopterus",622.9999999999999,9,9,6
 6,2014,11,63,21,"Xenentodon cancila",10,9,9,6
 6,2014,11,107,38,"Oxygaster pointoni",4.4,9,9,6
 6,2014,11,109,39,"Luciosoma bleekeri",101,9,9,6
@@ -1035,7 +1035,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",54.2,10,10,
 6,2015,2,12,3,"Cyclocheilichthys lagleri",7.9,10,10,
 6,2015,2,17,5,"Puntius sp. (cf. masyai)",471.4,10,10,
-6,2015,2,21,6,"Labiobarbus leptocheilus",459,10,10,
+6,2015,2,21,6,"Labiobarbus leptocheilus",458.9999999999999,10,10,
 6,2015,2,22,8,"Henicorhynchus siamensis",83.3,10,10,
 6,2015,2,23,8,"Henicorhynchus lobatus",232.6,10,10,
 6,2015,2,24,9,"Esomus metallicus",29.1,10,10,
@@ -1056,10 +1056,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2015,2,169,58,"Leptobarbus hoeveni",522.9,10,10,
 6,2015,5,4,1,"Mystus mysticetus",5.3,11,11,7
 6,2015,5,9,3,"Anematichthys/Cyclocheilichthys apogon",4.5,11,11,7
-6,2015,5,12,3,"Cyclocheilichthys lagleri",93.19999999999999,11,11,7
-6,2015,5,16,5,"Puntius brevis",326,11,11,7
+6,2015,5,12,3,"Cyclocheilichthys lagleri",93.2,11,11,7
+6,2015,5,16,5,"Puntius brevis",326.0000000000001,11,11,7
 6,2015,5,17,5,"Puntius sp. (cf. masyai)",193,11,11,7
-6,2015,5,21,6,"Labiobarbus leptocheilus",401,11,11,7
+6,2015,5,21,6,"Labiobarbus leptocheilus",401.0000000000001,11,11,7
 6,2015,5,22,8,"Henicorhynchus siamensis",126.1,11,11,7
 6,2015,5,23,8,"Henicorhynchus lobatus",174.4,11,11,7
 6,2015,5,24,9,"Esomus metallicus",501.8,11,11,7
@@ -1111,7 +1111,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 6,2015,11,47,15,"Pristolepis fasciata",1.3,13,13,8
 6,2015,11,50,16,"Parambassis siamensis",239,13,13,8
 6,2015,11,52,17,"Trichogaster microlepis",69.7,13,13,8
-6,2015,11,53,17,"Trichopodus trichopterus",81.69999999999999,13,13,8
+6,2015,11,53,17,"Trichopodus trichopterus",81.7,13,13,8
 6,2015,11,55,9,"Lobocheilos melanotaenia",10.4,13,13,8
 6,2015,11,58,18,"Trichopsis vittata",20.6,13,13,8
 6,2015,11,59,19,"Notopterus notopterus",997,13,13,8
@@ -1175,7 +1175,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 7,2013,8,50,16,"Parambassis siamensis",26.9,4,4,3
 7,2013,8,59,19,"Notopterus notopterus",47,4,4,3
 7,2013,8,102,34,"Osteochilus vittatus/lini/hasselti",10.6,4,4,3
-7,2013,8,107,38,"Oxygaster pointoni",37.6,4,4,3
+7,2013,8,107,38,"Oxygaster pointoni",37.59999999999999,4,4,3
 7,2013,11,1,1,"Mystus albolineatus",5,5,5,4
 7,2013,11,4,1,"Mystus mysticetus",796.2,5,5,4
 7,2013,11,7,1,"Mystus bocourti",26,5,5,4
@@ -1189,13 +1189,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 7,2013,11,52,17,"Trichogaster microlepis",123.6,5,5,4
 7,2013,11,53,17,"Trichopodus trichopterus",74.5,5,5,4
 7,2013,11,59,19,"Notopterus notopterus",133.4,5,5,4
-7,2013,11,64,22,"Micronema hexapterus",40.09999999999999,5,5,4
+7,2013,11,64,22,"Micronema hexapterus",40.1,5,5,4
 7,2013,11,65,22,"Kryptopterus dissitus",9.5,5,5,4
 7,2013,11,68,25,"Macrognathus siamensis",24.6,5,5,4
 7,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",18.1,5,5,4
 7,2013,11,107,38,"Oxygaster pointoni",107.2,5,5,4
 7,2013,11,128,7,"Thynnichthys thynnoides",17,5,5,4
-7,2013,11,138,9,"Rasbora caudimaculata",53.5,5,5,4
+7,2013,11,138,9,"Rasbora caudimaculata",53.49999999999999,5,5,4
 7,2014,2,6,1,"Mystus gulio",45.2,6,6,
 7,2014,2,7,1,"Mystus bocourti",6.8,6,6,
 7,2014,2,12,3,"Cyclocheilichthys lagleri",139.9,6,6,
@@ -1307,7 +1307,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 8,2013,5,47,15,"Pristolepis fasciata",174.5,3,3,2
 8,2013,5,52,17,"Trichogaster microlepis",24.4,3,3,2
 8,2013,5,56,18,"Trichopsis schalleri",1.3,3,3,2
-8,2013,5,59,19,"Notopterus notopterus",393.4999999999999,3,3,2
+8,2013,5,59,19,"Notopterus notopterus",393.5,3,3,2
 8,2013,5,68,25,"Macrognathus siamensis",39.3,3,3,2
 8,2013,5,78,29,"Oxyeleotris marmorata",65.7,3,3,2
 8,2013,8,24,9,"Esomus metallicus",39,4,4,3
@@ -1334,7 +1334,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 8,2014,2,52,17,"Trichogaster microlepis",360.96,6,6,
 8,2014,2,53,17,"Trichopodus trichopterus",15.88,6,6,
 8,2014,2,56,18,"Trichopsis schalleri",1.13,6,6,
-8,2014,2,59,19,"Notopterus notopterus",554.8099999999999,6,6,
+8,2014,2,59,19,"Notopterus notopterus",554.8100000000001,6,6,
 8,2014,2,110,24,"Ompok hypophthalmus/urbaini",134.95,6,6,
 8,2014,5,9,3,"Anematichthys/Cyclocheilichthys apogon",9.699999999999999,7,7,5
 8,2014,5,14,4,"Hypsibarbus malcolmi",103.6,7,7,5
@@ -1344,10 +1344,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 8,2014,5,56,18,"Trichopsis schalleri",1.3,7,7,5
 8,2014,5,59,19,"Notopterus notopterus",116.4,7,7,5
 8,2014,5,68,25,"Macrognathus siamensis",30.6,7,7,5
-8,2014,8,24,9,"Esomus metallicus",94.8,8,8,
+8,2014,8,24,9,"Esomus metallicus",94.79999999999998,8,8,
 8,2014,8,52,17,"Trichogaster microlepis",21,8,8,
 8,2014,8,59,19,"Notopterus notopterus",246.7,8,8,
-8,2014,8,68,25,"Macrognathus siamensis",85.30000000000001,8,8,
+8,2014,8,68,25,"Macrognathus siamensis",85.3,8,8,
 8,2014,8,78,29,"Oxyeleotris marmorata",228.3,8,8,
 8,2014,11,24,9,"Esomus metallicus",11.2,9,9,6
 8,2014,11,27,9,"Amblypharyngodon chulabhornae",.4,9,9,6
@@ -1379,7 +1379,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 8,2015,8,25,9,"Esomus longimanus",2.8,12,12,
 8,2015,8,47,15,"Pristolepis fasciata",123.1,12,12,
 8,2015,8,52,17,"Trichogaster microlepis",143.8,12,12,
-8,2015,8,59,19,"Notopterus notopterus",578.1,12,12,
+8,2015,8,59,19,"Notopterus notopterus",578.0999999999999,12,12,
 8,2015,8,68,25,"Macrognathus siamensis",22.7,12,12,
 8,2015,11,1,1,"Mystus albolineatus",151,13,13,8
 8,2015,11,26,9,"Danio albolineatus",15.4,13,13,8
@@ -1387,7 +1387,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 8,2015,11,40,13,"Clarias batrachus",50.6,13,13,8
 8,2015,11,46,15,"Nandus oxyrhynchus",4.5,13,13,8
 8,2015,11,47,15,"Pristolepis fasciata",123,13,13,8
-8,2015,11,52,17,"Trichogaster microlepis",81.40000000000001,13,13,8
+8,2015,11,52,17,"Trichogaster microlepis",81.39999999999999,13,13,8
 8,2015,11,56,18,"Trichopsis schalleri",3.6,13,13,8
 8,2015,11,59,19,"Notopterus notopterus",298,13,13,8
 8,2015,11,68,25,"Macrognathus siamensis",15.6,13,13,8
@@ -1427,9 +1427,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 9,2013,5,68,25,"Macrognathus siamensis",4.4,3,3,2
 9,2013,5,86,33,"Pangasianodon hypophthalmus",217,3,3,2
 9,2013,5,100,4,"Hypsibarbus vernayi",118.6,3,3,2
-9,2013,5,149,48,"Wallago attu",791.3999999999999,3,3,2
+9,2013,5,149,48,"Wallago attu",791.4000000000001,3,3,2
 9,2013,8,15,4,"Barbonymus gonionotus",1062.8,4,4,3
-9,2013,8,24,9,"Esomus metallicus",88,4,4,3
+9,2013,8,24,9,"Esomus metallicus",87.99999999999999,4,4,3
 9,2013,8,27,9,"Amblypharyngodon chulabhornae",294.5,4,4,3
 9,2013,8,38,12,"Anabas testudineus",91.7,4,4,3
 9,2013,8,40,13,"Clarias batrachus",316.1,4,4,3
@@ -1450,7 +1450,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 9,2013,11,68,25,"Macrognathus siamensis",12.9,5,5,4
 9,2013,11,100,4,"Hypsibarbus vernayi",2299.9,5,5,4
 9,2014,2,14,4,"Hypsibarbus malcolmi",1553.5,6,6,
-9,2014,2,24,9,"Esomus metallicus",61,6,6,
+9,2014,2,24,9,"Esomus metallicus",60.99999999999999,6,6,
 9,2014,2,40,13,"Clarias batrachus",869.7,6,6,
 9,2014,2,43,14,"Channa striata",1191.2,6,6,
 9,2014,2,50,16,"Parambassis siamensis",9.1,6,6,
@@ -1477,12 +1477,12 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 9,2014,11,24,9,"Esomus metallicus",6,9,9,6
 9,2014,11,27,9,"Amblypharyngodon chulabhornae",184,9,9,6
 9,2014,11,43,14,"Channa striata",160.2,9,9,6
-9,2014,11,48,16,"Parambassis apogonoides",66.09999999999999,9,9,6
+9,2014,11,48,16,"Parambassis apogonoides",66.10000000000001,9,9,6
 9,2014,11,52,17,"Trichogaster microlepis",20.1,9,9,6
 9,2014,11,143,18,"Betta prima",8.5,9,9,6
 9,2015,2,5,1,"Mystus atrifasciatus",31.5,10,10,
 9,2015,2,15,4,"Barbonymus gonionotus",234.4,10,10,
-9,2015,2,27,9,"Amblypharyngodon chulabhornae",54.09999999999999,10,10,
+9,2015,2,27,9,"Amblypharyngodon chulabhornae",54.1,10,10,
 9,2015,2,42,13,"Clarias meladerma",1669,10,10,
 9,2015,2,43,14,"Channa striata",188.5,10,10,
 9,2015,2,50,16,"Parambassis siamensis",112,10,10,
@@ -1506,7 +1506,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 9,2015,11,24,9,"Esomus metallicus",233.5,13,13,8
 9,2015,11,50,16,"Parambassis siamensis",111.3,13,13,8
 9,2015,11,56,18,"Trichopsis schalleri",3,13,13,8
-10,2012,11,28,9,"Rasbora daniconius",7.7,1,1,1
+10,2012,11,28,9,"Rasbora daniconius",7.699999999999999,1,1,1
 10,2012,11,38,12,"Anabas testudineus",163.3,1,1,1
 10,2012,11,50,16,"Parambassis siamensis",102.2,1,1,1
 10,2012,11,51,17,"Trichopodus pectoralis",176.4,1,1,1
@@ -1527,10 +1527,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 10,2013,8,24,9,"Esomus metallicus",18.5,4,4,3
 10,2013,8,27,9,"Amblypharyngodon chulabhornae",5,4,4,3
 10,2013,8,28,9,"Rasbora daniconius",5.2,4,4,3
-10,2013,8,38,12,"Anabas testudineus",316.5000000000001,4,4,3
+10,2013,8,38,12,"Anabas testudineus",316.5,4,4,3
 10,2013,8,40,13,"Clarias batrachus",13.2,4,4,3
 10,2013,8,41,13,"Clarias macrocephalus",334.3,4,4,3
-10,2013,8,43,14,"Channa striata",53.1,4,4,3
+10,2013,8,43,14,"Channa striata",53.10000000000001,4,4,3
 10,2013,8,53,17,"Trichopodus trichopterus",55.8,4,4,3
 10,2013,8,56,18,"Trichopsis schalleri",9.5,4,4,3
 10,2013,8,57,18,"Trichopsis pumila",11.2,4,4,3
@@ -1540,19 +1540,19 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 10,2013,8,68,25,"Macrognathus siamensis",5.9,4,4,3
 10,2013,11,4,1,"Mystus mysticetus",21.4,5,5,4
 10,2013,11,24,9,"Esomus metallicus",90.39999999999999,5,5,4
-10,2013,11,38,12,"Anabas testudineus",568.6999999999999,5,5,4
+10,2013,11,38,12,"Anabas testudineus",568.7,5,5,4
 10,2013,11,40,13,"Clarias batrachus",141.6,5,5,4
 10,2013,11,41,13,"Clarias macrocephalus",218.9,5,5,4
 10,2013,11,51,17,"Trichopodus pectoralis",398.6,5,5,4
 10,2013,11,52,17,"Trichogaster microlepis",49.6,5,5,4
 10,2013,11,53,17,"Trichopodus trichopterus",777.7000000000002,5,5,4
-10,2013,11,58,18,"Trichopsis vittata",74,5,5,4
+10,2013,11,58,18,"Trichopsis vittata",73.99999999999999,5,5,4
 10,2013,11,59,19,"Notopterus notopterus",396.4,5,5,4
 10,2013,11,75,27,"Acanthopsoides/Acantopsis spp",.6,5,5,4
 10,2013,11,164,64,"Channa gachua",30.7,5,5,4
 10,2014,2,4,1,"Mystus mysticetus",28.2,6,6,
-10,2014,2,17,5,"Puntius sp. (cf. masyai)",96.10000000000001,6,6,
-10,2014,2,24,9,"Esomus metallicus",83.60000000000001,6,6,
+10,2014,2,17,5,"Puntius sp. (cf. masyai)",96.09999999999999,6,6,
+10,2014,2,24,9,"Esomus metallicus",83.59999999999999,6,6,
 10,2014,2,38,12,"Anabas testudineus",1242.9,6,6,
 10,2014,2,40,13,"Clarias batrachus",398.3,6,6,
 10,2014,2,41,13,"Clarias macrocephalus",558,6,6,
@@ -1577,7 +1577,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 10,2014,8,4,1,"Mystus mysticetus",138.7,8,8,
 10,2014,8,24,9,"Esomus metallicus",100.5,8,8,
 10,2014,8,38,12,"Anabas testudineus",81.2,8,8,
-10,2014,8,40,13,"Clarias batrachus",562.8000000000001,8,8,
+10,2014,8,40,13,"Clarias batrachus",562.8,8,8,
 10,2014,8,41,13,"Clarias macrocephalus",511.3,8,8,
 10,2014,8,43,14,"Channa striata",163.3,8,8,
 10,2014,8,51,17,"Trichopodus pectoralis",972.5,8,8,
@@ -1592,13 +1592,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 10,2014,11,38,12,"Anabas testudineus",4.6,9,9,6
 10,2014,11,40,13,"Clarias batrachus",125.4,9,9,6
 10,2014,11,43,14,"Channa striata",9.300000000000001,9,9,6
-10,2014,11,51,17,"Trichopodus pectoralis",548.3,9,9,6
+10,2014,11,51,17,"Trichopodus pectoralis",548.3000000000001,9,9,6
 10,2014,11,53,17,"Trichopodus trichopterus",175.8,9,9,6
 10,2014,11,56,18,"Trichopsis schalleri",.4,9,9,6
 10,2014,11,58,18,"Trichopsis vittata",21.9,9,9,6
 10,2014,11,59,19,"Notopterus notopterus",69.3,9,9,6
 10,2015,2,17,5,"Puntius sp. (cf. masyai)",11.3,10,10,
-10,2015,2,24,9,"Esomus metallicus",80.29999999999998,10,10,
+10,2015,2,24,9,"Esomus metallicus",80.30000000000001,10,10,
 10,2015,2,38,12,"Anabas testudineus",274.9,10,10,
 10,2015,2,41,13,"Clarias macrocephalus",627.3,10,10,
 10,2015,2,43,14,"Channa striata",498,10,10,
@@ -1624,7 +1624,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 10,2015,11,38,12,"Anabas testudineus",16.1,13,13,8
 10,2015,11,43,14,"Channa striata",63.5,13,13,8
 10,2015,11,53,17,"Trichopodus trichopterus",66.8,13,13,8
-10,2015,11,58,18,"Trichopsis vittata",49.79999999999999,13,13,8
+10,2015,11,58,18,"Trichopsis vittata",49.8,13,13,8
 10,2015,11,74,27,"Acantopsis sp. ""stripe""",.7,13,13,8
 10,2015,11,111,40,"Channa micropeltes",.5,13,13,8
 11,2012,11,6,1,"Mystus gulio",29,1,1,1
@@ -1674,7 +1674,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 11,2013,8,43,14,"Channa striata",35.9,4,4,3
 11,2013,8,47,15,"Pristolepis fasciata",40.4,4,4,3
 11,2013,8,53,17,"Trichopodus trichopterus",4.7,4,4,3
-11,2013,8,60,19,"Chitala blanci",7,4,4,3
+11,2013,8,60,19,"Chitala blanci",7.000000000000001,4,4,3
 11,2013,8,64,22,"Micronema hexapterus",35.9,4,4,3
 11,2013,8,65,22,"Kryptopterus dissitus",53.5,4,4,3
 11,2013,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",34.1,4,4,3
@@ -1716,7 +1716,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 11,2014,2,63,21,"Xenentodon cancila",9.5,6,6,
 11,2014,2,65,22,"Kryptopterus dissitus",17.5,6,6,
 11,2014,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",6.3,6,6,
-11,2014,2,107,38,"Oxygaster pointoni",37.40000000000001,6,6,
+11,2014,2,107,38,"Oxygaster pointoni",37.4,6,6,
 11,2014,2,126,10,"Clupeichthys aesarnensis",4.699999999999999,6,6,
 11,2014,2,134,49,"Phalacronotus bleekeri",8.4,6,6,
 11,2014,5,4,1,"Mystus mysticetus",11.1,7,7,5
@@ -1732,7 +1732,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 11,2014,8,4,1,"Mystus mysticetus",48.1,8,8,
 11,2014,8,7,1,"Mystus bocourti",17.5,8,8,
 11,2014,8,8,2,"Hemibagrus spilopterus/nemurus",32.6,8,8,
-11,2014,8,12,3,"Cyclocheilichthys lagleri",45.39999999999999,8,8,
+11,2014,8,12,3,"Cyclocheilichthys lagleri",45.4,8,8,
 11,2014,8,16,5,"Puntius brevis",28.4,8,8,
 11,2014,8,22,8,"Henicorhynchus siamensis",217.2,8,8,
 11,2014,8,25,9,"Esomus longimanus",45.2,8,8,
@@ -1756,7 +1756,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 11,2014,8,156,0,"Crossocheilus reticulatus",5.8,8,8,
 11,2014,11,7,1,"Mystus bocourti",72.59999999999999,9,9,6
 11,2014,11,8,2,"Hemibagrus spilopterus/nemurus",6.8,9,9,6
-11,2014,11,12,3,"Cyclocheilichthys lagleri",623.9000000000001,9,9,6
+11,2014,11,12,3,"Cyclocheilichthys lagleri",623.9000000000002,9,9,6
 11,2014,11,16,5,"Puntius brevis",29.9,9,9,6
 11,2014,11,17,5,"Puntius sp. (cf. masyai)",65.3,9,9,6
 11,2014,11,21,6,"Labiobarbus leptocheilus",39.3,9,9,6
@@ -1804,12 +1804,12 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 11,2015,8,107,38,"Oxygaster pointoni",3,12,12,
 11,2015,8,110,24,"Ompok hypophthalmus/urbaini",7.1,12,12,
 11,2015,11,6,1,"Mystus gulio",12.2,13,13,8
-11,2015,11,9,3,"Anematichthys/Cyclocheilichthys apogon",43.40000000000001,13,13,8
-11,2015,11,12,3,"Cyclocheilichthys lagleri",78.10000000000001,13,13,8
+11,2015,11,9,3,"Anematichthys/Cyclocheilichthys apogon",43.4,13,13,8
+11,2015,11,12,3,"Cyclocheilichthys lagleri",78.09999999999999,13,13,8
 11,2015,11,15,4,"Barbonymus gonionotus",62.1,13,13,8
 11,2015,11,16,5,"Puntius brevis",5,13,13,8
 11,2015,11,21,6,"Labiobarbus leptocheilus",5.2,13,13,8
-11,2015,11,22,8,"Henicorhynchus siamensis",8.699999999999999,13,13,8
+11,2015,11,22,8,"Henicorhynchus siamensis",8.700000000000001,13,13,8
 11,2015,11,25,9,"Esomus longimanus",5,13,13,8
 11,2015,11,37,11,"Puntioplites proctozystron",21.2,13,13,8
 11,2015,11,47,15,"Pristolepis fasciata",3.7,13,13,8
@@ -1818,7 +1818,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 11,2015,11,63,21,"Xenentodon cancila",10.5,13,13,8
 11,2015,11,64,22,"Micronema hexapterus",24,13,13,8
 11,2015,11,65,22,"Kryptopterus dissitus",9.1,13,13,8
-11,2015,11,69,25,"Macrognathus semiocellatus",40.6,13,13,8
+11,2015,11,69,25,"Macrognathus semiocellatus",40.59999999999999,13,13,8
 11,2015,11,71,26,"Mastacembelus favus",15.1,13,13,8
 11,2015,11,75,27,"Acanthopsoides/Acantopsis spp",9,13,13,8
 11,2015,11,78,29,"Oxyeleotris marmorata",.5,13,13,8
@@ -1826,7 +1826,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 11,2015,11,86,33,"Pangasianodon hypophthalmus",5.9,13,13,8
 11,2015,11,102,34,"Osteochilus vittatus/lini/hasselti",9,13,13,8
 11,2015,11,107,38,"Oxygaster pointoni",196.3,13,13,8
-11,2015,11,108,38,"Paralaubuca typus",58.9,13,13,8
+11,2015,11,108,38,"Paralaubuca typus",58.90000000000001,13,13,8
 11,2015,11,126,10,"Clupeichthys aesarnensis",4.1,13,13,8
 11,2015,11,138,9,"Rasbora caudimaculata",4,13,13,8
 11,2015,11,142,45,"Barbonymus altus",5.5,13,13,8
@@ -1842,13 +1842,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2012,11,41,13,"Clarias macrocephalus",153.8,1,1,1
 12,2012,11,43,14,"Channa striata",24.6,1,1,1
 12,2012,11,47,15,"Pristolepis fasciata",25.1,1,1,1
-12,2012,11,50,16,"Parambassis siamensis",76.40000000000001,1,1,1
+12,2012,11,50,16,"Parambassis siamensis",76.39999999999999,1,1,1
 12,2012,11,52,17,"Trichogaster microlepis",32,1,1,1
 12,2012,11,53,17,"Trichopodus trichopterus",267.5,1,1,1
 12,2012,11,58,18,"Trichopsis vittata",9.4,1,1,1
 12,2012,11,59,19,"Notopterus notopterus",55.7,1,1,1
 12,2012,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",159,1,1,1
-12,2013,2,4,1,"Mystus mysticetus",57.1,2,2,
+12,2013,2,4,1,"Mystus mysticetus",57.09999999999999,2,2,
 12,2013,2,12,3,"Cyclocheilichthys lagleri",10.4,2,2,
 12,2013,2,16,5,"Puntius brevis",2206.8,2,2,
 12,2013,2,24,9,"Esomus metallicus",2.3,2,2,
@@ -1856,7 +1856,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2013,2,41,13,"Clarias macrocephalus",38.9,2,2,
 12,2013,2,43,14,"Channa striata",1504.5,2,2,
 12,2013,2,47,15,"Pristolepis fasciata",7.7,2,2,
-12,2013,2,49,16,"Parambassis wolffii",9.899999999999999,2,2,
+12,2013,2,49,16,"Parambassis wolffii",9.9,2,2,
 12,2013,2,52,17,"Trichogaster microlepis",43.4,2,2,
 12,2013,2,53,17,"Trichopodus trichopterus",199.9,2,2,
 12,2013,2,63,21,"Xenentodon cancila",32.4,2,2,
@@ -1875,15 +1875,15 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2013,8,21,6,"Labiobarbus leptocheilus",8.300000000000001,4,4,3
 12,2013,8,24,9,"Esomus metallicus",5.199999999999999,4,4,3
 12,2013,8,27,9,"Amblypharyngodon chulabhornae",2.1,4,4,3
-12,2013,8,38,12,"Anabas testudineus",73.50000000000001,4,4,3
-12,2013,8,40,13,"Clarias batrachus",401,4,4,3
+12,2013,8,38,12,"Anabas testudineus",73.5,4,4,3
+12,2013,8,40,13,"Clarias batrachus",401.0000000000001,4,4,3
 12,2013,8,47,15,"Pristolepis fasciata",88.10000000000001,4,4,3
 12,2013,8,52,17,"Trichogaster microlepis",26.3,4,4,3
 12,2013,8,53,17,"Trichopodus trichopterus",8.4,4,4,3
 12,2013,8,59,19,"Notopterus notopterus",369.5,4,4,3
 12,2013,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",369.8,4,4,3
 12,2013,8,68,25,"Macrognathus siamensis",35.40000000000001,4,4,3
-12,2013,11,4,1,"Mystus mysticetus",680.6,5,5,4
+12,2013,11,4,1,"Mystus mysticetus",680.5999999999999,5,5,4
 12,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",6.8,5,5,4
 12,2013,11,12,3,"Cyclocheilichthys lagleri",8.300000000000001,5,5,4
 12,2013,11,16,5,"Puntius brevis",39.3,5,5,4
@@ -1902,9 +1902,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2013,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",124.7,5,5,4
 12,2013,11,75,27,"Acanthopsoides/Acantopsis spp",.8,5,5,4
 12,2013,11,170,0,"Gyrinocheilus pennocki",1,5,5,4
-12,2014,2,4,1,"Mystus mysticetus",292.4999999999999,6,6,
-12,2014,2,15,4,"Barbonymus gonionotus",937.3,6,6,
-12,2014,2,17,5,"Puntius sp. (cf. masyai)",684.4000000000001,6,6,
+12,2014,2,4,1,"Mystus mysticetus",292.5,6,6,
+12,2014,2,15,4,"Barbonymus gonionotus",937.3000000000001,6,6,
+12,2014,2,17,5,"Puntius sp. (cf. masyai)",684.4,6,6,
 12,2014,2,21,6,"Labiobarbus leptocheilus",107,6,6,
 12,2014,2,24,9,"Esomus metallicus",19.8,6,6,
 12,2014,2,29,9,"Rasbora aurotaenia",26.3,6,6,
@@ -1919,7 +1919,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2014,2,63,21,"Xenentodon cancila",245,6,6,
 12,2014,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",207.6,6,6,
 12,2014,2,68,25,"Macrognathus siamensis",79.90000000000001,6,6,
-12,2014,2,147,34,"Osteochilus microcephalus",542.8,6,6,
+12,2014,2,147,34,"Osteochilus microcephalus",542.8000000000001,6,6,
 12,2014,5,4,1,"Mystus mysticetus",59.5,7,7,5
 12,2014,5,16,5,"Puntius brevis",8.199999999999999,7,7,5
 12,2014,5,21,6,"Labiobarbus leptocheilus",60.7,7,7,5
@@ -1954,13 +1954,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2014,11,53,17,"Trichopodus trichopterus",314.1,9,9,6
 12,2014,11,56,18,"Trichopsis schalleri",2.4,9,9,6
 12,2014,11,58,18,"Trichopsis vittata",9.4,9,9,6
-12,2014,11,59,19,"Notopterus notopterus",638.4000000000001,9,9,6
+12,2014,11,59,19,"Notopterus notopterus",638.4,9,9,6
 12,2014,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",81.89999999999999,9,9,6
 12,2014,11,68,25,"Macrognathus siamensis",40.6,9,9,6
 12,2014,11,75,27,"Acanthopsoides/Acantopsis spp",2.5,9,9,6
 12,2015,2,4,1,"Mystus mysticetus",39,10,10,
 12,2015,2,16,5,"Puntius brevis",5.9,10,10,
-12,2015,2,17,5,"Puntius sp. (cf. masyai)",962.7,10,10,
+12,2015,2,17,5,"Puntius sp. (cf. masyai)",962.6999999999999,10,10,
 12,2015,2,21,6,"Labiobarbus leptocheilus",118.5,10,10,
 12,2015,2,24,9,"Esomus metallicus",47.09999999999999,10,10,
 12,2015,2,38,12,"Anabas testudineus",5.6,10,10,
@@ -1995,7 +1995,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2015,8,59,19,"Notopterus notopterus",1114.8,12,12,
 12,2015,8,65,22,"Kryptopterus dissitus",13.6,12,12,
 12,2015,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",19.6,12,12,
-12,2015,11,4,1,"Mystus mysticetus",890.0999999999999,13,13,8
+12,2015,11,4,1,"Mystus mysticetus",890.1000000000001,13,13,8
 12,2015,11,15,4,"Barbonymus gonionotus",34.1,13,13,8
 12,2015,11,16,5,"Puntius brevis",238.8,13,13,8
 12,2015,11,17,5,"Puntius sp. (cf. masyai)",254.5,13,13,8
@@ -2007,7 +2007,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2015,11,47,15,"Pristolepis fasciata",13.4,13,13,8
 12,2015,11,50,16,"Parambassis siamensis",6.6,13,13,8
 12,2015,11,52,17,"Trichogaster microlepis",92.90000000000001,13,13,8
-12,2015,11,53,17,"Trichopodus trichopterus",494.3,13,13,8
+12,2015,11,53,17,"Trichopodus trichopterus",494.3000000000001,13,13,8
 12,2015,11,58,18,"Trichopsis vittata",2,13,13,8
 12,2015,11,59,19,"Notopterus notopterus",427.2,13,13,8
 12,2015,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",8.199999999999999,13,13,8
@@ -2015,7 +2015,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 12,2015,11,74,27,"Acantopsis sp. ""stripe""",.9,13,13,8
 13,2012,11,4,1,"Mystus mysticetus",59.59999999999999,1,1,1
 13,2012,11,9,3,"Anematichthys/Cyclocheilichthys apogon",5.4,1,1,1
-13,2012,11,12,3,"Cyclocheilichthys lagleri",57.90000000000001,1,1,1
+13,2012,11,12,3,"Cyclocheilichthys lagleri",57.9,1,1,1
 13,2012,11,16,5,"Puntius brevis",95.90000000000001,1,1,1
 13,2012,11,20,6,"Labiobarbus siamensis",27.8,1,1,1
 13,2012,11,24,9,"Esomus metallicus",35,1,1,1
@@ -2032,7 +2032,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 13,2013,2,12,3,"Cyclocheilichthys lagleri",60.2,2,2,
 13,2013,2,17,5,"Puntius sp. (cf. masyai)",278.7,2,2,
 13,2013,2,19,5,"Puntius rhombeus",285.4,2,2,
-13,2013,2,24,9,"Esomus metallicus",77.60000000000001,2,2,
+13,2013,2,24,9,"Esomus metallicus",77.59999999999999,2,2,
 13,2013,2,38,12,"Anabas testudineus",17.9,2,2,
 13,2013,2,43,14,"Channa striata",197,2,2,
 13,2013,2,52,17,"Trichogaster microlepis",111.4,2,2,
@@ -2046,7 +2046,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 13,2013,5,32,9,"Rasbora borapetensis",2.1,3,3,2
 13,2013,5,38,12,"Anabas testudineus",252.4,3,3,2
 13,2013,5,41,13,"Clarias macrocephalus",329.6,3,3,2
-13,2013,5,43,14,"Channa striata",961.3000000000002,3,3,2
+13,2013,5,43,14,"Channa striata",961.3,3,3,2
 13,2013,5,53,17,"Trichopodus trichopterus",69.30000000000001,3,3,2
 13,2013,5,58,18,"Trichopsis vittata",3.1,3,3,2
 13,2013,5,143,18,"Betta prima",1.6,3,3,2
@@ -2059,7 +2059,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 13,2013,11,14,4,"Hypsibarbus malcolmi",8.4,5,5,4
 13,2013,11,19,5,"Puntius rhombeus",66.7,5,5,4
 13,2013,11,24,9,"Esomus metallicus",138.7,5,5,4
-13,2013,11,29,9,"Rasbora aurotaenia",298.6999999999999,5,5,4
+13,2013,11,29,9,"Rasbora aurotaenia",298.7,5,5,4
 13,2013,11,34,9,"Rasbora paviana",6.1,5,5,4
 13,2013,11,38,12,"Anabas testudineus",110.3,5,5,4
 13,2013,11,43,14,"Channa striata",18.3,5,5,4
@@ -2079,8 +2079,8 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 13,2014,5,40,13,"Clarias batrachus",60.5,7,7,5
 13,2014,5,41,13,"Clarias macrocephalus",319.4,7,7,5
 13,2014,5,43,14,"Channa striata",138.6,7,7,5
-13,2014,5,51,17,"Trichopodus pectoralis",895.4,7,7,5
-13,2014,5,52,17,"Trichogaster microlepis",89.10000000000001,7,7,5
+13,2014,5,51,17,"Trichopodus pectoralis",895.4000000000001,7,7,5
+13,2014,5,52,17,"Trichogaster microlepis",89.09999999999999,7,7,5
 13,2014,5,53,17,"Trichopodus trichopterus",21.9,7,7,5
 13,2014,5,59,19,"Notopterus notopterus",351.2,7,7,5
 13,2014,8,43,14,"Channa striata",402.6,8,8,
@@ -2107,7 +2107,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 13,2015,5,42,13,"Clarias meladerma",458.1,11,11,7
 13,2015,5,51,17,"Trichopodus pectoralis",943.5999999999999,11,11,7
 13,2015,8,27,9,"Amblypharyngodon chulabhornae",3.5,12,12,
-13,2015,8,38,12,"Anabas testudineus",431.1999999999999,12,12,
+13,2015,8,38,12,"Anabas testudineus",431.2,12,12,
 13,2015,8,41,13,"Clarias macrocephalus",192.7,12,12,
 13,2015,8,43,14,"Channa striata",1534.5,12,12,
 13,2015,8,51,17,"Trichopodus pectoralis",1019.5,12,12,
@@ -2166,7 +2166,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2013,2,50,16,"Parambassis siamensis",145.3,2,2,
 14,2013,2,59,19,"Notopterus notopterus",93.69999999999999,2,2,
 14,2013,2,63,21,"Xenentodon cancila",16.9,2,2,
-14,2013,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",395,2,2,
+14,2013,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",394.9999999999999,2,2,
 14,2013,2,102,34,"Osteochilus vittatus/lini/hasselti",57.7,2,2,
 14,2013,2,140,1,"Mystus wolffi",10.5,2,2,
 14,2013,5,1,1,"Mystus albolineatus",24.9,3,3,2
@@ -2177,7 +2177,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2013,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",49.1,3,3,2
 14,2013,5,68,25,"Macrognathus siamensis",18.1,3,3,2
 14,2013,8,1,1,"Mystus albolineatus",48.5,4,4,3
-14,2013,8,4,1,"Mystus mysticetus",38.6,4,4,3
+14,2013,8,4,1,"Mystus mysticetus",38.59999999999999,4,4,3
 14,2013,8,10,3,"Anematichthys repasson",9.1,4,4,3
 14,2013,8,12,3,"Cyclocheilichthys lagleri",8,4,4,3
 14,2013,8,16,5,"Puntius brevis",25.9,4,4,3
@@ -2206,7 +2206,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2013,11,16,5,"Puntius brevis",125,5,5,4
 14,2013,11,17,5,"Puntius sp. (cf. masyai)",22.8,5,5,4
 14,2013,11,21,6,"Labiobarbus leptocheilus",15.6,5,5,4
-14,2013,11,25,9,"Esomus longimanus",42.6,5,5,4
+14,2013,11,25,9,"Esomus longimanus",42.59999999999999,5,5,4
 14,2013,11,28,9,"Rasbora daniconius",.8,5,5,4
 14,2013,11,29,9,"Rasbora aurotaenia",3.3,5,5,4
 14,2013,11,37,11,"Puntioplites proctozystron",9,5,5,4
@@ -2217,7 +2217,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2013,11,54,8,"Lobocheilos rhabdoura",1.5,5,5,4
 14,2013,11,63,21,"Xenentodon cancila",635.8,5,5,4
 14,2013,11,64,22,"Micronema hexapterus",2,5,5,4
-14,2013,11,65,22,"Kryptopterus dissitus",90.90000000000001,5,5,4
+14,2013,11,65,22,"Kryptopterus dissitus",90.89999999999999,5,5,4
 14,2013,11,69,25,"Macrognathus semiocellatus",89.5,5,5,4
 14,2013,11,70,26,"Mastacembelus armatus",650,5,5,4
 14,2013,11,82,32,"Yasuhikotakia lecontei",11.8,5,5,4
@@ -2227,13 +2227,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",4.5,5,5,4
 14,2013,11,103,35,"Systomus partipentazona",4.3,5,5,4
 14,2013,11,107,38,"Oxygaster pointoni",49.1,5,5,4
-14,2013,11,108,38,"Paralaubuca typus",362.0000000000001,5,5,4
+14,2013,11,108,38,"Paralaubuca typus",362,5,5,4
 14,2013,11,134,49,"Phalacronotus bleekeri",6.3,5,5,4
 14,2013,11,142,45,"Barbonymus altus",5,5,5,4
 14,2013,11,146,34,"Osteochilus waandersii",14.3,5,5,4
 14,2014,2,1,1,"Mystus albolineatus",29.6,6,6,
 14,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",321.3000000000001,6,6,
-14,2014,2,16,5,"Puntius brevis",292.8000000000001,6,6,
+14,2014,2,16,5,"Puntius brevis",292.8,6,6,
 14,2014,2,25,9,"Esomus longimanus",1.5,6,6,
 14,2014,2,33,9,"Rasbora tornieri",2.1,6,6,
 14,2014,2,40,13,"Clarias batrachus",64.09999999999999,6,6,
@@ -2260,8 +2260,8 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2014,5,53,17,"Trichopodus trichopterus",3.5,7,7,5
 14,2014,5,59,19,"Notopterus notopterus",35.59999999999999,7,7,5
 14,2014,5,63,21,"Xenentodon cancila",6.4,7,7,5
-14,2014,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",79.10000000000001,7,7,5
-14,2014,5,102,34,"Osteochilus vittatus/lini/hasselti",51.09999999999999,7,7,5
+14,2014,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",79.09999999999999,7,7,5
+14,2014,5,102,34,"Osteochilus vittatus/lini/hasselti",51.1,7,7,5
 14,2014,5,107,38,"Oxygaster pointoni",54.5,7,7,5
 14,2014,5,108,38,"Paralaubuca typus",12.9,7,7,5
 14,2014,5,138,9,"Rasbora caudimaculata",4.2,7,7,5
@@ -2288,7 +2288,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2014,11,37,11,"Puntioplites proctozystron",2,9,9,6
 14,2014,11,47,15,"Pristolepis fasciata",6.2,9,9,6
 14,2014,11,48,16,"Parambassis apogonoides",64.40000000000001,9,9,6
-14,2014,11,49,16,"Parambassis wolffii",40.09999999999999,9,9,6
+14,2014,11,49,16,"Parambassis wolffii",40.1,9,9,6
 14,2014,11,53,17,"Trichopodus trichopterus",4,9,9,6
 14,2014,11,63,21,"Xenentodon cancila",25.3,9,9,6
 14,2014,11,64,22,"Micronema hexapterus",24.2,9,9,6
@@ -2296,7 +2296,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2014,11,75,27,"Acanthopsoides/Acantopsis spp",4.5,9,9,6
 14,2014,11,85,32,"Yasuhikotakia modesta",3.6,9,9,6
 14,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",13.6,9,9,6
-14,2014,11,108,38,"Paralaubuca typus",63.39999999999999,9,9,6
+14,2014,11,108,38,"Paralaubuca typus",63.40000000000001,9,9,6
 14,2014,11,133,43,"Tetraodon fluviatilis",22.5,9,9,6
 14,2015,2,6,1,"Mystus gulio",43.09999999999999,10,10,
 14,2015,2,11,3,"Anematichthys/Cyclocheilichthys armatus",77.51000000000001,10,10,
@@ -2337,24 +2337,24 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2015,8,86,33,"Pangasianodon hypophthalmus",2.3,12,12,
 14,2015,8,108,38,"Paralaubuca typus",6.1,12,12,
 14,2015,8,139,1,"Leiocassis/Pseudomystus siamensis",7.2,12,12,
-14,2015,11,2,1,"Mystus singaringan",303.5000000000001,13,13,8
+14,2015,11,2,1,"Mystus singaringan",303.5,13,13,8
 14,2015,11,4,1,"Mystus mysticetus",132.7,13,13,8
 14,2015,11,6,1,"Mystus gulio",90,13,13,8
 14,2015,11,8,2,"Hemibagrus spilopterus/nemurus",112.4,13,13,8
 14,2015,11,9,3,"Anematichthys/Cyclocheilichthys apogon",4.2,13,13,8
 14,2015,11,11,3,"Anematichthys/Cyclocheilichthys armatus",1166.76,13,13,8
-14,2015,11,12,3,"Cyclocheilichthys lagleri",618.4999999999999,13,13,8
+14,2015,11,12,3,"Cyclocheilichthys lagleri",618.5,13,13,8
 14,2015,11,15,4,"Barbonymus gonionotus",237.6,13,13,8
 14,2015,11,20,6,"Labiobarbus siamensis",169.6,13,13,8
 14,2015,11,22,8,"Henicorhynchus siamensis",82.30000000000001,13,13,8
-14,2015,11,23,8,"Henicorhynchus lobatus",397.9,13,13,8
+14,2015,11,23,8,"Henicorhynchus lobatus",397.8999999999999,13,13,8
 14,2015,11,25,9,"Esomus longimanus",136.5,13,13,8
 14,2015,11,29,9,"Rasbora aurotaenia",32,13,13,8
 14,2015,11,36,10,"Clupeoides borneensis",5.4,13,13,8
 14,2015,11,47,15,"Pristolepis fasciata",4.3,13,13,8
 14,2015,11,48,16,"Parambassis apogonoides",189.5,13,13,8
 14,2015,11,50,16,"Parambassis siamensis",591.1,13,13,8
-14,2015,11,52,17,"Trichogaster microlepis",771.7,13,13,8
+14,2015,11,52,17,"Trichogaster microlepis",771.6999999999999,13,13,8
 14,2015,11,53,17,"Trichopodus trichopterus",1064.7,13,13,8
 14,2015,11,61,19,"Chitala ornata",78.90000000000001,13,13,8
 14,2015,11,63,21,"Xenentodon cancila",43.4,13,13,8
@@ -2363,8 +2363,8 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 14,2015,11,74,27,"Acantopsis sp. ""stripe""",12.4,13,13,8
 14,2015,11,82,32,"Yasuhikotakia lecontei",8.300000000000001,13,13,8
 14,2015,11,85,32,"Yasuhikotakia modesta",11.5,13,13,8
-14,2015,11,107,38,"Oxygaster pointoni",533.4,13,13,8
-14,2015,11,108,38,"Paralaubuca typus",368.2000000000002,13,13,8
+14,2015,11,107,38,"Oxygaster pointoni",533.3999999999999,13,13,8
+14,2015,11,108,38,"Paralaubuca typus",368.2,13,13,8
 14,2015,11,126,10,"Clupeichthys aesarnensis",9.4,13,13,8
 14,2015,11,128,7,"Thynnichthys thynnoides",44.90000000000001,13,13,8
 14,2015,11,133,43,"Tetraodon fluviatilis",9.699999999999999,13,13,8
@@ -2405,7 +2405,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 15,2013,2,12,3,"Cyclocheilichthys lagleri",300.2,2,2,
 15,2013,2,17,5,"Puntius sp. (cf. masyai)",301.8,2,2,
 15,2013,2,19,5,"Puntius rhombeus",99.8,2,2,
-15,2013,2,21,6,"Labiobarbus leptocheilus",954.2999999999998,2,2,
+15,2013,2,21,6,"Labiobarbus leptocheilus",954.3000000000001,2,2,
 15,2013,2,22,8,"Henicorhynchus siamensis",33.5,2,2,
 15,2013,2,24,9,"Esomus metallicus",397.4,2,2,
 15,2013,2,37,11,"Puntioplites proctozystron",161.8,2,2,
@@ -2447,10 +2447,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 15,2013,5,147,34,"Osteochilus microcephalus",79,3,3,2
 15,2013,5,149,48,"Wallago attu",5.2,3,3,2
 15,2013,5,150,4,"Hypsibarbus wetmorei",947.6,3,3,2
-15,2013,8,1,1,"Mystus albolineatus",75.89999999999999,4,4,3
+15,2013,8,1,1,"Mystus albolineatus",75.90000000000001,4,4,3
 15,2013,8,5,1,"Mystus atrifasciatus",8.1,4,4,3
 15,2013,8,9,3,"Anematichthys/Cyclocheilichthys apogon",2.6,4,4,3
-15,2013,8,12,3,"Cyclocheilichthys lagleri",56.9,4,4,3
+15,2013,8,12,3,"Cyclocheilichthys lagleri",56.90000000000001,4,4,3
 15,2013,8,21,6,"Labiobarbus leptocheilus",329,4,4,3
 15,2013,8,24,9,"Esomus metallicus",39.3,4,4,3
 15,2013,8,27,9,"Amblypharyngodon chulabhornae",2.1,4,4,3
@@ -2489,7 +2489,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 15,2014,2,40,13,"Clarias batrachus",357.3,6,6,
 15,2014,2,41,13,"Clarias macrocephalus",122.5,6,6,
 15,2014,2,43,14,"Channa striata",391.3,6,6,
-15,2014,2,52,17,"Trichogaster microlepis",765.9000000000001,6,6,
+15,2014,2,52,17,"Trichogaster microlepis",765.9,6,6,
 15,2014,2,59,19,"Notopterus notopterus",512.6,6,6,
 15,2014,2,78,29,"Oxyeleotris marmorata",48.9,6,6,
 15,2014,2,100,4,"Hypsibarbus vernayi",583.4,6,6,
@@ -2503,7 +2503,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 15,2014,5,24,9,"Esomus metallicus",144.5,7,7,5
 15,2014,5,37,11,"Puntioplites proctozystron",308.7,7,7,5
 15,2014,5,41,13,"Clarias macrocephalus",176,7,7,5
-15,2014,5,52,17,"Trichogaster microlepis",336,7,7,5
+15,2014,5,52,17,"Trichogaster microlepis",336.0000000000001,7,7,5
 15,2014,5,53,17,"Trichopodus trichopterus",10.2,7,7,5
 15,2014,5,59,19,"Notopterus notopterus",438.4,7,7,5
 15,2014,5,100,4,"Hypsibarbus vernayi",74.90000000000001,7,7,5
@@ -2520,10 +2520,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 15,2014,8,59,19,"Notopterus notopterus",415.7,8,8,
 15,2014,8,78,29,"Oxyeleotris marmorata",87,8,8,
 15,2014,8,100,4,"Hypsibarbus vernayi",194.7,8,8,
-15,2014,8,107,38,"Oxygaster pointoni",25.59999999999999,8,8,
-15,2014,8,110,24,"Ompok hypophthalmus/urbaini",58.6,8,8,
+15,2014,8,107,38,"Oxygaster pointoni",25.6,8,8,
+15,2014,8,110,24,"Ompok hypophthalmus/urbaini",58.59999999999999,8,8,
 15,2014,11,12,3,"Cyclocheilichthys lagleri",6.1,9,9,6
-15,2014,11,24,9,"Esomus metallicus",93.8,9,9,6
+15,2014,11,24,9,"Esomus metallicus",93.80000000000001,9,9,6
 15,2014,11,38,12,"Anabas testudineus",29.7,9,9,6
 15,2014,11,43,14,"Channa striata",304.2,9,9,6
 15,2014,11,52,17,"Trichogaster microlepis",1015.9,9,9,6
@@ -2531,10 +2531,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 15,2014,11,59,19,"Notopterus notopterus",395.6,9,9,6
 15,2014,11,68,25,"Macrognathus siamensis",154.9,9,9,6
 15,2014,11,69,25,"Macrognathus semiocellatus",14.3,9,9,6
-15,2014,11,78,29,"Oxyeleotris marmorata",800.0999999999999,9,9,6
+15,2014,11,78,29,"Oxyeleotris marmorata",800.1,9,9,6
 15,2014,11,100,4,"Hypsibarbus vernayi",175.5,9,9,6
 15,2014,11,107,38,"Oxygaster pointoni",4.4,9,9,6
-15,2014,11,110,24,"Ompok hypophthalmus/urbaini",80.5,9,9,6
+15,2014,11,110,24,"Ompok hypophthalmus/urbaini",80.49999999999999,9,9,6
 15,2014,11,143,18,"Betta prima",1.5,9,9,6
 15,2015,2,4,1,"Mystus mysticetus",154.2,10,10,
 15,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",19.8,10,10,
@@ -2558,7 +2558,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 15,2015,5,21,6,"Labiobarbus leptocheilus",522.9,11,11,7
 15,2015,5,24,9,"Esomus metallicus",1270.9,11,11,7
 15,2015,5,38,12,"Anabas testudineus",33.2,11,11,7
-15,2015,5,40,13,"Clarias batrachus",572.9000000000001,11,11,7
+15,2015,5,40,13,"Clarias batrachus",572.9,11,11,7
 15,2015,5,50,16,"Parambassis siamensis",1.8,11,11,7
 15,2015,5,52,17,"Trichogaster microlepis",813.0999999999999,11,11,7
 15,2015,5,53,17,"Trichopodus trichopterus",31.6,11,11,7
@@ -2624,10 +2624,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 16,2013,2,7,1,"Mystus bocourti",17.8,2,2,
 16,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",71.3,2,2,
 16,2013,2,12,3,"Cyclocheilichthys lagleri",29.9,2,2,
-16,2013,2,16,5,"Puntius brevis",59.4,2,2,
+16,2013,2,16,5,"Puntius brevis",59.40000000000001,2,2,
 16,2013,2,24,9,"Esomus metallicus",3.1,2,2,
 16,2013,2,25,9,"Esomus longimanus",12.3,2,2,
-16,2013,2,27,9,"Amblypharyngodon chulabhornae",8.600000000000001,2,2,
+16,2013,2,27,9,"Amblypharyngodon chulabhornae",8.6,2,2,
 16,2013,2,44,15,"Datnioides undecimradiatus",4,2,2,
 16,2013,2,45,15,"Nandus nandus",1,2,2,
 16,2013,2,47,15,"Pristolepis fasciata",152.9,2,2,
@@ -2671,15 +2671,15 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 16,2013,8,60,19,"Chitala blanci",3.3,4,4,3
 16,2013,8,70,26,"Mastacembelus armatus",11.7,4,4,3
 16,2013,8,107,38,"Oxygaster pointoni",18.8,4,4,3
-16,2013,8,126,10,"Clupeichthys aesarnensis",99.09999999999999,4,4,3
-16,2013,11,4,1,"Mystus mysticetus",739.6999999999999,5,5,4
+16,2013,8,126,10,"Clupeichthys aesarnensis",99.10000000000001,4,4,3
+16,2013,11,4,1,"Mystus mysticetus",739.7,5,5,4
 16,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",262,5,5,4
 16,2013,11,16,5,"Puntius brevis",225.8,5,5,4
 16,2013,11,21,6,"Labiobarbus leptocheilus",8.199999999999999,5,5,4
 16,2013,11,22,8,"Henicorhynchus siamensis",16.5,5,5,4
 16,2013,11,25,9,"Esomus longimanus",9.4,5,5,4
 16,2013,11,47,15,"Pristolepis fasciata",27.6,5,5,4
-16,2013,11,48,16,"Parambassis apogonoides",773.1,5,5,4
+16,2013,11,48,16,"Parambassis apogonoides",773.0999999999999,5,5,4
 16,2013,11,49,16,"Parambassis wolffii",22.6,5,5,4
 16,2013,11,52,17,"Trichogaster microlepis",86.40000000000001,5,5,4
 16,2013,11,53,17,"Trichopodus trichopterus",29.7,5,5,4
@@ -2705,7 +2705,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 16,2014,2,140,1,"Mystus wolffi",44.4,6,6,
 16,2014,5,6,1,"Mystus gulio",138.5,7,7,5
 16,2014,5,7,1,"Mystus bocourti",41,7,7,5
-16,2014,5,12,3,"Cyclocheilichthys lagleri",259.5,7,7,5
+16,2014,5,12,3,"Cyclocheilichthys lagleri",259.5000000000001,7,7,5
 16,2014,5,15,4,"Barbonymus gonionotus",156.9,7,7,5
 16,2014,5,21,6,"Labiobarbus leptocheilus",11.1,7,7,5
 16,2014,5,37,11,"Puntioplites proctozystron",194.4,7,7,5
@@ -2716,13 +2716,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 16,2014,5,85,32,"Yasuhikotakia modesta",6.6,7,7,5
 16,2014,5,107,38,"Oxygaster pointoni",892.1,7,7,5
 16,2014,5,126,10,"Clupeichthys aesarnensis",110.7,7,7,5
-16,2014,5,128,7,"Thynnichthys thynnoides",966.4000000000001,7,7,5
+16,2014,5,128,7,"Thynnichthys thynnoides",966.4,7,7,5
 16,2014,8,12,3,"Cyclocheilichthys lagleri",128.6,8,8,
 16,2014,8,16,5,"Puntius brevis",3.3,8,8,
 16,2014,8,22,8,"Henicorhynchus siamensis",134.9,8,8,
 16,2014,8,48,16,"Parambassis apogonoides",34.9,8,8,
 16,2014,8,49,16,"Parambassis wolffii",105,8,8,
-16,2014,8,50,16,"Parambassis siamensis",56.4,8,8,
+16,2014,8,50,16,"Parambassis siamensis",56.40000000000001,8,8,
 16,2014,8,107,38,"Oxygaster pointoni",5,8,8,
 16,2014,8,126,10,"Clupeichthys aesarnensis",73,8,8,
 16,2014,8,138,9,"Rasbora caudimaculata",2.1,8,8,
@@ -2752,15 +2752,15 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 16,2015,2,16,5,"Puntius brevis",109.4,10,10,
 16,2015,2,21,6,"Labiobarbus leptocheilus",48.3,10,10,
 16,2015,2,37,11,"Puntioplites proctozystron",202.9,10,10,
-16,2015,2,48,16,"Parambassis apogonoides",351.7,10,10,
+16,2015,2,48,16,"Parambassis apogonoides",351.6999999999999,10,10,
 16,2015,2,49,16,"Parambassis wolffii",76.40000000000001,10,10,
 16,2015,2,64,22,"Micronema hexapterus",67.5,10,10,
 16,2015,2,85,32,"Yasuhikotakia modesta",18.5,10,10,
 16,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",19.9,10,10,
 16,2015,2,107,38,"Oxygaster pointoni",427.1,10,10,
 16,2015,2,126,10,"Clupeichthys aesarnensis",5.3,10,10,
-16,2015,5,6,1,"Mystus gulio",733.3000000000001,11,11,7
-16,2015,5,12,3,"Cyclocheilichthys lagleri",98.42999999999999,11,11,7
+16,2015,5,6,1,"Mystus gulio",733.3,11,11,7
+16,2015,5,12,3,"Cyclocheilichthys lagleri",98.43000000000001,11,11,7
 16,2015,5,16,5,"Puntius brevis",6.2,11,11,7
 16,2015,5,21,6,"Labiobarbus leptocheilus",49.59999999999999,11,11,7
 16,2015,5,37,11,"Puntioplites proctozystron",102.8,11,11,7
@@ -2768,7 +2768,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 16,2015,5,50,16,"Parambassis siamensis",503.3,11,11,7
 16,2015,5,63,21,"Xenentodon cancila",11.7,11,11,7
 16,2015,5,107,38,"Oxygaster pointoni",93.5,11,11,7
-16,2015,5,126,10,"Clupeichthys aesarnensis",8.9,11,11,7
+16,2015,5,126,10,"Clupeichthys aesarnensis",8.899999999999999,11,11,7
 16,2015,5,134,49,"Phalacronotus bleekeri",219.8,11,11,7
 16,2015,8,1,1,"Mystus albolineatus",9.1,12,12,
 16,2015,8,4,1,"Mystus mysticetus",16,12,12,
@@ -2832,7 +2832,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 17,2013,11,8,2,"Hemibagrus spilopterus/nemurus",8.800000000000001,5,5,4
 17,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",26.6,5,5,4
 17,2013,11,12,3,"Cyclocheilichthys lagleri",37.7,5,5,4
-17,2013,11,16,5,"Puntius brevis",97.59999999999999,5,5,4
+17,2013,11,16,5,"Puntius brevis",97.60000000000001,5,5,4
 17,2013,11,17,5,"Puntius sp. (cf. masyai)",7,5,5,4
 17,2013,11,20,6,"Labiobarbus siamensis",6.6,5,5,4
 17,2013,11,21,6,"Labiobarbus leptocheilus",22.1,5,5,4
@@ -2870,14 +2870,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 17,2014,2,103,35,"Systomus partipentazona",.7,6,6,
 17,2014,2,107,38,"Oxygaster pointoni",114.3,6,6,
 17,2014,2,128,7,"Thynnichthys thynnoides",51.6,6,6,
-17,2014,2,138,9,"Rasbora caudimaculata",98.30000000000001,6,6,
-17,2014,5,12,3,"Cyclocheilichthys lagleri",73.60000000000001,7,7,5
+17,2014,2,138,9,"Rasbora caudimaculata",98.29999999999998,6,6,
+17,2014,5,12,3,"Cyclocheilichthys lagleri",73.59999999999999,7,7,5
 17,2014,5,24,9,"Esomus metallicus",19.7,7,7,5
 17,2014,5,40,13,"Clarias batrachus",101.3,7,7,5
 17,2014,5,42,13,"Clarias meladerma",261.3,7,7,5
 17,2014,5,43,14,"Channa striata",768.4000000000001,7,7,5
 17,2014,5,52,17,"Trichogaster microlepis",182.6,7,7,5
-17,2014,5,59,19,"Notopterus notopterus",758.8999999999999,7,7,5
+17,2014,5,59,19,"Notopterus notopterus",758.9,7,7,5
 17,2014,5,128,7,"Thynnichthys thynnoides",13.4,7,7,5
 17,2014,8,4,1,"Mystus mysticetus",6.6,8,8,
 17,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",14.9,8,8,
@@ -2887,26 +2887,26 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 17,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",94.59999999999999,9,9,6
 17,2014,11,12,3,"Cyclocheilichthys lagleri",1,9,9,6
 17,2014,11,16,5,"Puntius brevis",3.6,9,9,6
-17,2014,11,17,5,"Puntius sp. (cf. masyai)",67.2,9,9,6
-17,2014,11,30,9,"Rasbora pauciperforata/Trigonopoma pauciperforatum",81,9,9,6
+17,2014,11,17,5,"Puntius sp. (cf. masyai)",67.20000000000002,9,9,6
+17,2014,11,30,9,"Rasbora pauciperforata/Trigonopoma pauciperforatum",81.00000000000001,9,9,6
 17,2014,11,46,15,"Nandus oxyrhynchus",4,9,9,6
 17,2014,11,47,15,"Pristolepis fasciata",17.5,9,9,6
-17,2014,11,48,16,"Parambassis apogonoides",9.4,9,9,6
+17,2014,11,48,16,"Parambassis apogonoides",9.399999999999999,9,9,6
 17,2014,11,53,17,"Trichopodus trichopterus",187.3,9,9,6
 17,2014,11,58,18,"Trichopsis vittata",3.2,9,9,6
 17,2014,11,59,19,"Notopterus notopterus",35.5,9,9,6
 17,2014,11,63,21,"Xenentodon cancila",25.2,9,9,6
 17,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",16.3,9,9,6
-17,2014,11,107,38,"Oxygaster pointoni",45.00000000000001,9,9,6
+17,2014,11,107,38,"Oxygaster pointoni",45,9,9,6
 17,2014,11,110,24,"Ompok hypophthalmus/urbaini",10.8,9,9,6
 17,2014,11,132,43,"Tetraodon biocellatus",13.6,9,9,6
 17,2014,11,146,34,"Osteochilus waandersii",8.800000000000001,9,9,6
 17,2014,11,169,58,"Leptobarbus hoeveni",34.6,9,9,6
 17,2015,2,4,1,"Mystus mysticetus",4.8,10,10,
-17,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",41.59999999999999,10,10,
+17,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",41.6,10,10,
 17,2015,2,17,5,"Puntius sp. (cf. masyai)",116,10,10,
 17,2015,2,29,9,"Rasbora aurotaenia",16.9,10,10,
-17,2015,2,34,9,"Rasbora paviana",6.299999999999999,10,10,
+17,2015,2,34,9,"Rasbora paviana",6.300000000000001,10,10,
 17,2015,2,43,14,"Channa striata",611.9,10,10,
 17,2015,2,44,15,"Datnioides undecimradiatus",1.6,10,10,
 17,2015,2,47,15,"Pristolepis fasciata",100.7,10,10,
@@ -2915,7 +2915,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 17,2015,2,53,17,"Trichopodus trichopterus",31.4,10,10,
 17,2015,2,59,19,"Notopterus notopterus",224.1,10,10,
 17,2015,2,63,21,"Xenentodon cancila",32.8,10,10,
-17,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",42.6,10,10,
+17,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",42.60000000000001,10,10,
 17,2015,2,107,38,"Oxygaster pointoni",19.3,10,10,
 17,2015,2,128,7,"Thynnichthys thynnoides",29.5,10,10,
 17,2015,2,138,9,"Rasbora caudimaculata",6.5,10,10,
@@ -2943,7 +2943,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 17,2015,11,24,9,"Esomus metallicus",9,13,13,8
 17,2015,11,27,9,"Amblypharyngodon chulabhornae",24.8,13,13,8
 17,2015,11,38,12,"Anabas testudineus",3.8,13,13,8
-17,2015,11,50,16,"Parambassis siamensis",6.5,13,13,8
+17,2015,11,50,16,"Parambassis siamensis",6.499999999999998,13,13,8
 17,2015,11,52,17,"Trichogaster microlepis",1,13,13,8
 17,2015,11,53,17,"Trichopodus trichopterus",18.9,13,13,8
 17,2015,11,58,18,"Trichopsis vittata",1.6,13,13,8
@@ -2960,7 +2960,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 18,2012,11,18,5,"Puntius aurotaeniatus",1.8,1,1,1
 18,2012,11,24,9,"Esomus metallicus",6.300000000000001,1,1,1
 18,2012,11,36,10,"Clupeoides borneensis",3.7,1,1,1
-18,2012,11,38,12,"Anabas testudineus",70.80000000000001,1,1,1
+18,2012,11,38,12,"Anabas testudineus",70.8,1,1,1
 18,2012,11,40,13,"Clarias batrachus",321.6,1,1,1
 18,2012,11,47,15,"Pristolepis fasciata",5.300000000000001,1,1,1
 18,2012,11,52,17,"Trichogaster microlepis",22.5,1,1,1
@@ -2969,7 +2969,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 18,2012,11,63,21,"Xenentodon cancila",15.8,1,1,1
 18,2012,11,65,22,"Kryptopterus dissitus",28.8,1,1,1
 18,2012,11,100,4,"Hypsibarbus vernayi",5.5,1,1,1
-18,2013,2,1,1,"Mystus albolineatus",41.09999999999999,2,2,
+18,2013,2,1,1,"Mystus albolineatus",41.1,2,2,
 18,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",35.7,2,2,
 18,2013,2,12,3,"Cyclocheilichthys lagleri",18,2,2,
 18,2013,2,16,5,"Puntius brevis",119.8,2,2,
@@ -2980,7 +2980,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 18,2013,2,59,19,"Notopterus notopterus",384.3,2,2,
 18,2013,2,63,21,"Xenentodon cancila",31.5,2,2,
 18,2013,2,65,22,"Kryptopterus dissitus",18.4,2,2,
-18,2013,2,107,38,"Oxygaster pointoni",61.70000000000001,2,2,
+18,2013,2,107,38,"Oxygaster pointoni",61.7,2,2,
 18,2013,2,110,24,"Ompok hypophthalmus/urbaini",10.2,2,2,
 18,2013,5,2,1,"Mystus singaringan",29.5,3,3,2
 18,2013,5,5,1,"Mystus atrifasciatus",51.8,3,3,2
@@ -3006,9 +3006,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 18,2013,11,15,4,"Barbonymus gonionotus",5,5,5,4
 18,2013,11,17,5,"Puntius sp. (cf. masyai)",28.4,5,5,4
 18,2013,11,28,9,"Rasbora daniconius",.6,5,5,4
-18,2013,11,29,9,"Rasbora aurotaenia",396.4999999999999,5,5,4
+18,2013,11,29,9,"Rasbora aurotaenia",396.5000000000001,5,5,4
 18,2013,11,38,12,"Anabas testudineus",114.9,5,5,4
-18,2013,11,40,13,"Clarias batrachus",520.8,5,5,4
+18,2013,11,40,13,"Clarias batrachus",520.8000000000001,5,5,4
 18,2013,11,43,14,"Channa striata",164.9,5,5,4
 18,2013,11,52,17,"Trichogaster microlepis",28.2,5,5,4
 18,2013,11,53,17,"Trichopodus trichopterus",18.2,5,5,4
@@ -3029,14 +3029,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 18,2014,2,149,48,"Wallago attu",132.8,6,6,
 18,2014,5,1,1,"Mystus albolineatus",5.3,7,7,5
 18,2014,5,12,3,"Cyclocheilichthys lagleri",67.09999999999999,7,7,5
-18,2014,5,40,13,"Clarias batrachus",854.1,7,7,5
+18,2014,5,40,13,"Clarias batrachus",854.1000000000001,7,7,5
 18,2014,5,41,13,"Clarias macrocephalus",67.5,7,7,5
 18,2014,5,43,14,"Channa striata",230.2,7,7,5
 18,2014,5,47,15,"Pristolepis fasciata",24.4,7,7,5
 18,2014,5,52,17,"Trichogaster microlepis",28.8,7,7,5
-18,2014,5,59,19,"Notopterus notopterus",640.9,7,7,5
+18,2014,5,59,19,"Notopterus notopterus",640.9000000000001,7,7,5
 18,2014,5,110,24,"Ompok hypophthalmus/urbaini",298.3,7,7,5
-18,2014,8,12,3,"Cyclocheilichthys lagleri",51.6,8,8,
+18,2014,8,12,3,"Cyclocheilichthys lagleri",51.59999999999999,8,8,
 18,2014,8,24,9,"Esomus metallicus",2.3,8,8,
 18,2014,8,40,13,"Clarias batrachus",510.4,8,8,
 18,2014,8,43,14,"Channa striata",159.3,8,8,
@@ -3049,7 +3049,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 18,2014,11,29,9,"Rasbora aurotaenia",6.7,9,9,6
 18,2014,11,38,12,"Anabas testudineus",64.2,9,9,6
 18,2014,11,40,13,"Clarias batrachus",71.40000000000001,9,9,6
-18,2014,11,52,17,"Trichogaster microlepis",37.1,9,9,6
+18,2014,11,52,17,"Trichogaster microlepis",37.09999999999999,9,9,6
 18,2014,11,56,18,"Trichopsis schalleri",.5,9,9,6
 18,2014,11,57,18,"Trichopsis pumila",1.4,9,9,6
 18,2014,11,59,19,"Notopterus notopterus",203.1,9,9,6
@@ -3085,7 +3085,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 18,2015,11,27,9,"Amblypharyngodon chulabhornae",10.22,13,13,8
 18,2015,11,40,13,"Clarias batrachus",702.8,13,13,8
 18,2015,11,43,14,"Channa striata",47.7,13,13,8
-18,2015,11,52,17,"Trichogaster microlepis",683.6,13,13,8
+18,2015,11,52,17,"Trichogaster microlepis",683.5999999999999,13,13,8
 18,2015,11,56,18,"Trichopsis schalleri",7.2,13,13,8
 18,2015,11,59,19,"Notopterus notopterus",1344.3,13,13,8
 18,2015,11,78,29,"Oxyeleotris marmorata",2.5,13,13,8
@@ -3098,7 +3098,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 19,2012,11,68,25,"Macrognathus siamensis",129,1,1,1
 19,2012,11,76,28,"Monopterus albus",48.8,1,1,1
 19,2013,8,38,12,"Anabas testudineus",897.6,4,4,3
-19,2013,8,40,13,"Clarias batrachus",70.30000000000001,4,4,3
+19,2013,8,40,13,"Clarias batrachus",70.3,4,4,3
 19,2013,8,43,14,"Channa striata",63.2,4,4,3
 19,2013,8,52,17,"Trichogaster microlepis",8.1,4,4,3
 19,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",3.1,5,5,4
@@ -3116,7 +3116,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 19,2013,11,140,1,"Mystus wolffi",15.1,5,5,4
 19,2014,2,12,3,"Cyclocheilichthys lagleri",80.60000000000001,6,6,
 19,2014,2,15,4,"Barbonymus gonionotus",31.9,6,6,
-19,2014,2,24,9,"Esomus metallicus",68.10000000000001,6,6,
+19,2014,2,24,9,"Esomus metallicus",68.09999999999999,6,6,
 19,2014,2,38,12,"Anabas testudineus",36.1,6,6,
 19,2014,2,40,13,"Clarias batrachus",404.4,6,6,
 19,2014,2,43,14,"Channa striata",250.9,6,6,
@@ -3142,7 +3142,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 19,2014,8,43,14,"Channa striata",823,8,8,
 19,2014,8,68,25,"Macrognathus siamensis",36.7,8,8,
 19,2014,8,100,4,"Hypsibarbus vernayi",302.5,8,8,
-19,2014,11,24,9,"Esomus metallicus",28.9,9,9,6
+19,2014,11,24,9,"Esomus metallicus",28.90000000000001,9,9,6
 19,2014,11,40,13,"Clarias batrachus",73.59999999999999,9,9,6
 19,2014,11,68,25,"Macrognathus siamensis",188.7,9,9,6
 19,2014,11,100,4,"Hypsibarbus vernayi",462.2,9,9,6
@@ -3225,10 +3225,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 20,2013,8,16,5,"Puntius brevis",238.8,4,4,3
 20,2013,8,17,5,"Puntius sp. (cf. masyai)",109.1,4,4,3
 20,2013,8,19,5,"Puntius rhombeus",365.7,4,4,3
-20,2013,8,26,9,"Danio albolineatus",97.00000000000001,4,4,3
+20,2013,8,26,9,"Danio albolineatus",97,4,4,3
 20,2013,8,34,9,"Rasbora paviana",73.40000000000001,4,4,3
 20,2013,8,43,14,"Channa striata",15.1,4,4,3
-20,2013,8,49,16,"Parambassis wolffii",96.3,4,4,3
+20,2013,8,49,16,"Parambassis wolffii",96.30000000000001,4,4,3
 20,2013,8,56,18,"Trichopsis schalleri",6.4,4,4,3
 20,2013,8,63,21,"Xenentodon cancila",11.9,4,4,3
 20,2013,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",38.4,4,4,3
@@ -3257,7 +3257,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 20,2014,2,52,17,"Trichogaster microlepis",10.8,6,6,
 20,2014,2,56,18,"Trichopsis schalleri",8.5,6,6,
 20,2014,2,99,34,"Puntius orphoides",297.2,6,6,
-20,2014,2,110,24,"Ompok hypophthalmus/urbaini",580.9,6,6,
+20,2014,2,110,24,"Ompok hypophthalmus/urbaini",580.9000000000001,6,6,
 20,2014,5,9,3,"Anematichthys/Cyclocheilichthys apogon",682.6,7,7,5
 20,2014,5,10,3,"Anematichthys repasson",50.3,7,7,5
 20,2014,5,12,3,"Cyclocheilichthys lagleri",391.4,7,7,5
@@ -3311,7 +3311,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 20,2015,2,99,34,"Puntius orphoides",1044.6,10,10,
 20,2015,2,110,24,"Ompok hypophthalmus/urbaini",56.5,10,10,
 20,2015,2,112,41,"Oreochromis niloticus",455.6,10,10,
-20,2015,5,5,1,"Mystus atrifasciatus",51.4,11,11,7
+20,2015,5,5,1,"Mystus atrifasciatus",51.40000000000001,11,11,7
 20,2015,5,16,5,"Puntius brevis",1113.2,11,11,7
 20,2015,5,26,9,"Danio albolineatus",130.3,11,11,7
 20,2015,5,38,12,"Anabas testudineus",59.3,11,11,7
@@ -3335,11 +3335,11 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 20,2015,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",381.6,12,12,
 20,2015,11,1,1,"Mystus albolineatus",11,13,13,8
 20,2015,11,12,3,"Cyclocheilichthys lagleri",52.1,13,13,8
-20,2015,11,16,5,"Puntius brevis",935.6000000000001,13,13,8
+20,2015,11,16,5,"Puntius brevis",935.6,13,13,8
 20,2015,11,17,5,"Puntius sp. (cf. masyai)",179.3,13,13,8
 20,2015,11,20,6,"Labiobarbus siamensis",3.7,13,13,8
 20,2015,11,21,6,"Labiobarbus leptocheilus",26.3,13,13,8
-20,2015,11,24,9,"Esomus metallicus",90.69999999999999,13,13,8
+20,2015,11,24,9,"Esomus metallicus",90.7,13,13,8
 20,2015,11,25,9,"Esomus longimanus",17.5,13,13,8
 20,2015,11,26,9,"Danio albolineatus",11.1,13,13,8
 20,2015,11,42,13,"Clarias meladerma",53.9,13,13,8
@@ -3348,7 +3348,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 20,2015,11,50,16,"Parambassis siamensis",1106.2,13,13,8
 20,2015,11,52,17,"Trichogaster microlepis",83.09999999999999,13,13,8
 20,2015,11,63,21,"Xenentodon cancila",50,13,13,8
-20,2015,11,99,34,"Puntius orphoides",321.2,13,13,8
+20,2015,11,99,34,"Puntius orphoides",321.1999999999999,13,13,8
 20,2015,11,101,34,"Poropuntius normani",8.300000000000001,13,13,8
 20,2015,11,110,24,"Ompok hypophthalmus/urbaini",46.4,13,13,8
 20,2015,11,112,41,"Oreochromis niloticus",51.6,13,13,8
@@ -3378,7 +3378,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 21,2013,2,15,4,"Barbonymus gonionotus",3424.6,2,2,
 21,2013,2,16,5,"Puntius brevis",34.5,2,2,
 21,2013,2,40,13,"Clarias batrachus",696.8000000000001,2,2,
-21,2013,2,50,16,"Parambassis siamensis",5.300000000000001,2,2,
+21,2013,2,50,16,"Parambassis siamensis",5.3,2,2,
 21,2013,2,59,19,"Notopterus notopterus",224.6,2,2,
 21,2013,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",227.6,2,2,
 21,2013,5,12,3,"Cyclocheilichthys lagleri",383.9,3,3,2
@@ -3392,7 +3392,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 21,2013,8,41,13,"Clarias macrocephalus",200.5,4,4,3
 21,2013,8,47,15,"Pristolepis fasciata",206.3,4,4,3
 21,2013,8,50,16,"Parambassis siamensis",61.3,4,4,3
-21,2013,8,59,19,"Notopterus notopterus",743.6999999999999,4,4,3
+21,2013,8,59,19,"Notopterus notopterus",743.7,4,4,3
 21,2013,8,69,25,"Macrognathus semiocellatus",29,4,4,3
 21,2013,11,6,1,"Mystus gulio",11.2,5,5,4
 21,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",2182.5,5,5,4
@@ -3413,9 +3413,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 21,2014,2,12,3,"Cyclocheilichthys lagleri",33.40000000000001,6,6,
 21,2014,2,15,4,"Barbonymus gonionotus",1652.1,6,6,
 21,2014,2,38,12,"Anabas testudineus",39.7,6,6,
-21,2014,2,40,13,"Clarias batrachus",712.3,6,6,
+21,2014,2,40,13,"Clarias batrachus",712.3000000000001,6,6,
 21,2014,2,43,14,"Channa striata",257.9,6,6,
-21,2014,2,47,15,"Pristolepis fasciata",578.0999999999999,6,6,
+21,2014,2,47,15,"Pristolepis fasciata",578.1,6,6,
 21,2014,2,50,16,"Parambassis siamensis",3.2,6,6,
 21,2014,2,79,30,"Hampala macrolepidota",106.6,6,6,
 21,2014,5,4,1,"Mystus mysticetus",237.3,7,7,5
@@ -3427,7 +3427,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 21,2014,5,53,17,"Trichopodus trichopterus",41.8,7,7,5
 21,2014,5,59,19,"Notopterus notopterus",267.6,7,7,5
 21,2014,8,4,1,"Mystus mysticetus",44.6,8,8,
-21,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",663.0999999999999,8,8,
+21,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",663.1,8,8,
 21,2014,8,15,4,"Barbonymus gonionotus",2872.7,8,8,
 21,2014,8,47,15,"Pristolepis fasciata",204.1,8,8,
 21,2014,8,50,16,"Parambassis siamensis",11.2,8,8,
@@ -3438,7 +3438,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 21,2014,8,79,30,"Hampala macrolepidota",55.5,8,8,
 21,2014,11,4,1,"Mystus mysticetus",269.8,9,9,6
 21,2014,11,12,3,"Cyclocheilichthys lagleri",1845,9,9,6
-21,2014,11,15,4,"Barbonymus gonionotus",5375.3,9,9,6
+21,2014,11,15,4,"Barbonymus gonionotus",5375.299999999999,9,9,6
 21,2014,11,40,13,"Clarias batrachus",86.90000000000001,9,9,6
 21,2014,11,48,16,"Parambassis apogonoides",89.5,9,9,6
 21,2014,11,51,17,"Trichopodus pectoralis",216.3,9,9,6
@@ -3450,7 +3450,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 21,2015,2,7,1,"Mystus bocourti",46.2,10,10,
 21,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",477.9,10,10,
 21,2015,2,12,3,"Cyclocheilichthys lagleri",686.5,10,10,
-21,2015,2,15,4,"Barbonymus gonionotus",6543.8,10,10,
+21,2015,2,15,4,"Barbonymus gonionotus",6543.799999999999,10,10,
 21,2015,2,22,8,"Henicorhynchus siamensis",89.7,10,10,
 21,2015,2,38,12,"Anabas testudineus",87.59999999999999,10,10,
 21,2015,2,40,13,"Clarias batrachus",284.1,10,10,
@@ -3510,14 +3510,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2012,11,41,13,"Clarias macrocephalus",163,1,1,1
 22,2012,11,43,14,"Channa striata",2147,1,1,1
 22,2012,11,47,15,"Pristolepis fasciata",2,1,1,1
-22,2012,11,50,16,"Parambassis siamensis",96.59999999999999,1,1,1
+22,2012,11,50,16,"Parambassis siamensis",96.60000000000001,1,1,1
 22,2012,11,53,17,"Trichopodus trichopterus",1.2,1,1,1
 22,2012,11,59,19,"Notopterus notopterus",66,1,1,1
 22,2012,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",16,1,1,1
 22,2012,11,68,25,"Macrognathus siamensis",9,1,1,1
 22,2012,11,102,34,"Osteochilus vittatus/lini/hasselti",2,1,1,1
 22,2013,2,2,1,"Mystus singaringan",5.1,2,2,
-22,2013,2,12,3,"Cyclocheilichthys lagleri",44.4,2,2,
+22,2013,2,12,3,"Cyclocheilichthys lagleri",44.40000000000001,2,2,
 22,2013,2,16,5,"Puntius brevis",169.3,2,2,
 22,2013,2,21,6,"Labiobarbus leptocheilus",86.40000000000001,2,2,
 22,2013,2,27,9,"Amblypharyngodon chulabhornae",80,2,2,
@@ -3570,12 +3570,12 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2013,11,17,5,"Puntius sp. (cf. masyai)",546.9000000000001,5,5,4
 22,2013,11,21,6,"Labiobarbus leptocheilus",9.300000000000001,5,5,4
 22,2013,11,24,9,"Esomus metallicus",71.7,5,5,4
-22,2013,11,28,9,"Rasbora daniconius",94.7,5,5,4
+22,2013,11,28,9,"Rasbora daniconius",94.69999999999999,5,5,4
 22,2013,11,29,9,"Rasbora aurotaenia",6,5,5,4
 22,2013,11,30,9,"Rasbora pauciperforata/Trigonopoma pauciperforatum",7.6,5,5,4
 22,2013,11,32,9,"Rasbora borapetensis",1,5,5,4
 22,2013,11,47,15,"Pristolepis fasciata",32.9,5,5,4
-22,2013,11,48,16,"Parambassis apogonoides",37.40000000000001,5,5,4
+22,2013,11,48,16,"Parambassis apogonoides",37.4,5,5,4
 22,2013,11,49,16,"Parambassis wolffii",106.3,5,5,4
 22,2013,11,52,17,"Trichogaster microlepis",10.4,5,5,4
 22,2013,11,58,18,"Trichopsis vittata",.2,5,5,4
@@ -3605,9 +3605,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2014,5,8,2,"Hemibagrus spilopterus/nemurus",457.3,7,7,5
 22,2014,5,12,3,"Cyclocheilichthys lagleri",151.2,7,7,5
 22,2014,5,15,4,"Barbonymus gonionotus",1731.4,7,7,5
-22,2014,5,16,5,"Puntius brevis",748.9000000000001,7,7,5
+22,2014,5,16,5,"Puntius brevis",748.8999999999999,7,7,5
 22,2014,5,17,5,"Puntius sp. (cf. masyai)",156.1,7,7,5
-22,2014,5,21,6,"Labiobarbus leptocheilus",766.1000000000001,7,7,5
+22,2014,5,21,6,"Labiobarbus leptocheilus",766.1,7,7,5
 22,2014,5,22,8,"Henicorhynchus siamensis",227.9,7,7,5
 22,2014,5,24,9,"Esomus metallicus",625.9000000000001,7,7,5
 22,2014,5,42,13,"Clarias meladerma",81.2,7,7,5
@@ -3617,7 +3617,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2014,5,53,17,"Trichopodus trichopterus",24.7,7,7,5
 22,2014,5,59,19,"Notopterus notopterus",820.4,7,7,5
 22,2014,5,63,21,"Xenentodon cancila",116,7,7,5
-22,2014,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",48.09999999999999,7,7,5
+22,2014,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",48.1,7,7,5
 22,2014,5,99,34,"Puntius orphoides",157.7,7,7,5
 22,2014,5,102,34,"Osteochilus vittatus/lini/hasselti",110.3,7,7,5
 22,2014,5,107,38,"Oxygaster pointoni",398.1,7,7,5
@@ -3626,7 +3626,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2014,5,140,1,"Mystus wolffi",30.5,7,7,5
 22,2014,8,1,1,"Mystus albolineatus",13.9,8,8,
 22,2014,8,2,1,"Mystus singaringan",6.3,8,8,
-22,2014,8,4,1,"Mystus mysticetus",96.8,8,8,
+22,2014,8,4,1,"Mystus mysticetus",96.79999999999998,8,8,
 22,2014,8,5,1,"Mystus atrifasciatus",28.2,8,8,
 22,2014,8,12,3,"Cyclocheilichthys lagleri",92.30000000000001,8,8,
 22,2014,8,13,4,"Hypsibarbus lagleri",5.4,8,8,
@@ -3638,7 +3638,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2014,8,63,21,"Xenentodon cancila",29.4,8,8,
 22,2014,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",46.4,8,8,
 22,2014,8,99,34,"Puntius orphoides",37.6,8,8,
-22,2014,8,107,38,"Oxygaster pointoni",34.39999999999999,8,8,
+22,2014,8,107,38,"Oxygaster pointoni",34.4,8,8,
 22,2014,8,108,38,"Paralaubuca typus",65.59999999999999,8,8,
 22,2014,8,110,24,"Ompok hypophthalmus/urbaini",17.1,8,8,
 22,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",44.5,9,9,6
@@ -3662,13 +3662,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",7.3,9,9,6
 22,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",6.4,10,10,
 22,2015,2,12,3,"Cyclocheilichthys lagleri",23.2,10,10,
-22,2015,2,17,5,"Puntius sp. (cf. masyai)",81.80000000000001,10,10,
+22,2015,2,17,5,"Puntius sp. (cf. masyai)",81.8,10,10,
 22,2015,2,21,6,"Labiobarbus leptocheilus",36,10,10,
 22,2015,2,22,8,"Henicorhynchus siamensis",376,10,10,
 22,2015,2,24,9,"Esomus metallicus",290.9,10,10,
 22,2015,2,27,9,"Amblypharyngodon chulabhornae",27,10,10,
 22,2015,2,43,14,"Channa striata",783.1,10,10,
-22,2015,2,48,16,"Parambassis apogonoides",298.9999999999999,10,10,
+22,2015,2,48,16,"Parambassis apogonoides",299,10,10,
 22,2015,2,53,17,"Trichopodus trichopterus",5.7,10,10,
 22,2015,2,59,19,"Notopterus notopterus",142.9,10,10,
 22,2015,2,63,21,"Xenentodon cancila",30.6,10,10,
@@ -3687,7 +3687,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2015,5,22,8,"Henicorhynchus siamensis",238.3,11,11,7
 22,2015,5,24,9,"Esomus metallicus",50.8,11,11,7
 22,2015,5,27,9,"Amblypharyngodon chulabhornae",6.3,11,11,7
-22,2015,5,43,14,"Channa striata",757.6000000000001,11,11,7
+22,2015,5,43,14,"Channa striata",757.6,11,11,7
 22,2015,5,48,16,"Parambassis apogonoides",59.7,11,11,7
 22,2015,5,59,19,"Notopterus notopterus",139.6,11,11,7
 22,2015,5,63,21,"Xenentodon cancila",33.7,11,11,7
@@ -3731,7 +3731,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 22,2015,11,43,14,"Channa striata",241.2,13,13,8
 22,2015,11,47,15,"Pristolepis fasciata",6,13,13,8
 22,2015,11,48,16,"Parambassis apogonoides",16.4,13,13,8
-22,2015,11,50,16,"Parambassis siamensis",454.4999999999999,13,13,8
+22,2015,11,50,16,"Parambassis siamensis",454.5000000000001,13,13,8
 22,2015,11,59,19,"Notopterus notopterus",4.1,13,13,8
 22,2015,11,63,21,"Xenentodon cancila",128.8,13,13,8
 22,2015,11,68,25,"Macrognathus siamensis",13.2,13,13,8
@@ -3815,7 +3815,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 23,2014,2,1,1,"Mystus albolineatus",16.8,6,6,
 23,2014,2,6,1,"Mystus gulio",18.5,6,6,
 23,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",98.7,6,6,
-23,2014,2,12,3,"Cyclocheilichthys lagleri",82.60000000000001,6,6,
+23,2014,2,12,3,"Cyclocheilichthys lagleri",82.59999999999999,6,6,
 23,2014,2,16,5,"Puntius brevis",23.5,6,6,
 23,2014,2,21,6,"Labiobarbus leptocheilus",161.1,6,6,
 23,2014,2,25,9,"Esomus longimanus",9.699999999999999,6,6,
@@ -3850,7 +3850,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 23,2014,8,47,15,"Pristolepis fasciata",26.4,8,8,
 23,2014,8,50,16,"Parambassis siamensis",40,8,8,
 23,2014,8,138,9,"Rasbora caudimaculata",9.300000000000001,8,8,
-23,2014,11,1,1,"Mystus albolineatus",78.30000000000001,9,9,6
+23,2014,11,1,1,"Mystus albolineatus",78.3,9,9,6
 23,2014,11,12,3,"Cyclocheilichthys lagleri",197.5,9,9,6
 23,2014,11,16,5,"Puntius brevis",197.1,9,9,6
 23,2014,11,21,6,"Labiobarbus leptocheilus",138.5,9,9,6
@@ -3859,7 +3859,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 23,2014,11,37,11,"Puntioplites proctozystron",35,9,9,6
 23,2014,11,38,12,"Anabas testudineus",195.5,9,9,6
 23,2014,11,43,14,"Channa striata",180,9,9,6
-23,2014,11,48,16,"Parambassis apogonoides",42.90000000000001,9,9,6
+23,2014,11,48,16,"Parambassis apogonoides",42.9,9,9,6
 23,2014,11,53,17,"Trichopodus trichopterus",28.1,9,9,6
 23,2014,11,57,18,"Trichopsis pumila",3.7,9,9,6
 23,2014,11,59,19,"Notopterus notopterus",636.1,9,9,6
@@ -3868,7 +3868,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 23,2014,11,99,34,"Puntius orphoides",30,9,9,6
 23,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",58.8,9,9,6
 23,2014,11,108,38,"Paralaubuca typus",5.800000000000001,9,9,6
-23,2014,11,138,9,"Rasbora caudimaculata",39.9,9,9,6
+23,2014,11,138,9,"Rasbora caudimaculata",39.89999999999999,9,9,6
 23,2014,11,143,18,"Betta prima",.9,9,9,6
 23,2015,2,1,1,"Mystus albolineatus",52.7,10,10,
 23,2015,2,6,1,"Mystus gulio",28.3,10,10,
@@ -3934,7 +3934,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 24,2012,11,108,38,"Paralaubuca typus",71,1,1,1
 24,2013,2,3,1,"Mystus multiradiatus",13.1,2,2,
 24,2013,2,4,1,"Mystus mysticetus",107.6,2,2,
-24,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",824.0999999999999,2,2,
+24,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",824.1,2,2,
 24,2013,2,16,5,"Puntius brevis",532.3000000000001,2,2,
 24,2013,2,17,5,"Puntius sp. (cf. masyai)",138.6,2,2,
 24,2013,2,29,9,"Rasbora aurotaenia",4.9,2,2,
@@ -3980,7 +3980,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 24,2013,8,108,38,"Paralaubuca typus",39.3,4,4,3
 24,2013,8,138,9,"Rasbora caudimaculata",136,4,4,3
 24,2013,11,8,2,"Hemibagrus spilopterus/nemurus",71.59999999999999,5,5,4
-24,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",67.30000000000001,5,5,4
+24,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",67.3,5,5,4
 24,2013,11,17,5,"Puntius sp. (cf. masyai)",46.7,5,5,4
 24,2013,11,18,5,"Puntius aurotaeniatus",57.5,5,5,4
 24,2013,11,19,5,"Puntius rhombeus",25.9,5,5,4
@@ -3988,11 +3988,11 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 24,2013,11,47,15,"Pristolepis fasciata",10.4,5,5,4
 24,2013,11,50,16,"Parambassis siamensis",221,5,5,4
 24,2013,11,59,19,"Notopterus notopterus",17.8,5,5,4
-24,2013,11,99,34,"Puntius orphoides",99.80000000000001,5,5,4
+24,2013,11,99,34,"Puntius orphoides",99.8,5,5,4
 24,2013,11,103,35,"Systomus partipentazona",2.8,5,5,4
 24,2013,11,138,9,"Rasbora caudimaculata",124.9,5,5,4
 24,2014,2,4,1,"Mystus mysticetus",80.09999999999999,6,6,
-24,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",884.41,6,6,
+24,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",884.4099999999999,6,6,
 24,2014,2,16,5,"Puntius brevis",21.7,6,6,
 24,2014,2,19,5,"Puntius rhombeus",242.7,6,6,
 24,2014,2,26,9,"Danio albolineatus",6.1,6,6,
@@ -4019,10 +4019,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 24,2014,5,103,35,"Systomus partipentazona",1.3,7,7,5
 24,2014,8,1,1,"Mystus albolineatus",11,8,8,
 24,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",344.9,8,8,
-24,2014,8,19,5,"Puntius rhombeus",83.90000000000001,8,8,
-24,2014,8,24,9,"Esomus metallicus",49.9,8,8,
+24,2014,8,19,5,"Puntius rhombeus",83.89999999999999,8,8,
+24,2014,8,24,9,"Esomus metallicus",49.90000000000001,8,8,
 24,2014,8,47,15,"Pristolepis fasciata",16.1,8,8,
-24,2014,8,50,16,"Parambassis siamensis",93.89999999999998,8,8,
+24,2014,8,50,16,"Parambassis siamensis",93.90000000000001,8,8,
 24,2014,8,56,18,"Trichopsis schalleri",2.9,8,8,
 24,2014,8,59,19,"Notopterus notopterus",71,8,8,
 24,2014,8,63,21,"Xenentodon cancila",27.9,8,8,
@@ -4037,7 +4037,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 24,2014,11,63,21,"Xenentodon cancila",30.7,9,9,6
 24,2014,11,99,34,"Puntius orphoides",7.5,9,9,6
 24,2014,11,103,35,"Systomus partipentazona",4.899999999999999,9,9,6
-24,2014,11,138,9,"Rasbora caudimaculata",63.29999999999999,9,9,6
+24,2014,11,138,9,"Rasbora caudimaculata",63.3,9,9,6
 24,2014,11,149,48,"Wallago attu",40.6,9,9,6
 24,2015,2,4,1,"Mystus mysticetus",13.4,10,10,
 24,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",31,10,10,
@@ -4078,7 +4078,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 24,2015,11,26,9,"Danio albolineatus",189.1,13,13,8
 24,2015,11,38,12,"Anabas testudineus",43.2,13,13,8
 24,2015,11,40,13,"Clarias batrachus",171.1,13,13,8
-24,2015,11,43,14,"Channa striata",874.8000000000001,13,13,8
+24,2015,11,43,14,"Channa striata",874.8,13,13,8
 24,2015,11,44,15,"Datnioides undecimradiatus",.9,13,13,8
 24,2015,11,47,15,"Pristolepis fasciata",6.4,13,13,8
 24,2015,11,50,16,"Parambassis siamensis",213.5,13,13,8
@@ -4104,7 +4104,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2013,2,7,1,"Mystus bocourti",13.1,2,2,
 25,2013,2,12,3,"Cyclocheilichthys lagleri",32.7,2,2,
 25,2013,2,15,4,"Barbonymus gonionotus",92.5,2,2,
-25,2013,2,16,5,"Puntius brevis",47.1,2,2,
+25,2013,2,16,5,"Puntius brevis",47.09999999999999,2,2,
 25,2013,2,21,6,"Labiobarbus leptocheilus",159.4,2,2,
 25,2013,2,22,8,"Henicorhynchus siamensis",301.7,2,2,
 25,2013,2,29,9,"Rasbora aurotaenia",33.8,2,2,
@@ -4112,7 +4112,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2013,2,41,13,"Clarias macrocephalus",169.6,2,2,
 25,2013,2,43,14,"Channa striata",353.9,2,2,
 25,2013,2,47,15,"Pristolepis fasciata",83.40000000000001,2,2,
-25,2013,2,50,16,"Parambassis siamensis",583.9999999999999,2,2,
+25,2013,2,50,16,"Parambassis siamensis",584,2,2,
 25,2013,2,52,17,"Trichogaster microlepis",31.5,2,2,
 25,2013,2,59,19,"Notopterus notopterus",28.5,2,2,
 25,2013,2,63,21,"Xenentodon cancila",47.1,2,2,
@@ -4153,7 +4153,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2013,8,40,13,"Clarias batrachus",28.8,4,4,3
 25,2013,8,50,16,"Parambassis siamensis",865.1,4,4,3
 25,2013,8,59,19,"Notopterus notopterus",50.2,4,4,3
-25,2013,8,63,21,"Xenentodon cancila",88.60000000000001,4,4,3
+25,2013,8,63,21,"Xenentodon cancila",88.59999999999999,4,4,3
 25,2013,8,68,25,"Macrognathus siamensis",26.4,4,4,3
 25,2013,8,75,27,"Acanthopsoides/Acantopsis spp",15.7,4,4,3
 25,2013,8,100,4,"Hypsibarbus vernayi",41.4,4,4,3
@@ -4161,7 +4161,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2013,8,107,38,"Oxygaster pointoni",282.7,4,4,3
 25,2013,8,110,24,"Ompok hypophthalmus/urbaini",61.6,4,4,3
 25,2013,11,4,1,"Mystus mysticetus",194.7,5,5,4
-25,2013,11,12,3,"Cyclocheilichthys lagleri",9.399999999999999,5,5,4
+25,2013,11,12,3,"Cyclocheilichthys lagleri",9.4,5,5,4
 25,2013,11,16,5,"Puntius brevis",4.8,5,5,4
 25,2013,11,17,5,"Puntius sp. (cf. masyai)",83.80000000000001,5,5,4
 25,2013,11,21,6,"Labiobarbus leptocheilus",150.1,5,5,4
@@ -4170,7 +4170,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2013,11,32,9,"Rasbora borapetensis",.9,5,5,4
 25,2013,11,40,13,"Clarias batrachus",48.9,5,5,4
 25,2013,11,42,13,"Clarias meladerma",50.2,5,5,4
-25,2013,11,48,16,"Parambassis apogonoides",856.0999999999999,5,5,4
+25,2013,11,48,16,"Parambassis apogonoides",856.1,5,5,4
 25,2013,11,53,17,"Trichopodus trichopterus",26,5,5,4
 25,2013,11,57,18,"Trichopsis pumila",.5,5,5,4
 25,2013,11,59,19,"Notopterus notopterus",60.4,5,5,4
@@ -4186,7 +4186,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2014,2,21,6,"Labiobarbus leptocheilus",102.7,6,6,
 25,2014,2,22,8,"Henicorhynchus siamensis",280.5,6,6,
 25,2014,2,43,14,"Channa striata",256,6,6,
-25,2014,2,48,16,"Parambassis apogonoides",657.3,6,6,
+25,2014,2,48,16,"Parambassis apogonoides",657.3000000000001,6,6,
 25,2014,2,52,17,"Trichogaster microlepis",18.9,6,6,
 25,2014,2,59,19,"Notopterus notopterus",153,6,6,
 25,2014,2,63,21,"Xenentodon cancila",26,6,6,
@@ -4195,7 +4195,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2014,2,99,34,"Puntius orphoides",163.6,6,6,
 25,2014,2,102,34,"Osteochilus vittatus/lini/hasselti",916,6,6,
 25,2014,2,140,1,"Mystus wolffi",42.1,6,6,
-25,2014,5,4,1,"Mystus mysticetus",52.49999999999999,7,7,5
+25,2014,5,4,1,"Mystus mysticetus",52.5,7,7,5
 25,2014,5,5,1,"Mystus atrifasciatus",8.199999999999999,7,7,5
 25,2014,5,16,5,"Puntius brevis",22.6,7,7,5
 25,2014,5,21,6,"Labiobarbus leptocheilus",629.9000000000001,7,7,5
@@ -4221,7 +4221,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2014,8,37,11,"Puntioplites proctozystron",101.9,8,8,
 25,2014,8,38,12,"Anabas testudineus",23.7,8,8,
 25,2014,8,40,13,"Clarias batrachus",214.4,8,8,
-25,2014,8,48,16,"Parambassis apogonoides",634,8,8,
+25,2014,8,48,16,"Parambassis apogonoides",633.9999999999999,8,8,
 25,2014,8,52,17,"Trichogaster microlepis",43.1,8,8,
 25,2014,8,54,8,"Lobocheilos rhabdoura",39.6,8,8,
 25,2014,8,63,21,"Xenentodon cancila",83.30000000000001,8,8,
@@ -4254,7 +4254,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2015,2,21,6,"Labiobarbus leptocheilus",325.3,10,10,
 25,2015,2,22,8,"Henicorhynchus siamensis",375.9,10,10,
 25,2015,2,29,9,"Rasbora aurotaenia",17.6,10,10,
-25,2015,2,48,16,"Parambassis apogonoides",312.1999999999999,10,10,
+25,2015,2,48,16,"Parambassis apogonoides",312.2,10,10,
 25,2015,2,59,19,"Notopterus notopterus",492.4,10,10,
 25,2015,2,63,21,"Xenentodon cancila",19.3,10,10,
 25,2015,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",33.6,10,10,
@@ -4276,9 +4276,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 25,2015,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",26.4,11,11,7
 25,2015,5,68,25,"Macrognathus siamensis",12.1,11,11,7
 25,2015,5,99,34,"Puntius orphoides",238.2,11,11,7
-25,2015,5,102,34,"Osteochilus vittatus/lini/hasselti",83.30000000000001,11,11,7
+25,2015,5,102,34,"Osteochilus vittatus/lini/hasselti",83.3,11,11,7
 25,2015,8,3,1,"Mystus multiradiatus",49.8,12,12,
-25,2015,8,4,1,"Mystus mysticetus",96.10000000000001,12,12,
+25,2015,8,4,1,"Mystus mysticetus",96.09999999999999,12,12,
 25,2015,8,5,1,"Mystus atrifasciatus",7.5,12,12,
 25,2015,8,6,1,"Mystus gulio",6,12,12,
 25,2015,8,12,3,"Cyclocheilichthys lagleri",22.7,12,12,
@@ -4345,7 +4345,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2012,11,107,38,"Oxygaster pointoni",28,1,1,1
 26,2012,11,138,9,"Rasbora caudimaculata",27,1,1,1
 26,2013,2,6,1,"Mystus gulio",22,2,2,
-26,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",81.09999999999999,2,2,
+26,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",81.10000000000001,2,2,
 26,2013,2,12,3,"Cyclocheilichthys lagleri",47.3,2,2,
 26,2013,2,16,5,"Puntius brevis",155.8,2,2,
 26,2013,2,21,6,"Labiobarbus leptocheilus",48.7,2,2,
@@ -4361,7 +4361,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2013,5,12,3,"Cyclocheilichthys lagleri",521.1,3,3,2
 26,2013,5,21,6,"Labiobarbus leptocheilus",321.5,3,3,2
 26,2013,5,49,16,"Parambassis wolffii",26.9,3,3,2
-26,2013,5,50,16,"Parambassis siamensis",38.6,3,3,2
+26,2013,5,50,16,"Parambassis siamensis",38.59999999999999,3,3,2
 26,2013,5,59,19,"Notopterus notopterus",32.4,3,3,2
 26,2013,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",8.300000000000001,3,3,2
 26,2013,5,69,25,"Macrognathus semiocellatus",5.7,3,3,2
@@ -4376,16 +4376,16 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2013,11,6,1,"Mystus gulio",25.2,5,5,4
 26,2013,11,7,1,"Mystus bocourti",4.3,5,5,4
 26,2013,11,8,2,"Hemibagrus spilopterus/nemurus",78.5,5,5,4
-26,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",417.0999999999999,5,5,4
-26,2013,11,12,3,"Cyclocheilichthys lagleri",592.9000000000001,5,5,4
-26,2013,11,16,5,"Puntius brevis",843.7,5,5,4
+26,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",417.1,5,5,4
+26,2013,11,12,3,"Cyclocheilichthys lagleri",592.9,5,5,4
+26,2013,11,16,5,"Puntius brevis",843.6999999999999,5,5,4
 26,2013,11,21,6,"Labiobarbus leptocheilus",69.3,5,5,4
 26,2013,11,24,9,"Esomus metallicus",1.2,5,5,4
 26,2013,11,37,11,"Puntioplites proctozystron",18.8,5,5,4
 26,2013,11,40,13,"Clarias batrachus",56,5,5,4
 26,2013,11,43,14,"Channa striata",100.1,5,5,4
 26,2013,11,47,15,"Pristolepis fasciata",92.59999999999999,5,5,4
-26,2013,11,48,16,"Parambassis apogonoides",480.4,5,5,4
+26,2013,11,48,16,"Parambassis apogonoides",480.4000000000001,5,5,4
 26,2013,11,49,16,"Parambassis wolffii",77.19999999999999,5,5,4
 26,2013,11,52,17,"Trichogaster microlepis",27,5,5,4
 26,2013,11,63,21,"Xenentodon cancila",80.19999999999999,5,5,4
@@ -4414,11 +4414,11 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2014,5,22,8,"Henicorhynchus siamensis",22.7,7,7,5
 26,2014,5,43,14,"Channa striata",722.4,7,7,5
 26,2014,5,49,16,"Parambassis wolffii",98.39999999999999,7,7,5
-26,2014,5,50,16,"Parambassis siamensis",88.60000000000001,7,7,5
-26,2014,5,59,19,"Notopterus notopterus",613.3000000000001,7,7,5
+26,2014,5,50,16,"Parambassis siamensis",88.59999999999999,7,7,5
+26,2014,5,59,19,"Notopterus notopterus",613.3,7,7,5
 26,2014,5,107,38,"Oxygaster pointoni",32.4,7,7,5
 26,2014,5,126,10,"Clupeichthys aesarnensis",2.1,7,7,5
-26,2014,5,128,7,"Thynnichthys thynnoides",593.2,7,7,5
+26,2014,5,128,7,"Thynnichthys thynnoides",593.1999999999999,7,7,5
 26,2014,8,7,1,"Mystus bocourti",40.3,8,8,
 26,2014,8,12,3,"Cyclocheilichthys lagleri",212.1,8,8,
 26,2014,8,15,4,"Barbonymus gonionotus",1.2,8,8,
@@ -4437,7 +4437,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2014,11,16,5,"Puntius brevis",343.3,9,9,6
 26,2014,11,21,6,"Labiobarbus leptocheilus",490.8,9,9,6
 26,2014,11,47,15,"Pristolepis fasciata",3,9,9,6
-26,2014,11,48,16,"Parambassis apogonoides",95.10000000000001,9,9,6
+26,2014,11,48,16,"Parambassis apogonoides",95.09999999999999,9,9,6
 26,2014,11,49,16,"Parambassis wolffii",172.2,9,9,6
 26,2014,11,63,21,"Xenentodon cancila",16.9,9,9,6
 26,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",129.1,9,9,6
@@ -4447,7 +4447,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",1299.1,10,10,
 26,2015,2,12,3,"Cyclocheilichthys lagleri",281.3,10,10,
 26,2015,2,15,4,"Barbonymus gonionotus",649.4,10,10,
-26,2015,2,16,5,"Puntius brevis",507.0000000000001,10,10,
+26,2015,2,16,5,"Puntius brevis",507,10,10,
 26,2015,2,17,5,"Puntius sp. (cf. masyai)",110.4,10,10,
 26,2015,2,19,5,"Puntius rhombeus",14.3,10,10,
 26,2015,2,21,6,"Labiobarbus leptocheilus",1643.2,10,10,
@@ -4469,13 +4469,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2015,2,172,0,"Hampala dispar",370.8,10,10,
 26,2015,5,7,1,"Mystus bocourti",32.3,11,11,7
 26,2015,5,11,3,"Anematichthys/Cyclocheilichthys armatus",83.59999999999999,11,11,7
-26,2015,5,12,3,"Cyclocheilichthys lagleri",465.9,11,11,7
+26,2015,5,12,3,"Cyclocheilichthys lagleri",465.9000000000001,11,11,7
 26,2015,5,15,4,"Barbonymus gonionotus",659.8,11,11,7
 26,2015,5,16,5,"Puntius brevis",7.3,11,11,7
 26,2015,5,21,6,"Labiobarbus leptocheilus",126.9,11,11,7
 26,2015,5,50,16,"Parambassis siamensis",9.199999999999999,11,11,7
 26,2015,5,52,17,"Trichogaster microlepis",110.8,11,11,7
-26,2015,5,59,19,"Notopterus notopterus",677.5000000000001,11,11,7
+26,2015,5,59,19,"Notopterus notopterus",677.5,11,11,7
 26,2015,5,102,34,"Osteochilus vittatus/lini/hasselti",82,11,11,7
 26,2015,8,6,1,"Mystus gulio",97,12,12,
 26,2015,8,9,3,"Anematichthys/Cyclocheilichthys apogon",49.9,12,12,
@@ -4495,7 +4495,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 26,2015,11,16,5,"Puntius brevis",200.3,13,13,8
 26,2015,11,21,6,"Labiobarbus leptocheilus",264.2,13,13,8
 26,2015,11,47,15,"Pristolepis fasciata",6.600000000000001,13,13,8
-26,2015,11,48,16,"Parambassis apogonoides",55.2,13,13,8
+26,2015,11,48,16,"Parambassis apogonoides",55.20000000000001,13,13,8
 26,2015,11,49,16,"Parambassis wolffii",25.3,13,13,8
 26,2015,11,52,17,"Trichogaster microlepis",8.6,13,13,8
 26,2015,11,59,19,"Notopterus notopterus",95.59999999999999,13,13,8
@@ -4544,12 +4544,12 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2013,5,12,3,"Cyclocheilichthys lagleri",75.8,3,3,2
 27,2013,5,16,5,"Puntius brevis",131.7,3,3,2
 27,2013,5,20,6,"Labiobarbus siamensis",6.3,3,3,2
-27,2013,5,21,6,"Labiobarbus leptocheilus",97.60000000000001,3,3,2
+27,2013,5,21,6,"Labiobarbus leptocheilus",97.59999999999999,3,3,2
 27,2013,5,22,8,"Henicorhynchus siamensis",328.7,3,3,2
 27,2013,5,24,9,"Esomus metallicus",.8,3,3,2
 27,2013,5,27,9,"Amblypharyngodon chulabhornae",.8,3,3,2
 27,2013,5,40,13,"Clarias batrachus",132.4,3,3,2
-27,2013,5,49,16,"Parambassis wolffii",86.40000000000001,3,3,2
+27,2013,5,49,16,"Parambassis wolffii",86.39999999999999,3,3,2
 27,2013,5,51,17,"Trichopodus pectoralis",29.8,3,3,2
 27,2013,5,59,19,"Notopterus notopterus",101.4,3,3,2
 27,2013,5,63,21,"Xenentodon cancila",46.09999999999999,3,3,2
@@ -4576,14 +4576,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2013,11,17,5,"Puntius sp. (cf. masyai)",1619,5,5,4
 27,2013,11,18,5,"Puntius aurotaeniatus",3.3,5,5,4
 27,2013,11,21,6,"Labiobarbus leptocheilus",70.39999999999999,5,5,4
-27,2013,11,22,8,"Henicorhynchus siamensis",56,5,5,4
+27,2013,11,22,8,"Henicorhynchus siamensis",55.99999999999999,5,5,4
 27,2013,11,24,9,"Esomus metallicus",311.1,5,5,4
 27,2013,11,29,9,"Rasbora aurotaenia",5.7,5,5,4
 27,2013,11,38,12,"Anabas testudineus",38.59999999999999,5,5,4
 27,2013,11,40,13,"Clarias batrachus",64.90000000000001,5,5,4
 27,2013,11,41,13,"Clarias macrocephalus",164,5,5,4
 27,2013,11,49,16,"Parambassis wolffii",196.2,5,5,4
-27,2013,11,53,17,"Trichopodus trichopterus",91.8,5,5,4
+27,2013,11,53,17,"Trichopodus trichopterus",91.80000000000001,5,5,4
 27,2013,11,58,18,"Trichopsis vittata",24,5,5,4
 27,2013,11,63,21,"Xenentodon cancila",62.59999999999999,5,5,4
 27,2013,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",1.8,5,5,4
@@ -4622,7 +4622,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2014,2,147,34,"Osteochilus microcephalus",192.5,6,6,
 27,2014,5,4,1,"Mystus mysticetus",61.8,7,7,5
 27,2014,5,9,3,"Anematichthys/Cyclocheilichthys apogon",52.1,7,7,5
-27,2014,5,12,3,"Cyclocheilichthys lagleri",47.90000000000001,7,7,5
+27,2014,5,12,3,"Cyclocheilichthys lagleri",47.9,7,7,5
 27,2014,5,16,5,"Puntius brevis",134.6,7,7,5
 27,2014,5,17,5,"Puntius sp. (cf. masyai)",40.2,7,7,5
 27,2014,5,18,5,"Puntius aurotaeniatus",3.6,7,7,5
@@ -4630,7 +4630,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2014,5,22,8,"Henicorhynchus siamensis",342.6,7,7,5
 27,2014,5,24,9,"Esomus metallicus",5.1,7,7,5
 27,2014,5,28,9,"Rasbora daniconius",2.3,7,7,5
-27,2014,5,29,9,"Rasbora aurotaenia",54.1,7,7,5
+27,2014,5,29,9,"Rasbora aurotaenia",54.09999999999999,7,7,5
 27,2014,5,49,16,"Parambassis wolffii",310,7,7,5
 27,2014,5,53,17,"Trichopodus trichopterus",42.4,7,7,5
 27,2014,5,59,19,"Notopterus notopterus",214.5,7,7,5
@@ -4658,22 +4658,22 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2014,8,99,34,"Puntius orphoides",76.09999999999999,8,8,
 27,2014,8,108,38,"Paralaubuca typus",5.5,8,8,
 27,2014,8,128,7,"Thynnichthys thynnoides",376.3,8,8,
-27,2014,11,4,1,"Mystus mysticetus",55.5,9,9,6
+27,2014,11,4,1,"Mystus mysticetus",55.50000000000001,9,9,6
 27,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",15,9,9,6
 27,2014,11,12,3,"Cyclocheilichthys lagleri",99.09999999999999,9,9,6
 27,2014,11,15,4,"Barbonymus gonionotus",480.9,9,9,6
 27,2014,11,16,5,"Puntius brevis",40.1,9,9,6
-27,2014,11,17,5,"Puntius sp. (cf. masyai)",625.8,9,9,6
+27,2014,11,17,5,"Puntius sp. (cf. masyai)",625.8000000000002,9,9,6
 27,2014,11,18,5,"Puntius aurotaeniatus",.8,9,9,6
-27,2014,11,21,6,"Labiobarbus leptocheilus",359.6999999999999,9,9,6
+27,2014,11,21,6,"Labiobarbus leptocheilus",359.7,9,9,6
 27,2014,11,22,8,"Henicorhynchus siamensis",54.6,9,9,6
-27,2014,11,24,9,"Esomus metallicus",6.6,9,9,6
+27,2014,11,24,9,"Esomus metallicus",6.600000000000001,9,9,6
 27,2014,11,25,9,"Esomus longimanus",3.1,9,9,6
 27,2014,11,27,9,"Amblypharyngodon chulabhornae",29.4,9,9,6
 27,2014,11,38,12,"Anabas testudineus",37.1,9,9,6
 27,2014,11,43,14,"Channa striata",81.7,9,9,6
 27,2014,11,47,15,"Pristolepis fasciata",29.7,9,9,6
-27,2014,11,49,16,"Parambassis wolffii",444.5,9,9,6
+27,2014,11,49,16,"Parambassis wolffii",444.4999999999999,9,9,6
 27,2014,11,52,17,"Trichogaster microlepis",92.90000000000001,9,9,6
 27,2014,11,53,17,"Trichopodus trichopterus",59,9,9,6
 27,2014,11,56,18,"Trichopsis schalleri",.1,9,9,6
@@ -4690,7 +4690,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2015,2,4,1,"Mystus mysticetus",23.3,10,10,
 27,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",44.9,10,10,
 27,2015,2,12,3,"Cyclocheilichthys lagleri",68.7,10,10,
-27,2015,2,15,4,"Barbonymus gonionotus",945,10,10,
+27,2015,2,15,4,"Barbonymus gonionotus",945.0000000000001,10,10,
 27,2015,2,16,5,"Puntius brevis",33.6,10,10,
 27,2015,2,17,5,"Puntius sp. (cf. masyai)",340.4,10,10,
 27,2015,2,21,6,"Labiobarbus leptocheilus",84.5,10,10,
@@ -4711,7 +4711,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2015,5,9,3,"Anematichthys/Cyclocheilichthys apogon",90.09999999999999,11,11,7
 27,2015,5,12,3,"Cyclocheilichthys lagleri",115.2,11,11,7
 27,2015,5,15,4,"Barbonymus gonionotus",232.3,11,11,7
-27,2015,5,16,5,"Puntius brevis",92.60000000000001,11,11,7
+27,2015,5,16,5,"Puntius brevis",92.59999999999998,11,11,7
 27,2015,5,18,5,"Puntius aurotaeniatus",3.5,11,11,7
 27,2015,5,21,6,"Labiobarbus leptocheilus",210.2,11,11,7
 27,2015,5,22,8,"Henicorhynchus siamensis",98.69999999999999,11,11,7
@@ -4720,7 +4720,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2015,5,50,16,"Parambassis siamensis",251.4,11,11,7
 27,2015,5,52,17,"Trichogaster microlepis",4.9,11,11,7
 27,2015,5,59,19,"Notopterus notopterus",70.5,11,11,7
-27,2015,5,63,21,"Xenentodon cancila",91.30000000000001,11,11,7
+27,2015,5,63,21,"Xenentodon cancila",91.3,11,11,7
 27,2015,5,68,25,"Macrognathus siamensis",132.3,11,11,7
 27,2015,5,70,26,"Mastacembelus armatus",22.3,11,11,7
 27,2015,5,99,34,"Puntius orphoides",112.2,11,11,7
@@ -4754,19 +4754,19 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 27,2015,11,12,3,"Cyclocheilichthys lagleri",38.1,13,13,8
 27,2015,11,15,4,"Barbonymus gonionotus",17.8,13,13,8
 27,2015,11,16,5,"Puntius brevis",136.7,13,13,8
-27,2015,11,17,5,"Puntius sp. (cf. masyai)",607.4,13,13,8
+27,2015,11,17,5,"Puntius sp. (cf. masyai)",607.4000000000001,13,13,8
 27,2015,11,18,5,"Puntius aurotaeniatus",6.4,13,13,8
 27,2015,11,21,6,"Labiobarbus leptocheilus",166.1,13,13,8
 27,2015,11,24,9,"Esomus metallicus",28.6,13,13,8
 27,2015,11,32,9,"Rasbora borapetensis",.7,13,13,8
-27,2015,11,38,12,"Anabas testudineus",39.9,13,13,8
+27,2015,11,38,12,"Anabas testudineus",39.89999999999999,13,13,8
 27,2015,11,43,14,"Channa striata",28.7,13,13,8
 27,2015,11,47,15,"Pristolepis fasciata",2,13,13,8
 27,2015,11,50,16,"Parambassis siamensis",103.5,13,13,8
 27,2015,11,52,17,"Trichogaster microlepis",3.8,13,13,8
 27,2015,11,53,17,"Trichopodus trichopterus",47.6,13,13,8
 27,2015,11,58,18,"Trichopsis vittata",10.1,13,13,8
-27,2015,11,59,19,"Notopterus notopterus",389.1999999999999,13,13,8
+27,2015,11,59,19,"Notopterus notopterus",389.2,13,13,8
 27,2015,11,63,21,"Xenentodon cancila",31.2,13,13,8
 27,2015,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",28.3,13,13,8
 27,2015,11,68,25,"Macrognathus siamensis",52.4,13,13,8
@@ -4802,7 +4802,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2013,2,8,2,"Hemibagrus spilopterus/nemurus",114.5,2,2,
 28,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",7.9,2,2,
 28,2013,2,11,3,"Anematichthys/Cyclocheilichthys armatus",6.3,2,2,
-28,2013,2,12,3,"Cyclocheilichthys lagleri",57.6,2,2,
+28,2013,2,12,3,"Cyclocheilichthys lagleri",57.59999999999999,2,2,
 28,2013,2,16,5,"Puntius brevis",6.4,2,2,
 28,2013,2,17,5,"Puntius sp. (cf. masyai)",3.4,2,2,
 28,2013,2,21,6,"Labiobarbus leptocheilus",115.4,2,2,
@@ -4840,10 +4840,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2013,8,102,34,"Osteochilus vittatus/lini/hasselti",8.5,4,4,3
 28,2013,8,107,38,"Oxygaster pointoni",2.2,4,4,3
 28,2013,8,126,10,"Clupeichthys aesarnensis",1.1,4,4,3
-28,2013,11,2,1,"Mystus singaringan",98.89999999999999,5,5,4
+28,2013,11,2,1,"Mystus singaringan",98.90000000000001,5,5,4
 28,2013,11,4,1,"Mystus mysticetus",562.2,5,5,4
 28,2013,11,8,2,"Hemibagrus spilopterus/nemurus",1.8,5,5,4
-28,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",707.1999999999999,5,5,4
+28,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",707.2,5,5,4
 28,2013,11,12,3,"Cyclocheilichthys lagleri",33.3,5,5,4
 28,2013,11,15,4,"Barbonymus gonionotus",42.4,5,5,4
 28,2013,11,17,5,"Puntius sp. (cf. masyai)",81.5,5,5,4
@@ -4853,7 +4853,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2013,11,38,12,"Anabas testudineus",9.4,5,5,4
 28,2013,11,39,11,"Puntioplites falcifer",9.1,5,5,4
 28,2013,11,40,13,"Clarias batrachus",112.9,5,5,4
-28,2013,11,48,16,"Parambassis apogonoides",841.2999999999998,5,5,4
+28,2013,11,48,16,"Parambassis apogonoides",841.3,5,5,4
 28,2013,11,52,17,"Trichogaster microlepis",48.3,5,5,4
 28,2013,11,59,19,"Notopterus notopterus",37.9,5,5,4
 28,2013,11,63,21,"Xenentodon cancila",996.2,5,5,4
@@ -4865,7 +4865,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2013,11,100,4,"Hypsibarbus vernayi",3.7,5,5,4
 28,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",131.6,5,5,4
 28,2013,11,108,38,"Paralaubuca typus",148.6,5,5,4
-28,2013,11,110,24,"Ompok hypophthalmus/urbaini",3232.900000000001,5,5,4
+28,2013,11,110,24,"Ompok hypophthalmus/urbaini",3232.9,5,5,4
 28,2013,11,139,1,"Leiocassis/Pseudomystus siamensis",34.3,5,5,4
 28,2013,11,143,18,"Betta prima",.9,5,5,4
 28,2014,2,4,1,"Mystus mysticetus",11,6,6,
@@ -4874,7 +4874,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2014,2,8,2,"Hemibagrus spilopterus/nemurus",579,6,6,
 28,2014,2,12,3,"Cyclocheilichthys lagleri",2024.7,6,6,
 28,2014,2,15,4,"Barbonymus gonionotus",309.6,6,6,
-28,2014,2,16,5,"Puntius brevis",330.8000000000001,6,6,
+28,2014,2,16,5,"Puntius brevis",330.8,6,6,
 28,2014,2,20,6,"Labiobarbus siamensis",101.2,6,6,
 28,2014,2,21,6,"Labiobarbus leptocheilus",435,6,6,
 28,2014,2,22,8,"Henicorhynchus siamensis",80.09999999999999,6,6,
@@ -4889,21 +4889,21 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2014,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",1649.7,6,6,
 28,2014,2,75,27,"Acanthopsoides/Acantopsis spp",63,6,6,
 28,2014,2,78,29,"Oxyeleotris marmorata",46.1,6,6,
-28,2014,2,102,34,"Osteochilus vittatus/lini/hasselti",627.6,6,6,
-28,2014,2,107,38,"Oxygaster pointoni",309.8000000000001,6,6,
+28,2014,2,102,34,"Osteochilus vittatus/lini/hasselti",627.5999999999999,6,6,
+28,2014,2,107,38,"Oxygaster pointoni",309.8,6,6,
 28,2014,2,110,24,"Ompok hypophthalmus/urbaini",76.2,6,6,
 28,2014,2,128,7,"Thynnichthys thynnoides",51.8,6,6,
 28,2014,2,134,49,"Phalacronotus bleekeri",64.59999999999999,6,6,
 28,2014,5,5,1,"Mystus atrifasciatus",43,7,7,5
 28,2014,5,7,1,"Mystus bocourti",58.3,7,7,5
 28,2014,5,8,2,"Hemibagrus spilopterus/nemurus",51.90000000000001,7,7,5
-28,2014,5,9,3,"Anematichthys/Cyclocheilichthys apogon",400.6,7,7,5
+28,2014,5,9,3,"Anematichthys/Cyclocheilichthys apogon",400.6000000000001,7,7,5
 28,2014,5,12,3,"Cyclocheilichthys lagleri",28.1,7,7,5
 28,2014,5,21,6,"Labiobarbus leptocheilus",726,7,7,5
 28,2014,5,24,9,"Esomus metallicus",5.2,7,7,5
 28,2014,5,37,11,"Puntioplites proctozystron",68.59999999999999,7,7,5
 28,2014,5,52,17,"Trichogaster microlepis",326.6,7,7,5
-28,2014,5,59,19,"Notopterus notopterus",847.6,7,7,5
+28,2014,5,59,19,"Notopterus notopterus",847.5999999999999,7,7,5
 28,2014,5,65,22,"Kryptopterus dissitus",141.3,7,7,5
 28,2014,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",545.4,7,7,5
 28,2014,5,68,25,"Macrognathus siamensis",32.6,7,7,5
@@ -4913,7 +4913,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2014,8,2,1,"Mystus singaringan",9.4,8,8,
 28,2014,8,4,1,"Mystus mysticetus",48.7,8,8,
 28,2014,8,12,3,"Cyclocheilichthys lagleri",72.5,8,8,
-28,2014,8,16,5,"Puntius brevis",7.3,8,8,
+28,2014,8,16,5,"Puntius brevis",7.300000000000001,8,8,
 28,2014,8,17,5,"Puntius sp. (cf. masyai)",65.8,8,8,
 28,2014,8,29,9,"Rasbora aurotaenia",13.2,8,8,
 28,2014,8,37,11,"Puntioplites proctozystron",72.59999999999999,8,8,
@@ -4945,19 +4945,19 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2014,11,38,12,"Anabas testudineus",3.5,9,9,6
 28,2014,11,43,14,"Channa striata",199.2,9,9,6
 28,2014,11,47,15,"Pristolepis fasciata",23.1,9,9,6
-28,2014,11,48,16,"Parambassis apogonoides",47.89999999999999,9,9,6
+28,2014,11,48,16,"Parambassis apogonoides",47.9,9,9,6
 28,2014,11,52,17,"Trichogaster microlepis",58.2,9,9,6
 28,2014,11,53,17,"Trichopodus trichopterus",21.7,9,9,6
 28,2014,11,58,18,"Trichopsis vittata",.5,9,9,6
 28,2014,11,59,19,"Notopterus notopterus",891.7,9,9,6
 28,2014,11,63,21,"Xenentodon cancila",158.1,9,9,6
 28,2014,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",118.2,9,9,6
-28,2014,11,68,25,"Macrognathus siamensis",82.49999999999999,9,9,6
+28,2014,11,68,25,"Macrognathus siamensis",82.5,9,9,6
 28,2014,11,75,27,"Acanthopsoides/Acantopsis spp",62.5,9,9,6
 28,2014,11,79,30,"Hampala macrolepidota",126.3,9,9,6
 28,2014,11,84,32,"Syncrossus helodes",1.5,9,9,6
 28,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",14.2,9,9,6
-28,2014,11,107,38,"Oxygaster pointoni",53.90000000000001,9,9,6
+28,2014,11,107,38,"Oxygaster pointoni",53.9,9,9,6
 28,2014,11,110,24,"Ompok hypophthalmus/urbaini",236.7,9,9,6
 28,2014,11,134,49,"Phalacronotus bleekeri",6.8,9,9,6
 28,2014,11,170,0,"Gyrinocheilus pennocki",2.7,9,9,6
@@ -4981,7 +4981,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2015,2,63,21,"Xenentodon cancila",266.9,10,10,
 28,2015,2,65,22,"Kryptopterus dissitus",5.2,10,10,
 28,2015,2,66,22,"Kryptopterus cheveyi",89,10,10,
-28,2015,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",310.3000000000001,10,10,
+28,2015,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",310.3,10,10,
 28,2015,2,68,25,"Macrognathus siamensis",11.1,10,10,
 28,2015,2,75,27,"Acanthopsoides/Acantopsis spp",5.3,10,10,
 28,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",189.4,10,10,
@@ -4996,7 +4996,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2015,5,12,3,"Cyclocheilichthys lagleri",23.9,11,11,7
 28,2015,5,16,5,"Puntius brevis",41.7,11,11,7
 28,2015,5,17,5,"Puntius sp. (cf. masyai)",1294.3,11,11,7
-28,2015,5,21,6,"Labiobarbus leptocheilus",417.6000000000001,11,11,7
+28,2015,5,21,6,"Labiobarbus leptocheilus",417.6,11,11,7
 28,2015,5,22,8,"Henicorhynchus siamensis",28.5,11,11,7
 28,2015,5,29,9,"Rasbora aurotaenia",72.2,11,11,7
 28,2015,5,37,11,"Puntioplites proctozystron",37.1,11,11,7
@@ -5013,7 +5013,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2015,5,128,7,"Thynnichthys thynnoides",752,11,11,7
 28,2015,8,3,1,"Mystus multiradiatus",28.1,12,12,
 28,2015,8,4,1,"Mystus mysticetus",38,12,12,
-28,2015,8,9,3,"Anematichthys/Cyclocheilichthys apogon",38.4,12,12,
+28,2015,8,9,3,"Anematichthys/Cyclocheilichthys apogon",38.40000000000001,12,12,
 28,2015,8,10,3,"Anematichthys repasson",11,12,12,
 28,2015,8,12,3,"Cyclocheilichthys lagleri",64.90000000000001,12,12,
 28,2015,8,15,4,"Barbonymus gonionotus",59.2,12,12,
@@ -5053,7 +5053,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 28,2015,11,49,16,"Parambassis wolffii",38.8,13,13,8
 28,2015,11,50,16,"Parambassis siamensis",466.9,13,13,8
 28,2015,11,52,17,"Trichogaster microlepis",3.5,13,13,8
-28,2015,11,63,21,"Xenentodon cancila",63.9,13,13,8
+28,2015,11,63,21,"Xenentodon cancila",63.90000000000001,13,13,8
 28,2015,11,65,22,"Kryptopterus dissitus",153.5,13,13,8
 28,2015,11,75,27,"Acanthopsoides/Acantopsis spp",4.5,13,13,8
 28,2015,11,85,32,"Yasuhikotakia modesta",2.8,13,13,8
@@ -5121,7 +5121,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 29,2013,11,5,1,"Mystus atrifasciatus",5.9,5,5,4
 29,2013,11,7,1,"Mystus bocourti",11.2,5,5,4
 29,2013,11,8,2,"Hemibagrus spilopterus/nemurus",15.6,5,5,4
-29,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",535.8000000000001,5,5,4
+29,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",535.8,5,5,4
 29,2013,11,12,3,"Cyclocheilichthys lagleri",495.7,5,5,4
 29,2013,11,17,5,"Puntius sp. (cf. masyai)",166.8,5,5,4
 29,2013,11,21,6,"Labiobarbus leptocheilus",86.19999999999999,5,5,4
@@ -5137,9 +5137,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 29,2013,11,107,38,"Oxygaster pointoni",15.1,5,5,4
 29,2013,11,110,24,"Ompok hypophthalmus/urbaini",109.2,5,5,4
 29,2014,2,4,1,"Mystus mysticetus",12.9,6,6,
-29,2014,2,5,1,"Mystus atrifasciatus",35.09999999999999,6,6,
+29,2014,2,5,1,"Mystus atrifasciatus",35.1,6,6,
 29,2014,2,8,2,"Hemibagrus spilopterus/nemurus",67.3,6,6,
-29,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",48.4,6,6,
+29,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",48.40000000000001,6,6,
 29,2014,2,12,3,"Cyclocheilichthys lagleri",305.2,6,6,
 29,2014,2,16,5,"Puntius brevis",232.4,6,6,
 29,2014,2,21,6,"Labiobarbus leptocheilus",166.6,6,6,
@@ -5147,7 +5147,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 29,2014,2,38,12,"Anabas testudineus",23.7,6,6,
 29,2014,2,43,14,"Channa striata",700.1999999999999,6,6,
 29,2014,2,47,15,"Pristolepis fasciata",110.5,6,6,
-29,2014,2,48,16,"Parambassis apogonoides",65.59999999999999,6,6,
+29,2014,2,48,16,"Parambassis apogonoides",65.60000000000001,6,6,
 29,2014,2,49,16,"Parambassis wolffii",3.7,6,6,
 29,2014,2,52,17,"Trichogaster microlepis",525.3,6,6,
 29,2014,2,53,17,"Trichopodus trichopterus",14.5,6,6,
@@ -5229,13 +5229,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 29,2015,2,66,22,"Kryptopterus cheveyi",12.9,10,10,
 29,2015,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",45.1,10,10,
 29,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",84.3,10,10,
-29,2015,2,107,38,"Oxygaster pointoni",91.3,10,10,
+29,2015,2,107,38,"Oxygaster pointoni",91.29999999999998,10,10,
 29,2015,5,4,1,"Mystus mysticetus",10.3,11,11,7
 29,2015,5,9,3,"Anematichthys/Cyclocheilichthys apogon",15.3,11,11,7
 29,2015,5,10,3,"Anematichthys repasson",49.3,11,11,7
 29,2015,5,12,3,"Cyclocheilichthys lagleri",4.2,11,11,7
 29,2015,5,16,5,"Puntius brevis",7.6,11,11,7
-29,2015,5,17,5,"Puntius sp. (cf. masyai)",91.7,11,11,7
+29,2015,5,17,5,"Puntius sp. (cf. masyai)",91.69999999999999,11,11,7
 29,2015,5,21,6,"Labiobarbus leptocheilus",149.3,11,11,7
 29,2015,5,22,8,"Henicorhynchus siamensis",38.2,11,11,7
 29,2015,5,27,9,"Amblypharyngodon chulabhornae",31.4,11,11,7
@@ -5330,7 +5330,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 30,2013,5,38,12,"Anabas testudineus",47.9,3,3,2
 30,2013,5,40,13,"Clarias batrachus",165,3,3,2
 30,2013,5,43,14,"Channa striata",557.1,3,3,2
-30,2013,5,50,16,"Parambassis siamensis",9.699999999999999,3,3,2
+30,2013,5,50,16,"Parambassis siamensis",9.700000000000001,3,3,2
 30,2013,5,54,8,"Lobocheilos rhabdoura",65.90000000000001,3,3,2
 30,2013,5,102,34,"Osteochilus vittatus/lini/hasselti",199.6,3,3,2
 30,2013,8,4,1,"Mystus mysticetus",8.1,4,4,3
@@ -5363,7 +5363,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 30,2013,11,65,22,"Kryptopterus dissitus",2.8,5,5,4
 30,2013,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",83.3,5,5,4
 30,2013,11,69,25,"Macrognathus semiocellatus",59.3,5,5,4
-30,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",92.29999999999998,5,5,4
+30,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",92.3,5,5,4
 30,2013,11,126,10,"Clupeichthys aesarnensis",4.2,5,5,4
 30,2013,11,138,9,"Rasbora caudimaculata",1.8,5,5,4
 30,2014,2,4,1,"Mystus mysticetus",5.2,6,6,
@@ -5379,7 +5379,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 30,2014,2,40,13,"Clarias batrachus",341.7,6,6,
 30,2014,2,43,14,"Channa striata",379.9,6,6,
 30,2014,2,47,15,"Pristolepis fasciata",45.4,6,6,
-30,2014,2,48,16,"Parambassis apogonoides",318.9999999999999,6,6,
+30,2014,2,48,16,"Parambassis apogonoides",319,6,6,
 30,2014,2,53,17,"Trichopodus trichopterus",8.4,6,6,
 30,2014,2,59,19,"Notopterus notopterus",230.2,6,6,
 30,2014,2,64,22,"Micronema hexapterus",5.9,6,6,
@@ -5391,7 +5391,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 30,2014,5,12,3,"Cyclocheilichthys lagleri",803,7,7,5
 30,2014,5,15,4,"Barbonymus gonionotus",1373.3,7,7,5
 30,2014,5,16,5,"Puntius brevis",53,7,7,5
-30,2014,5,21,6,"Labiobarbus leptocheilus",925.4999999999999,7,7,5
+30,2014,5,21,6,"Labiobarbus leptocheilus",925.5,7,7,5
 30,2014,5,22,8,"Henicorhynchus siamensis",479.3,7,7,5
 30,2014,5,24,9,"Esomus metallicus",32.4,7,7,5
 30,2014,5,25,9,"Esomus longimanus",206.9,7,7,5
@@ -5415,7 +5415,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 30,2014,8,37,11,"Puntioplites proctozystron",405,8,8,
 30,2014,8,38,12,"Anabas testudineus",2.8,8,8,
 30,2014,8,47,15,"Pristolepis fasciata",22.8,8,8,
-30,2014,8,50,16,"Parambassis siamensis",88.29999999999998,8,8,
+30,2014,8,50,16,"Parambassis siamensis",88.3,8,8,
 30,2014,8,52,17,"Trichogaster microlepis",1.1,8,8,
 30,2014,8,59,19,"Notopterus notopterus",318.7,8,8,
 30,2014,8,69,25,"Macrognathus semiocellatus",4.9,8,8,
@@ -5427,14 +5427,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 30,2014,11,8,2,"Hemibagrus spilopterus/nemurus",8.4,9,9,6
 30,2014,11,12,3,"Cyclocheilichthys lagleri",288.2,9,9,6
 30,2014,11,15,4,"Barbonymus gonionotus",3599.4,9,9,6
-30,2014,11,16,5,"Puntius brevis",866.7999999999998,9,9,6
+30,2014,11,16,5,"Puntius brevis",866.8,9,9,6
 30,2014,11,21,6,"Labiobarbus leptocheilus",281.8,9,9,6
 30,2014,11,25,9,"Esomus longimanus",82.59999999999999,9,9,6
 30,2014,11,37,11,"Puntioplites proctozystron",332.1,9,9,6
 30,2014,11,43,14,"Channa striata",20.38,9,9,6
 30,2014,11,47,15,"Pristolepis fasciata",18.5,9,9,6
-30,2014,11,48,16,"Parambassis apogonoides",69.39999999999999,9,9,6
-30,2014,11,53,17,"Trichopodus trichopterus",464.5,9,9,6
+30,2014,11,48,16,"Parambassis apogonoides",69.40000000000001,9,9,6
+30,2014,11,53,17,"Trichopodus trichopterus",464.4999999999999,9,9,6
 30,2014,11,59,19,"Notopterus notopterus",2121.7,9,9,6
 30,2014,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",62.6,9,9,6
 30,2014,11,68,25,"Macrognathus siamensis",34.2,9,9,6
@@ -5486,7 +5486,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 30,2015,11,21,6,"Labiobarbus leptocheilus",38.8,13,13,8
 30,2015,11,24,9,"Esomus metallicus",8.5,13,13,8
 30,2015,11,25,9,"Esomus longimanus",88.3,13,13,8
-30,2015,11,32,9,"Rasbora borapetensis",53.09999999999999,13,13,8
+30,2015,11,32,9,"Rasbora borapetensis",53.1,13,13,8
 30,2015,11,38,12,"Anabas testudineus",36.4,13,13,8
 30,2015,11,39,11,"Puntioplites falcifer",143.7,13,13,8
 30,2015,11,47,15,"Pristolepis fasciata",146.1,13,13,8
@@ -5546,7 +5546,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2013,2,74,27,"Acantopsis sp. ""stripe""",30,2,2,
 31,2013,2,102,34,"Osteochilus vittatus/lini/hasselti",247,2,2,
 31,2013,2,107,38,"Oxygaster pointoni",13.4,2,2,
-31,2013,5,6,1,"Mystus gulio",53.09999999999999,3,3,2
+31,2013,5,6,1,"Mystus gulio",53.1,3,3,2
 31,2013,5,7,1,"Mystus bocourti",8.300000000000001,3,3,2
 31,2013,5,8,2,"Hemibagrus spilopterus/nemurus",6.3,3,3,2
 31,2013,5,9,3,"Anematichthys/Cyclocheilichthys apogon",18.1,3,3,2
@@ -5556,7 +5556,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2013,5,21,6,"Labiobarbus leptocheilus",351.2,3,3,2
 31,2013,5,29,9,"Rasbora aurotaenia",31.6,3,3,2
 31,2013,5,36,10,"Clupeoides borneensis",42.9,3,3,2
-31,2013,5,49,16,"Parambassis wolffii",37.59999999999999,3,3,2
+31,2013,5,49,16,"Parambassis wolffii",37.6,3,3,2
 31,2013,5,50,16,"Parambassis siamensis",230.1,3,3,2
 31,2013,5,53,17,"Trichopodus trichopterus",6.6,3,3,2
 31,2013,5,59,19,"Notopterus notopterus",403.4,3,3,2
@@ -5569,7 +5569,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2013,8,4,1,"Mystus mysticetus",23.9,4,4,3
 31,2013,8,7,1,"Mystus bocourti",28.5,4,4,3
 31,2013,8,9,3,"Anematichthys/Cyclocheilichthys apogon",36.1,4,4,3
-31,2013,8,12,3,"Cyclocheilichthys lagleri",80.19999999999999,4,4,3
+31,2013,8,12,3,"Cyclocheilichthys lagleri",80.2,4,4,3
 31,2013,8,23,8,"Henicorhynchus lobatus",162,4,4,3
 31,2013,8,37,11,"Puntioplites proctozystron",20.8,4,4,3
 31,2013,8,49,16,"Parambassis wolffii",213.8,4,4,3
@@ -5591,7 +5591,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2013,11,38,12,"Anabas testudineus",225.6,5,5,4
 31,2013,11,39,11,"Puntioplites falcifer",39.9,5,5,4
 31,2013,11,43,14,"Channa striata",18.3,5,5,4
-31,2013,11,47,15,"Pristolepis fasciata",42.6,5,5,4
+31,2013,11,47,15,"Pristolepis fasciata",42.59999999999999,5,5,4
 31,2013,11,49,16,"Parambassis wolffii",1226.8,5,5,4
 31,2013,11,52,17,"Trichogaster microlepis",15.4,5,5,4
 31,2013,11,59,19,"Notopterus notopterus",117.9,5,5,4
@@ -5609,7 +5609,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2014,2,8,2,"Hemibagrus spilopterus/nemurus",181.3,6,6,
 31,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",17.2,6,6,
 31,2014,2,12,3,"Cyclocheilichthys lagleri",367.7,6,6,
-31,2014,2,15,4,"Barbonymus gonionotus",937.5999999999999,6,6,
+31,2014,2,15,4,"Barbonymus gonionotus",937.6,6,6,
 31,2014,2,16,5,"Puntius brevis",168.2,6,6,
 31,2014,2,17,5,"Puntius sp. (cf. masyai)",17.1,6,6,
 31,2014,2,21,6,"Labiobarbus leptocheilus",581.7,6,6,
@@ -5619,7 +5619,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2014,2,37,11,"Puntioplites proctozystron",33.8,6,6,
 31,2014,2,38,12,"Anabas testudineus",116.4,6,6,
 31,2014,2,47,15,"Pristolepis fasciata",25.3,6,6,
-31,2014,2,48,16,"Parambassis apogonoides",858.9,6,6,
+31,2014,2,48,16,"Parambassis apogonoides",858.9000000000001,6,6,
 31,2014,2,49,16,"Parambassis wolffii",54.2,6,6,
 31,2014,2,52,17,"Trichogaster microlepis",235.1,6,6,
 31,2014,2,53,17,"Trichopodus trichopterus",3.5,6,6,
@@ -5631,7 +5631,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2014,2,74,27,"Acantopsis sp. ""stripe""",10,6,6,
 31,2014,2,79,30,"Hampala macrolepidota",133.9,6,6,
 31,2014,2,102,34,"Osteochilus vittatus/lini/hasselti",17.9,6,6,
-31,2014,2,107,38,"Oxygaster pointoni",541.5,6,6,
+31,2014,2,107,38,"Oxygaster pointoni",541.4999999999999,6,6,
 31,2014,2,110,24,"Ompok hypophthalmus/urbaini",24.7,6,6,
 31,2014,2,128,7,"Thynnichthys thynnoides",292.3,6,6,
 31,2014,2,134,49,"Phalacronotus bleekeri",62.6,6,6,
@@ -5641,8 +5641,8 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2014,5,8,2,"Hemibagrus spilopterus/nemurus",17.4,7,7,5
 31,2014,5,12,3,"Cyclocheilichthys lagleri",185.8,7,7,5
 31,2014,5,16,5,"Puntius brevis",35,7,7,5
-31,2014,5,21,6,"Labiobarbus leptocheilus",762.7,7,7,5
-31,2014,5,22,8,"Henicorhynchus siamensis",518.9,7,7,5
+31,2014,5,21,6,"Labiobarbus leptocheilus",762.6999999999999,7,7,5
+31,2014,5,22,8,"Henicorhynchus siamensis",518.9000000000001,7,7,5
 31,2014,5,29,9,"Rasbora aurotaenia",34.7,7,7,5
 31,2014,5,30,9,"Rasbora pauciperforata/Trigonopoma pauciperforatum",10.2,7,7,5
 31,2014,5,37,11,"Puntioplites proctozystron",15.8,7,7,5
@@ -5660,14 +5660,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2014,8,4,1,"Mystus mysticetus",42.5,8,8,
 31,2014,8,6,1,"Mystus gulio",6.3,8,8,
 31,2014,8,8,2,"Hemibagrus spilopterus/nemurus",540.1,8,8,
-31,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",43.09999999999999,8,8,
+31,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",43.1,8,8,
 31,2014,8,12,3,"Cyclocheilichthys lagleri",5.9,8,8,
 31,2014,8,21,6,"Labiobarbus leptocheilus",67,8,8,
 31,2014,8,22,8,"Henicorhynchus siamensis",133.8,8,8,
 31,2014,8,24,9,"Esomus metallicus",33.6,8,8,
 31,2014,8,37,11,"Puntioplites proctozystron",43.1,8,8,
-31,2014,8,49,16,"Parambassis wolffii",55.90000000000001,8,8,
-31,2014,8,50,16,"Parambassis siamensis",84.2,8,8,
+31,2014,8,49,16,"Parambassis wolffii",55.9,8,8,
+31,2014,8,50,16,"Parambassis siamensis",84.20000000000002,8,8,
 31,2014,8,52,17,"Trichogaster microlepis",50.6,8,8,
 31,2014,8,65,22,"Kryptopterus dissitus",31.6,8,8,
 31,2014,8,107,38,"Oxygaster pointoni",48.4,8,8,
@@ -5685,7 +5685,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2014,11,21,6,"Labiobarbus leptocheilus",139.2,9,9,6
 31,2014,11,24,9,"Esomus metallicus",31.1,9,9,6
 31,2014,11,28,9,"Rasbora daniconius",3.2,9,9,6
-31,2014,11,29,9,"Rasbora aurotaenia",42.89999999999999,9,9,6
+31,2014,11,29,9,"Rasbora aurotaenia",42.9,9,9,6
 31,2014,11,31,9,"Rasbora myersi/dusonensis",6.4,9,9,6
 31,2014,11,37,11,"Puntioplites proctozystron",79.59999999999999,9,9,6
 31,2014,11,38,12,"Anabas testudineus",104.6,9,9,6
@@ -5700,16 +5700,16 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2014,11,63,21,"Xenentodon cancila",30.8,9,9,6
 31,2014,11,65,22,"Kryptopterus dissitus",4.9,9,9,6
 31,2014,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",79.5,9,9,6
-31,2014,11,68,25,"Macrognathus siamensis",90.39999999999998,9,9,6
+31,2014,11,68,25,"Macrognathus siamensis",90.40000000000001,9,9,6
 31,2014,11,75,27,"Acanthopsoides/Acantopsis spp",6.1,9,9,6
 31,2014,11,79,30,"Hampala macrolepidota",226,9,9,6
 31,2014,11,85,32,"Yasuhikotakia modesta",27.7,9,9,6
 31,2014,11,99,34,"Puntius orphoides",29.3,9,9,6
 31,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",115.3,9,9,6
-31,2014,11,107,38,"Oxygaster pointoni",62.40000000000001,9,9,6
+31,2014,11,107,38,"Oxygaster pointoni",62.4,9,9,6
 31,2014,11,108,38,"Paralaubuca typus",7.3,9,9,6
 31,2014,11,110,24,"Ompok hypophthalmus/urbaini",50.1,9,9,6
-31,2014,11,128,7,"Thynnichthys thynnoides",985,9,9,6
+31,2014,11,128,7,"Thynnichthys thynnoides",985.0000000000001,9,9,6
 31,2014,11,146,34,"Osteochilus waandersii",6.7,9,9,6
 31,2014,11,147,34,"Osteochilus microcephalus",9.300000000000001,9,9,6
 31,2015,2,4,1,"Mystus mysticetus",50,10,10,
@@ -5718,7 +5718,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 31,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",9.300000000000001,10,10,
 31,2015,2,12,3,"Cyclocheilichthys lagleri",19.9,10,10,
 31,2015,2,16,5,"Puntius brevis",6.1,10,10,
-31,2015,2,17,5,"Puntius sp. (cf. masyai)",42.90000000000001,10,10,
+31,2015,2,17,5,"Puntius sp. (cf. masyai)",42.9,10,10,
 31,2015,2,21,6,"Labiobarbus leptocheilus",33.7,10,10,
 31,2015,2,23,8,"Henicorhynchus lobatus",9.4,10,10,
 31,2015,2,29,9,"Rasbora aurotaenia",14.3,10,10,
@@ -5820,7 +5820,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 32,2012,11,104,36,"Labeo chrysophekadion",59,1,1,1
 32,2012,11,105,37,"Osteochilus melanopleurus",34,1,1,1
 32,2013,2,15,4,"Barbonymus gonionotus",43.1,2,2,
-32,2013,2,17,5,"Puntius sp. (cf. masyai)",62.09999999999999,2,2,
+32,2013,2,17,5,"Puntius sp. (cf. masyai)",62.1,2,2,
 32,2013,2,24,9,"Esomus metallicus",25.7,2,2,
 32,2013,2,38,12,"Anabas testudineus",174,2,2,
 32,2013,2,40,13,"Clarias batrachus",210.4,2,2,
@@ -5838,7 +5838,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 32,2013,5,40,13,"Clarias batrachus",48.3,3,3,2
 32,2013,5,41,13,"Clarias macrocephalus",494,3,3,2
 32,2013,5,43,14,"Channa striata",240.9,3,3,2
-32,2013,5,53,17,"Trichopodus trichopterus",427.1999999999999,3,3,2
+32,2013,5,53,17,"Trichopodus trichopterus",427.2,3,3,2
 32,2013,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",13.5,3,3,2
 32,2013,5,99,34,"Puntius orphoides",42.7,3,3,2
 32,2013,8,4,1,"Mystus mysticetus",4.1,4,4,3
@@ -5855,38 +5855,38 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 32,2013,8,109,39,"Luciosoma bleekeri",13.4,4,4,3
 32,2013,11,4,1,"Mystus mysticetus",143.3,5,5,4
 32,2013,11,12,3,"Cyclocheilichthys lagleri",105.5,5,5,4
-32,2013,11,15,4,"Barbonymus gonionotus",524.6999999999999,5,5,4
+32,2013,11,15,4,"Barbonymus gonionotus",524.7,5,5,4
 32,2013,11,16,5,"Puntius brevis",27.6,5,5,4
-32,2013,11,17,5,"Puntius sp. (cf. masyai)",664.8000000000001,5,5,4
+32,2013,11,17,5,"Puntius sp. (cf. masyai)",664.8,5,5,4
 32,2013,11,21,6,"Labiobarbus leptocheilus",15.6,5,5,4
-32,2013,11,24,9,"Esomus metallicus",91.59999999999999,5,5,4
+32,2013,11,24,9,"Esomus metallicus",91.60000000000001,5,5,4
 32,2013,11,27,9,"Amblypharyngodon chulabhornae",6,5,5,4
 32,2013,11,38,12,"Anabas testudineus",261.6,5,5,4
 32,2013,11,40,13,"Clarias batrachus",58,5,5,4
 32,2013,11,41,13,"Clarias macrocephalus",138.8,5,5,4
 32,2013,11,47,15,"Pristolepis fasciata",106.9,5,5,4
 32,2013,11,49,16,"Parambassis wolffii",1.6,5,5,4
-32,2013,11,53,17,"Trichopodus trichopterus",379.8999999999999,5,5,4
+32,2013,11,53,17,"Trichopodus trichopterus",379.9,5,5,4
 32,2013,11,58,18,"Trichopsis vittata",20.8,5,5,4
 32,2013,11,59,19,"Notopterus notopterus",149.4,5,5,4
 32,2013,11,63,21,"Xenentodon cancila",21.7,5,5,4
 32,2013,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",11.5,5,5,4
-32,2013,11,68,25,"Macrognathus siamensis",61.4,5,5,4
+32,2013,11,68,25,"Macrognathus siamensis",61.40000000000001,5,5,4
 32,2013,11,109,39,"Luciosoma bleekeri",15.3,5,5,4
 32,2014,2,4,1,"Mystus mysticetus",21.5,6,6,
 32,2014,2,12,3,"Cyclocheilichthys lagleri",81.40000000000001,6,6,
 32,2014,2,15,4,"Barbonymus gonionotus",87.5,6,6,
 32,2014,2,17,5,"Puntius sp. (cf. masyai)",333.8,6,6,
-32,2014,2,21,6,"Labiobarbus leptocheilus",786.7,6,6,
+32,2014,2,21,6,"Labiobarbus leptocheilus",786.6999999999999,6,6,
 32,2014,2,24,9,"Esomus metallicus",191,6,6,
 32,2014,2,38,12,"Anabas testudineus",291.1,6,6,
 32,2014,2,40,13,"Clarias batrachus",125.4,6,6,
 32,2014,2,41,13,"Clarias macrocephalus",59.8,6,6,
-32,2014,2,43,14,"Channa striata",612.6999999999999,6,6,
+32,2014,2,43,14,"Channa striata",612.7,6,6,
 32,2014,2,44,15,"Datnioides undecimradiatus",2.7,6,6,
 32,2014,2,53,17,"Trichopodus trichopterus",1301.3,6,6,
 32,2014,2,58,18,"Trichopsis vittata",8.300000000000001,6,6,
-32,2014,2,59,19,"Notopterus notopterus",777.6999999999999,6,6,
+32,2014,2,59,19,"Notopterus notopterus",777.7,6,6,
 32,2014,2,63,21,"Xenentodon cancila",25.1,6,6,
 32,2014,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",111.6,6,6,
 32,2014,2,68,25,"Macrognathus siamensis",49.3,6,6,
@@ -5925,7 +5925,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 32,2015,2,4,1,"Mystus mysticetus",31,10,10,
 32,2015,2,15,4,"Barbonymus gonionotus",316.7,10,10,
 32,2015,2,16,5,"Puntius brevis",82.90000000000001,10,10,
-32,2015,2,17,5,"Puntius sp. (cf. masyai)",48.90000000000001,10,10,
+32,2015,2,17,5,"Puntius sp. (cf. masyai)",48.9,10,10,
 32,2015,2,22,8,"Henicorhynchus siamensis",50.1,10,10,
 32,2015,2,24,9,"Esomus metallicus",285.9,10,10,
 32,2015,2,38,12,"Anabas testudineus",211.8,10,10,
@@ -5953,22 +5953,22 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 32,2015,5,59,19,"Notopterus notopterus",809.3,11,11,7
 32,2015,5,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",167.5,11,11,7
 32,2015,5,78,29,"Oxyeleotris marmorata",56.3,11,11,7
-32,2015,5,108,38,"Paralaubuca typus",61.70000000000001,11,11,7
+32,2015,5,108,38,"Paralaubuca typus",61.7,11,11,7
 32,2015,5,128,7,"Thynnichthys thynnoides",29.7,11,11,7
 32,2015,8,15,4,"Barbonymus gonionotus",1196.6,12,12,
 32,2015,8,16,5,"Puntius brevis",8.5,12,12,
-32,2015,8,24,9,"Esomus metallicus",76.19999999999999,12,12,
+32,2015,8,24,9,"Esomus metallicus",76.2,12,12,
 32,2015,8,47,15,"Pristolepis fasciata",74.40000000000001,12,12,
 32,2015,8,51,17,"Trichopodus pectoralis",1287.3,12,12,
 32,2015,8,52,17,"Trichogaster microlepis",2.7,12,12,
-32,2015,8,53,17,"Trichopodus trichopterus",633.5999999999999,12,12,
+32,2015,8,53,17,"Trichopodus trichopterus",633.6,12,12,
 32,2015,8,58,18,"Trichopsis vittata",10.7,12,12,
 32,2015,8,59,19,"Notopterus notopterus",1085.3,12,12,
 32,2015,11,4,1,"Mystus mysticetus",65.3,13,13,8
 32,2015,11,16,5,"Puntius brevis",73.7,13,13,8
-32,2015,11,17,5,"Puntius sp. (cf. masyai)",74.99999999999999,13,13,8
+32,2015,11,17,5,"Puntius sp. (cf. masyai)",75,13,13,8
 32,2015,11,21,6,"Labiobarbus leptocheilus",6.5,13,13,8
-32,2015,11,24,9,"Esomus metallicus",56.9,13,13,8
+32,2015,11,24,9,"Esomus metallicus",56.89999999999999,13,13,8
 32,2015,11,27,9,"Amblypharyngodon chulabhornae",.7,13,13,8
 32,2015,11,40,13,"Clarias batrachus",48.3,13,13,8
 32,2015,11,43,14,"Channa striata",.5,13,13,8
@@ -6036,7 +6036,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",66.7,5,5,4
 33,2013,11,10,3,"Anematichthys repasson",134.5,5,5,4
 33,2013,11,12,3,"Cyclocheilichthys lagleri",348.4,5,5,4
-33,2013,11,21,6,"Labiobarbus leptocheilus",569.1,5,5,4
+33,2013,11,21,6,"Labiobarbus leptocheilus",569.0999999999999,5,5,4
 33,2013,11,24,9,"Esomus metallicus",135.1,5,5,4
 33,2013,11,25,9,"Esomus longimanus",21.3,5,5,4
 33,2013,11,28,9,"Rasbora daniconius",7.5,5,5,4
@@ -6045,7 +6045,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2013,11,42,13,"Clarias meladerma",406,5,5,4
 33,2013,11,43,14,"Channa striata",23.4,5,5,4
 33,2013,11,52,17,"Trichogaster microlepis",302.1,5,5,4
-33,2013,11,53,17,"Trichopodus trichopterus",87.7,5,5,4
+33,2013,11,53,17,"Trichopodus trichopterus",87.69999999999999,5,5,4
 33,2013,11,59,19,"Notopterus notopterus",453.5000000000001,5,5,4
 33,2013,11,63,21,"Xenentodon cancila",12.5,5,5,4
 33,2013,11,68,25,"Macrognathus siamensis",78.40000000000001,5,5,4
@@ -6057,7 +6057,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2014,2,8,2,"Hemibagrus spilopterus/nemurus",113.7,6,6,
 33,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",34.2,6,6,
 33,2014,2,10,3,"Anematichthys repasson",6.6,6,6,
-33,2014,2,12,3,"Cyclocheilichthys lagleri",443.8999999999999,6,6,
+33,2014,2,12,3,"Cyclocheilichthys lagleri",443.9,6,6,
 33,2014,2,16,5,"Puntius brevis",15.4,6,6,
 33,2014,2,20,6,"Labiobarbus siamensis",204.9,6,6,
 33,2014,2,21,6,"Labiobarbus leptocheilus",778,6,6,
@@ -6114,7 +6114,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",110.8,9,9,6
 33,2014,11,12,3,"Cyclocheilichthys lagleri",1385.7,9,9,6
 33,2014,11,16,5,"Puntius brevis",115.7,9,9,6
-33,2014,11,21,6,"Labiobarbus leptocheilus",858.4,9,9,6
+33,2014,11,21,6,"Labiobarbus leptocheilus",858.4000000000001,9,9,6
 33,2014,11,23,8,"Henicorhynchus lobatus",53.7,9,9,6
 33,2014,11,24,9,"Esomus metallicus",8.6,9,9,6
 33,2014,11,38,12,"Anabas testudineus",132.7,9,9,6
@@ -6135,7 +6135,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2015,2,8,2,"Hemibagrus spilopterus/nemurus",350,10,10,
 33,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",200.1,10,10,
 33,2015,2,10,3,"Anematichthys repasson",17.3,10,10,
-33,2015,2,12,3,"Cyclocheilichthys lagleri",441.5,10,10,
+33,2015,2,12,3,"Cyclocheilichthys lagleri",441.5000000000001,10,10,
 33,2015,2,16,5,"Puntius brevis",46.2,10,10,
 33,2015,2,20,6,"Labiobarbus siamensis",23.3,10,10,
 33,2015,2,21,6,"Labiobarbus leptocheilus",138.9,10,10,
@@ -6155,7 +6155,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2015,5,4,1,"Mystus mysticetus",98,11,11,7
 33,2015,5,8,2,"Hemibagrus spilopterus/nemurus",576.7,11,11,7
 33,2015,5,9,3,"Anematichthys/Cyclocheilichthys apogon",342.9,11,11,7
-33,2015,5,12,3,"Cyclocheilichthys lagleri",75.60000000000001,11,11,7
+33,2015,5,12,3,"Cyclocheilichthys lagleri",75.59999999999999,11,11,7
 33,2015,5,21,6,"Labiobarbus leptocheilus",482.6,11,11,7
 33,2015,5,24,9,"Esomus metallicus",115.1,11,11,7
 33,2015,5,48,16,"Parambassis apogonoides",2.4,11,11,7
@@ -6170,7 +6170,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2015,8,8,2,"Hemibagrus spilopterus/nemurus",142.7,12,12,
 33,2015,8,12,3,"Cyclocheilichthys lagleri",78.5,12,12,
 33,2015,8,21,6,"Labiobarbus leptocheilus",150.4,12,12,
-33,2015,8,24,9,"Esomus metallicus",35.5,12,12,
+33,2015,8,24,9,"Esomus metallicus",35.49999999999999,12,12,
 33,2015,8,27,9,"Amblypharyngodon chulabhornae",19.2,12,12,
 33,2015,8,48,16,"Parambassis apogonoides",.6,12,12,
 33,2015,8,52,17,"Trichogaster microlepis",31.9,12,12,
@@ -6183,14 +6183,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 33,2015,11,4,1,"Mystus mysticetus",61,13,13,8
 33,2015,11,5,1,"Mystus atrifasciatus",4.5,13,13,8
 33,2015,11,9,3,"Anematichthys/Cyclocheilichthys apogon",5.1,13,13,8
-33,2015,11,12,3,"Cyclocheilichthys lagleri",697.9000000000001,13,13,8
+33,2015,11,12,3,"Cyclocheilichthys lagleri",697.9,13,13,8
 33,2015,11,15,4,"Barbonymus gonionotus",223.4,13,13,8
 33,2015,11,16,5,"Puntius brevis",111.1,13,13,8
-33,2015,11,21,6,"Labiobarbus leptocheilus",689.0000000000001,13,13,8
-33,2015,11,24,9,"Esomus metallicus",38.9,13,13,8
+33,2015,11,21,6,"Labiobarbus leptocheilus",689,13,13,8
+33,2015,11,24,9,"Esomus metallicus",38.90000000000001,13,13,8
 33,2015,11,47,15,"Pristolepis fasciata",10.4,13,13,8
-33,2015,11,50,16,"Parambassis siamensis",9.1,13,13,8
-33,2015,11,52,17,"Trichogaster microlepis",45.59999999999999,13,13,8
+33,2015,11,50,16,"Parambassis siamensis",9.100000000000001,13,13,8
+33,2015,11,52,17,"Trichogaster microlepis",45.60000000000001,13,13,8
 33,2015,11,53,17,"Trichopodus trichopterus",21.5,13,13,8
 33,2015,11,58,18,"Trichopsis vittata",11.1,13,13,8
 33,2015,11,61,19,"Chitala ornata",525.4,13,13,8
@@ -6216,7 +6216,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 34,2012,11,66,22,"Kryptopterus cheveyi",184,1,1,1
 34,2012,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",112,1,1,1
 34,2012,11,107,38,"Oxygaster pointoni",0,1,1,1
-34,2013,2,12,3,"Cyclocheilichthys lagleri",47.59999999999999,2,2,
+34,2013,2,12,3,"Cyclocheilichthys lagleri",47.6,2,2,
 34,2013,2,25,9,"Esomus longimanus",4.8,2,2,
 34,2013,2,40,13,"Clarias batrachus",1260.8,2,2,
 34,2013,2,41,13,"Clarias macrocephalus",479.7,2,2,
@@ -6252,7 +6252,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 34,2013,11,16,5,"Puntius brevis",258.8,5,5,4
 34,2013,11,20,6,"Labiobarbus siamensis",18.1,5,5,4
 34,2013,11,21,6,"Labiobarbus leptocheilus",1130.9,5,5,4
-34,2013,11,25,9,"Esomus longimanus",961.4999999999999,5,5,4
+34,2013,11,25,9,"Esomus longimanus",961.5,5,5,4
 34,2013,11,38,12,"Anabas testudineus",257.5,5,5,4
 34,2013,11,40,13,"Clarias batrachus",249.2,5,5,4
 34,2013,11,43,14,"Channa striata",305.2,5,5,4
@@ -6268,13 +6268,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 34,2013,11,78,29,"Oxyeleotris marmorata",3.8,5,5,4
 34,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",54.4,5,5,4
 34,2013,11,108,38,"Paralaubuca typus",2.3,5,5,4
-34,2013,11,110,24,"Ompok hypophthalmus/urbaini",87.69999999999999,5,5,4
+34,2013,11,110,24,"Ompok hypophthalmus/urbaini",87.7,5,5,4
 34,2013,11,126,10,"Clupeichthys aesarnensis",105.8,5,5,4
 34,2014,2,6,1,"Mystus gulio",2,6,6,
 34,2014,2,16,5,"Puntius brevis",20,6,6,
 34,2014,2,19,5,"Puntius rhombeus",15.2,6,6,
 34,2014,2,21,6,"Labiobarbus leptocheilus",287.8,6,6,
-34,2014,2,24,9,"Esomus metallicus",97.30000000000001,6,6,
+34,2014,2,24,9,"Esomus metallicus",97.3,6,6,
 34,2014,2,40,13,"Clarias batrachus",243.6,6,6,
 34,2014,2,43,14,"Channa striata",1058.3,6,6,
 34,2014,2,52,17,"Trichogaster microlepis",216.9,6,6,
@@ -6284,7 +6284,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 34,2014,2,110,24,"Ompok hypophthalmus/urbaini",98.8,6,6,
 34,2014,5,6,1,"Mystus gulio",82.3,7,7,5
 34,2014,5,8,2,"Hemibagrus spilopterus/nemurus",177.2,7,7,5
-34,2014,5,12,3,"Cyclocheilichthys lagleri",87.7,7,7,5
+34,2014,5,12,3,"Cyclocheilichthys lagleri",87.69999999999999,7,7,5
 34,2014,5,15,4,"Barbonymus gonionotus",877.2,7,7,5
 34,2014,5,21,6,"Labiobarbus leptocheilus",17.9,7,7,5
 34,2014,5,43,14,"Channa striata",1139.8,7,7,5
@@ -6293,7 +6293,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 34,2014,8,4,1,"Mystus mysticetus",157.9,8,8,
 34,2014,8,7,1,"Mystus bocourti",6.2,8,8,
 34,2014,8,9,3,"Anematichthys/Cyclocheilichthys apogon",10.5,8,8,
-34,2014,8,12,3,"Cyclocheilichthys lagleri",80.89999999999999,8,8,
+34,2014,8,12,3,"Cyclocheilichthys lagleri",80.90000000000001,8,8,
 34,2014,8,15,4,"Barbonymus gonionotus",425.1,8,8,
 34,2014,8,16,5,"Puntius brevis",33.9,8,8,
 34,2014,8,21,6,"Labiobarbus leptocheilus",140.2,8,8,
@@ -6314,13 +6314,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 34,2014,11,43,14,"Channa striata",236.6,9,9,6
 34,2014,11,47,15,"Pristolepis fasciata",4.1,9,9,6
 34,2014,11,48,16,"Parambassis apogonoides",15.8,9,9,6
-34,2014,11,50,16,"Parambassis siamensis",7.499999999999999,9,9,6
+34,2014,11,50,16,"Parambassis siamensis",7.5,9,9,6
 34,2014,11,53,17,"Trichopodus trichopterus",69.2,9,9,6
 34,2014,11,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",88.5,9,9,6
 34,2014,11,68,25,"Macrognathus siamensis",18.2,9,9,6
 34,2015,2,6,1,"Mystus gulio",91.09999999999999,10,10,
 34,2015,2,8,2,"Hemibagrus spilopterus/nemurus",268.4,10,10,
-34,2015,2,11,3,"Anematichthys/Cyclocheilichthys armatus",90.99999999999999,10,10,
+34,2015,2,11,3,"Anematichthys/Cyclocheilichthys armatus",91,10,10,
 34,2015,2,12,3,"Cyclocheilichthys lagleri",328.5,10,10,
 34,2015,2,15,4,"Barbonymus gonionotus",879.5999999999999,10,10,
 34,2015,2,25,9,"Esomus longimanus",6.199999999999999,10,10,
@@ -6334,13 +6334,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 34,2015,2,102,34,"Osteochilus vittatus/lini/hasselti",99.80000000000001,10,10,
 34,2015,2,110,24,"Ompok hypophthalmus/urbaini",117.5,10,10,
 34,2015,5,1,1,"Mystus albolineatus",77.59999999999999,11,11,7
-34,2015,5,8,2,"Hemibagrus spilopterus/nemurus",648.5,11,11,7
+34,2015,5,8,2,"Hemibagrus spilopterus/nemurus",648.4999999999999,11,11,7
 34,2015,5,12,3,"Cyclocheilichthys lagleri",57.2,11,11,7
 34,2015,5,15,4,"Barbonymus gonionotus",458.2,11,11,7
 34,2015,5,21,6,"Labiobarbus leptocheilus",112.6,11,11,7
 34,2015,5,25,9,"Esomus longimanus",.9,11,11,7
 34,2015,5,42,13,"Clarias meladerma",53.2,11,11,7
-34,2015,5,43,14,"Channa striata",574.9,11,11,7
+34,2015,5,43,14,"Channa striata",574.9000000000001,11,11,7
 34,2015,5,52,17,"Trichogaster microlepis",125.7,11,11,7
 34,2015,5,53,17,"Trichopodus trichopterus",65.3,11,11,7
 34,2015,5,59,19,"Notopterus notopterus",26.3,11,11,7
@@ -6409,12 +6409,12 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2013,2,9,3,"Anematichthys/Cyclocheilichthys apogon",91.19999999999999,2,2,
 35,2013,2,12,3,"Cyclocheilichthys lagleri",107.4,2,2,
 35,2013,2,16,5,"Puntius brevis",87.5,2,2,
-35,2013,2,21,6,"Labiobarbus leptocheilus",971.8000000000001,2,2,
-35,2013,2,25,9,"Esomus longimanus",658.0999999999999,2,2,
+35,2013,2,21,6,"Labiobarbus leptocheilus",971.8,2,2,
+35,2013,2,25,9,"Esomus longimanus",658.1,2,2,
 35,2013,2,29,9,"Rasbora aurotaenia",13.6,2,2,
 35,2013,2,38,12,"Anabas testudineus",44.7,2,2,
 35,2013,2,41,13,"Clarias macrocephalus",692.1999999999999,2,2,
-35,2013,2,43,14,"Channa striata",767.5999999999999,2,2,
+35,2013,2,43,14,"Channa striata",767.6,2,2,
 35,2013,2,47,15,"Pristolepis fasciata",57.8,2,2,
 35,2013,2,50,16,"Parambassis siamensis",151.7,2,2,
 35,2013,2,51,17,"Trichopodus pectoralis",45.8,2,2,
@@ -6422,8 +6422,8 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2013,2,53,17,"Trichopodus trichopterus",4.3,2,2,
 35,2013,2,54,8,"Lobocheilos rhabdoura",9.6,2,2,
 35,2013,2,59,19,"Notopterus notopterus",233.9,2,2,
-35,2013,2,63,21,"Xenentodon cancila",93.80000000000001,2,2,
-35,2013,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",76.19999999999999,2,2,
+35,2013,2,63,21,"Xenentodon cancila",93.8,2,2,
+35,2013,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",76.2,2,2,
 35,2013,2,68,25,"Macrognathus siamensis",16,2,2,
 35,2013,2,99,34,"Puntius orphoides",33.7,2,2,
 35,2013,2,102,34,"Osteochilus vittatus/lini/hasselti",73.40000000000001,2,2,
@@ -6434,7 +6434,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2013,5,5,1,"Mystus atrifasciatus",13.9,3,3,2
 35,2013,5,7,1,"Mystus bocourti",39,3,3,2
 35,2013,5,9,3,"Anematichthys/Cyclocheilichthys apogon",43.8,3,3,2
-35,2013,5,12,3,"Cyclocheilichthys lagleri",61.29999999999999,3,3,2
+35,2013,5,12,3,"Cyclocheilichthys lagleri",61.3,3,3,2
 35,2013,5,25,9,"Esomus longimanus",10.5,3,3,2
 35,2013,5,40,13,"Clarias batrachus",267.8,3,3,2
 35,2013,5,43,14,"Channa striata",469.6,3,3,2
@@ -6469,7 +6469,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2013,11,12,3,"Cyclocheilichthys lagleri",305.7,5,5,4
 35,2013,11,14,4,"Hypsibarbus malcolmi",1768.7,5,5,4
 35,2013,11,15,4,"Barbonymus gonionotus",1032.8,5,5,4
-35,2013,11,16,5,"Puntius brevis",82.69999999999999,5,5,4
+35,2013,11,16,5,"Puntius brevis",82.7,5,5,4
 35,2013,11,20,6,"Labiobarbus siamensis",32,5,5,4
 35,2013,11,21,6,"Labiobarbus leptocheilus",503.3,5,5,4
 35,2013,11,23,8,"Henicorhynchus lobatus",19.8,5,5,4
@@ -6497,14 +6497,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",26.7,5,5,4
 35,2013,11,107,38,"Oxygaster pointoni",194.9,5,5,4
 35,2013,11,108,38,"Paralaubuca typus",50.6,5,5,4
-35,2013,11,110,24,"Ompok hypophthalmus/urbaini",98.40000000000001,5,5,4
+35,2013,11,110,24,"Ompok hypophthalmus/urbaini",98.39999999999999,5,5,4
 35,2013,11,138,9,"Rasbora caudimaculata",4.7,5,5,4
 35,2014,2,1,1,"Mystus albolineatus",6.4,6,6,
 35,2014,2,9,3,"Anematichthys/Cyclocheilichthys apogon",37.5,6,6,
 35,2014,2,12,3,"Cyclocheilichthys lagleri",112.8,6,6,
 35,2014,2,16,5,"Puntius brevis",24.5,6,6,
 35,2014,2,17,5,"Puntius sp. (cf. masyai)",10.6,6,6,
-35,2014,2,21,6,"Labiobarbus leptocheilus",613.8,6,6,
+35,2014,2,21,6,"Labiobarbus leptocheilus",613.8000000000001,6,6,
 35,2014,2,25,9,"Esomus longimanus",3.6,6,6,
 35,2014,2,29,9,"Rasbora aurotaenia",16.1,6,6,
 35,2014,2,40,13,"Clarias batrachus",560.9,6,6,
@@ -6539,21 +6539,21 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2014,8,52,17,"Trichogaster microlepis",77.59999999999999,8,8,
 35,2014,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",6.6,8,8,
 35,2014,8,138,9,"Rasbora caudimaculata",59.3,8,8,
-35,2014,11,1,1,"Mystus albolineatus",80.2,9,9,6
+35,2014,11,1,1,"Mystus albolineatus",80.19999999999999,9,9,6
 35,2014,11,6,1,"Mystus gulio",65.5,9,9,6
 35,2014,11,7,1,"Mystus bocourti",46.3,9,9,6
 35,2014,11,8,2,"Hemibagrus spilopterus/nemurus",143.2,9,9,6
 35,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",31.9,9,9,6
-35,2014,11,12,3,"Cyclocheilichthys lagleri",933.3,9,9,6
+35,2014,11,12,3,"Cyclocheilichthys lagleri",933.3000000000001,9,9,6
 35,2014,11,15,4,"Barbonymus gonionotus",197.6,9,9,6
-35,2014,11,16,5,"Puntius brevis",971.8000000000001,9,9,6
+35,2014,11,16,5,"Puntius brevis",971.8,9,9,6
 35,2014,11,21,6,"Labiobarbus leptocheilus",4992.200000000001,9,9,6
 35,2014,11,22,8,"Henicorhynchus siamensis",9,9,9,6
 35,2014,11,25,9,"Esomus longimanus",132.2,9,9,6
 35,2014,11,27,9,"Amblypharyngodon chulabhornae",1.4,9,9,6
 35,2014,11,29,9,"Rasbora aurotaenia",143.7,9,9,6
 35,2014,11,37,11,"Puntioplites proctozystron",82,9,9,6
-35,2014,11,38,12,"Anabas testudineus",97.5,9,9,6
+35,2014,11,38,12,"Anabas testudineus",97.50000000000001,9,9,6
 35,2014,11,40,13,"Clarias batrachus",210,9,9,6
 35,2014,11,41,13,"Clarias macrocephalus",87,9,9,6
 35,2014,11,43,14,"Channa striata",278.9,9,9,6
@@ -6605,7 +6605,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2015,5,69,25,"Macrognathus semiocellatus",12.5,11,11,7
 35,2015,5,78,29,"Oxyeleotris marmorata",194.1,11,11,7
 35,2015,5,107,38,"Oxygaster pointoni",76.90000000000001,11,11,7
-35,2015,5,110,24,"Ompok hypophthalmus/urbaini",567.5999999999999,11,11,7
+35,2015,5,110,24,"Ompok hypophthalmus/urbaini",567.6,11,11,7
 35,2015,8,4,1,"Mystus mysticetus",50.4,12,12,
 35,2015,8,6,1,"Mystus gulio",13.7,12,12,
 35,2015,8,11,3,"Anematichthys/Cyclocheilichthys armatus",60.40000000000001,12,12,
@@ -6614,14 +6614,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2015,8,20,6,"Labiobarbus siamensis",68.09999999999999,12,12,
 35,2015,8,37,11,"Puntioplites proctozystron",269.9,12,12,
 35,2015,8,40,13,"Clarias batrachus",273.9,12,12,
-35,2015,8,43,14,"Channa striata",814.9000000000001,12,12,
+35,2015,8,43,14,"Channa striata",814.9,12,12,
 35,2015,8,52,17,"Trichogaster microlepis",211.1,12,12,
 35,2015,8,53,17,"Trichopodus trichopterus",126.3,12,12,
 35,2015,8,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",115.4,12,12,
 35,2015,8,69,25,"Macrognathus semiocellatus",12.5,12,12,
 35,2015,8,78,29,"Oxyeleotris marmorata",194.1,12,12,
 35,2015,8,107,38,"Oxygaster pointoni",53.2,12,12,
-35,2015,8,110,24,"Ompok hypophthalmus/urbaini",567.5999999999999,12,12,
+35,2015,8,110,24,"Ompok hypophthalmus/urbaini",567.6,12,12,
 35,2015,11,4,1,"Mystus mysticetus",1072.7,13,13,8
 35,2015,11,6,1,"Mystus gulio",55.4,13,13,8
 35,2015,11,11,3,"Anematichthys/Cyclocheilichthys armatus",106.7,13,13,8
@@ -6637,7 +6637,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2015,11,38,12,"Anabas testudineus",94.7,13,13,8
 35,2015,11,43,14,"Channa striata",293.6,13,13,8
 35,2015,11,47,15,"Pristolepis fasciata",22.9,13,13,8
-35,2015,11,48,16,"Parambassis apogonoides",77.89999999999999,13,13,8
+35,2015,11,48,16,"Parambassis apogonoides",77.90000000000001,13,13,8
 35,2015,11,50,16,"Parambassis siamensis",288.3,13,13,8
 35,2015,11,52,17,"Trichogaster microlepis",41.3,13,13,8
 35,2015,11,53,17,"Trichopodus trichopterus",854,13,13,8
@@ -6649,7 +6649,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 35,2015,11,99,34,"Puntius orphoides",25.3,13,13,8
 35,2015,11,102,34,"Osteochilus vittatus/lini/hasselti",230.4,13,13,8
 35,2015,11,107,38,"Oxygaster pointoni",113.1,13,13,8
-35,2015,11,108,38,"Paralaubuca typus",53.9,13,13,8
+35,2015,11,108,38,"Paralaubuca typus",53.90000000000001,13,13,8
 35,2015,11,110,24,"Ompok hypophthalmus/urbaini",72.8,13,13,8
 35,2015,11,111,40,"Channa micropeltes",83.5,13,13,8
 35,2015,11,128,7,"Thynnichthys thynnoides",.9,13,13,8
@@ -6724,7 +6724,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 36,2013,11,30,9,"Rasbora pauciperforata/Trigonopoma pauciperforatum",6.1,5,5,4
 36,2013,11,34,9,"Rasbora paviana",1.5,5,5,4
 36,2013,11,38,12,"Anabas testudineus",35.6,5,5,4
-36,2013,11,48,16,"Parambassis apogonoides",42.49999999999999,5,5,4
+36,2013,11,48,16,"Parambassis apogonoides",42.5,5,5,4
 36,2013,11,49,16,"Parambassis wolffii",2.8,5,5,4
 36,2013,11,57,18,"Trichopsis pumila",2.2,5,5,4
 36,2013,11,58,18,"Trichopsis vittata",.7,5,5,4
@@ -6776,7 +6776,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 36,2014,11,12,3,"Cyclocheilichthys lagleri",14.8,9,9,6
 36,2014,11,16,5,"Puntius brevis",53.6,9,9,6
 36,2014,11,20,6,"Labiobarbus siamensis",115.6,9,9,6
-36,2014,11,21,6,"Labiobarbus leptocheilus",553.9,9,9,6
+36,2014,11,21,6,"Labiobarbus leptocheilus",553.9000000000001,9,9,6
 36,2014,11,24,9,"Esomus metallicus",411.7,9,9,6
 36,2014,11,38,12,"Anabas testudineus",37.6,9,9,6
 36,2014,11,42,13,"Clarias meladerma",122.9,9,9,6
@@ -6789,14 +6789,14 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 36,2014,11,110,24,"Ompok hypophthalmus/urbaini",20.2,9,9,6
 36,2015,2,9,3,"Anematichthys/Cyclocheilichthys apogon",62.7,10,10,
 36,2015,2,10,3,"Anematichthys repasson",58.2,10,10,
-36,2015,2,12,3,"Cyclocheilichthys lagleri",78.90000000000001,10,10,
+36,2015,2,12,3,"Cyclocheilichthys lagleri",78.89999999999999,10,10,
 36,2015,2,16,5,"Puntius brevis",20.7,10,10,
 36,2015,2,20,6,"Labiobarbus siamensis",58.8,10,10,
-36,2015,2,21,6,"Labiobarbus leptocheilus",962.8,10,10,
+36,2015,2,21,6,"Labiobarbus leptocheilus",962.8000000000001,10,10,
 36,2015,2,24,9,"Esomus metallicus",20,10,10,
 36,2015,2,38,12,"Anabas testudineus",9.4,10,10,
 36,2015,2,42,13,"Clarias meladerma",383.9,10,10,
-36,2015,2,50,16,"Parambassis siamensis",64.19999999999999,10,10,
+36,2015,2,50,16,"Parambassis siamensis",64.2,10,10,
 36,2015,2,52,17,"Trichogaster microlepis",107.4,10,10,
 36,2015,2,68,25,"Macrognathus siamensis",33.3,10,10,
 36,2015,2,79,30,"Hampala macrolepidota",356.6,10,10,
@@ -6817,9 +6817,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 36,2015,5,42,13,"Clarias meladerma",115.9,11,11,7
 36,2015,5,50,16,"Parambassis siamensis",60.3,11,11,7
 36,2015,5,52,17,"Trichogaster microlepis",177,11,11,7
-36,2015,5,107,38,"Oxygaster pointoni",89.49999999999999,11,11,7
+36,2015,5,107,38,"Oxygaster pointoni",89.50000000000001,11,11,7
 36,2015,5,110,24,"Ompok hypophthalmus/urbaini",224.8,11,11,7
-36,2015,8,4,1,"Mystus mysticetus",804.6,12,12,
+36,2015,8,4,1,"Mystus mysticetus",804.5999999999999,12,12,
 36,2015,8,9,3,"Anematichthys/Cyclocheilichthys apogon",4.2,12,12,
 36,2015,8,12,3,"Cyclocheilichthys lagleri",21.4,12,12,
 36,2015,8,21,6,"Labiobarbus leptocheilus",1298.3,12,12,
@@ -6831,7 +6831,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 36,2015,8,102,34,"Osteochilus vittatus/lini/hasselti",321.9,12,12,
 36,2015,11,4,1,"Mystus mysticetus",17.3,13,13,8
 36,2015,11,9,3,"Anematichthys/Cyclocheilichthys apogon",37,13,13,8
-36,2015,11,12,3,"Cyclocheilichthys lagleri",82.5,13,13,8
+36,2015,11,12,3,"Cyclocheilichthys lagleri",82.49999999999999,13,13,8
 36,2015,11,15,4,"Barbonymus gonionotus",611.9,13,13,8
 36,2015,11,16,5,"Puntius brevis",37.1,13,13,8
 36,2015,11,21,6,"Labiobarbus leptocheilus",1217.9,13,13,8
@@ -6844,7 +6844,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 36,2015,11,58,18,"Trichopsis vittata",1.3,13,13,8
 36,2015,11,60,19,"Chitala blanci",1.6,13,13,8
 36,2015,11,63,21,"Xenentodon cancila",7,13,13,8
-36,2015,11,68,25,"Macrognathus siamensis",52.00000000000001,13,13,8
+36,2015,11,68,25,"Macrognathus siamensis",52,13,13,8
 36,2015,11,99,34,"Puntius orphoides",56.7,13,13,8
 36,2015,11,101,34,"Poropuntius normani",69.59999999999999,13,13,8
 36,2015,11,102,34,"Osteochilus vittatus/lini/hasselti",26,13,13,8
@@ -6917,7 +6917,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 37,2013,5,5,1,"Mystus atrifasciatus",47.3,3,3,2
 37,2013,5,8,2,"Hemibagrus spilopterus/nemurus",679.7,3,3,2
 37,2013,5,12,3,"Cyclocheilichthys lagleri",380.4,3,3,2
-37,2013,5,16,5,"Puntius brevis",93.50000000000001,3,3,2
+37,2013,5,16,5,"Puntius brevis",93.5,3,3,2
 37,2013,5,17,5,"Puntius sp. (cf. masyai)",340,3,3,2
 37,2013,5,19,5,"Puntius rhombeus",38.4,3,3,2
 37,2013,5,21,6,"Labiobarbus leptocheilus",2015,3,3,2
@@ -6960,7 +6960,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 37,2013,11,17,5,"Puntius sp. (cf. masyai)",47.9,5,5,4
 37,2013,11,21,6,"Labiobarbus leptocheilus",385.3,5,5,4
 37,2013,11,24,9,"Esomus metallicus",550.3000000000001,5,5,4
-37,2013,11,25,9,"Esomus longimanus",500.0000000000001,5,5,4
+37,2013,11,25,9,"Esomus longimanus",500,5,5,4
 37,2013,11,38,12,"Anabas testudineus",206.3,5,5,4
 37,2013,11,40,13,"Clarias batrachus",81.3,5,5,4
 37,2013,11,41,13,"Clarias macrocephalus",399.3,5,5,4
@@ -6990,7 +6990,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 37,2014,2,41,13,"Clarias macrocephalus",96.7,6,6,
 37,2014,2,45,15,"Nandus nandus",2.2,6,6,
 37,2014,2,46,15,"Nandus oxyrhynchus",2.1,6,6,
-37,2014,2,47,15,"Pristolepis fasciata",913.4999999999999,6,6,
+37,2014,2,47,15,"Pristolepis fasciata",913.5,6,6,
 37,2014,2,52,17,"Trichogaster microlepis",289.2,6,6,
 37,2014,2,57,18,"Trichopsis pumila",3,6,6,
 37,2014,2,59,19,"Notopterus notopterus",770.5,6,6,
@@ -7028,10 +7028,10 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 37,2014,8,59,19,"Notopterus notopterus",85.09999999999999,8,8,
 37,2014,8,68,25,"Macrognathus siamensis",7.699999999999999,8,8,
 37,2014,11,4,1,"Mystus mysticetus",50,9,9,6
-37,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",52.59999999999999,9,9,6
+37,2014,11,9,3,"Anematichthys/Cyclocheilichthys apogon",52.6,9,9,6
 37,2014,11,12,3,"Cyclocheilichthys lagleri",140.7,9,9,6
 37,2014,11,16,5,"Puntius brevis",40.2,9,9,6
-37,2014,11,17,5,"Puntius sp. (cf. masyai)",97.20000000000002,9,9,6
+37,2014,11,17,5,"Puntius sp. (cf. masyai)",97.19999999999999,9,9,6
 37,2014,11,19,5,"Puntius rhombeus",9.1,9,9,6
 37,2014,11,21,6,"Labiobarbus leptocheilus",103.9,9,9,6
 37,2014,11,24,9,"Esomus metallicus",170.3,9,9,6
@@ -7087,7 +7087,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 37,2015,8,48,16,"Parambassis apogonoides",15.1,12,12,
 37,2015,8,52,17,"Trichogaster microlepis",88.59999999999999,12,12,
 37,2015,8,53,17,"Trichopodus trichopterus",1.9,12,12,
-37,2015,8,59,19,"Notopterus notopterus",383.5,12,12,
+37,2015,8,59,19,"Notopterus notopterus",383.5000000000001,12,12,
 37,2015,8,68,25,"Macrognathus siamensis",18,12,12,
 37,2015,8,99,34,"Puntius orphoides",18,12,12,
 37,2015,8,110,24,"Ompok hypophthalmus/urbaini",4,12,12,
@@ -7101,7 +7101,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 37,2015,11,42,13,"Clarias meladerma",309.5,13,13,8
 37,2015,11,43,14,"Channa striata",276,13,13,8
 37,2015,11,50,16,"Parambassis siamensis",14.4,13,13,8
-37,2015,11,52,17,"Trichogaster microlepis",47.49999999999999,13,13,8
+37,2015,11,52,17,"Trichogaster microlepis",47.5,13,13,8
 37,2015,11,59,19,"Notopterus notopterus",567.1,13,13,8
 37,2015,11,63,21,"Xenentodon cancila",6.2,13,13,8
 37,2015,11,68,25,"Macrognathus siamensis",51,13,13,8
@@ -7174,7 +7174,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2013,5,18,5,"Puntius aurotaeniatus",52.8,3,3,2
 38,2013,5,21,6,"Labiobarbus leptocheilus",184.4,3,3,2
 38,2013,5,29,9,"Rasbora aurotaenia",66.90000000000001,3,3,2
-38,2013,5,49,16,"Parambassis wolffii",97.90000000000001,3,3,2
+38,2013,5,49,16,"Parambassis wolffii",97.89999999999999,3,3,2
 38,2013,5,52,17,"Trichogaster microlepis",44.1,3,3,2
 38,2013,5,59,19,"Notopterus notopterus",202.6,3,3,2
 38,2013,5,66,22,"Kryptopterus cheveyi",7.6,3,3,2
@@ -7199,13 +7199,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",7.3,5,5,4
 38,2013,11,12,3,"Cyclocheilichthys lagleri",275.3,5,5,4
 38,2013,11,16,5,"Puntius brevis",1207.6,5,5,4
-38,2013,11,17,5,"Puntius sp. (cf. masyai)",5349.200000000001,5,5,4
-38,2013,11,21,6,"Labiobarbus leptocheilus",92.3,5,5,4
+38,2013,11,17,5,"Puntius sp. (cf. masyai)",5349.2,5,5,4
+38,2013,11,21,6,"Labiobarbus leptocheilus",92.30000000000001,5,5,4
 38,2013,11,25,9,"Esomus longimanus",95.40000000000001,5,5,4
 38,2013,11,45,15,"Nandus nandus",5.3,5,5,4
 38,2013,11,46,15,"Nandus oxyrhynchus",5,5,5,4
 38,2013,11,47,15,"Pristolepis fasciata",137.4,5,5,4
-38,2013,11,49,16,"Parambassis wolffii",902.4000000000001,5,5,4
+38,2013,11,49,16,"Parambassis wolffii",902.4,5,5,4
 38,2013,11,52,17,"Trichogaster microlepis",4.1,5,5,4
 38,2013,11,59,19,"Notopterus notopterus",64.40000000000001,5,5,4
 38,2013,11,63,21,"Xenentodon cancila",405.9,5,5,4
@@ -7217,7 +7217,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2013,11,75,27,"Acanthopsoides/Acantopsis spp",15.4,5,5,4
 38,2013,11,99,34,"Puntius orphoides",185.7,5,5,4
 38,2013,11,102,34,"Osteochilus vittatus/lini/hasselti",53.1,5,5,4
-38,2013,11,103,35,"Systomus partipentazona",47.90000000000001,5,5,4
+38,2013,11,103,35,"Systomus partipentazona",47.9,5,5,4
 38,2013,11,107,38,"Oxygaster pointoni",3.8,5,5,4
 38,2013,11,132,43,"Tetraodon biocellatus",22,5,5,4
 38,2013,11,137,43,"Monotrete cochinchinensis",14.9,5,5,4
@@ -7242,7 +7242,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2014,2,47,15,"Pristolepis fasciata",48.7,6,6,
 38,2014,2,50,16,"Parambassis siamensis",189.5,6,6,
 38,2014,2,52,17,"Trichogaster microlepis",68.40000000000001,6,6,
-38,2014,2,59,19,"Notopterus notopterus",657.8,6,6,
+38,2014,2,59,19,"Notopterus notopterus",657.8000000000001,6,6,
 38,2014,2,63,21,"Xenentodon cancila",66.5,6,6,
 38,2014,2,65,22,"Kryptopterus dissitus",2.2,6,6,
 38,2014,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",156.9,6,6,
@@ -7297,7 +7297,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2014,11,102,34,"Osteochilus vittatus/lini/hasselti",1.9,9,9,6
 38,2014,11,108,38,"Paralaubuca typus",5.2,9,9,6
 38,2014,11,128,7,"Thynnichthys thynnoides",34.6,9,9,6
-38,2014,11,138,9,"Rasbora caudimaculata",87.99999999999999,9,9,6
+38,2014,11,138,9,"Rasbora caudimaculata",88,9,9,6
 38,2014,11,139,1,"Leiocassis/Pseudomystus siamensis",10.8,9,9,6
 38,2014,11,153,27,"Acantopsis sp. ""cheek spot""",5.4,9,9,6
 38,2014,11,154,27,"Acantopsis sp. ""Phanara""",24.6,9,9,6
@@ -7320,13 +7320,13 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2015,2,108,38,"Paralaubuca typus",12.3,10,10,
 38,2015,2,111,40,"Channa micropeltes",1617.4,10,10,
 38,2015,2,138,9,"Rasbora caudimaculata",4.4,10,10,
-38,2015,5,9,3,"Anematichthys/Cyclocheilichthys apogon",397,11,11,7
+38,2015,5,9,3,"Anematichthys/Cyclocheilichthys apogon",396.9999999999999,11,11,7
 38,2015,5,11,3,"Anematichthys/Cyclocheilichthys armatus",7,11,11,7
 38,2015,5,12,3,"Cyclocheilichthys lagleri",155.6,11,11,7
 38,2015,5,16,5,"Puntius brevis",2.8,11,11,7
 38,2015,5,21,6,"Labiobarbus leptocheilus",220,11,11,7
 38,2015,5,23,8,"Henicorhynchus lobatus",17.1,11,11,7
-38,2015,5,37,11,"Puntioplites proctozystron",425.4999999999999,11,11,7
+38,2015,5,37,11,"Puntioplites proctozystron",425.5,11,11,7
 38,2015,5,43,14,"Channa striata",919.5,11,11,7
 38,2015,5,50,16,"Parambassis siamensis",1.7,11,11,7
 38,2015,5,52,17,"Trichogaster microlepis",34.2,11,11,7
@@ -7341,7 +7341,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2015,8,10,3,"Anematichthys repasson",10.1,12,12,
 38,2015,8,17,5,"Puntius sp. (cf. masyai)",3.4,12,12,
 38,2015,8,28,9,"Rasbora daniconius",8,12,12,
-38,2015,8,38,12,"Anabas testudineus",476,12,12,
+38,2015,8,38,12,"Anabas testudineus",475.9999999999999,12,12,
 38,2015,8,59,19,"Notopterus notopterus",384,12,12,
 38,2015,8,64,22,"Micronema hexapterus",2,12,12,
 38,2015,8,76,28,"Monopterus albus",146.7,12,12,
@@ -7353,7 +7353,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 38,2015,11,17,5,"Puntius sp. (cf. masyai)",10.7,13,13,8
 38,2015,11,20,6,"Labiobarbus siamensis",3.7,13,13,8
 38,2015,11,21,6,"Labiobarbus leptocheilus",24.9,13,13,8
-38,2015,11,22,8,"Henicorhynchus siamensis",94.09999999999999,13,13,8
+38,2015,11,22,8,"Henicorhynchus siamensis",94.10000000000001,13,13,8
 38,2015,11,24,9,"Esomus metallicus",33.6,13,13,8
 38,2015,11,37,11,"Puntioplites proctozystron",4.5,13,13,8
 38,2015,11,42,13,"Clarias meladerma",83.59999999999999,13,13,8
@@ -7469,12 +7469,12 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 39,2013,8,78,29,"Oxyeleotris marmorata",4.9,4,4,3
 39,2013,8,99,34,"Puntius orphoides",57.3,4,4,3
 39,2013,8,103,35,"Systomus partipentazona",2.3,4,4,3
-39,2013,11,2,1,"Mystus singaringan",61.29999999999999,5,5,4
+39,2013,11,2,1,"Mystus singaringan",61.3,5,5,4
 39,2013,11,3,1,"Mystus multiradiatus",12.2,5,5,4
 39,2013,11,9,3,"Anematichthys/Cyclocheilichthys apogon",20.6,5,5,4
-39,2013,11,12,3,"Cyclocheilichthys lagleri",587.5,5,5,4
+39,2013,11,12,3,"Cyclocheilichthys lagleri",587.5000000000001,5,5,4
 39,2013,11,14,4,"Hypsibarbus malcolmi",353.4,5,5,4
-39,2013,11,16,5,"Puntius brevis",444.6,5,5,4
+39,2013,11,16,5,"Puntius brevis",444.6000000000001,5,5,4
 39,2013,11,17,5,"Puntius sp. (cf. masyai)",210.5,5,5,4
 39,2013,11,20,6,"Labiobarbus siamensis",9.5,5,5,4
 39,2013,11,21,6,"Labiobarbus leptocheilus",89,5,5,4
@@ -7504,7 +7504,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 39,2014,2,17,5,"Puntius sp. (cf. masyai)",4.9,6,6,
 39,2014,2,18,5,"Puntius aurotaeniatus",9.5,6,6,
 39,2014,2,25,9,"Esomus longimanus",2,6,6,
-39,2014,2,50,16,"Parambassis siamensis",77.10000000000001,6,6,
+39,2014,2,50,16,"Parambassis siamensis",77.09999999999999,6,6,
 39,2014,2,63,21,"Xenentodon cancila",11.6,6,6,
 39,2014,2,66,22,"Kryptopterus cheveyi",.9,6,6,
 39,2014,2,107,38,"Oxygaster pointoni",6.1,6,6,
@@ -7525,7 +7525,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 39,2014,8,2,1,"Mystus singaringan",1.2,8,8,
 39,2014,8,4,1,"Mystus mysticetus",24.7,8,8,
 39,2014,8,5,1,"Mystus atrifasciatus",13.6,8,8,
-39,2014,8,8,2,"Hemibagrus spilopterus/nemurus",63.2,8,8,
+39,2014,8,8,2,"Hemibagrus spilopterus/nemurus",63.20000000000001,8,8,
 39,2014,8,12,3,"Cyclocheilichthys lagleri",127.6,8,8,
 39,2014,8,16,5,"Puntius brevis",15.9,8,8,
 39,2014,8,17,5,"Puntius sp. (cf. masyai)",36.5,8,8,
@@ -7555,7 +7555,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 39,2014,11,24,9,"Esomus metallicus",7,9,9,6
 39,2014,11,29,9,"Rasbora aurotaenia",4.1,9,9,6
 39,2014,11,37,11,"Puntioplites proctozystron",77.09999999999999,9,9,6
-39,2014,11,50,16,"Parambassis siamensis",37.60000000000001,9,9,6
+39,2014,11,50,16,"Parambassis siamensis",37.6,9,9,6
 39,2014,11,63,21,"Xenentodon cancila",23.3,9,9,6
 39,2014,11,66,22,"Kryptopterus cheveyi",45.8,9,9,6
 39,2014,11,75,27,"Acanthopsoides/Acantopsis spp",18.2,9,9,6
@@ -7575,20 +7575,20 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 39,2015,2,37,11,"Puntioplites proctozystron",25.3,10,10,
 39,2015,2,49,16,"Parambassis wolffii",6.699999999999999,10,10,
 39,2015,2,50,16,"Parambassis siamensis",71.7,10,10,
-39,2015,2,63,21,"Xenentodon cancila",52.40000000000001,10,10,
+39,2015,2,63,21,"Xenentodon cancila",52.4,10,10,
 39,2015,2,66,22,"Kryptopterus cheveyi",4.4,10,10,
 39,2015,2,75,27,"Acanthopsoides/Acantopsis spp",65,10,10,
 39,2015,2,82,32,"Yasuhikotakia lecontei",26,10,10,
-39,2015,2,107,38,"Oxygaster pointoni",98.79999999999998,10,10,
-39,2015,2,138,9,"Rasbora caudimaculata",8.300000000000001,10,10,
-39,2015,5,4,1,"Mystus mysticetus",49.40000000000001,11,11,7
+39,2015,2,107,38,"Oxygaster pointoni",98.8,10,10,
+39,2015,2,138,9,"Rasbora caudimaculata",8.299999999999999,10,10,
+39,2015,5,4,1,"Mystus mysticetus",49.4,11,11,7
 39,2015,5,5,1,"Mystus atrifasciatus",8.4,11,11,7
 39,2015,5,9,3,"Anematichthys/Cyclocheilichthys apogon",48.40000000000001,11,11,7
 39,2015,5,12,3,"Cyclocheilichthys lagleri",474.5,11,11,7
 39,2015,5,16,5,"Puntius brevis",4.9,11,11,7
 39,2015,5,20,6,"Labiobarbus siamensis",11.1,11,11,7
 39,2015,5,37,11,"Puntioplites proctozystron",38.8,11,11,7
-39,2015,5,50,16,"Parambassis siamensis",517.4,11,11,7
+39,2015,5,50,16,"Parambassis siamensis",517.4000000000001,11,11,7
 39,2015,5,63,21,"Xenentodon cancila",65.8,11,11,7
 39,2015,5,68,25,"Macrognathus siamensis",32.2,11,11,7
 39,2015,5,75,27,"Acanthopsoides/Acantopsis spp",35.3,11,11,7
@@ -7615,7 +7615,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 39,2015,11,9,3,"Anematichthys/Cyclocheilichthys apogon",8.1,13,13,8
 39,2015,11,12,3,"Cyclocheilichthys lagleri",66.39999999999999,13,13,8
 39,2015,11,20,6,"Labiobarbus siamensis",5.1,13,13,8
-39,2015,11,21,6,"Labiobarbus leptocheilus",57.40000000000001,13,13,8
+39,2015,11,21,6,"Labiobarbus leptocheilus",57.39999999999999,13,13,8
 39,2015,11,24,9,"Esomus metallicus",.6,13,13,8
 39,2015,11,37,11,"Puntioplites proctozystron",8.5,13,13,8
 39,2015,11,47,15,"Pristolepis fasciata",2.9,13,13,8
@@ -7623,9 +7623,9 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 39,2015,11,63,21,"Xenentodon cancila",33.5,13,13,8
 39,2015,11,75,27,"Acanthopsoides/Acantopsis spp",23,13,13,8
 39,2015,11,78,29,"Oxyeleotris marmorata",169.4,13,13,8
-39,2015,11,103,35,"Systomus partipentazona",4.4,13,13,8
+39,2015,11,103,35,"Systomus partipentazona",4.399999999999999,13,13,8
 39,2015,11,107,38,"Oxygaster pointoni",24.7,13,13,8
-39,2015,11,108,38,"Paralaubuca typus",33.4,13,13,8
+39,2015,11,108,38,"Paralaubuca typus",33.40000000000001,13,13,8
 39,2015,11,131,43,"Tetraodon cambodgiensis",20.2,13,13,8
 39,2015,11,158,0,"Yasuhikotakia caudipunctata",.3,13,13,8
 40,2012,11,1,1,"Mystus albolineatus",3,1,1,1
@@ -7656,7 +7656,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 40,2013,2,11,3,"Anematichthys/Cyclocheilichthys armatus",27.1,2,2,
 40,2013,2,12,3,"Cyclocheilichthys lagleri",352.2,2,2,
 40,2013,2,16,5,"Puntius brevis",34.6,2,2,
-40,2013,2,17,5,"Puntius sp. (cf. masyai)",87.2,2,2,
+40,2013,2,17,5,"Puntius sp. (cf. masyai)",87.19999999999999,2,2,
 40,2013,2,18,5,"Puntius aurotaeniatus",236,2,2,
 40,2013,2,20,6,"Labiobarbus siamensis",6.2,2,2,
 40,2013,2,21,6,"Labiobarbus leptocheilus",165.6,2,2,
@@ -7740,7 +7740,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 40,2014,2,59,19,"Notopterus notopterus",100.1,6,6,
 40,2014,2,63,21,"Xenentodon cancila",365.1,6,6,
 40,2014,2,67,23,"Ompok bimaculatus/Hemisilurus mekongensis",14.6,6,6,
-40,2014,2,99,34,"Puntius orphoides",69.59999999999999,6,6,
+40,2014,2,99,34,"Puntius orphoides",69.60000000000001,6,6,
 40,2014,5,4,1,"Mystus mysticetus",27.1,7,7,5
 40,2014,5,6,1,"Mystus gulio",14.5,7,7,5
 40,2014,5,9,3,"Anematichthys/Cyclocheilichthys apogon",21.3,7,7,5
@@ -7750,7 +7750,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 40,2014,5,21,6,"Labiobarbus leptocheilus",186.8,7,7,5
 40,2014,5,24,9,"Esomus metallicus",2.8,7,7,5
 40,2014,5,37,11,"Puntioplites proctozystron",6.2,7,7,5
-40,2014,5,50,16,"Parambassis siamensis",93.2,7,7,5
+40,2014,5,50,16,"Parambassis siamensis",93.20000000000002,7,7,5
 40,2014,5,52,17,"Trichogaster microlepis",21.5,7,7,5
 40,2014,5,63,21,"Xenentodon cancila",147.2,7,7,5
 40,2014,5,68,25,"Macrognathus siamensis",28.2,7,7,5
@@ -7760,7 +7760,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 40,2014,8,17,5,"Puntius sp. (cf. masyai)",37.6,8,8,
 40,2014,8,29,9,"Rasbora aurotaenia",27,8,8,
 40,2014,8,47,15,"Pristolepis fasciata",60.8,8,8,
-40,2014,8,48,16,"Parambassis apogonoides",86,8,8,
+40,2014,8,48,16,"Parambassis apogonoides",86.00000000000001,8,8,
 40,2014,8,63,21,"Xenentodon cancila",10.8,8,8,
 40,2014,8,68,25,"Macrognathus siamensis",9.800000000000001,8,8,
 40,2014,8,75,27,"Acanthopsoides/Acantopsis spp",6,8,8,
@@ -7779,7 +7779,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 40,2014,11,37,11,"Puntioplites proctozystron",102.9,9,9,6
 40,2014,11,40,13,"Clarias batrachus",43.7,9,9,6
 40,2014,11,43,14,"Channa striata",111.2,9,9,6
-40,2014,11,50,16,"Parambassis siamensis",48,9,9,6
+40,2014,11,50,16,"Parambassis siamensis",47.99999999999999,9,9,6
 40,2014,11,52,17,"Trichogaster microlepis",26.5,9,9,6
 40,2014,11,59,19,"Notopterus notopterus",119.4,9,9,6
 40,2014,11,63,21,"Xenentodon cancila",101.7,9,9,6
@@ -7812,7 +7812,7 @@ cfrid,year,month,scode_biom,sgroup_biom,sname_biom,totalweight_biom,timekey1,tim
 40,2015,5,59,19,"Notopterus notopterus",333.4,11,11,7
 40,2015,5,107,38,"Oxygaster pointoni",3.4,11,11,7
 40,2015,5,138,9,"Rasbora caudimaculata",2,11,11,7
-40,2015,8,12,3,"Cyclocheilichthys lagleri",91,12,12,
+40,2015,8,12,3,"Cyclocheilichthys lagleri",91.00000000000001,12,12,
 40,2015,8,16,5,"Puntius brevis",7.3,12,12,
 40,2015,8,17,5,"Puntius sp. (cf. masyai)",5.7,12,12,
 40,2015,8,21,6,"Labiobarbus leptocheilus",5.7,12,12,

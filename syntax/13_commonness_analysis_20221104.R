@@ -192,9 +192,9 @@ commonness %>%
   ylab("Mean commonness index") +
   labs(title = "Mean commonness index by portfolio type",
   caption = "
-       Figure is zoomed to show detail, truncating max values of household sold mean commonness. 
-       White diamonds depict means. 
-       Means differences are significant between all groups except CFR and sold (Paired t-tests with Bonferroni correction)")
+      Figure is zoomed to show detail, truncating max values of household sold mean commonness. 
+      White diamonds depict means. Means differences are significant between all groups 
+      except CFR and sold (Paired t-tests with Bonferroni correction)")
 
 ggsave(path = "output/20221109/figures", "commonness_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 

@@ -968,8 +968,8 @@ use "$processed/hh_level_stata", clear
 postclose `betas'
 use "$temp/betas_traits", clear
 * calculate min and max
-gen min = coeff-2*se
-gen max = coeff+2*se
+gen min = coeff-1.96*se
+gen max = coeff+1.96*se
 export excel using "$output/$date/tables/betas_traits_noeffort.xlsx", sheet("traits models NE") sheetmodify firstrow(variables)
 
 

@@ -127,8 +127,7 @@ rda_threshold <- 1
 
   
   #### ----- Calculate how many RDAs met by 100g of a given fish portfolio using RDA threshold set above ------ #### 
-  #### ----- Calculate the proportion of RDA met by 100g of a given fish portfolio, by nutrient ------ #### 
-  
+
   rda_hh_catch <- portfolio_nutrient_concentration %>% 
     # bring in RDA thresholds
     cbind(rda) %>% # 
@@ -622,7 +621,8 @@ nd_score %>%
   labs(title = "Nutrient density scores of household and CFR portfolios", 
   caption = "
        Sold plot excludes households that sold no fish. White diamonds depict means. 
-       Means differences are significant between all groups except catch and consumed (Paired t-tests with Bonferroni correction)")
+       Means differences are significant between all groups except catch and consumed 
+      (Paired t-tests with Bonferroni correction)")
 
 ggsave(path = "output/20221109/figures", "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 

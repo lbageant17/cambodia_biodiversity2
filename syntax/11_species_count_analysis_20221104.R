@@ -108,12 +108,111 @@ t413 %>% rbind(t266) %>%
 
 
 
+#--------- Look at number of species at each level ---------------------------*/
+
+# number of unique species in the biomonitoring data
+biom_species_no <- b %>% 
+  select(scode_biom) %>% 
+  mutate(code = scode_biom, 
+         biom = "biom") %>% 
+  distinct() # 132
+
+# number of unique species at catch level
+catch_species_no <- c %>% 
+  select(scode_ccm) %>% 
+  mutate(code = scode_ccm,
+         catch_code = scode_ccm,
+         catch = "catch") %>% 
+  select(-scode_ccm) %>% 
+  distinct() # 130
+
+# number of unique species at consumption level
+cons_species_no <- c %>% 
+  filter(atefresh == 1) %>% 
+  select(scode_ccm) %>% 
+  mutate(code = scode_ccm,
+         scode_cons = scode_ccm, 
+         cons = "cons") %>% 
+  select(-scode_ccm) %>% 
+  distinct() # 126
+
+# number of unique species at sold level
+sold_species_no <- c %>% 
+  filter(soldfresh == 1) %>% 
+  select(scode_ccm) %>% 
+  mutate(code = scode_ccm, 
+         scode_sold = scode_ccm,
+         sold = "sold") %>% 
+  select(-scode_ccm) %>% 
+  distinct() # 110
+
+# combine all data files to see what species are present in each level.
+data <- biom_species_no %>% 
+  full_join(catch_species_no, by = "code") %>% 
+  full_join(cons_species_no, by = "code") %>% 
+  full_join(sold_species_no, by = "code") %>% 
+  arrange(code) %>% 
+  select(code, biom, catch, cons, sold)
+
+# total number of species in data set
+nrow(data) # 137
+
+# species that are present in all levels
+all_levels <- data %>% 
+  drop_na(biom, catch, cons, sold) # 104
+
+# species that are only in biom and nowhere else
+biom_only <- data %>% 
+  mutate(count =rowSums(is.na(.))) %>% 
+  filter(!is.na(biom),
+         count == 3) # 7
+
+# species that are only in catch and nowhere else
+catch_only <- data %>% 
+  drop_na(catch) %>% 
+  mutate(count = rowSums(is.na(.))) %>% 
+  filter(count == 3) # 0
+
+# species that are in system and catch but nowhere else
+sys_catch_only <- data %>% 
+  drop_na(biom, catch) %>% 
+  mutate(count = rowSums(is.na(.))) %>% 
+  filter(count == 2) # 2
+
+# species that are caught and consumed, but not sold
+biom_catch_cons_only <- data %>% 
+  drop_na(biom, catch, cons) %>% 
+  mutate(count = rowSums(is.na(.))) %>% 
+  filter(count == 1) #18
+
+# species that are caught and consumed, but not sold
+biom_catch_sold_only <- data %>% 
+  drop_na(biom, catch, sold) %>%  
+  mutate(count = rowSums(is.na(.))) %>% 
+  filter(count == 1) # 1
+
+# species that are not in biomonitoring but are caught and consumed
+catch_cons_only <- data %>% 
+  filter(is.na(biom)) %>% 
+  filter(is.na(cons)) %>% 
+  mutate(count = rowSums(is.na(.))) %>%  # 1
+  filter(count == 2)
+
+# species that are not in biomonitoring but are caught, sold and consumed
+catch_sold_cons_only <- data %>% 
+  filter(is.na(biom)) %>% 
+  mutate(count = rowSums(is.na(.))) %>% 
+  filter(count == 1) # 4
 
 
-
-
-
-
+check <- all_levels %>% 
+  mutate(count = 0) %>% 
+  rbind(biom_only, catch_only, sys_catch_only, biom_catch_cons_only, biom_catch_sold_only, catch_cons_only, catch_sold_cons_only) %>% 
+  arrange(code) %>% 
+  select(code) %>%
+  mutate(x = "x") %>% 
+  full_join(data, by = "code")
+  
 
 
 
