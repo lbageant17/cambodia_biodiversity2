@@ -1,5 +1,5 @@
 ## Liz Bageant
-## September 19, 2022
+## November 15, 2022
 
 
 #------------------------------------------------------------------------------# 
@@ -13,7 +13,7 @@
 #  Packages
 #------------------------------------------------------------------------------# 
 
-library(Hmisc) # install.packages("Hmisc") # this package makes summarize not recognize group_by(), use summarise with an s instead. Sometimes ungroup() is needed when you least expect it.
+library(Hmisc) # install.packages("Hmisc") # this package interferes with summarize (with a z), use summarise with an s instead. Sometimes ungroup() is needed when you least expect it.
 library(lubridate)
 library(ggalluvial) # install.packages("ggalluvial")
 library(alluvial) #install.packages("alluvial")
@@ -25,11 +25,19 @@ library(readxl)
 library(multcompView) #install.packages("multcompView")
 library(rstatix)
 
+
 # Set up R to run stata files from R script below
 library(RStata) #install.packages("RStata")
   options(RStata.StataPath = "/Applications/Stata/StataIC.app/Contents/MacOS/stataic") 
   options(RStata.StataVersion = 15)
   options(RStata.StataEcho = FALSE)
+  
+# Create date-specific file paths
+  output_date <- "20221115"     # <---- THIS MUST MATCH THE DATE IN _PHASE_1_MASTER.do!!
+
+  
+
+  
 
 #------------------------------------------------------------------------------# 
 #  Phase 1: Data prep in Stata
@@ -45,7 +53,7 @@ library(RStata) #install.packages("RStata")
   source("syntax/10_diet_quality_calculation_20221104.R")
   source("syntax/11_species_count_analysis_20221104.R")
   source("syntax/12_diversity_index_calculation_20221104.R")
-  source("syntax/13_commonness_analysis_20221104.R")
+  source("syntax/13_commonness_analysis_20221111.R")
   source("syntax/14_body_size_calculation_20221104.R")
   
 #------------------------------------------------------------------------------# 

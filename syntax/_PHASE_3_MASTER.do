@@ -1,7 +1,6 @@
 ** Liz Bageant
 ** November 8, 2022
 
-** 
 /*----------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------
  
@@ -15,21 +14,9 @@
 ------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 
-* Macros: must be repeated from _MASTER1.do
 global umbrella "/Users/erb32/github/cambodia_biodiversity2"
-global stata_raw "$umbrella/data/stata_raw"
-global excel_raw "$umbrella/data/excel_raw"
 global do "$umbrella/syntax"
-global temp "/Users/erb32/Desktop/temp"
-global processed "$umbrella/data/processed"
-global traits "$umbrella/data/traits/"
-global documentation "$umbrella/documentation/"
-global brochure "$umbrella/data/brochure/"
-global component "$umbrella/data/component/"
-global output "$umbrella/output/"
-global data "$umbrella/data/"
-
-global date "20221109"
+do "$do/0_initialize_macros.do" 		// This file initializes file path and date macros.
 	
 * Do-files
 

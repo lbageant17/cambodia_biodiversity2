@@ -1,0 +1,29 @@
+Table X: Catch_X_Sold (species)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Number of species sold	Number of species sold	Number of species sold	Number of species sold
+					
+catch_species	Number of species caught by households	0.271***	0.276***	0.280***	0.274***
+		(0.0396)	(0.0368)	(0.0381)	(0.0730)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			-0.0178	-0.0219
+				(0.0204)	(0.0340)
+c.catch_species#c.city_distance					0.000168
+					(0.00171)
+hhsize	Household size		0.0626	0.0576	0.0586
+			(0.183)	(0.182)	(0.182)
+depshare	Share of household members <=15 or >=65		1.643	1.593	1.587
+			(4.290)	(4.216)	(4.234)
+maxeduc	Max educational attainment by any hh member (years)		-0.0170	-0.0165	-0.0167
+			(0.0846)	(0.0843)	(0.0838)
+index1	Household amenities index		0.429	0.398	0.394
+			(0.288)	(0.280)	(0.278)
+index2	Livelihood asset index		0.192	0.156	0.155
+			(0.161)	(0.168)	(0.163)
+Constant	Constant	-1.782**	-2.239	-1.641	-1.492
+		(0.722)	(1.480)	(1.691)	(1.894)
+					
+Observations		410	410	410	410
+R-squared		0.259	0.268	0.270	0.270
+Robust standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
+Outcome variable is species at the catch level. In these models _sold = 0 for households that sold no fish. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1					

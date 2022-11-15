@@ -28,24 +28,17 @@
 total_biomass_biom <- b %>% 
   summarise(total = sum(totalweight_biom)) %>% 
   as.numeric()
-# calculate proportional abundance at system level
-pa_sys <- b %>% 
-  ungroup() %>% 
-  group_by(scode_biom) %>% 
-  summarize(biomass = sum(totalweight_biom)) %>% 
-  mutate(pa_sys = biomass/total_biomass_biom) %>% 
-  left_join(scode, by = "scode_biom") %>% 
-  select(scode_ccm, scode_biom, pa_sys)
+
 
 #------------------------------------------------------------------------------# 
 # CFR LEVEL
 #------------------------------------------------------------------------------# 
 
-# calculate proportional abundance at CFR level 
+# calculate proportional abundance at CFR level. We will use this in calculations at other levels. 
 pa_cfr <- b %>%
   ungroup() %>% 
   group_by(cfrid, scode_biom) %>% 
-  summarize(biomass = sum(totalweight_biom)) %>% 
+  summarise(biomass = sum(totalweight_biom)) %>% 
   mutate(pa_cfr = biomass/total_biomass_biom) %>% 
   left_join(scode, by = "scode_biom")
 
@@ -108,7 +101,7 @@ pa_cons <- c %>%
 
 commonness_cons <- pa_cons %>% 
   left_join (pa_cfr, by = "scode_ccm") %>% 
-  mutate(commonness = pa_sys * pa_cons,
+  mutate(commonness = pa_cfr * pa_cons,
          type = "cons") %>% 
   group_by(hhid, type) %>% 
   summarise(commonness = mean(commonness, na.rm = TRUE)) %>% 
@@ -138,7 +131,7 @@ pa_sold <- c %>%
 
 commonness_sold <- pa_sold %>% 
   left_join (pa_cfr, by = "scode_ccm") %>% 
-  mutate(commonness = pa_sys * pa_sold,
+  mutate(commonness = pa_cfr * pa_sold,
          type = "sold") %>% 
   group_by(hhid, type) %>% 
   summarise(commonness = mean(commonness, na.rm = TRUE)) %>% 
@@ -167,8 +160,6 @@ table(commonness$type)
 # BOXPLOT
 #------------------------------------------------------------------------------# 
 
-# sys <- log(tl_system +1) # system total length
-
 order <-c("cfr", "catch", "cons", "sold" )
 
 commonness %>% 
@@ -178,8 +169,9 @@ commonness %>%
   stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
   scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
   scale_fill_viridis(discrete = TRUE, alpha = 0.7) +
-  scale_y_continuous(trans = "log1p") + # this doesnt' seem to do anything
-  coord_cartesian(ylim = c(0, 0.00004)) + # zooming the plot in
+  scale_y_continuous(trans = "log10") +
+  #scale_y_continuous(trans = "log1p") + # this doesnt' seem to do anything
+  #coord_cartesian(ylim = c(0, 0.00004)) + # zooming the plot in
   theme_bw() +
   theme(legend.position = "none",
         axis.title.x=element_blank(),
@@ -187,19 +179,15 @@ commonness %>%
   ylab("Mean commonness index") +
   labs(title = "Mean commonness index by portfolio type",
   caption = "
-      Figure is zoomed to show detail, truncating max values of household sold mean commonness. 
       White diamonds depict means. Means differences are significant between all groups 
       except CFR and sold (Paired t-tests with Bonferroni correction)")
 
-ggsave(path = "output/20221109/figures", "commonness_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
-
-
-test <- commonness %>% 
-  mutate(log = log(commonness), 
-         log1p = log1p(commonness), 
-         again = log(commonness + 1))
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "commonness_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 write.csv(commonness, file = "data/processed/commonness.csv")
+
+
 
 #--------- Test mean differences in commonness -------------------------------*/
 
@@ -243,7 +231,9 @@ t266 <- data %>%
   pairwise_t_test(commonness ~ type, paired = TRUE, p.adjust.method = "bonferroni")
 
 # export
+csv_name <- paste("output/",output_date,"/tables/ttests/commonness_ttest.csv",sep="")
+
 t413 %>% rbind(t266) %>% 
-  write.csv(., file = "output/20221109/tables/commonness_ttest.csv")
+  write.csv(., file = csv_name)
 
 

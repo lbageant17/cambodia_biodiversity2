@@ -75,7 +75,7 @@ sum(is.na(hh_soldcons$consumption_species))
 ## Create a household-level effort data frame
 effort <- e %>% 
   group_by(hhid) %>% 
-  summarize(effort = sum(effort_persondays))
+  summarise(effort = sum(effort_persondays))
 
 ## Create a household-species level data frame that contains the amount of each species caught, consumed, sold, processed etc by household
 
@@ -109,13 +109,13 @@ cfr_biodiv <- full_join(cfr_biodiv, hh_soldcons, by = c("cfrid", "hhid"))
 # Create a species-level data frame that contains relative abundance of different species
 systemtotal <- b %>% 
   select(totalweight_biom) %>% 
-  summarize(systemtotal = sum(totalweight_biom)) %>% 
+  summarise(systemtotal = sum(totalweight_biom)) %>% 
   as.numeric()
 
 rel_abundance <- b %>% 
   select(scode_biom, totalweight_biom) %>% 
   group_by(scode_biom) %>% 
-  summarize(species_total = sum(totalweight_biom)) %>% 
+  summarise(species_total = sum(totalweight_biom)) %>% 
   mutate(rel_abundance = species_total/systemtotal) %>%  # check: summarize(total = sum(rel_abundance)) = 1
   select(scode_biom, rel_abundance) %>% 
   mutate(scode_ccm = scode_biom) # set up key for later merge
@@ -183,3 +183,4 @@ numspecies_biom <- b %>%
 cfrid_to_hhid <- c %>% 
   select(cfrid, hhid) %>% 
   unique()
+

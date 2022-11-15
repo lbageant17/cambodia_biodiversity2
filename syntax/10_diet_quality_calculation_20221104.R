@@ -602,20 +602,15 @@ order <-c("cfr", "catch", "cons", "sold" )
 nd_score %>%  
   select(-cfrid) %>% 
   filter(nd_score != 0) %>%  # removing cases where households sold no fish
-  #mutate(type = factor(type, levels = c("catch", "cfr", "cons", "sold" )),
-   #      type = fct_relevel(type, "cfr", "catch", "cons", "sold")) %>% 
   ggplot(aes(x = type, y = nd_score, fill = type)) +
   geom_boxplot(outlier.shape = NA) +
   geom_jitter(size = 1.3, alpha = 0.5, width = 0.2, color = "black") +
   stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
   scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
   scale_fill_viridis(discrete = TRUE, alpha = 0.7, name = "Portfolio type", labels = c("CFR", "Household Catch", "Household Consumption", "Household Sold")) +
-  #scale_color_viridis(discrete = TRUE) +
   theme_bw() +
   theme(legend.position = "none") +
   theme(axis.title.x=element_blank(),
-        #axis.text.x = element_blank(),
-        #axis.ticks.x = element_blank(),
         plot.caption = element_text(hjust = 0)) +
   ylab("Nutrient density score") +
   labs(title = "Nutrient density scores of household and CFR portfolios", 
@@ -624,8 +619,11 @@ nd_score %>%
        Means differences are significant between all groups except catch and consumed 
       (Paired t-tests with Bonferroni correction)")
 
-ggsave(path = "output/20221109/figures", "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+# ggsave(path = "output/20221109/figures", "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+#ggsave(path = main_figures, "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 
 #--------- Test mean differences in nutrient density score -------------------*/
@@ -661,28 +659,25 @@ t266 <- data %>%
   pairwise_t_test(nd_score ~ type, paired = TRUE, p.adjust.method = "bonferroni")
 
 # export
+
+csv_name <- paste("output/",output_date,"/tables/ttests/diet_quality_ttest.csv",sep="")
 t413 %>% rbind(t266) %>% 
-  write.csv(., file = "output/20221109/tables/diet_quality_ttest.csv")
-
-
-# Plot minimum biomass against nutrient density score to see how they correspond
-nd_score %>% 
-  as_tibble() %>% 
-  filter(type == "catch") %>% 
-  left_join(hh_dq, by = "hhid") %>% 
-  select(nd_score, minbio_hh_catch_all) %>% 
-  ggplot(aes(x = nd_score, y = minbio_hh_catch_all)) +
-  geom_point() +
-  geom_smooth() +
-  ylab("Minimum biomass") +
-  xlab("Nutrient density score") +
-  ggtitle("Minimum biomass X Nutrient density score")
+  write_csv(., file = csv_name)
 
 
 
 
 
-#------- Plot differences in min-bio amounts across portfolios (not used as of 11/4) -----#
+
+
+
+
+#------------------------------------------------------------------------------# 
+#  Analysis below this point is not being used as of 11/14, though it still runs.                       
+#------------------------------------------------------------------------------# 
+
+
+#------- Plot differences in min-bio amounts across portfolios -----#
 
 # combining household level files
 hh_dq <- minbio_hh_catch %>% 
@@ -764,6 +759,21 @@ x %>%
             min = min(amount)) 
   
   
-  
+#-------------- Plot minimum biomass against nutrient density score to see how they correspond -----------#
+nd_score %>% 
+  as_tibble() %>% 
+  filter(type == "catch") %>% 
+  left_join(hh_dq, by = "hhid") %>% 
+  select(nd_score, minbio_hh_catch_all) %>% 
+  ggplot(aes(x = nd_score, y = minbio_hh_catch_all)) +
+  geom_point() +
+  geom_smooth() +
+  ylab("Minimum biomass") +
+  xlab("Nutrient density score") +
+  ggtitle("Minimum biomass X Nutrient density score")
+
+
+
+
   
 

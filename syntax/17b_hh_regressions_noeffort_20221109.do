@@ -71,7 +71,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base hh mkt mktx] using "$output/$date/tables/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base hh mkt mktx] using "$output/$date/tables/no_effort/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -131,7 +131,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base hh mkt mktx] using "$output/$date/tables/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base hh mkt mktx] using "$output/$date/tables/no_effort/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -191,7 +191,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base hh mkt mktx] using "$output/$date/tables/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base hh mkt mktx] using "$output/$date/tables/no_effort/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. `sold_caveat' Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -250,7 +250,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base hh mkt mktx] using "$output/$date/tables/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base hh mkt mktx] using "$output/$date/tables/no_effort/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -310,7 +310,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base hh mkt mktx] using "$output/$date/tables/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base hh mkt mktx] using "$output/$date/tables/no_effort/hh_regs_no_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. `sold_caveat' Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -351,9 +351,9 @@ use "$temp/betas_hh", clear
 * calculate min and max
 gen min = coeff-1.96*se
 gen max = coeff+1.96*se
-export excel using "$output/$date/tables/betas_hh_noeffort.xlsx", sheet("HH models NE") sheetmodify firstrow(variables)
+export excel using "$output/$date/tables/no_effort/betas_hh_noeffort.xlsx", sheet("HH models NE") sheetmodify firstrow(variables)
 
 
 postclose `wald'
 use "$temp/wald_test_hh", clear
-export excel using "$output/$date/tables/wald_test_hh_noeffort.xlsx", sheet("HH models NE") sheetmodify firstrow(variables)
+export excel using "$output/$date/tables/no_effort/wald_test_hh_noeffort.xlsx", sheet("HH models NE") sheetmodify firstrow(variables)

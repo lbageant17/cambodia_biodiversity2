@@ -1,5 +1,5 @@
 ## Liz Bageant
-## November 8, 2022
+## November 15, 2022
 
 
 #------------------------------------------------------------------------------# 
@@ -57,7 +57,9 @@ cfr_biodiv_long %>%
        Sold plot excludes excludes households that sold no fish. White diamonds depict means. 
        Means differences are significant between all levels (paired t-test with Bonferroni correction)")
 
-ggsave(path = "output/20221109/figures", "species_count_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+#ggsave(path = "output/20221109/figures", "species_count_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "species_count_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 
 #--------- Test mean differences in number of species ------------------------*/
@@ -103,8 +105,9 @@ t266 <- data %>%
   pairwise_t_test(species ~ type, paired = TRUE, p.adjust.method = "bonferroni")
 
 # export
+csv_name <- paste("output/",output_date,"/tables/ttests/species_ttest.csv",sep="")
 t413 %>% rbind(t266) %>% 
-  write.csv(., file = "output/20221109/tables/species_ttest.csv")
+  write.csv(., file = csv_name)
 
 
 
@@ -245,7 +248,7 @@ check <- all_levels %>%
     xlab("Number of species in biomonitoring (CFR level") +
     ylab("Number of species caught (HH level)")
   
-  ggsave(path = "output/20221109/figures/secondary", "numspecies_biom_x_catch.png", width = 16, height =  12, units = "cm", dpi = 320)
+  #ggsave(path = "output/20221109/figures/secondary", "numspecies_biom_x_catch.png", width = 16, height =  12, units = "cm", dpi = 320)
   
   
   # Check correlation stats
@@ -269,7 +272,7 @@ check <- all_levels %>%
     xlab("Number of species in biomonitoring") +
     ylab("Number of species caught")
   
-  ggsave(path = "output/20221109/figures/secondary", "numspecies_biom_x_catch_x_effort.png", width = 16, height =  12, units = "cm", dpi = 320)
+  #ggsave(path = "output/20221109/figures/secondary", "numspecies_biom_x_catch_x_effort.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 
     # Sidenote: What is the relationship between effort and diversity of species caught
@@ -305,7 +308,7 @@ check <- all_levels %>%
       xlab("Number of species in biomonitoring (CFR level") +
       ylab("Number of species sold (HH level)")
     
-    ggsave(path = "output/20221109/figures/secondary", "numspecies_biom_x_sold.png", width = 16, height =  12, units = "cm", dpi = 320)
+    #ggsave(path = "output/20221109/figures/secondary", "numspecies_biom_x_sold.png", width = 16, height =  12, units = "cm", dpi = 320)
     
     
     # Check correlation stats
@@ -330,7 +333,7 @@ check <- all_levels %>%
       xlab("Number of species caught") +
       ylab("Number of species consumed")
     
-    ggsave(path = "output/20221109/figures/secondary", "numspecies_catch_x_cons.png", width = 16, height =  12, units = "cm", dpi = 320)
+    #ggsave(path = "output/20221109/figures/secondary", "numspecies_catch_x_cons.png", width = 16, height =  12, units = "cm", dpi = 320)
 
     
     # Check correlation stats
@@ -355,7 +358,7 @@ check <- all_levels %>%
       xlab("Number of species caught") +
       ylab("Number of species consumed")
     
-    ggsave(path = "output/20221109/figures/secondary", "numspecies_catch_x_cons_x_effort.png", width = 16, height =  12, units = "cm", dpi = 320)
+    #ggsave(path = "output/20221109/figures/secondary", "numspecies_catch_x_cons_x_effort.png", width = 16, height =  12, units = "cm", dpi = 320)
     
     
 
@@ -373,7 +376,7 @@ check <- all_levels %>%
       xlab("Number of species caught") +
       ylab("Number of species sold")
     
-    ggsave(path = "output/20221109/figures/secondary", "numspecies_catch_x_sold.png", width = 16, height =  12, units = "cm", dpi = 320)
+    #ggsave(path = "output/20221109/figures/secondary", "numspecies_catch_x_sold.png", width = 16, height =  12, units = "cm", dpi = 320)
     
     # Check correlation stats
     cfr_biodiv %>% 
@@ -433,7 +436,7 @@ check <- all_levels %>%
       ggtitle("Number of species consumed X RDAs met") +
       ylab("Number of species consumed") +
       xlab("RDAs met by species portfolio (not weighted)")
-    ggsave(path = "output/20221109/figures/secondary", "cons_x_rda_boxplot_UNWEIGHTED.png", width = 16, height =  12, units = "cm", dpi = 320)
+    #ggsave(path = "output/20221109/figures/secondary", "cons_x_rda_boxplot_UNWEIGHTED.png", width = 16, height =  12, units = "cm", dpi = 320)
 
     
 #### Sold X RDAs ####   
@@ -482,7 +485,7 @@ check <- all_levels %>%
       ylab("Number of species sold") +
       xlab("RDAs met by species portfolio (not weighted)")
     
-    ggsave(path = "output/20221109/figures/secondary", "sold_x_rda_boxplot_UNWEIGHTED.png", width = 16, height =  12, units = "cm", dpi = 320)
+     #ggsave(path = "output/20221109/figures/secondary", "sold_x_rda_boxplot_UNWEIGHTED.png", width = 16, height =  12, units = "cm", dpi = 320)
   
     
 #------------------------------------------------------------------------------# 
@@ -511,7 +514,7 @@ check <- all_levels %>%
       xlab("Quantity eaten") +
       labs(size = " ", colour = " Relative abundance \nat system level ")
     
-  ggsave(path = "output/20221109/figures/secondary", "cons_x_sold_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
+     #ggsave(path = "output/20221109/figures/secondary", "cons_x_sold_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
  
   # Check correlation stats
   ccm_traits_specieslevel %>% 
@@ -742,7 +745,7 @@ check <- all_levels %>%
     labs(size = "", colour = "Relative abundance") +
     ggtitle("Quantity caught X Quantity eaten X Relative abundance")
 
-  ggsave(path = "output/20221109/figures/secondary", "catch_x_cons_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
+    #ggsave(path = "output/20221109/figures/secondary", "catch_x_cons_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
   
 
 #### CAUGHT X SOLD X RELATIVE ABUNDANCE #### 
@@ -762,6 +765,6 @@ check <- all_levels %>%
     labs(size = "", colour = "Relative abundance") +
     ggtitle("Quantity caught X Quantity sold X Relative abundance (species level)")
   
-  ggsave(path = "output/20221109/figures/secondary", "catch_x_sell_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
+    #ggsave(path = "output/20221109/figures/secondary", "catch_x_sell_x_abund_specieslevel.png", width = 16, height =  12, units = "cm", dpi = 320)
   
 

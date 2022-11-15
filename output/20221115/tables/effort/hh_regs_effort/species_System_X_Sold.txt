@@ -1,0 +1,31 @@
+Table X: System_X_Sold (species)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Number of species sold	Number of species sold	Number of species sold	Number of species sold	Number of species sold
+						
+cfr_species	Number of species in system (CFR)	0.0636*	0.0770**	0.0715**	0.0722**	0.0636
+		(0.0358)	(0.0315)	(0.0320)	(0.0322)	(0.0570)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				0.00418	-0.00745
+					(0.0248)	(0.0725)
+c.cfr_species#c.city_distance						0.000234
+						(0.00150)
+effort_persondays	Person-days		0.0733***	0.0759***	0.0758***	0.0755***
+			(0.0177)	(0.0183)	(0.0182)	(0.0180)
+hhsize	Household size			-0.206	-0.205	-0.200
+				(0.219)	(0.218)	(0.222)
+depshare	Share of household members <=15 or >=65			-3.391	-3.332	-3.316
+				(5.416)	(5.422)	(5.433)
+maxeduc	Max educational attainment by any hh member (years)			0.00515	0.00573	0.00577
+				(0.0942)	(0.0937)	(0.0937)
+index1	Household amenities index			-0.0284	-0.0199	-0.0195
+				(0.346)	(0.341)	(0.343)
+index2	Livelihood asset index			0.228	0.236	0.235
+				(0.204)	(0.216)	(0.216)
+Constant	Constant	1.280	-3.942*	-2.156	-2.359	-1.935
+		(1.642)	(2.074)	(2.710)	(2.925)	(3.367)
+						
+Observations		410	410	410	410	410
+R-squared		0.017	0.165	0.171	0.171	0.171
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is species at the CFR level. In these models species_sold = 0 for households that sold no fish. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

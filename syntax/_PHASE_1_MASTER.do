@@ -13,32 +13,23 @@
 ------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 
-* Macros
-global umbrella "/Users/erb32/github/cambodia_biodiversity2"
-global stata_raw "$umbrella/data/stata_raw"
-global excel_raw "$umbrella/data/excel_raw"
-global do "$umbrella/syntax"
-global temp "/Users/erb32/Desktop/temp"
-global processed "$umbrella/data/processed"
-global traits "$umbrella/data/traits/"
-global documentation "$umbrella/documentation/"
-global brochure "$umbrella/data/brochure/"
-global component "$umbrella/data/component/"
-global output "$umbrella/output/"
-global data "$umbrella/data/"
 
-* date macro for date-specific output
-global date "20221109"  // <----UPDATE THIS DATE IN _PHASE_2_MASTER.do
+global umbrella "/Users/erb32/github/cambodia_biodiversity2"
+global do "$umbrella/syntax"
+
+do "$do/0_initialize_macros.do" 		// This file initializes file path and date macros.
+
 
 cap mkdir "$umbrella/output/$date"
 cap mkdir "$umbrella/output/$date/figures"
-cap mkdir "$umbrella/output/$date/figures/secondary"
+*cap mkdir "$umbrella/output/$date/figures/secondary"
 cap mkdir "$umbrella/output/$date/figures/beta_compare"
 cap mkdir "$umbrella/output/$date/tables"
-cap mkdir "$umbrella/output/$date/tables/hh_regs_effort"
-cap mkdir "$umbrella/output/$date/tables/hh_regs_no_effort"
-cap mkdir "$umbrella/output/$date/tables/traits_regs_effort"
-cap mkdir "$umbrella/output/$date/tables/traits_regs_no_effort"
+cap mkdir "$umbrella/output/$date/tables/ttests"
+cap mkdir "$umbrella/output/$date/tables/effort/hh_regs_effort"
+cap mkdir "$umbrella/output/$date/tables/no_effort/hh_regs_no_effort"
+cap mkdir "$umbrella/output/$date/tables/effort/traits_regs_effort"
+cap mkdir "$umbrella/output/$date/tables/no_effort/traits_regs_no_effort"
 
 
 * Do-files

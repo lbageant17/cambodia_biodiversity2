@@ -1,4 +1,14 @@
-# plotting beta coefficients of different models
+# Liz Bageant
+# November 15, 2022
+
+#------------------------------------------------------------------------------# 
+#
+#  PLOT REGRESSION MODEL COEFFICIENTS 
+#
+#------------------------------------------------------------------------------#
+
+# set path for output of all beta coefficient plots
+betapath <- paste("output/",output_date,"/figures/beta_compare/",sep="")
 
 # Species count household models
 hh_betas_e <- read_excel("output/20221109/tables/betas_hh.xlsx")
@@ -30,7 +40,7 @@ hh_betas_e %>%
     xlim(-0.02, 1) +
     theme_bw() +
     ggtitle("System species count point estimates with effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_species.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_species.png", width = 10, height =  4, dpi = 320)
 
 # System species count point estimates without effort controls
   hh_betas_ne %>% 
@@ -50,7 +60,7 @@ hh_betas_e %>%
     xlim(-0.02, 1) +
     theme_bw() +
     ggtitle("System species count point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_species_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_species_NE.png", width = 10, height =  4, dpi = 320)
 
 
 # Catch species count point estimates with effort controls
@@ -76,7 +86,7 @@ hh_betas_e %>%
         Catch species count coefficients between sold species model with no controls 
         and sold species model with effort controls are statistically significantly different (p = 0.025)")
   
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_species.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_species.png", width = 10, height =  4, dpi = 320)
 
 # Catch species count point estimates without effort controls
   hh_betas_ne %>% 
@@ -96,7 +106,7 @@ hh_betas_e %>%
     xlim(-0.02, 1) +
     theme_bw() +
     ggtitle("Catch species count point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_species_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_species_NE.png", width = 10, height =  4, dpi = 320)
 
 
 #------------------------------------------------------------------------------# 
@@ -126,7 +136,7 @@ traits_betas_e %>%
         System nutrient density coefficients between sold nutrient density model with no controls 
         and sold nutrient density model with effort controls are statistically significantly different (p = 0.092)")
 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_nd.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_nd.png", width = 10, height =  4, dpi = 320)
 
 
 # System nutrient density models without effort controls
@@ -147,7 +157,7 @@ traits_betas_e %>%
     xlim(-0.5, 1.25) +
     theme_bw() +
     ggtitle("System nutrient density point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_nd_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_nd_NE.png", width = 10, height =  4, dpi = 320)
   
 # Catch nutrient density models with effort controls
   traits_betas_e %>% 
@@ -172,7 +182,7 @@ traits_betas_e %>%
         Catch nutrient density coefficients between sold nutrient density model with no controls 
         and sold nutrient density model with effort controls are statistically significantly different (p = 0.058)")
   
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_nd.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_nd.png", width = 10, height =  4, dpi = 320)
   
 # Catch nutrient density models without effort controls
   traits_betas_ne %>% 
@@ -192,7 +202,7 @@ traits_betas_e %>%
     xlim(-0.5, 1.25) +
     theme_bw() +
     ggtitle("Catch nutrient density point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_nd_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_nd_NE.png", width = 10, height =  4, dpi = 320)
 
   
 #------------------------------------------------------------------------------# 
@@ -214,10 +224,10 @@ traits_betas_e %>%
                         name = "Model", 
                         labels = c("No controls", "Add Effort", "Add HH Characteristics", "Add Market Access")) +
     scale_y_discrete(name = "", labels = c("Catch body size", "Consumption body size", "Sold body size")) +
-    xlim(-0.3, 1) +
+    #xlim(-0.3, 1) +
     theme_bw() +
     ggtitle("System body size point estimates with effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_body_size.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_body_size.png", width = 10, height =  4, dpi = 320)
   
 # System body size models without effort controls
   traits_betas_ne %>% 
@@ -234,10 +244,10 @@ traits_betas_e %>%
                         name = "Model", 
                         labels = c("No controls",  "Add HH Characteristics", "Add Market Access")) +
     scale_y_discrete(name = "", labels = c("Catch body size", "Consumption body size", "Sold body size")) +
-    xlim(-0.3, 1) +
+    #xlim(-0.3, 1) +
     theme_bw() +
     ggtitle("System body size point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_body_size_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_body_size_NE.png", width = 10, height =  4, dpi = 320)
   
 # Catch body size models with effort controls
 x <-  traits_betas_e %>% 
@@ -257,7 +267,7 @@ x <-  traits_betas_e %>%
     #xlim(-0.5, 1.25) +
     theme_bw() +
     ggtitle("Catch body size point estimates with effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_body_size.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_body_size.png", width = 10, height =  4, dpi = 320)
   
 # Catch body size models without effort controls
   traits_betas_ne %>% 
@@ -274,16 +284,16 @@ x <-  traits_betas_e %>%
                         name = "Model", 
                         labels = c("No controls",  "Add HH Characteristics", "Add Market Access")) +
     scale_y_discrete(name = "", labels = c("Consumption body size", "Sold body size")) +
-    xlim(0, 6.2) +
+    #xlim(0, 6.2) +
     theme_bw() +
     ggtitle("Catch body size point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_body_size_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_body_size_NE.png", width = 10, height =  4, dpi = 320)
   
 
 #------------------------------------------------------------------------------# 
 #  Commonness models
 #------------------------------------------------------------------------------# 
-
+  
 # System commonness models with effort controls
   traits_betas_e %>% 
     filter(Predictor == "com_cfr") %>% 
@@ -299,10 +309,10 @@ x <-  traits_betas_e %>%
                         name = "Model", 
                         labels = c("No controls", "Add Effort", "Add HH Characteristics", "Add Market Access")) +
     scale_y_discrete(name = "", labels = c("Catch commonness", "Consumption commonness", "Sold commonness")) +
-    xlim(-.01, 0.65) +
+    #xlim(-.5, 0.65) +
     theme_bw() +
     ggtitle("System commonness point estimates with effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_commonness.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_commonness.png", width = 10, height =  4, dpi = 320)
   
 # System commonness models without effort controls
   traits_betas_ne %>% 
@@ -319,10 +329,10 @@ x <-  traits_betas_e %>%
                         name = "Model", 
                         labels = c("No controls",  "Add HH Characteristics", "Add Market Access")) +
     scale_y_discrete(name = "", labels = c("Catch commonness", "Consumption commonness", "Sold commonness")) +
-    xlim(-.01, 0.65) +
+    #xlim(-.01, 0.65) +
     theme_bw() +
     ggtitle("System commonness point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "system_commonness_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "system_commonness_NE.png", width = 10, height =  4, dpi = 320)
   
 # Catch commonness models with effort controls
   traits_betas_e %>% 
@@ -339,10 +349,10 @@ x <-  traits_betas_e %>%
                         name = "Model", 
                         labels = c("No controls", "Add Effort", "Add HH Characteristics", "Add Market Access")) +
     scale_y_discrete(name = "", labels = c("Consumption commonness", "Sold commonness")) +
-    xlim(0, 7) +
+    #xlim(0, 7) +
     theme_bw() +
     ggtitle("Catch commonness point estimates with effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_commonness.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_commonness.png", width = 10, height =  4, dpi = 320)
 
 # Catch commonness models without effort controls
   traits_betas_ne %>% 
@@ -359,10 +369,10 @@ x <-  traits_betas_e %>%
                         name = "Model", 
                         labels = c("No controls",  "Add HH Characteristics", "Add Market Access")) +
     scale_y_discrete(name = "", labels = c("Consumption commonness", "Sold commonness")) +
-    xlim(0, 7) +
+    #xlim(0, 7) +
     theme_bw() +
     ggtitle("Catch commonness point estimates with no effort controls and 95% CIs") 
-  ggsave(path = "output/20221109/figures/beta_compare", "catch_commonness_NE.png", width = 10, height =  4, dpi = 320)
+  ggsave(path = betapath, "catch_commonness_NE.png", width = 10, height =  4, dpi = 320)
   
 
 
