@@ -26,7 +26,7 @@ global hh effort hhsize depshare maxeduc index1 index2 buff chicken cow duck pig
 global cfr city_distance cat1 cat2 cat3 cat4
 	
 estpost tabstat $diversity $traits $hh $cfr, statistics (p50 mean sd min max ) columns(statistics) casewise
-esttab using "$output/$date/tables/sumstats.csv", cells ("p50(fmt(2)) mean(fmt(2)) sd(fmt(2)) min(fmt(2)) max(fmt(2)) ") 		///
+esttab using "$output/$date/tables/sumstats.csv", cells ("p50() mean() sd() min() max() ") 		///
 	nostar replace label unstack nonumber ///
 	title("Summary statistics of key variables") csv
 
