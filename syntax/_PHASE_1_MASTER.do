@@ -32,6 +32,7 @@ cap mkdir "$umbrella/output/$date/tables/effort/traits_regs_effort"
 cap mkdir "$umbrella/output/$date/tables/no_effort/traits_regs_no_effort"
 cap mkdir "$umbrella/output/$date/tables/effort/index_regs_effort"
 cap mkdir "$umbrella/output/$date/tables/no_effort/index_regs_no_effort"
+cap mkdir "$umbrella/output/$date/tables/variance_decomposition"
 
 
 
