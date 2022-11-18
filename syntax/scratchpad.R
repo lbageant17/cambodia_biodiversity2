@@ -1,19 +1,52 @@
 
-
-## calculating weighted RDAs met using relative abundance, but then I got confused and stopped (9/21/2022)
-
-file <- ccm_traits %>% 
-  select(contains(c("hhid", "scode", "iweight", "content", "minbio"))) %>% 
-  # sum(is.na(file$pr_content)) 4220 observations with no nutrient info
-  # nrow(file) total obs = 26.9k so 16% of obs have no nutrient info
-  drop_na(pr_content) %>% # dropping 16% of cases due to missing nutrient info
-  # bring in relative abundance data: 
-  left_join(rel_abundance, key = scode_ccm) %>% 
-  # sum(is.na(file$rel_abundance)) # 3 NA values. I will drop them. These are scode = 144, a species that did not appear in the biomonitoring data.
-  drop_na(rel_abundance) %>% # nrow(file) n = 2271
+# 11/18/2022
+#number of species caught, consumed and sold and processed
 
 
+# caught
+c %>% 
+  filter(catch_iweight > 0) %>% # no change in N as expected
+  distinct(scode_ccm) %>% 
+  nrow()
 
+#consumed
+c %>% 
+  filter(atefresh_iweight > 0) %>% 
+  distinct(scode_ccm) %>% 
+  nrow()
+
+#sold 
+c %>% 
+  filter(soldfresh_iweight > 0) %>% 
+  distinct(scode_ccm) %>% 
+  nrow()
+
+# processed
+c %>% 
+  filter(process_iweight > 0) %>% 
+  distinct(scode_ccm) %>% 
+  nrow()
+
+
+
+# 11/16/2022. How does our "commonness" index relate to the Simpson index calculated by R? Badly. 
+
+simpson <- diversity_indices_hh_level %>% 
+  select(hhid, contains("d1")) %>%
+  rename(cons = d1_cons, 
+         sold = d1_sold, 
+         catch = d1_catch) %>% 
+  pivot_longer(!hhid, names_to = "type", values_to = "simpson") 
+
+
+data <- commonness %>% 
+  left_join(simpson, by = c("hhid", "type")) %>% 
+  drop_na(simpson)
+
+data %>% filter(type == "cons") %>% 
+ggplot((aes(x = simpson, y = commonness))) +
+  geom_point() +
+  scale_y_continuous(trans = "log10")
 
 
 

@@ -36,6 +36,9 @@ e <- as_tibble(read.csv("data/processed/effort.csv", na.strings = c("", "NA")))
 l <- as_tibble(read.csv("data/processed/livelihood.csv", na.strings = c("", "NA"))) %>% 
   filter(year == 2012)
 
+# commercial species
+cs <- as_tibble(read.csv("data/processed/commercial_species.csv",na.strings = c("", "NA")))
+
 
 #------------------------------------------------------------------------------# 
 # Create core data frames for subsequent analyses
@@ -106,19 +109,19 @@ cfr_biodiv <- full_join(cfr_biodiv, hh_soldcons, by = c("cfrid", "hhid"))
 
 #### ----- Species level data files ------ #### 
 
-# Create a species-level data frame that contains relative abundance of different species
-systemtotal <- b %>% 
-  select(totalweight_biom) %>% 
-  summarise(systemtotal = sum(totalweight_biom)) %>% 
-  as.numeric()
+# # Create a species-level data frame that contains relative abundance of different species
+# systemtotal <- b %>% 
+#   select(totalweight_biom) %>% 
+#   summarise(systemtotal = sum(totalweight_biom)) %>% 
+#   as.numeric()
 
-rel_abundance <- b %>% 
-  select(scode_biom, totalweight_biom) %>% 
-  group_by(scode_biom) %>% 
-  summarise(species_total = sum(totalweight_biom)) %>% 
-  mutate(rel_abundance = species_total/systemtotal) %>%  # check: summarize(total = sum(rel_abundance)) = 1
-  select(scode_biom, rel_abundance) %>% 
-  mutate(scode_ccm = scode_biom) # set up key for later merge
+# rel_abundance <- b %>% 
+#   select(scode_biom, totalweight_biom) %>% 
+#   group_by(scode_biom) %>% 
+#   summarise(species_total = sum(totalweight_biom)) %>% 
+#   mutate(rel_abundance = species_total/systemtotal) %>%  # check: summarize(total = sum(rel_abundance)) = 1
+#   select(scode_biom, rel_abundance) %>% 
+#   mutate(scode_ccm = scode_biom) # set up key for later merge
 
 # Combine traits and CCM data
 ccm_traits <- t %>% 
