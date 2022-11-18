@@ -22,7 +22,7 @@ the key parameters (e.g. outcome variables, predictor variables).
 /*----------------------------------------------------------------------------*/
 
 * controls
-global effort effort
+global effort effort effort2
 global hh hhsize depshare maxeduc index1 index2
 global mkt city_distance
 

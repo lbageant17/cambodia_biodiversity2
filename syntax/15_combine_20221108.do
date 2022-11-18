@@ -125,6 +125,9 @@ save "$component/hh", replace
 use "$processed/effort",clear
 collapse (sum) effort, by(hhid)
 la var effort "Person-days"
+ren effort_persondays effort
+gen effort2 = effort*effort
+la var effort2 "Effort-squared"
 save "$component/effort", replace
 
 /* -------- Combine all HH level data files ----------------------------------*/
@@ -172,7 +175,7 @@ foreach var of varlist body_size_sold com_sold {
 	}
 
 	
-order hhid cfrid *_species h_* nd_score* body_size* com_* d1_* d2_* effort
+order hhid cfrid *_species h_* nd_score* body_size* com_* d1_* d2_* effort*
 
 save "$processed/hh_level_stata", replace
 
