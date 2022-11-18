@@ -66,9 +66,9 @@ library(RStata) #install.packages("RStata")
 #  Phase 4: Plot regression analyses in R
 #------------------------------------------------------------------------------#    
 
-  source("syntax/19_plot_betas.R")
-  source("syntax/commercial_species_calculations.R")
-  
+  source("syntax/20_plot_betas.R")
+  source("syntax/21_commercial_species_calculations.R")
+  source("syntax/22_quantity_explore.R")  
 
   
   

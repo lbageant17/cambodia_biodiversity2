@@ -1,5 +1,5 @@
 # Liz Bageant
-# November 15, 2022
+# November 18, 2022
 
 #------------------------------------------------------------------------------# 
 #
@@ -11,12 +11,20 @@
 betapath <- paste("output/",output_date,"/figures/beta_compare/",sep="")
 
 # Species count household models
-hh_betas_e <- read_excel("output/20221109/tables/betas_hh.xlsx")
-hh_betas_ne <- read_excel("output/20221109/tables/betas_hh_noeffort.xlsx") 
+path <- paste("output/",output_date,"/tables/effort/betas_hh.xlsx",sep="")
+hh_betas_e <- read_excel(path)
+path <- paste("output/",output_date,"/tables/no_effort/betas_hh_noeffort.xlsx",sep="")
+hh_betas_ne <- read_excel(path) 
 
 # Traits household models
-traits_betas_e <- read_excel("output/20221109/tables/betas_traits.xlsx")
-traits_betas_ne <- read_excel("output/20221109/tables/betas_traits_noeffort.xlsx") 
+path <- paste("output/",output_date,"/tables/effort/betas_traits.xlsx",sep="")
+traits_betas_e <- read_excel(path)
+path <- paste("output/",output_date,"/tables/no_effort/betas_traits_noeffort.xlsx",sep="")
+traits_betas_ne <- read_excel(path) 
+
+# Index household models 
+path <- paste("output/",output_date,"/tables/effort/betas_index.xlsx",sep="")
+index_betas_e <- read_excel(path)
 
 #------------------------------------------------------------------------------# 
 #  Species count models
@@ -376,8 +384,103 @@ x <-  traits_betas_e %>%
   
 
 
+#------------------------------------------------------------------------------# 
+#  Shannon models
+#------------------------------------------------------------------------------# 
+  index_betas_e %>% 
+    filter(Predictor == "h_cfr") %>% 
+    ggplot() +
+    geom_pointrange(aes(x = coeff, 
+                        y = Outcome,
+                        xmin = min,
+                        xmax = max,
+                        group = Model,
+                        color = Model),
+                    position = position_dodge(width = 0.40)) +
+    scale_color_viridis(discrete = TRUE, 
+                        name = "Model", 
+                        labels = c("No controls", "Add Effort", "Add HH Characteristics", "Add Market Access")) +
+    scale_y_discrete(name = "", labels = c("Catch Shannon", "Consumption Shannon", "Sold Shannon")) +
+    #xlim(-.5, 0.65) +
+    theme_bw() +
+    ggtitle("System Shannon index point estimates with effort controls and 95% CIs") 
+  ggsave(path = betapath, "system_shannon.png", width = 10, height =  4, dpi = 320)
+  
+  
+# Catch Shannon index
+  index_betas_e %>% 
+    filter(Predictor == "h_catch") %>% 
+    ggplot() +
+    geom_pointrange(aes(x = coeff, 
+                        y = Outcome,
+                        xmin = min,
+                        xmax = max,
+                        group = Model,
+                        color = Model),
+                    position = position_dodge(width = 0.40)) +
+    scale_color_viridis(discrete = TRUE, 
+                        name = "Model", 
+                        labels = c("No controls", "Add Effort", "Add HH Characteristics", "Add Market Access")) +
+    scale_y_discrete(name = "", labels = c("Consumption Shannon", "Sold Shannon")) +
+    #xlim(-.5, 0.65) +
+    theme_bw() +
+    ggtitle("Catch Shannon index point estimates with effort controls and 95% CIs") 
+  ggsave(path = betapath, "catch_shannon.png", width = 10, height =  4, dpi = 320)
+  
+
+#------------------------------------------------------------------------------# 
+#  Simpson models
+#------------------------------------------------------------------------------# 
+
+  # System Simpson index
+  index_betas_e %>% 
+    filter(Predictor == "d1_cfr") %>% 
+    ggplot() +
+    geom_pointrange(aes(x = coeff, 
+                        y = Outcome,
+                        xmin = min,
+                        xmax = max,
+                        group = Model,
+                        color = Model),
+                    position = position_dodge(width = 0.40)) +
+    scale_color_viridis(discrete = TRUE, 
+                        name = "Model", 
+                        labels = c("No controls", "Add Effort", "Add HH Characteristics", "Add Market Access")) +
+    scale_y_discrete(name = "", labels = c("Catch Simpson", "Consumption Simpson", "Sold Simpson")) +
+    #xlim(-.5, 0.65) +
+    theme_bw() +
+    ggtitle("System Simpson index point estimates with effort controls and 95% CIs") 
+  ggsave(path = betapath, "system_simpson.png", width = 10, height =  4, dpi = 320)
+  
+  
+  # Catch Simpson index
+  index_betas_e %>% 
+    filter(Predictor == "d1_catch") %>% 
+    ggplot() +
+    geom_pointrange(aes(x = coeff, 
+                        y = Outcome,
+                        xmin = min,
+                        xmax = max,
+                        group = Model,
+                        color = Model),
+                    position = position_dodge(width = 0.40)) +
+    scale_color_viridis(discrete = TRUE, 
+                        name = "Model", 
+                        labels = c("No controls", "Add Effort", "Add HH Characteristics", "Add Market Access")) +
+    scale_y_discrete(name = "", labels = c("Consumption Simpson", "Sold Simpson")) +
+    #xlim(-.5, 0.65) +
+    theme_bw() +
+    ggtitle("Catch Simpson index point estimates with effort controls and 95% CIs") 
+  ggsave(path = betapath, "catch_simpson.png", width = 10, height =  4, dpi = 320)
 
 
+
+#------------------------------------------------------------------------------# 
+#  Inverse Simpson models
+  
+# Inverse Simpson regressions are complicated by infinite values of the index, 
+# so they have not been run as of 11/18/2022 
+#------------------------------------------------------------------------------# 
 
 
 

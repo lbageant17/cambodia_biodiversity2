@@ -22,7 +22,7 @@ the key parameters (e.g. outcome variables, predictor variables).
 /*----------------------------------------------------------------------------*/
 
 * controls
-global effort effort
+global effort effort effort2
 global hh hhsize depshare maxeduc index1 index2
 global mkt city_distance
 
@@ -42,6 +42,10 @@ local sold_caveat "In these models `metric'_sold = 0 for households that sold no
 /* ----------- Shannon index -------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 local metric shannon  
+
+* add note to all sold tables that missing values of sold variables are treated as zero
+local sold_caveat "In these models `metric'_sold = 0 for households that sold no fish."
+
 
 /* ----------- System x Catch ------------------------------------------------*/
 
@@ -399,7 +403,7 @@ use "$processed/hh_level_stata", clear
 
 
 local metric simpson
-local sold_caveat "In these models `metric'_sold = 0 for households that sold no fish."
+local sold_caveat "In these models `metric'_sold = 1 for households that sold no fish."
 
 
 /* ----------- System x Catch ------------------------------------------------*/
@@ -758,6 +762,11 @@ use "$processed/hh_level_stata", clear
 /* ----------- Inverse Simpson------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 
+Inverse simpson is complicated by infinite values. 
+The code is here but it will need attention and thought as to how to handle the zero/infinite cases. 
+If we drop households that have infinite inverse simpson index values (these are
+households that did not sell fish), then we end up with regressions with different
+sample sizes and cannot implement the wald test across models.
 
 local metric inv_simpson
 local sold_caveat "In these models `metric'_sold = 0 for households that sold no fish."

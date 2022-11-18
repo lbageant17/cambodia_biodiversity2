@@ -26,3 +26,4 @@ do "$do/17a_hh_regressions_effort_20221109.do" 		// test whether HH characterist
 do "$do/17b_hh_regressions_noeffort_20221109" 		// test whether HH characteristics attenuate core diversity relationships (without effort controls)
 do "$do/18a_trait_regressions_effort_20221109.do"  	// test whether HH characteristics attenuate trait-based diversity relationships (with effort controls)
 do "$do/18b_trait_regressions_noeffort_20221109.do"	// test whether HH characteristics attenuate trait-based diversity relationships (without effort controls) 
+do "$do/19a_index_regressions_effort_20221116.do"	// test whether HH characteristics attenuate index-based diversity relationships (with effort controls) 
