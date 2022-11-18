@@ -1,0 +1,31 @@
+Table X: Catch_X_Sold (shannon)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Shannon index--sold	Shannon index--sold	Shannon index--sold	Shannon index--sold	Shannon index--sold
+						
+h_catch	Shannon index--catch	0.498***	0.336***	0.332***	0.337***	0.248
+		(0.0798)	(0.0773)	(0.0751)	(0.0787)	(0.148)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-0.000864	-0.00684
+					(0.00328)	(0.00868)
+c.h_catch#c.city_distance						0.00253
+						(0.00368)
+effort_persondays	Person-days		0.00766***	0.00832***	0.00834***	0.00831***
+			(0.00125)	(0.00135)	(0.00136)	(0.00136)
+hhsize	Household size			-0.0343	-0.0346	-0.0334
+				(0.0273)	(0.0273)	(0.0279)
+depshare	Share of household members <=15 or >=65			0.370	0.367	0.369
+				(0.624)	(0.621)	(0.622)
+maxeduc	Max educational attainment by any hh member (years)			-0.00243	-0.00237	-0.00261
+				(0.0114)	(0.0114)	(0.0117)
+index1	Household amenities index			0.0159	0.0144	0.0132
+				(0.0447)	(0.0444)	(0.0449)
+index2	Livelihood asset index			0.0431	0.0413	0.0409
+				(0.0266)	(0.0268)	(0.0269)
+Constant	Constant	-0.340**	-0.438***	-0.327	-0.305	-0.102
+		(0.160)	(0.157)	(0.295)	(0.313)	(0.381)
+						
+Observations		410	410	410	410	410
+R-squared		0.108	0.199	0.218	0.218	0.219
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is shannon at the catch level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

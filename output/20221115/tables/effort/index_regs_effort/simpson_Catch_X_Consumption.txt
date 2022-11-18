@@ -1,0 +1,31 @@
+Table X: Catch_X_Consumption (simpson)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Simpson index--consumption	Simpson index--consumption	Simpson index--consumption	Simpson index--consumption	Simpson index--consumption
+						
+d1_catch	Simpson index--catch	0.792***	0.769***	0.769***	0.774***	0.752***
+		(0.0494)	(0.0503)	(0.0519)	(0.0510)	(0.0928)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-0.000192	-0.000781
+					(0.000140)	(0.00222)
+c.d1_catch#c.city_distance						0.000696
+						(0.00252)
+effort_persondays	Person-days		0.000281***	0.000280***	0.000285***	0.000284***
+			(8.33e-05)	(7.99e-05)	(8.23e-05)	(8.15e-05)
+hhsize	Household size			-0.000407	-0.000463	-0.000416
+				(0.00126)	(0.00126)	(0.00127)
+depshare	Share of household members <=15 or >=65			-0.00909	-0.0100	-0.0106
+				(0.0282)	(0.0278)	(0.0274)
+maxeduc	Max educational attainment by any hh member (years)			0.000209	0.000224	0.000203
+				(0.000663)	(0.000662)	(0.000644)
+index1	Household amenities index			-0.00136	-0.00169	-0.00175
+				(0.00282)	(0.00289)	(0.00294)
+index2	Livelihood asset index			-0.00109	-0.00149	-0.00151
+				(0.00113)	(0.00111)	(0.00113)
+Constant	Constant	0.184***	0.185***	0.188***	0.190***	0.209**
+		(0.0433)	(0.0429)	(0.0466)	(0.0465)	(0.0806)
+						
+Observations		410	410	410	410	410
+R-squared		0.755	0.765	0.766	0.767	0.767
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is simpson at the catch level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

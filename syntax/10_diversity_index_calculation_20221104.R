@@ -13,7 +13,9 @@
 #------------------------------------------------------------------------------#
 
 
-#### ----- Set up data files for diversity index calculations ------ #### 
+#------------------------------------------------------------------------------# 
+# Set up data files for diversity index calculations
+#------------------------------------------------------------------------------# 
 
 # We need a data file with vectors of species and biomass. 
 # We need this for biomonitoring, catch, and consumption data. 
@@ -30,16 +32,16 @@ biom_div_data <- b %>%
   mutate_all(~replace(., is.na(.), 0))
 
 
-# catch @ cfr level
-catch_div_data_cfr <- c %>% 
-  select(hhid, cfrid, scode_ccm, catch_iweight) %>% 
-  # collapse to CFR level 
-  group_by(cfrid, scode_ccm) %>% 
-  summarise(biomass = sum(catch_iweight)) %>% 
-  # reshape
-  pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
-  # replace NA values with zero
-  mutate_all(~replace(., is.na(.), 0))
+# # catch @ cfr level
+# catch_div_data_cfr <- c %>% 
+#   select(hhid, cfrid, scode_ccm, catch_iweight) %>% 
+#   # collapse to CFR level 
+#   group_by(cfrid, scode_ccm) %>% 
+#   summarise(biomass = sum(catch_iweight)) %>% 
+#   # reshape
+#   pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
+#   # replace NA values with zero
+#   mutate_all(~replace(., is.na(.), 0))
 
 # catch @ household level
 catch_div_data_hh <- c %>% 
@@ -52,16 +54,16 @@ catch_div_data_hh <- c %>%
   # replace NA values with zero
   mutate_all(~replace(., is.na(.), 0)) 
 
-# consumption @ cfr level--not sure if this is necessary
-cons_div_data_cfr <- c %>% 
-  select(cfrid, scode_ccm, atefresh_iweight) %>% 
-  # collapse to CFR level 
-  group_by(cfrid, scode_ccm) %>% 
-  summarise(biomass = sum(atefresh_iweight)) %>% 
-  # reshape
-  pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
-  # replace NA values with zero
-  mutate_all(~replace(., is.na(.), 0)) 
+# # consumption @ cfr level--not sure if this is necessary
+# cons_div_data_cfr <- c %>% 
+#   select(cfrid, scode_ccm, atefresh_iweight) %>% 
+#   # collapse to CFR level 
+#   group_by(cfrid, scode_ccm) %>% 
+#   summarise(biomass = sum(atefresh_iweight)) %>% 
+#   # reshape
+#   pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
+#   # replace NA values with zero
+#   mutate_all(~replace(., is.na(.), 0)) 
 
 # consumption @ hh level
 cons_div_data_hh <- c %>% 
@@ -74,16 +76,16 @@ cons_div_data_hh <- c %>%
   # replace NA values with zero
   mutate_all(~replace(., is.na(.), 0)) 
 
-# sold @ cfr level--not sure if this is necessary
-sold_div_data_cfr <- c %>% 
-  select(cfrid, scode_ccm, soldfresh_iweight) %>% 
-  # collapse to CFR level 
-  group_by(cfrid, scode_ccm) %>% 
-  summarise(biomass = sum(soldfresh_iweight)) %>% 
-  # reshape
-  pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
-  # replace NA values with zero
-  mutate_all(~replace(., is.na(.), 0)) 
+# # sold @ cfr level--not sure if this is necessary
+# sold_div_data_cfr <- c %>% 
+#   select(cfrid, scode_ccm, soldfresh_iweight) %>% 
+#   # collapse to CFR level 
+#   group_by(cfrid, scode_ccm) %>% 
+#   summarise(biomass = sum(soldfresh_iweight)) %>% 
+#   # reshape
+#   pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
+#   # replace NA values with zero
+#   mutate_all(~replace(., is.na(.), 0)) 
 
 # sold @ hh level
 sold_div_data_hh <- c %>% 
@@ -97,8 +99,9 @@ sold_div_data_hh <- c %>%
   mutate_all(~replace(., is.na(.), 0)) 
 
 
-
-#### ----- Calculate diversity indices ------ #### 
+#------------------------------------------------------------------------------# 
+# Calculate diversity indices
+#------------------------------------------------------------------------------# 
 
 # Biomonitoring (system) diversity @ CFR level
     
@@ -151,54 +154,54 @@ sold_div_data_hh <- c %>%
       left_join(d2_biom_cfr) 
 
 
-# Catch diversity @ CFR level
-
-    # Shannon Index (H)
-    temp <- catch_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity() %>% 
-      # adding back CFR IDs
-      cbind(catch_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    h_catch_cfr <- temp %>% 
-      mutate(h_catch = as.numeric(.),
-             cfrid = V2) %>% 
-      select(h_catch, cfrid)
-    
-    # Simpson index (D1)
-    temp <- catch_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity("simpson") %>% 
-      # adding back CFR IDs
-      cbind(catch_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    d1_catch_cfr <- temp %>% 
-      mutate(d1_catch = as.numeric(.),
-             cfrid = V2) %>% 
-      select(d1_catch, cfrid)
-    
-    # Inverse simpson index (D2)
-    temp <- catch_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity("invsimpson") %>% 
-      # adding back CFR IDs
-      cbind(catch_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    d2_catch_cfr <- temp %>% 
-      mutate(d2_catch = as.numeric(.),
-             cfrid = V2) %>% 
-      select(d2_catch, cfrid)
-    
-    # combine files
-    indices_catch_cfr <- h_catch_cfr %>% 
-      left_join(d1_catch_cfr, by = "cfrid") %>% 
-      left_join(d2_catch_cfr, by = "cfrid")
+# # Catch diversity @ CFR level
+# 
+#     # Shannon Index (H)
+#     temp <- catch_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity() %>% 
+#       # adding back CFR IDs
+#       cbind(catch_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     h_catch_cfr <- temp %>% 
+#       mutate(h_catch = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(h_catch, cfrid)
+#     
+#     # Simpson index (D1)
+#     temp <- catch_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity("simpson") %>% 
+#       # adding back CFR IDs
+#       cbind(catch_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     d1_catch_cfr <- temp %>% 
+#       mutate(d1_catch = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(d1_catch, cfrid)
+#     
+#     # Inverse simpson index (D2)
+#     temp <- catch_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity("invsimpson") %>% 
+#       # adding back CFR IDs
+#       cbind(catch_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     d2_catch_cfr <- temp %>% 
+#       mutate(d2_catch = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(d2_catch, cfrid)
+#     
+#     # combine files
+#     indices_catch_cfr <- h_catch_cfr %>% 
+#       left_join(d1_catch_cfr, by = "cfrid") %>% 
+#       left_join(d2_catch_cfr, by = "cfrid")
  
        
 # Catch diversity @ HH level
@@ -301,54 +304,54 @@ sold_div_data_hh <- c %>%
       left_join(d2_cons_hh, by = "hhid")
     
 
-## Consumption diversity at the CFR level
-    
-    # Shannon Index (H)
-    temp <- cons_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity() %>% 
-      # adding back CFR IDs
-      cbind(cons_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    h_cons_cfr <- temp %>% 
-      mutate(h_cons = as.numeric(.),
-             cfrid = V2) %>% 
-      select(h_cons, cfrid)
-    
-    # Simpson index (D1)
-    temp <- cons_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity("simpson") %>% 
-      # adding back CFR IDs
-      cbind(cons_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    d1_cons_cfr <- temp %>% 
-      mutate(d1_cons = as.numeric(.),
-             cfrid = V2) %>% 
-      select(d1_cons, cfrid)
-    
-    # Inverse simpson index (D2)
-    temp <- cons_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity("invsimpson") %>% 
-      # adding back CFR IDs
-      cbind(cons_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    d2_cons_cfr <- temp %>% 
-      mutate(d2_cons = as.numeric(.),
-             cfrid = V2) %>% 
-      select(d2_cons, cfrid)
-    
-    # combine files
-    indices_cons_cfr <- h_cons_cfr %>% 
-      left_join(d1_cons_cfr, by = "cfrid") %>% 
-      left_join(d2_cons_cfr, by = "cfrid")   
+# ## Consumption diversity at the CFR level
+#     
+#     # Shannon Index (H)
+#     temp <- cons_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity() %>% 
+#       # adding back CFR IDs
+#       cbind(cons_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     h_cons_cfr <- temp %>% 
+#       mutate(h_cons = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(h_cons, cfrid)
+#     
+#     # Simpson index (D1)
+#     temp <- cons_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity("simpson") %>% 
+#       # adding back CFR IDs
+#       cbind(cons_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     d1_cons_cfr <- temp %>% 
+#       mutate(d1_cons = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(d1_cons, cfrid)
+#     
+#     # Inverse simpson index (D2)
+#     temp <- cons_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity("invsimpson") %>% 
+#       # adding back CFR IDs
+#       cbind(cons_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     d2_cons_cfr <- temp %>% 
+#       mutate(d2_cons = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(d2_cons, cfrid)
+#     
+#     # combine files
+#     indices_cons_cfr <- h_cons_cfr %>% 
+#       left_join(d1_cons_cfr, by = "cfrid") %>% 
+#       left_join(d2_cons_cfr, by = "cfrid")   
     
 ## Sold diversity at the HH level
     
@@ -399,79 +402,90 @@ sold_div_data_hh <- c %>%
       left_join(d1_sold_hh, by = "hhid") %>% 
       left_join(d2_sold_hh, by = "hhid")
 
-## Sold diversity at the CFR level
-    
-    # Shannon Index (H)
-    temp <- sold_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity() %>% 
-      # adding back CFR IDs
-      cbind(sold_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    h_sold_cfr <- temp %>% 
-      mutate(h_sold = as.numeric(.),
-             cfrid = V2) %>% 
-      select(h_sold, cfrid)
-    
-    # Simpson index (D1)
-    temp <- sold_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity("simpson") %>% 
-      # adding back CFR IDs
-      cbind(sold_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    d1_sold_cfr <- temp %>% 
-      mutate(d1_sold = as.numeric(.),
-             cfrid = V2) %>% 
-      select(d1_sold, cfrid)
-    
-    # Inverse simpson index (D2)
-    temp <- sold_div_data_cfr %>% 
-      ungroup() %>% 
-      select(-cfrid) %>% 
-      diversity("invsimpson") %>% 
-      # adding back CFR IDs
-      cbind(sold_div_data_cfr$cfrid) %>% 
-      as.data.frame()
-    
-    d2_sold_cfr <- temp %>% 
-      mutate(d2_sold = as.numeric(.),
-             cfrid = V2) %>% 
-      select(d2_sold, cfrid)
-    
-    # combine files
-    indices_sold_cfr <- h_sold_cfr %>% 
-      left_join(d1_sold_cfr, by = "cfrid") %>% 
-      left_join(d2_sold_cfr, by = "cfrid")
-    
+# ## Sold diversity at the CFR level
+#     
+#     # Shannon Index (H)
+#     temp <- sold_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity() %>% 
+#       # adding back CFR IDs
+#       cbind(sold_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     h_sold_cfr <- temp %>% 
+#       mutate(h_sold = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(h_sold, cfrid)
+#     
+#     # Simpson index (D1)
+#     temp <- sold_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity("simpson") %>% 
+#       # adding back CFR IDs
+#       cbind(sold_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     d1_sold_cfr <- temp %>% 
+#       mutate(d1_sold = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(d1_sold, cfrid)
+#     
+#     # Inverse simpson index (D2)
+#     temp <- sold_div_data_cfr %>% 
+#       ungroup() %>% 
+#       select(-cfrid) %>% 
+#       diversity("invsimpson") %>% 
+#       # adding back CFR IDs
+#       cbind(sold_div_data_cfr$cfrid) %>% 
+#       as.data.frame()
+#     
+#     d2_sold_cfr <- temp %>% 
+#       mutate(d2_sold = as.numeric(.),
+#              cfrid = V2) %>% 
+#       select(d2_sold, cfrid)
+#     
+#     # combine files
+#     indices_sold_cfr <- h_sold_cfr %>% 
+#       left_join(d1_sold_cfr, by = "cfrid") %>% 
+#       left_join(d2_sold_cfr, by = "cfrid")
+#     
     
 #### ----- Create CFR and HH level combined data files ------ ####     
     
   ## CFR-level file
-  diversity_indices_cfr_level <- indices_biom_cfr %>% 
-        left_join(indices_catch_cfr, by = "cfrid") %>% 
-        left_join(indices_cons_cfr, by = "cfrid") %>% 
-        left_join(indices_sold_cfr, by = "cfrid") %>% 
-        relocate(cfrid)
-      
+  # diversity_indices_cfr_level <- indices_biom_cfr %>% 
+  #       left_join(indices_catch_cfr, by = "cfrid") %>% 
+  #       left_join(indices_cons_cfr, by = "cfrid") %>% 
+  #       left_join(indices_sold_cfr, by = "cfrid") %>% 
+  #       relocate(cfrid)
+   
+  ## Expand CFR-level file to HH level 
+    cfrfile <- indices_biom_cfr %>% 
+      left_join(cfrid_to_hhid, by = "cfrid")
   
   ## HH-level file
       diversity_indices_hh_level <- indices_catch_hh %>% 
         left_join(indices_cons_hh, by = "hhid") %>% 
       left_join(indices_sold_hh, by = "hhid") %>% 
+        left_join(cfrfile, by = "hhid") %>% 
       relocate(hhid)
+    
+  
 
   ## Export for use in stata
-      write.csv(diversity_indices_cfr_level, file = "data/processed/diversity_indices_cfr_level.csv")
+      #write.csv(diversity_indices_cfr_level, file = "data/processed/diversity_indices_cfr_level.csv")
       write.csv(diversity_indices_hh_level, file = "data/processed/diversity_indices_hh_level.csv")
 
       
       
 
+      
+      
+      
+      
+      
 #### ----- Plot some things! ---------------------------------------------- ####     
 
 #### System diversity vs catch diversity ####

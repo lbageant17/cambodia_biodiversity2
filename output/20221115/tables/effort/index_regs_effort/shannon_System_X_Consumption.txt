@@ -1,0 +1,31 @@
+Table X: System_X_Consumption (shannon)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Shannon index--consumption	Shannon index--consumption	Shannon index--consumption	Shannon index--consumption	Shannon index--consumption
+						
+h_cfr	Shannon index--CFR	0.417***	0.435***	0.419***	0.421***	0.503**
+		(0.120)	(0.111)	(0.104)	(0.103)	(0.189)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				0.00282*	0.00909
+					(0.00158)	(0.0100)
+c.h_cfr#c.city_distance						-0.00233
+						(0.00367)
+effort_persondays	Person-days		0.00613***	0.00628***	0.00615***	0.00622***
+			(0.00107)	(0.000939)	(0.000899)	(0.000883)
+hhsize	Household size			-0.0321**	-0.0309**	-0.0322**
+				(0.0145)	(0.0148)	(0.0151)
+depshare	Share of household members <=15 or >=65			-0.796***	-0.771**	-0.790***
+				(0.284)	(0.289)	(0.283)
+maxeduc	Max educational attainment by any hh member (years)			-0.00593	-0.00586	-0.00622
+				(0.00683)	(0.00691)	(0.00688)
+index1	Household amenities index			-0.0708**	-0.0648**	-0.0658**
+				(0.0298)	(0.0285)	(0.0282)
+index2	Livelihood asset index			0.00285	0.00839	0.00853
+				(0.0177)	(0.0169)	(0.0168)
+Constant	Constant	1.196***	0.768**	1.122***	1.009***	0.796
+		(0.334)	(0.333)	(0.341)	(0.351)	(0.535)
+						
+Observations		410	410	410	410	410
+R-squared		0.095	0.257	0.288	0.298	0.299
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is shannon at the CFR level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

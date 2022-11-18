@@ -28,7 +28,7 @@ save "$component/species", replace
 /* -------- Biodiversity indices data ----------------------------------------*/
 
 * CFR and household level diversity indices were generated in R
-import delimited "$processed/diversity_indices_cfr_level.csv", clear 
+/*import delimited "$processed/diversity_indices_cfr_level.csv", clear 
 drop v1
 foreach var of varlist h_* d1_* d2_* {
 	rename `var' `var'_cfr_level
@@ -46,7 +46,7 @@ la var h_sold "Shannon index--sold CFR level"
 la var d1_sold "Simpson index--sold CFR level"
 la var d2_sold "Inverse simpson index--sold CFR level"
 	
-save "$component/cfr_shannon_index", replace 
+save "$component/cfr_shannon_index", replace */
 
 
 import delimited "$processed/diversity_indices_hh_level.csv", clear 
@@ -61,7 +61,14 @@ la var h_sold "Shannon index--sold"
 la var d1_sold "Simpson index--sold"
 la var d2_sold "Inverse simpson index--sold"
 
-save "$component/hh_shannon_index", replace
+ren h_biom h_cfr
+ren d1_biom d1_cfr
+ren d2_biom d2_cfr
+la var h_cfr "Shannon index--CFR"
+la var d1_cfr "Simpson index--CFR"
+la var d2_cfr "Inverse simpson index--CFR"
+
+save "$component/hh_div_index", replace
 
 /* -------- Commonness index -----------------------------------------------*/
 import delimited "$processed/commonness_hh_level.csv", clear
@@ -129,9 +136,7 @@ merge 1:1 hhid using "$component/commonness"
 drop _mer
 merge 1:1 hhid using "$component/body_size"
 drop _mer
-merge 1:1 hhid using "$component/hh_shannon_index"
-drop _mer
-merge m:1 cfrid using "$component/cfr_shannon_index"
+merge 1:1 hhid using "$component/hh_div_index"
 drop _mer
 mer 1:1 hhid using "$component/diet_quality"
 drop _mer

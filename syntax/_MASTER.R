@@ -50,7 +50,7 @@ library(RStata) #install.packages("RStata")
 #------------------------------------------------------------------------------#  
 
   source("syntax/9_r_data_prep.R")
-  source("syntax/10_diversity_index_calculation_20221104.R")
+  source("syntax/10_diversity_index_calculation_20221116.R")
   source("syntax/11_species_count_analysis_20221104.R")
   source("syntax/12_diet_quality_calculation_20221104.R")
   source("syntax/13_commonness_analysis_20221111.R")
@@ -67,6 +67,7 @@ library(RStata) #install.packages("RStata")
 #------------------------------------------------------------------------------#    
 
   source("syntax/19_plot_betas.R")
+  source("syntax/commercial_species_calculations.R")
   
 
   
