@@ -237,3 +237,101 @@ t413 %>% rbind(t266) %>%
   write.csv(., file = csv_name)
 
 
+
+
+#--------- Scatter plots of commonness index ---------------------------------*/
+
+com_cfr <- commonness_cfr %>% 
+  left_join(cfrid_to_hhid, by = "cfrid") %>%
+  mutate(com_cfr = commonness,
+         hhid = hhid.y) %>% 
+  select(hhid, com_cfr)
+com_catch <- commonness_catch %>% 
+  mutate(com_catch = commonness) %>% 
+  select(hhid, com_catch)
+com_cons <- commonness_cons %>% 
+  mutate(com_cons = commonness) %>% 
+  select(hhid, com_cons)
+com_sold <- commonness_sold %>% 
+  mutate(com_sold = commonness) %>% 
+  select(hhid, com_sold)
+
+com <- com_cfr %>% 
+  left_join(com_catch, by = "hhid") %>% 
+  left_join(com_cons, by = "hhid") %>% 
+  left_join(com_sold, by = "hhid") %>% 
+  mutate(com_sold = replace_na(com_sold, 0))
+
+
+# Plot
+
+path <- paste("output/",output_date,"/figures/scatter_plots",sep="")
+
+# system X catch
+com %>% 
+  ggplot(aes(x = com_cfr, y = com_catch)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Commonness: Biomonitoring X Catch") +
+  xlab("Commonness of biomonitoring (CFR level)") +
+  ylab("Commonness of species caught (HH level)")
+
+ggsave(path = path, "com_systemXcatch.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+# catch X consumption
+com %>% 
+  ggplot(aes(x = com_catch, y = com_cons)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Commonness: Catch X Consumption") +
+  xlab("Commonness of catch (HH level)") +
+  ylab("Commonness of consumed (HH level)")
+
+ggsave(path = path, "com_catchXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+# catch X sold
+com %>% 
+  filter(com_sold != 0) %>% 
+  ggplot(aes(x = com_catch, y = com_sold)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Commonness: Catch X Sold (sold = 0 removed)") +
+  xlab("Commonness of catch (HH level)") +
+  ylab("Commonness of sold (HH level)")
+
+ggsave(path = path, "com_catchXsold.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+# system X consumption
+com %>% 
+  ggplot(aes(x = com_cfr, y = com_cons)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Commonness: Biomonitoring X Consumption") +
+  xlab("Commonness of biomonitoring (CFR level)") +
+  ylab("Commonness of consumed (HH level)")
+
+ggsave(path = path, "com_systemXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+# system X sold
+
+com %>% 
+  filter(com_sold != 0) %>% 
+  ggplot(aes(x = com_cfr, y = com_sold)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Commonness: Biomonitoring X Sold (sold = 0 removed)") +
+  xlab("Commonness of biomonitoring (CFR level)") +
+  ylab("Commonness of sold (HH level)")
+
+ggsave(path = path, "com_systemXsold.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+
+

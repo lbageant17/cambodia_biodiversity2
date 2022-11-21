@@ -1,0 +1,33 @@
+Table X: System_X_Sold (shannon)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Shannon index--sold	Shannon index--sold	Shannon index--sold	Shannon index--sold	Shannon index--sold
+						
+h_cfr	Shannon index--CFR	0.0790	0.106	0.0812	0.0813	0.512
+		(0.145)	(0.133)	(0.137)	(0.136)	(0.327)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				0.000103	0.0329
+					(0.00317)	(0.0209)
+c.h_cfr#c.city_distance						-0.0122
+						(0.00849)
+effort	Person-days		0.0136***	0.0146***	0.0146***	0.0147***
+			(0.00259)	(0.00269)	(0.00270)	(0.00276)
+effort2	Effort-squared		-2.53e-05	-2.76e-05*	-2.75e-05*	-2.62e-05*
+			(1.53e-05)	(1.48e-05)	(1.50e-05)	(1.49e-05)
+hhsize	Household size			-0.0450*	-0.0449*	-0.0517*
+				(0.0261)	(0.0262)	(0.0263)
+depshare	Share of household members <=15 or >=65			0.0184	0.0194	-0.0782
+				(0.634)	(0.638)	(0.637)
+maxeduc	Max educational attainment by any hh member (years)			-0.00707	-0.00706	-0.00888
+				(0.0119)	(0.0119)	(0.0116)
+index1	Household amenities index			-0.00689	-0.00668	-0.0124
+				(0.0486)	(0.0479)	(0.0460)
+index2	Livelihood asset index			0.0513*	0.0515*	0.0522*
+				(0.0293)	(0.0293)	(0.0290)
+Constant	Constant	0.594	-0.190	0.104	0.100	-1.011
+		(0.385)	(0.355)	(0.471)	(0.466)	(0.859)
+						
+Observations		410	410	410	410	410
+R-squared		0.001	0.161	0.184	0.184	0.194
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is shannon at the CFR level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

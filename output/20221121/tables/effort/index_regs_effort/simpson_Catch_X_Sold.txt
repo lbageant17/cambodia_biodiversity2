@@ -1,0 +1,33 @@
+Table X: Catch_X_Sold (simpson)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Simpson index--sold	Simpson index--sold	Simpson index--sold	Simpson index--sold	Simpson index--sold
+						
+d1_catch	Simpson index--catch	0.521**	0.728***	0.727***	0.697***	0.918**
+		(0.216)	(0.209)	(0.210)	(0.207)	(0.391)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				0.00127**	0.00698
+					(0.000599)	(0.00726)
+c.d1_catch#c.city_distance						-0.00674
+						(0.00828)
+effort	Person-days		-0.00561***	-0.00559***	-0.00579***	-0.00582***
+			(0.00125)	(0.00130)	(0.00124)	(0.00125)
+effort2	Effort-squared		2.45e-05***	2.45e-05***	2.55e-05***	2.57e-05***
+			(6.06e-06)	(6.45e-06)	(6.19e-06)	(6.26e-06)
+hhsize	Household size			-0.00581	-0.00544	-0.00590
+				(0.00928)	(0.00929)	(0.00945)
+depshare	Share of household members <=15 or >=65			-0.167	-0.160	-0.154
+				(0.157)	(0.158)	(0.156)
+maxeduc	Max educational attainment by any hh member (years)			-0.00117	-0.00124	-0.00102
+				(0.00255)	(0.00251)	(0.00256)
+index1	Household amenities index			0.00938	0.0115	0.0120
+				(0.0123)	(0.0124)	(0.0124)
+index2	Livelihood asset index			-0.00801	-0.00541	-0.00521
+				(0.00789)	(0.00829)	(0.00827)
+Constant	Constant	0.299	0.350**	0.427**	0.410**	0.226
+		(0.187)	(0.169)	(0.172)	(0.169)	(0.317)
+						
+Observations		410	410	410	410	410
+R-squared		0.035	0.097	0.101	0.107	0.109
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is simpson at the catch level. In these models simpson_sold = 1 for households that sold no fish. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1.						

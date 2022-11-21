@@ -9,7 +9,7 @@ version 15
 
 /*----------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------
-Household characteristics and effort. Do they attenuate biodiversity filtering?
+Do household characteristics and effort attenuate the species richness relationships?
 
 These models INCLUDE effort controls.
 
@@ -78,7 +78,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $effort $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/hh_regs_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/species_regs_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -148,7 +148,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $effort $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/hh_regs_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/species_regs_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -218,7 +218,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $effort $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/hh_regs_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/species_regs_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. `sold_caveat' Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -287,7 +287,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $effort $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/hh_regs_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/species_regs_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -357,7 +357,7 @@ use "$processed/hh_level_stata", clear
 	reg `outcome' c.`pred'##c.city_distance $effort $hh, vce(cluster cfrid) 
 	est sto mktx 
 
-	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/hh_regs_effort/`metric'_`tablename'", replace excel label ///
+	outreg2 [base effort hh mkt mktx] using "$output/$date/tables/effort/species_regs_effort/`metric'_`tablename'", replace excel label ///
 		title("Table X: `tablename' (`metric')") addnote("Outcome variable is `metric' at the `outcome_level' level. `sold_caveat' Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1")
 	
 
@@ -404,11 +404,11 @@ use "$temp/betas_hh", clear
 * calculate min and max
 gen min = coeff-1.96*se
 gen max = coeff+1.96*se
-export excel using "$output/$date/tables/effort/betas_hh.xlsx", sheet("HH models") sheetmodify firstrow(variables)
+export excel using "$output/$date/tables/effort/betas_species.xlsx", sheet("species models") sheetmodify firstrow(variables)
 
 
 postclose `wald'
 use "$temp/wald_test_hh", clear
-export excel using "$output/$date/tables/effort/wald_test_hh.xlsx", sheet("HH models") sheetmodify firstrow(variables)
+export excel using "$output/$date/tables/effort/wald_test_species.xlsx", sheet("species models") sheetmodify firstrow(variables)
 	
 	

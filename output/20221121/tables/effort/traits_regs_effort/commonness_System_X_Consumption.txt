@@ -1,0 +1,33 @@
+Table X: System_X_Consumption (commonness)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Commonness index: cons level	Commonness index: cons level	Commonness index: cons level	Commonness index: cons level	Commonness index: cons level
+						
+com_cfr	Commonness index: cfr level	0.00147**	0.00193**	0.00168*	0.00167*	0.000262
+		(0.000708)	(0.000926)	(0.000856)	(0.000870)	(0.00345)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-6.26e-11	-1.24e-10
+					(2.55e-10)	(2.74e-10)
+c.com_cfr#c.city_distance						3.92e-05
+						(8.31e-05)
+effort	Person-days		1.00e-09***	9.63e-10***	9.76e-10***	1.01e-09***
+			(1.99e-10)	(1.92e-10)	(2.00e-10)	(1.97e-10)
+effort2	Effort-squared		-0***	-0***	-0***	-0***
+			(0)	(0)	(0)	(0)
+hhsize	Household size			2.25e-09	2.22e-09	2.10e-09
+				(1.53e-09)	(1.53e-09)	(1.47e-09)
+depshare	Share of household members <=15 or >=65			7.05e-08**	7.00e-08**	6.72e-08**
+				(3.00e-08)	(2.95e-08)	(3.00e-08)
+maxeduc	Max educational attainment by any hh member (years)			1.58e-09*	1.58e-09*	1.55e-09*
+				(8.38e-10)	(8.46e-10)	(8.56e-10)
+index1	Household amenities index			2.06e-09	1.94e-09	1.79e-09
+				(2.76e-09)	(2.69e-09)	(2.70e-09)
+index2	Livelihood asset index			-0	-1.60e-10	-1.09e-10
+				(1.67e-09)	(1.69e-09)	(1.71e-09)
+Constant	Constant	7.23e-08***	2.82e-08***	-3.64e-09	-1.54e-09	8.53e-10
+		(5.41e-09)	(8.47e-09)	(1.44e-08)	(1.71e-08)	(1.72e-08)
+						
+Observations		410	410	410	410	410
+R-squared		0.016	0.085	0.104	0.104	0.106
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is commonness at the CFR level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

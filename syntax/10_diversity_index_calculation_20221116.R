@@ -1,5 +1,5 @@
 ## Liz Bageant
-## November 8, 2022
+## November 21, 2022
 
 #------------------------------------------------------------------------------# 
 #
@@ -7,9 +7,9 @@
 #  This file does the following: 
 #    Uses data constructed in _MASTER.R
 #    Constructs shannon, simpson and inverse simpson indices
-#    Creates scatter plots of shannon indices across CFR, catch, consumed and sold
+#    Creates box plots of shannong and simpson indices across CFR, catch, consumed and sold
+#    Creates scatter plots of shannon and simpson indices across CFR, catch, consumed and sold
 # 
-#
 #------------------------------------------------------------------------------#
 
 
@@ -32,17 +32,6 @@ biom_div_data <- b %>%
   mutate_all(~replace(., is.na(.), 0))
 
 
-# # catch @ cfr level
-# catch_div_data_cfr <- c %>% 
-#   select(hhid, cfrid, scode_ccm, catch_iweight) %>% 
-#   # collapse to CFR level 
-#   group_by(cfrid, scode_ccm) %>% 
-#   summarise(biomass = sum(catch_iweight)) %>% 
-#   # reshape
-#   pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
-#   # replace NA values with zero
-#   mutate_all(~replace(., is.na(.), 0))
-
 # catch @ household level
 catch_div_data_hh <- c %>% 
   select(hhid, hhid, scode_ccm, catch_iweight) %>% 
@@ -54,17 +43,6 @@ catch_div_data_hh <- c %>%
   # replace NA values with zero
   mutate_all(~replace(., is.na(.), 0)) 
 
-# # consumption @ cfr level--not sure if this is necessary
-# cons_div_data_cfr <- c %>% 
-#   select(cfrid, scode_ccm, atefresh_iweight) %>% 
-#   # collapse to CFR level 
-#   group_by(cfrid, scode_ccm) %>% 
-#   summarise(biomass = sum(atefresh_iweight)) %>% 
-#   # reshape
-#   pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
-#   # replace NA values with zero
-#   mutate_all(~replace(., is.na(.), 0)) 
-
 # consumption @ hh level
 cons_div_data_hh <- c %>% 
   select(hhid, hhid, scode_ccm, atefresh_iweight) %>% 
@@ -75,17 +53,6 @@ cons_div_data_hh <- c %>%
   pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
   # replace NA values with zero
   mutate_all(~replace(., is.na(.), 0)) 
-
-# # sold @ cfr level--not sure if this is necessary
-# sold_div_data_cfr <- c %>% 
-#   select(cfrid, scode_ccm, soldfresh_iweight) %>% 
-#   # collapse to CFR level 
-#   group_by(cfrid, scode_ccm) %>% 
-#   summarise(biomass = sum(soldfresh_iweight)) %>% 
-#   # reshape
-#   pivot_wider(names_from = "scode_ccm", values_from = "biomass") %>% 
-#   # replace NA values with zero
-#   mutate_all(~replace(., is.na(.), 0)) 
 
 # sold @ hh level
 sold_div_data_hh <- c %>% 
@@ -153,56 +120,6 @@ sold_div_data_hh <- c %>%
       left_join(d1_biom_cfr) %>% 
       left_join(d2_biom_cfr) 
 
-
-# # Catch diversity @ CFR level
-# 
-#     # Shannon Index (H)
-#     temp <- catch_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity() %>% 
-#       # adding back CFR IDs
-#       cbind(catch_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     h_catch_cfr <- temp %>% 
-#       mutate(h_catch = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(h_catch, cfrid)
-#     
-#     # Simpson index (D1)
-#     temp <- catch_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity("simpson") %>% 
-#       # adding back CFR IDs
-#       cbind(catch_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     d1_catch_cfr <- temp %>% 
-#       mutate(d1_catch = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(d1_catch, cfrid)
-#     
-#     # Inverse simpson index (D2)
-#     temp <- catch_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity("invsimpson") %>% 
-#       # adding back CFR IDs
-#       cbind(catch_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     d2_catch_cfr <- temp %>% 
-#       mutate(d2_catch = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(d2_catch, cfrid)
-#     
-#     # combine files
-#     indices_catch_cfr <- h_catch_cfr %>% 
-#       left_join(d1_catch_cfr, by = "cfrid") %>% 
-#       left_join(d2_catch_cfr, by = "cfrid")
- 
        
 # Catch diversity @ HH level
     
@@ -304,55 +221,6 @@ sold_div_data_hh <- c %>%
       left_join(d2_cons_hh, by = "hhid")
     
 
-# ## Consumption diversity at the CFR level
-#     
-#     # Shannon Index (H)
-#     temp <- cons_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity() %>% 
-#       # adding back CFR IDs
-#       cbind(cons_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     h_cons_cfr <- temp %>% 
-#       mutate(h_cons = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(h_cons, cfrid)
-#     
-#     # Simpson index (D1)
-#     temp <- cons_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity("simpson") %>% 
-#       # adding back CFR IDs
-#       cbind(cons_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     d1_cons_cfr <- temp %>% 
-#       mutate(d1_cons = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(d1_cons, cfrid)
-#     
-#     # Inverse simpson index (D2)
-#     temp <- cons_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity("invsimpson") %>% 
-#       # adding back CFR IDs
-#       cbind(cons_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     d2_cons_cfr <- temp %>% 
-#       mutate(d2_cons = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(d2_cons, cfrid)
-#     
-#     # combine files
-#     indices_cons_cfr <- h_cons_cfr %>% 
-#       left_join(d1_cons_cfr, by = "cfrid") %>% 
-#       left_join(d2_cons_cfr, by = "cfrid")   
-    
 ## Sold diversity at the HH level
     
     # Shannon Index (H)
@@ -401,65 +269,10 @@ sold_div_data_hh <- c %>%
     indices_sold_hh <- h_sold_hh %>% 
       left_join(d1_sold_hh, by = "hhid") %>% 
       left_join(d2_sold_hh, by = "hhid")
-
-# ## Sold diversity at the CFR level
-#     
-#     # Shannon Index (H)
-#     temp <- sold_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity() %>% 
-#       # adding back CFR IDs
-#       cbind(sold_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     h_sold_cfr <- temp %>% 
-#       mutate(h_sold = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(h_sold, cfrid)
-#     
-#     # Simpson index (D1)
-#     temp <- sold_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity("simpson") %>% 
-#       # adding back CFR IDs
-#       cbind(sold_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     d1_sold_cfr <- temp %>% 
-#       mutate(d1_sold = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(d1_sold, cfrid)
-#     
-#     # Inverse simpson index (D2)
-#     temp <- sold_div_data_cfr %>% 
-#       ungroup() %>% 
-#       select(-cfrid) %>% 
-#       diversity("invsimpson") %>% 
-#       # adding back CFR IDs
-#       cbind(sold_div_data_cfr$cfrid) %>% 
-#       as.data.frame()
-#     
-#     d2_sold_cfr <- temp %>% 
-#       mutate(d2_sold = as.numeric(.),
-#              cfrid = V2) %>% 
-#       select(d2_sold, cfrid)
-#     
-#     # combine files
-#     indices_sold_cfr <- h_sold_cfr %>% 
-#       left_join(d1_sold_cfr, by = "cfrid") %>% 
-#       left_join(d2_sold_cfr, by = "cfrid")
-#     
+  
     
 #### ----- Create CFR and HH level combined data files ------ ####     
-    
-  ## CFR-level file
-  # diversity_indices_cfr_level <- indices_biom_cfr %>% 
-  #       left_join(indices_catch_cfr, by = "cfrid") %>% 
-  #       left_join(indices_cons_cfr, by = "cfrid") %>% 
-  #       left_join(indices_sold_cfr, by = "cfrid") %>% 
-  #       relocate(cfrid)
+
    
   ## Expand CFR-level file to HH level 
     cfrfile <- indices_biom_cfr %>% 
@@ -471,9 +284,6 @@ sold_div_data_hh <- c %>%
       left_join(indices_sold_hh, by = "hhid") %>% 
         left_join(cfrfile, by = "hhid") %>% 
       relocate(hhid)
-      
-  
-    
   
 
   ## Export for use in stata
@@ -482,7 +292,7 @@ sold_div_data_hh <- c %>%
 
       
 #------------------------------------------------------------------------------# 
-# Create diversity index boxplots
+# Create diversity index boxplots--household level
 #------------------------------------------------------------------------------#       
 
       
@@ -518,7 +328,7 @@ shannon %>%
 path <- paste("output/",output_date,"/figures/",sep="")
 ggsave(path = path, "shannon_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
-# t-tests
+# t-tests @ hh level ----------------------------------------------------------
 
 # compare differences with n = 413, replacing shannon = 0 for households that did not sell fish.
 t413 <- shannon %>% 
@@ -571,7 +381,7 @@ simpson %>%
 path <- paste("output/",output_date,"/figures/",sep="")
 ggsave(path = path, "simpson_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
-# t-tests
+# t-tests @ hh level ----------------------------------------------------------
 
 # compare differences with n = 413. Simpson = 1 for households that sold no fish
 t413 <- simpson %>% 
@@ -590,51 +400,200 @@ t413 %>% rbind(t267) %>%
   write.csv(., file = csv_name)
 
 
-# Inverse Simpson index --------------------------------------------------------
-
-inv_simpson <- diversity_indices_hh_level %>% 
-  select(hhid, d2_biom, d2_catch, d2_sold, d2_cons) %>% 
-  rename(cfr = d2_biom, 
-         catch = d2_catch,
-         sold = d2_sold, 
-         cons = d2_cons) %>% 
-  pivot_longer(!hhid, names_to = "type", values_to = "inv_simpson")
+#------------------------------------------------------------------------------# 
+# Create diversity index boxplots--CFR level
+#------------------------------------------------------------------------------# 
 
 order <-c("cfr", "catch", "cons", "sold" ) 
-inv_simpson %>% 
-  filter(!is.infinite(inv_simpson)) %>% 
-  ggplot(aes(x = type, y = inv_simpson, fill = type)) +
+
+# Shannon
+
+cfr_shannon <- shannon %>%
+  left_join(cfrid_to_hhid, by = "hhid") %>% 
+  group_by(cfrid, type) %>% 
+  summarise(shannon = mean(shannon)) 
+
+cfr <- cfr_shannon %>% 
+  filter(type == "cfr") %>% 
+  rename(cfr_shannon = shannon) %>% 
+  select(-type) 
+
+cfr_shannon %>% 
+  left_join(cfr, by = "cfrid") %>% 
+  ggplot(aes(x = type, y = shannon, fill = type)) +
   geom_boxplot(outlier.shape = NA) +
-  geom_jitter(size = 0.7, alpha = 0.4, width = 0.2, color = "black") +
-  stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
-  scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
+  geom_jitter(aes(color = cfr_shannon, size = cfr_shannon), alpha = 0.7) +
   scale_fill_viridis(discrete = TRUE, alpha = 0.7) +
+  scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
   theme_bw() +
-  theme(legend.position = "none",
-        axis.title.x=element_blank(),
-        plot.caption = element_text(hjust = 0)) +
-  ylab("Mean Inverse Simpson index") +
-  labs(title = "Mean Inverse Simpson index by portfolio type",
-       caption = "
-      White diamonds depict means. Means differences are significant between all groups 
-      (Paired t-tests with Bonferroni correction)")
+  ylab("Mean Shannon index") +
+  labs(title = "Mean Shannon index by portfolio type (CFR level)")
 
 path <- paste("output/",output_date,"/figures/",sep="")
-ggsave(path = path, "invsimpson_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
+ggsave(path = path, "shannon_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
 
-# t-tests
 
-# compare differences with n = 413. We do not do this for the inverse simpson index.
+# Simpson
+cfr_simpson <- simpson %>%
+  left_join(cfrid_to_hhid, by = "hhid") %>% 
+  group_by(cfrid, type) %>% 
+  summarise(simpson = mean(simpson)) 
 
-# compare differences with n = 237, dropping all households that did not sell fish
-t267 <- inv_simpson %>% 
-  pivot_wider(names_from = "type", values_from = "inv_simpson") %>% 
-  filter(!is.infinite(sold)) %>% 
-  pivot_longer(!hhid, names_to = "type", values_to = "inv_simpson") %>% 
-  pairwise_t_test(inv_simpson ~type, paired = TRUE, p.adjust.method = "bonferroni")
+cfr <- cfr_simpson %>% 
+  filter(type == "cfr") %>% 
+  rename(cfr_simpson = simpson) %>% 
+  select(-type) 
 
-# export
-csv_name <- paste("output/",output_date,"/tables/ttests/inv_simpson_ttest.csv",sep="")
-t267 %>% 
-  write.csv(., file = csv_name)
+cfr_simpson %>% 
+  left_join(cfr, by = "cfrid") %>% 
+  ggplot(aes(x = type, y = simpson, fill = type)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = cfr_simpson, size = cfr_simpson), alpha = 0.7) +
+  scale_fill_viridis(discrete = TRUE, alpha = 0.7) +
+  scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
+  theme_bw() +
+  ylab("Mean Simpson index") +
+  labs(title = "Mean Simpson index by portfolio type (CFR level)")
+
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "simpson_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+ 
+#------------------------------------------------------------------------------# 
+# Scatter plots--Shannon
+#------------------------------------------------------------------------------# 
+
+path <- paste("output/",output_date,"/figures/scatter_plots",sep="")
+
+# system X catch
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = h_biom, y = h_catch)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Shannon: Biomonitoring X Catch") +
+  xlab("Shannon index of biomonitoring (CFR level)") +
+  ylab("Shannon index of species caught (HH level)")
+
+ggsave(path = path, "shannon_systemXcatch.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+# catch X consumption
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = h_catch, y = h_cons)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Shannon: Catch X Consumption") +
+  xlab("Shannon index of catch (HH level)") +
+  ylab("Shannon index of consumed (HH level)")
+
+ggsave(path = path, "shannon_catchXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+# catch X sold
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = h_catch, y = h_sold)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Shannon: Catch X Sold") +
+  xlab("Shannon index of catch (HH level)") +
+  ylab("Shannon index of sold (HH level)")
+
+ggsave(path = path, "shannon_catchXsold.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+# system X consumption
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = h_biom, y = h_cons)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Number of species: Biomonitoring X Consumption") +
+  xlab("Shannon index of biomonitoring (CFR level)") +
+  ylab("Shannon index of consumed (HH level)")
+
+ggsave(path = path, "shannon_systemXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+# system X sold
+
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = h_biom, y = h_sold)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Number of species: Biomonitoring X Sold") +
+  xlab("Shannon index of biomonitoring (CFR level)") +
+  ylab("Shannon index of sold (HH level)")
+
+ggsave(path = path, "shannon_systemXsold.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+ 
+#------------------------------------------------------------------------------# 
+# Scatter plots--Simpson
+#------------------------------------------------------------------------------# 
+
+# system X catch
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = d1_biom, y = d1_catch)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Simpson: Biomonitoring X Catch") +
+  xlab("Simpson index of biomonitoring (CFR level)") +
+  ylab("Simpson index of species caught (HH level)")
+
+ggsave(path = path, "simpson_systemXcatch.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+# catch X consumption
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = d1_catch, y = d1_cons)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Simpson: Catch X Consumption") +
+  xlab("Simpson index of catch (HH level)") +
+  ylab("Simpson index of consumed (HH level)")
+
+ggsave(path = path, "simpson_catchXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+# catch X sold
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = d1_catch, y = d1_sold)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Simpson: Catch X Sold") +
+  xlab("Simpson index of catch (HH level)") +
+  ylab("Simpson index of sold (HH level)")
+
+ggsave(path = path, "simpson_catchXsold.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
+# system X consumption
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = d1_biom, y = d1_cons)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Number of species: Biomonitoring X Consumption") +
+  xlab("Simpson index of biomonitoring (CFR level)") +
+  ylab("Simpson index of consumed (HH level)")
+
+ggsave(path = path, "simpson_systemXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+# system X sold
+
+diversity_indices_hh_level %>% 
+  ggplot(aes(x = d1_biom, y = d1_sold)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "#008B8B") +
+  theme_bw() +
+  ggtitle("Number of species: Biomonitoring X Sold") +
+  xlab("Simpson index of biomonitoring (CFR level)") +
+  ylab("Simpson index of sold (HH level)")
+
+ggsave(path = path, "simpson_systemXsold.png", width = 16, height =  12, units = "cm", dpi = 320)
 

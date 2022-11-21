@@ -1,5 +1,5 @@
 ## Liz Bageant
-## November 15, 2022
+## November 21, 2022
 
 
 #------------------------------------------------------------------------------# 
@@ -33,7 +33,7 @@ library(RStata) #install.packages("RStata")
   options(RStata.StataEcho = FALSE)
   
 # Create date-specific file paths
-  output_date <- "20221115"     # <---- THIS MUST MATCH THE DATE IN _PHASE_1_MASTER.do!!
+  output_date <- "20221121"     # <---- THIS MUST MATCH THE DATE IN _0_initialize_macros.do !!
 
   
 
@@ -51,10 +51,10 @@ library(RStata) #install.packages("RStata")
 
   source("syntax/9_r_data_prep.R")
   source("syntax/10_diversity_index_calculation_20221116.R")
-  source("syntax/11_species_count_analysis_20221104.R")
-  source("syntax/12_diet_quality_calculation_20221104.R")
+  source("syntax/11_species_count_analysis_20221121.R")
+  source("syntax/12_diet_quality_calculation_20221121.R")
   source("syntax/13_commonness_analysis_20221111.R")
-  source("syntax/14_body_size_calculation_20221104.R")
+  source("syntax/14_body_size_calculation_20221121.R")
   
 #------------------------------------------------------------------------------# 
 #  Phase 3: Summary statistics and regression analysis in Stata
@@ -66,9 +66,10 @@ library(RStata) #install.packages("RStata")
 #  Phase 4: Plot regression analyses in R
 #------------------------------------------------------------------------------#    
 
-  source("syntax/20_plot_betas.R")
-  source("syntax/21_commercial_species_calculations.R")
-  source("syntax/22_quantity_explore.R")  
+  source("syntax/21_plot_betas.R")
+  source("syntax/22_variance_decomposition_plots.R")  
+  source("syntax/23_commercial_species_calculations.R")
+  source("syntax/24_quantity_explore.R")  
 
   
   

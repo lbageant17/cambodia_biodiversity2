@@ -26,4 +26,4 @@ global output "$umbrella/output/"
 global data "$umbrella/data/"
 
 * date macro for date-specific output
-global date "20221115"  
+global date "20221121"  

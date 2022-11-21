@@ -109,19 +109,19 @@ cfr_biodiv <- full_join(cfr_biodiv, hh_soldcons, by = c("cfrid", "hhid"))
 
 #### ----- Species level data files ------ #### 
 
-# # Create a species-level data frame that contains relative abundance of different species
-# systemtotal <- b %>% 
-#   select(totalweight_biom) %>% 
-#   summarise(systemtotal = sum(totalweight_biom)) %>% 
-#   as.numeric()
+# Create a species-level data frame that contains relative abundance of different species
+ systemtotal <- b %>% 
+  select(totalweight_biom) %>% 
+  summarise(systemtotal = sum(totalweight_biom)) %>% 
+  as.numeric()
 
-# rel_abundance <- b %>% 
-#   select(scode_biom, totalweight_biom) %>% 
-#   group_by(scode_biom) %>% 
-#   summarise(species_total = sum(totalweight_biom)) %>% 
-#   mutate(rel_abundance = species_total/systemtotal) %>%  # check: summarize(total = sum(rel_abundance)) = 1
-#   select(scode_biom, rel_abundance) %>% 
-#   mutate(scode_ccm = scode_biom) # set up key for later merge
+ rel_abundance <- b %>% 
+   select(scode_biom, totalweight_biom) %>% 
+   group_by(scode_biom) %>% 
+   summarise(species_total = sum(totalweight_biom)) %>% 
+   mutate(rel_abundance = species_total/systemtotal) %>%  # check: summarize(total = sum(rel_abundance)) = 1
+   select(scode_biom, rel_abundance) %>% 
+   mutate(scode_ccm = scode_biom) # set up key for later merge
 
 # Combine traits and CCM data
 ccm_traits <- t %>% 
@@ -158,7 +158,7 @@ ccm_traits_specieslevel <- ccm_traits %>%
 
 
 # Combine species-level traits, ccm and relative abundance data
-ccm_traits_specieslevel <- full_join(ccm_traits_specieslevel,rel_abundance, by = "scode_ccm")
+ccm_traits_specieslevel <- full_join(ccm_traits_specieslevel, rel_abundance, by = "scode_ccm")
 
 # Looking for NA values in number of species. If there are NA values, they should be replaced with zero.
 sum(is.na(cfr_biodiv$biom_species))

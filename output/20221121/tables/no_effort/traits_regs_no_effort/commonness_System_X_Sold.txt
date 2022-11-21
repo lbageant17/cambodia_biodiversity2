@@ -1,0 +1,29 @@
+Table X: System_X_Sold (commonness)					
+		(1)	(2)	(3)	(4)
+		base	hh	mkt	mktx
+VARIABLES	LABELS	Commonness index: sold level	Commonness index: sold level	Commonness index: sold level	Commonness index: sold level
+					
+com_cfr	Commonness index: cfr level	0.0134*	0.0118	0.0106	0.0519
+		(0.00698)	(0.00816)	(0.00759)	(0.0498)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap			-5.57e-09	-3.86e-09
+				(5.20e-09)	(5.35e-09)
+c.com_cfr#c.city_distance					-0.00114
+					(0.00117)
+hhsize	Household size		4.61e-08*	4.49e-08*	4.71e-08*
+			(2.46e-08)	(2.52e-08)	(2.49e-08)
+depshare	Share of household members <=15 or >=65		7.08e-07	6.71e-07	7.41e-07
+			(4.70e-07)	(4.57e-07)	(4.66e-07)
+maxeduc	Max educational attainment by any hh member (years)		1.07e-08	1.07e-08	1.15e-08
+			(1.29e-08)	(1.33e-08)	(1.32e-08)
+index1	Household amenities index		8.65e-08*	7.45e-08	7.91e-08*
+			(4.41e-08)	(4.52e-08)	(4.59e-08)
+index2	Livelihood asset index		-2.78e-08	-3.92e-08	-4.01e-08
+			(2.77e-08)	(3.09e-08)	(3.07e-08)
+Constant	Constant	5.46e-07***	1.55e-07	3.76e-07	2.81e-07
+		(8.94e-08)	(1.91e-07)	(3.10e-07)	(3.20e-07)
+					
+Observations		410	410	410	410
+R-squared		0.004	0.015	0.023	0.027
+Robust standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
+Outcome variable is commonness at the CFR level. In these models _sold = 0 for households that sold no fish. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1					

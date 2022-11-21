@@ -11,7 +11,7 @@ version 15
 /*------------------------------------------------------------------------------
 Do household characteristics attenuate the index-based diversity relationships?
 
-These models include effort controls.
+These models INCLUDE effort controls.
 
 Note on the strcuture of this dofile: 
 The regressions and wald test processes repeat for each index and level of 

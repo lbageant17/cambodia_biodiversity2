@@ -1,0 +1,33 @@
+Table X: System_X_Catch (species)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Number of species caught by households	Number of species caught by households	Number of species caught by households	Number of species caught by households	Number of species caught by households
+						
+cfr_species	Number of species in system (CFR)	0.347***	0.384***	0.395***	0.411***	0.349***
+		(0.0936)	(0.0785)	(0.0783)	(0.0728)	(0.0939)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				0.0961**	0.0124
+					(0.0384)	(0.108)
+c.cfr_species#c.city_distance						0.00168
+						(0.00207)
+effort	Person-days		0.326***	0.316***	0.297***	0.296***
+			(0.0441)	(0.0410)	(0.0376)	(0.0374)
+effort2	Effort-squared		-0.000841***	-0.000761**	-0.000663**	-0.000671**
+			(0.000294)	(0.000293)	(0.000273)	(0.000275)
+hhsize	Household size			-0.572*	-0.532*	-0.500*
+				(0.290)	(0.290)	(0.293)
+depshare	Share of household members <=15 or >=65			-12.53*	-11.09	-10.98
+				(6.844)	(6.830)	(6.815)
+maxeduc	Max educational attainment by any hh member (years)			0.105	0.121	0.121
+				(0.126)	(0.124)	(0.124)
+index1	Household amenities index			-1.648***	-1.466**	-1.462**
+				(0.585)	(0.579)	(0.585)
+index2	Livelihood asset index			-0.119	0.0508	0.0456
+				(0.352)	(0.359)	(0.359)
+Constant	Constant	5.505	-12.37**	-8.913	-13.14**	-10.12
+		(4.409)	(4.580)	(5.861)	(5.881)	(6.356)
+						
+Observations		410	410	410	410	410
+R-squared		0.144	0.445	0.471	0.490	0.491
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is species at the CFR level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

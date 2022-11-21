@@ -1,0 +1,33 @@
+Table X: Catch_X_Consumption (nd_score)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Nutrient density score: cons level	Nutrient density score: cons level	Nutrient density score: cons level	Nutrient density score: cons level	Nutrient density score: cons level
+						
+nd_score_catch	Nutrient density score: catch level	0.834***	0.828***	0.824***	0.829***	0.813***
+		(0.0354)	(0.0357)	(0.0355)	(0.0336)	(0.0861)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-0.00127	-0.00315
+					(0.000800)	(0.00818)
+c.nd_score_catch#c.city_distance						0.000479
+						(0.00201)
+effort	Person-days		0.000549	0.000570	0.000811	0.000809
+			(0.000831)	(0.000900)	(0.000887)	(0.000883)
+effort2	Effort-squared		1.34e-06	1.04e-06	-1.47e-07	-1.72e-07
+			(4.30e-06)	(4.56e-06)	(4.59e-06)	(4.57e-06)
+hhsize	Household size			0.00228	0.00179	0.00206
+				(0.00549)	(0.00534)	(0.00540)
+depshare	Share of household members <=15 or >=65			-0.135	-0.145	-0.144
+				(0.103)	(0.0987)	(0.0981)
+maxeduc	Max educational attainment by any hh member (years)			0.00125	0.00125	0.00124
+				(0.00413)	(0.00409)	(0.00411)
+index1	Household amenities index			-0.00556	-0.00786	-0.00779
+				(0.0143)	(0.0136)	(0.0137)
+index2	Livelihood asset index			0.00373	0.00111	0.00125
+				(0.00717)	(0.00734)	(0.00721)
+Constant	Constant	0.657***	0.640***	0.653***	0.676***	0.738**
+		(0.143)	(0.142)	(0.154)	(0.154)	(0.353)
+						
+Observations		410	410	410	410	410
+R-squared		0.755	0.758	0.760	0.762	0.762
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is nd_score at the catch level. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1						

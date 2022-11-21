@@ -1,0 +1,33 @@
+Table X: Catch_X_Sold (commonness)						
+		(1)	(2)	(3)	(4)	(5)
+		base	effort	hh	mkt	mktx
+VARIABLES	LABELS	Commonness index: sold level	Commonness index: sold level	Commonness index: sold level	Commonness index: sold level	Commonness index: sold level
+						
+com_catch	Commonness index: catch level	5.092***	5.161***	5.197***	5.165***	5.797***
+		(0.570)	(0.601)	(0.625)	(0.599)	(1.298)
+city_distance	Distance to nearest large town (km)--Battambang, Kampong Thom, Pursat, Siem Reap				-3.28e-09	2.04e-10
+					(2.84e-09)	(2.93e-09)
+c.com_catch#c.city_distance						-0.0194
+						(0.0252)
+effort	Person-days		-2.91e-09	-3.08e-09	-2.32e-09	-2.34e-09
+			(2.10e-09)	(2.08e-09)	(1.98e-09)	(1.95e-09)
+effort2	Effort-squared		0	0	0	0
+			(0)	(0)	(0)	(0)
+hhsize	Household size			-2.26e-08	-2.37e-08	-1.96e-08
+				(1.55e-08)	(1.62e-08)	(1.48e-08)
+depshare	Share of household members <=15 or >=65			-1.27e-07	-1.54e-07	-1.13e-07
+				(3.14e-07)	(3.19e-07)	(3.24e-07)
+maxeduc	Max educational attainment by any hh member (years)			-3.96e-09	-3.96e-09	-3.51e-09
+				(7.92e-09)	(7.92e-09)	(7.84e-09)
+index1	Household amenities index			6.27e-09	2.98e-10	2.14e-09
+				(2.45e-08)	(2.74e-08)	(2.67e-08)
+index2	Livelihood asset index			-2.15e-08	-2.77e-08	-2.87e-08
+				(1.75e-08)	(1.94e-08)	(2.01e-08)
+Constant	Constant	-2.72e-07***	-1.65e-07	1.68e-08	1.25e-07	-2.53e-08
+		(6.52e-08)	(1.09e-07)	(1.37e-07)	(1.90e-07)	(1.78e-07)
+						
+Observations		410	410	410	410	410
+R-squared		0.580	0.581	0.584	0.587	0.589
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						
+Outcome variable is commonness at the catch level. In these models commonness_sold = 0 for households that sold no fish. Robust standard errors clustered at CFR level in parentheses. *** p<0.01, ** p<0.05, * p<0.1.						

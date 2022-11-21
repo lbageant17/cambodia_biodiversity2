@@ -26,15 +26,17 @@ cap mkdir "$umbrella/output/$date/figures"
 cap mkdir "$umbrella/output/$date/figures/beta_compare"
 cap mkdir "$umbrella/output/$date/tables"
 cap mkdir "$umbrella/output/$date/tables/ttests"
-cap mkdir "$umbrella/output/$date/tables/effort/hh_regs_effort"
-cap mkdir "$umbrella/output/$date/tables/no_effort/hh_regs_no_effort"
+cap mkdir "$umbrella/output/$date/tables/effort/"
+cap mkdir "$umbrella/output/$date/tables/effort/species_regs_effort"
+cap mkdir "$umbrella/output/$date/tables/no_effort/"
+cap mkdir "$umbrella/output/$date/tables/no_effort/species_regs_no_effort"
 cap mkdir "$umbrella/output/$date/tables/effort/traits_regs_effort"
 cap mkdir "$umbrella/output/$date/tables/no_effort/traits_regs_no_effort"
 cap mkdir "$umbrella/output/$date/tables/effort/index_regs_effort"
 cap mkdir "$umbrella/output/$date/tables/no_effort/index_regs_no_effort"
 cap mkdir "$umbrella/output/$date/tables/variance_decomposition"
-
-
+cap mkdir "$umbrella/output/$date/figures/variance_decomposition"
+cap mkdir "$umbrella/output/$date/figures/scatter_plots"
 
 * Do-files
 
