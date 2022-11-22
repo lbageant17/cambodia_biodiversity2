@@ -189,7 +189,13 @@ body_size <- tl_catch %>%
   rbind(tl_sold) %>% 
   mutate(cfrid = 0) %>% 
   rbind(tl_cfr) %>% 
-  filter(tl != 0) # there is one value where tl = 0. This is a case where the household sold no fish. 
+  filter(tl != 0) %>%  # there is one value where tl = 0. This is a case where the household sold no fish. 
+  # fix cfrid 
+  left_join(cfrid_to_hhid, by = "hhid") %>%   
+  mutate(cfrid.y = replace_na(cfrid.y, 0)) %>% 
+  mutate(cfrid = cfrid.x + cfrid.y) %>% 
+  select(type, tl, hhid, cfrid)
+  
   
 
 
@@ -202,18 +208,14 @@ body_size <- tl_catch %>%
 
 order <-c("cfr", "catch", "cons", "sold" )
 
+# Original boxplot
 body_size %>% 
-  # mutate(type = factor(type, levels = c("cfr", "catch", "cons", "sold" ))) %>% 
   ggplot(aes(x = type, y = tl, fill = type)) +
   geom_boxplot(outlier.shape = NA) +
   geom_jitter(size = 0.7, alpha = 0.4, width = 0.2, color = "black") +
   stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
   scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
   scale_fill_viridis(discrete = TRUE, alpha = 0.7) +
-  #scale_y_continuous(trans = "log10") +
-  #scale_y_continuous(trans = "log1p") +
-  #scale_y_log10() +
-  #coord_cartesian(ylim = c(0, 0.1)) + # zooming the plot in
   theme_bw() +
   theme(legend.position = "none",
         axis.title.x=element_blank(),
@@ -227,8 +229,29 @@ body_size %>%
 path <- paste("output/",output_date,"/figures/",sep="")
 ggsave(path = path, "body_size_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
+# Boxplot that maps CFR values to colors
 
-#--------- Test mean differences in mean body size ---------------------------*/
+cfr_colors <- body_size %>% 
+  filter(type == "cfr") %>% 
+  mutate(cfr_colors = tl) %>% 
+  select(cfrid, cfr_colors)
+
+body_size %>% 
+  left_join(cfr_colors, by = "cfrid") %>% 
+  ggplot(aes(x = type, y = tl)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = cfr_colors), alpha = 0.7, width = 0.2) +
+  scale_color_viridis(option = "C", name = "CFR body \nsize") +
+  stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
+  scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
+  theme_bw() +
+  ylab("Body size") +
+  labs(title = "Body size by portfolio type")
+
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "body_size_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+# --------- Test mean differences in mean body size ---------------------------#
 
 # convert CFR biom data to household level
 cfrdata <- cfrid_to_hhid %>% 

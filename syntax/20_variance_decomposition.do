@@ -68,6 +68,22 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-cons relationship
+	local outcome consumption_species
+	local pred cfr_species 
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
+	
 
 /*---------- Outcome: Sold species -------------------------------------------*/
 use "$processed/hh_level_stata", clear
@@ -87,6 +103,22 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-sold relationship
+	local outcome sold_species
+	local pred cfr_species 
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
+	
 /*----------------------------------------------------------------------------*/
 /* ----------- Commonness ----------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
@@ -127,6 +159,22 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-cons relationship
+	local outcome com_cons
+	local pred com_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
+
 
 /*---------- Outcome: Sold commonness ----------------------------------------*/
 use "$processed/hh_level_stata", clear
@@ -146,6 +194,21 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-sold relationship
+	local outcome com_sold
+	local pred com_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
 /*----------------------------------------------------------------------------*/
 /* ----------- Body size -----------------------------------------------------*/
@@ -187,6 +250,22 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-cons relationship
+	local outcome body_size_cons
+	local pred body_size_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
+
 /*---------- Outcome: Sold body size -----------------------------------------*/
 use "$processed/hh_level_stata", clear
 
@@ -205,6 +284,21 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-sold relationship
+	local outcome body_size_sold
+	local pred body_size_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
 /*----------------------------------------------------------------------------*/
 /* ----------- Nutrient density ----------------------------------------------*/
@@ -247,6 +341,21 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-cons relationship
+	local outcome nd_score_cons
+	local pred nd_score_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
 /*---------- Outcome: Sold ND ------------------------------------------------*/
 use "$processed/hh_level_stata", clear
@@ -254,6 +363,22 @@ use "$processed/hh_level_stata", clear
 	local outcome nd_score_sold
 	local pred nd_score_catch
 
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
+
+	* system-to-sold relationship
+	local outcome nd_score_sold
+	local pred nd_score_cfr
+	
 	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
 	shapley2, stat(r2)
 		mat p=e(shapley)
@@ -291,7 +416,7 @@ use "$processed/hh_level_stata", clear
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
 	
-/*---------- Outcome: Sold Shannon -------------------------------------------*/
+/*---------- Outcome: Cons Shannon -------------------------------------------*/
 use "$processed/hh_level_stata", clear
 
 	local outcome h_cons
@@ -309,8 +434,23 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-cons relationship
+	local outcome h_cons
+	local pred h_cfr
 	
-/*---------- Outcome: Cons Shannon--------------------------------------------*/
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
+	
+/*---------- Outcome: Sold Shannon--------------------------------------------*/
 use "$processed/hh_level_stata", clear
 
 	local outcome h_sold
@@ -328,6 +468,21 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-sold relationship
+	local outcome h_sold
+	local pred h_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
 /*----------------------------------------------------------------------------*/
 /* ----------- Simpson index -------------------------------------------------*/
@@ -369,6 +524,22 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-cons relationship
+	local outcome d1_cons
+	local pred d1_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
+
 /*---------- Outcome: Sold Simpson -------------------------------------------*/
 use "$processed/hh_level_stata", clear
 
@@ -387,8 +558,24 @@ use "$processed/hh_level_stata", clear
 		mat r=e(r2)
 	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
+	* system-to-sold relationship
+	local outcome d1_sold
+	local pred d1_cfr
+	
+	qui: reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapley' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (p[6,1]) (p[7,1]) (p[8,1]) (p[9,1]) (r[1,1])
+	
+	reg `outcome' `pred' $effort $hh $assets $mkt, vce(cluster cfrid) 
+	shapley2, stat(r2) group(`pred', $effort, $hh, $assets, $mkt)
+		mat p=e(shapley)
+		mat r=e(r2)
+	post `shapleyg' (" `outcome'") ("`pred'") (p[1,1]) (p[2,1]) (p[3,1]) (p[4,1]) (p[5,1]) (r[1,1])
 
 
+/*---------- Output files ----------------------------------------------------*/
 
 	postclose `shapley'
 	use "$temp/shapley_$date",clear

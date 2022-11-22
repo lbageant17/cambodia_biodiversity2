@@ -5,7 +5,7 @@ clear all
 set more off
 version 15
 
-cd "$processed/livelihood"
+cd "$component"
 
 ** Livelihood questionnaire data that might be useful. 
 * This file was adapted from the Science Advances fisher behavior paper dofile.

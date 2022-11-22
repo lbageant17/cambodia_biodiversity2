@@ -37,7 +37,6 @@ library(RStata) #install.packages("RStata")
 
   
 
-  
 
 #------------------------------------------------------------------------------# 
 #  Phase 1: Data prep in Stata

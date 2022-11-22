@@ -626,6 +626,44 @@ path <- paste("output/",output_date,"/figures/",sep="")
 ggsave(path = path, "nd_score_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 
+#--------- Box plot with CFR-level values mapped to colors -------------------*/
+
+# make a household-level variable that represents CFR-level nutrient density to map to colors
+cfr_colors <- nd_score %>% 
+  select(cfrid, nd_score, type) %>% 
+  filter(type == "cfr") %>% 
+  select(-type) %>% 
+  rename(cfr_colors = nd_score)
+
+# merge cfr_colors into main data file
+plotfile <- nd_score %>% 
+  select(hhid, type, cfrid, nd_score) %>% 
+  # bring in missing cfrids
+  left_join(cfrid_to_hhid, by = "hhid") %>% 
+  mutate(cfrid.x = replace_na(cfrid.x, 0)) %>% 
+  mutate(cfrid.y = replace_na(cfrid.y, 0)) %>% 
+  mutate(cfrid = cfrid.y + cfrid.x) %>% 
+  select(hhid, type, nd_score, cfrid) %>% 
+  left_join(cfr_colors, by = "cfrid")
+
+plotfile %>% 
+  filter(nd_score != 0) %>% # removing hh that sold no fish
+  arrange(-nd_score) %>% 
+  ggplot(aes(x = type, y = nd_score)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = cfr_colors), alpha = 0.7, width = 0.2) +
+  scale_color_viridis(option = "C", name = "Nutrient density \nscore") +
+  stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
+  #scale_fill_viridis(discrete = TRUE, alpha = 0.7, option = "C") +
+  scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
+  theme_bw() +
+  ylab("Nutrient density score") +
+  labs(title = "Nutrient density score by portfolio type (CFR level)")
+
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "species_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
+  
+
 #--------- Test mean differences in nutrient density score -------------------*/
 
 # convert CFR biom data to household level

@@ -277,6 +277,7 @@ sold_div_data_hh <- c %>%
   ## Expand CFR-level file to HH level 
     cfrfile <- indices_biom_cfr %>% 
       left_join(cfrid_to_hhid, by = "cfrid")
+    
   
   ## HH-level file
       diversity_indices_hh_level <- indices_catch_hh %>% 
@@ -284,7 +285,7 @@ sold_div_data_hh <- c %>%
       left_join(indices_sold_hh, by = "hhid") %>% 
         left_join(cfrfile, by = "hhid") %>% 
       relocate(hhid)
-  
+
 
   ## Export for use in stata
       #write.csv(diversity_indices_cfr_level, file = "data/processed/diversity_indices_cfr_level.csv")
@@ -401,10 +402,40 @@ t413 %>% rbind(t267) %>%
 
 
 #------------------------------------------------------------------------------# 
-# Create diversity index boxplots--CFR level
+# Create diversity index boxplots with CFR-level values mapped to colors
 #------------------------------------------------------------------------------# 
 
 order <-c("cfr", "catch", "cons", "sold" ) 
+
+# Shannon
+
+# make a household-level variable that represents the CFR-level shannon value
+cfr_colors <- shannon %>% 
+  filter(type == "cfr") %>% 
+  # bring in cfrids
+  left_join(cfrid_to_hhid, by = "hhid") %>% 
+  select(-type) %>% 
+  rename(cfr_colors = shannon)
+
+# Merge cfr_colors with main data file
+plotfile <- shannon %>% 
+  left_join(cfr_colors, by = "hhid") %>% 
+  
+
+plotfile %>% 
+  ggplot(aes(x = type, y = shannon)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = cfr_colors), alpha = 0.7, width = 0.2) +
+  scale_color_viridis(option = "C", name = "CFR species \nrichness") +
+  stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
+  #scale_fill_viridis(discrete = TRUE, alpha = 0.7, option = "C") +
+  scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
+  theme_bw() +
+  ylab("Shannon index") +
+  labs(title = "Shannon index by portfolio type (CFR level)")
+
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "shannon_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 # Shannon
 

@@ -7,7 +7,7 @@ clear all
 set more off
 version 15
 
-cd "$processed"
+cd "$component"
 
 /*------- Housing amenities asset index --------------------------------------*/
 * Asset index of:

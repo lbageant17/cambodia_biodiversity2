@@ -1,5 +1,5 @@
 # Liz Bageant
-## November 8, 2022
+## November 22, 2022
 
 
 #------------------------------------------------------------------------------# 
@@ -150,8 +150,14 @@ commonness <- commonness_sold %>%
   rbind(commonness_catch) %>% 
   rbind(commonness_cons) %>% 
     mutate(cfrid = 0) %>% 
-  rbind(commonness_cfr) 
+  rbind(commonness_cfr) %>% 
+  # fix cfrid 
+  left_join(cfrid_to_hhid, by = "hhid") %>% 
+  mutate(cfrid.y = replace_na(cfrid.y, 0)) %>% 
+  mutate(cfrid = cfrid.x + cfrid.y) %>% 
+  select(type, commonness, hhid, cfrid)
 
+write.csv(commonness, file = "data/processed/commonness.csv") 
 
 table(commonness$type)
 
@@ -162,6 +168,7 @@ table(commonness$type)
 
 order <-c("cfr", "catch", "cons", "sold" )
 
+# Original boxplot
 commonness %>% 
   ggplot(aes(x = type, y = commonness, fill = type)) +
   geom_boxplot(outlier.shape = NA) +
@@ -185,8 +192,30 @@ commonness %>%
 path <- paste("output/",output_date,"/figures/",sep="")
 ggsave(path = path, "commonness_boxplot.png", width = 16, height =  12, units = "cm", dpi = 320)
 
-write.csv(commonness, file = "data/processed/commonness.csv")
 
+
+# Boxplot that maps CFR commonness to colors
+cfr_colors <- commonness %>% 
+  filter(type == "cfr") %>% 
+  mutate(cfr_colors = commonness) %>% 
+  select(cfrid, cfr_colors)
+
+commonness %>% 
+  arrange(-commonness) %>% 
+  left_join(cfr_colors, by = "cfrid") %>% 
+  ggplot(aes(x = type, y = commonness)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(aes(color = cfr_colors), alpha = 0.7, width = 0.2) +
+  scale_color_viridis(option = "C", name = "CFR \ncommonness") +
+  stat_summary(fun = mean, geom = "point", shape = 23, size = 6, color = "black", fill = "white") +
+  scale_x_discrete(limits = order, labels=c("CFR","Catch","Consumed", "Sold")) +
+  scale_y_continuous(trans = "log10") +
+  theme_bw() +
+  ylab("Commonness") +
+  labs(title = "Commonness by portfolio type")
+
+path <- paste("output/",output_date,"/figures/",sep="")
+ggsave(path = path, "commonness_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
 
 
 #--------- Test mean differences in commonness -------------------------------*/
