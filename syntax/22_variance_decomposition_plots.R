@@ -11,6 +11,11 @@
 #
 #------------------------------------------------------------------------------#
 
+# Bring in shapley values from excel
+path <- (paste("output/",output_date,"/tables/variance_decomposition/variance_decomposition.xlsx",sep=""))
+shapley <- read_excel(path)
+
+
 # set path for output of all plots
 shapleypath <- paste("output/",output_date,"/figures/variance_decomposition/",sep="")
 
