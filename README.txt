@@ -13,7 +13,7 @@ Phase 2:
 Data analysis and visualization in R. Construction of indices and trait variables takes place here.
 
 Phase 3: 
-Summary statistics, regression analyses, Wald tests, and Shapley Own decompositions in Stata.
+Summary statistics, regression analyses, Wald tests, and Shapley Owen decompositions in Stata.
 
 Phase 4: 
 Visualization of regression tests and Shapley Owen decompositions in R. 
