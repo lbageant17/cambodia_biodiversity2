@@ -14,7 +14,7 @@
 ------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 
-global umbrella "/Users/erb32/github/cambodia_biodiversity2"
+global umbrella "/Users/elizabethbageant/Desktop/github/cambodia_biodiversity2"
 global do "$umbrella/syntax"
 do "$do/0_initialize_macros.do" 		// This file initializes file path and date macros.
 	

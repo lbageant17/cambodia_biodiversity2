@@ -661,7 +661,7 @@ plotfile %>%
   labs(title = "Nutrient density score by portfolio type (CFR level)")
 
 path <- paste("output/",output_date,"/figures/",sep="")
-ggsave(path = path, "species_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
+ggsave(path = path, "nd_score_boxplot_cfr.png", width = 16, height =  12, units = "cm", dpi = 320)
   
 
 #--------- Test mean differences in nutrient density score -------------------*/

@@ -12,11 +12,11 @@ Initialize macros for _PHASE_1_MASTER.do and _PHASE_3_MASTER.do
 
 
 * Macros
-global umbrella "/Users/erb32/github/cambodia_biodiversity2"
+global umbrella "/Users/elizabethbageant/Desktop/github/cambodia_biodiversity2"
 global stata_raw "$umbrella/data/stata_raw"
 global excel_raw "$umbrella/data/excel_raw"
 global do "$umbrella/syntax"
-global temp "/Users/erb32/Desktop/temp"
+global temp "/Users/elizabethbageant/Desktop/temp"
 global processed "$umbrella/data/processed"
 global traits "$umbrella/data/traits/"
 global documentation "$umbrella/documentation/"

@@ -105,7 +105,7 @@ cfr_biom <- b %>%
 
 
 ## Combine CFR-level data frames
-cfr_biodiv <- full_join(cfr_biom, hh_catch, by = "cfrid") 
+cfr_biodiv <- full_join(cfr_biom, hh_catch, by = "cfrid")
 cfr_biodiv <- full_join(cfr_biodiv, hh_soldcons, by = c("cfrid", "hhid"))
 
 
@@ -128,7 +128,8 @@ cfr_biodiv <- full_join(cfr_biodiv, hh_soldcons, by = c("cfrid", "hhid"))
 # Combine traits and CCM data
 ccm_traits <- t %>% 
   mutate(sname_ccm = sname_traits) %>% # unique(ccm_traits$sname_traits) 126 species
-  full_join(c, key = "sname_traits") %>%  # unique(ccm_traits$sname_traits) 126 species + NA  
+  full_join(c, by = "sname_ccm", multiple = "all") %>%  # unique(ccm_traits$sname_traits) 126 species + NA  
+  #original full_join(c, key = "sname_traits") %>%  # unique(ccm_traits$sname_traits) 126 species + NA  
   select(cfrid, hhid, year, month, scode_ccm, sname_traits, soldfresh, atefresh, process, lost, other, ends_with("iweight"), tg, tl, ends_with("content"), ends_with("minbio"), ends_with("rda_100g"), starts_with("num_rda")) %>% 
   drop_na(cfrid, hhid) # Dropping cases where these key identifiers are missing. Allowing missing data in traits vectors.
 

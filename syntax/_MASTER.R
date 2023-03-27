@@ -28,8 +28,8 @@ library(rstatix)
 
 # Set up R to run stata files from R script below
 library(RStata) #install.packages("RStata")
-  options(RStata.StataPath = "/Applications/Stata/StataIC.app/Contents/MacOS/stataic") 
-  options(RStata.StataVersion = 15)
+  options(RStata.StataPath = "/Applications/Stata/StataSE.app/Contents/MacOS/stata-se") 
+  options(RStata.StataVersion = 17)
   options(RStata.StataEcho = FALSE)
   
 # Create date-specific file paths
@@ -49,7 +49,7 @@ library(RStata) #install.packages("RStata")
 #------------------------------------------------------------------------------#  
 
   source("syntax/9_r_data_prep.R")
-  source("syntax/10_diversity_index_calculation_20221116.R")
+  source("syntax/10_diversity_index_calculation_20221122.R")
   source("syntax/11_species_count_analysis_20221121.R")
   source("syntax/12_diet_quality_calculation_20221121.R")
   source("syntax/13_commonness_analysis_20221111.R")
