@@ -13,6 +13,10 @@
 ------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 
+* install packages
+ssc install estout
+ssc install outreg2
+ssc install shapley2
 
 global umbrella "/Users/elizabethbageant/Desktop/github/cambodia_biodiversity2"
 global do "$umbrella/syntax"
