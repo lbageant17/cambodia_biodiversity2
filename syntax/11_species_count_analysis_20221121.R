@@ -163,6 +163,14 @@ cfr_biodiv %>%
 
 ggsave(path = path, "species_systemXcatch.png", width = 16, height =  12, units = "cm", dpi = 320)
 
+  # calculate r-squared, slope and p-value
+  m <- lm(cfr_biodiv$catch_species ~ cfr_biodiv$biom_species)
+  summary(m)
+  # slope = 0.34447
+  # p = 2.04e-15
+  # r2 = 0.14
+ 
+    
 # catch X consumption
 cfr_biodiv %>% 
   ggplot(aes(x = catch_species, y = consumption_species)) +
@@ -174,7 +182,13 @@ cfr_biodiv %>%
   ylab("Number of species consumed (HH level)")
 
 ggsave(path = path, "species_catchXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
-
+  
+  # calculate r-squared, slope and p-value
+  m <- lm(cfr_biodiv$consumption_species ~ cfr_biodiv$catch_species)
+  summary(m)
+  # slope = 0.899111
+  # p = 2e-16
+  # r2 = 0.9523
 
 # catch X sold
 cfr_biodiv %>% 
@@ -188,6 +202,12 @@ cfr_biodiv %>%
 
 ggsave(path = path, "species_catchXsold.png", width = 16, height =  12, units = "cm", dpi = 320)
 
+  # calculate r-squared, slope and p-value
+  m <- lm(cfr_biodiv$sold_species ~ cfr_biodiv$catch_species)
+  summary(m)
+  # slope = 0.27129
+  # p = <2e-16
+  # r2 = 0.2593
 
 
 # system X consumption
@@ -201,6 +221,8 @@ cfr_biodiv %>%
   ylab("Number of species consumed (HH level)")
 
 ggsave(path = path, "species_systemXcons.png", width = 16, height =  12, units = "cm", dpi = 320)
+
+
 
 # system X sold
 

@@ -29,7 +29,7 @@ library(rstatix)
 # Set up R to run stata files from R script below
 library(RStata) #install.packages("RStata")
   options(RStata.StataPath = "/Applications/Stata/StataSE.app/Contents/MacOS/stata-se") 
-  options(RStata.StataVersion = 17)
+  options(RStata.StataVersion = 18)
   options(RStata.StataEcho = FALSE)
   
 # Create date-specific file paths

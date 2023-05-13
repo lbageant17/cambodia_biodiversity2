@@ -43,4 +43,18 @@ To run these files on your computer, you will need to do make the following one-
 	0_initialize_macros (line 15ish)
 ---------------------
 
+
+
+---------------------
+A note on species codes:
+We reconcile species names and codes across three sources in the file 4_species_reconcile.do. This process involves manual reconciliation in excel spreadsheets in consultation with WorldFish and the internet. 
+This generates two identical files called species_codes.dta and species_codes.csv. These files are used to align species names and codes throughout the analysis. 
+Total number of species within each raw data file: 
+	biom_formb: 132 species
+	ccm_q7: 130 species
+	traits: 126 species
+---------------------
+
+
+
  
